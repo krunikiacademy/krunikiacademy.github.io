@@ -7,25 +7,31 @@
   <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
 
   <style>
-     .topSocial {
+   /* --- KRUNIKI Social links pinned top-right (clickable) --- */
+.topSocial{
   position: fixed;
   top: 14px;
-  right: 24px;
+  right: 20px;
+  z-index: 2147483647;     /* สูงมาก กันทุกชั้นทับ */
   display: flex;
-  gap: 14px;
-  font-size: 13px;
-  z-index: 9999;
-  opacity: 0.9;
+  gap: 12px;
+  align-items: center;
+  pointer-events: auto;     /* บังคับให้รับคลิก */
 }
 
-.topSocial a {
-  color: #d6c9a5; /* gold soft */
+.topSocial a{
+  color: #d6c9a5;
   text-decoration: none;
-  font-weight: 400;
+  font-size: 13px;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(214,201,165,0.25);
+  pointer-events: auto;
 }
 
-.topSocial a:hover {
-  opacity: 1;
+.topSocial a:hover{
   text-decoration: underline;
 }
     
@@ -59,13 +65,13 @@
       border-bottom:1px solid var(--line);
     }
     .nav{
-      <div class="topSocial">
-  <a href="https://lin.ee/qdp20di" target="_blank">LINE OA</a>
-  <a href="https://shop.line.me/@mew3619k" target="_blank">LINE SHOP</a>
-  <a href="https://www.facebook.com/kruniki/" target="_blank">FB</a>
-  <a href="https://www.youtube.com/@kruniki" target="_blank">YT</a>
-  <a href="https://www.tiktok.com/@kruniki.official" target="_blank">TT</a>
-  <a href="https://www.instagram.com/kruniki.official/" target="_blank">IG</a>
+      <div class="topSocial" aria-label="KRUNIKI Social Links">
+  <a href="https://lin.ee/qdp20di" target="_blank" rel="noopener">LINE OA</a>
+  <a href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">LINE SHOP</a>
+  <a href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener">FB</a>
+  <a href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener">YT</a>
+  <a href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener">TT</a>
+  <a href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener">IG</a>
 </div>
       
       display:flex; align-items:center; justify-content:space-between;
@@ -97,6 +103,12 @@
       margin:22px 0 8px;
       font-size:42px; line-height:1.15;
       letter-spacing:.6px;
+
+      .hero,
+      .hero * {
+      pointer-events: none;
+     }
+       
     }
     .tagline{
       color:var(--muted);
@@ -281,27 +293,6 @@
         </div>
       </section>
 
-      <section id="contact">
-        <div class="titleRow">
-          <h2>ติดต่อ / Follow</h2>
-          <div class="sub">Connect gently</div>
-        </div>
-
-        <div class="block">
-          <p style="margin:0 0 10px;color:var(--muted)">
-            เพิ่มลิงก์ของนิกี้ตรงนี้ได้เลย (แก้ในไฟล์ index.html)
-          </p>
-          <div class="links">
-            <a class="btn" href="#" onclick="alert('https://www.facebook.com/kruniki/'); return false;">Facebook</a>
-            <a class="btn" href="#" onclick="alert('ใhttps://www.youtube.com/@kruniki'); return false;">YouTube</a>
-            <a class="btn" href="#" onclick="alert('https://www.tiktok.com/@kruniki.official); return false;">TikTok</a>
-            <a class="btn" href="#" onclick="alert('https://www.instagram.com/kruniki.official'); return false;">Instagram</a>
-            <a href="https://lin.ee/qdp20di target="_blank">
-               เชื่อมต่อหัวใจผ่าน LINE OA
-
-        </div>
-        </div>
-      </section>
 
       <footer>
         <div class="footRow">
