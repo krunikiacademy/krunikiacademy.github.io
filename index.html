@@ -2,58 +2,48 @@
 <html lang="th">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KRUNIKI Academy</title>
-  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
+  <meta name="description" content="KRUNIKI – Heart Awakening • Self-Healing • Conscious Learning" />
 
   <style>
     :root{
       --bg:#070707;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.04);
-      --stroke: rgba(255,255,255,.10);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
-      --muted2: rgba(255,255,255,.55);
-      --gold: #d6b46a;
-      --shadow: 0 14px 50px rgba(0,0,0,.55);
-      --r: 18px;
+      --panel:rgba(255,255,255,.06);
+      --panel2:rgba(255,255,255,.04);
+      --stroke:rgba(255,255,255,.12);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.70);
+      --gold:#d6b46a;
+      --shadow:0 14px 50px rgba(0,0,0,.55);
+      --r:18px;
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans Thai", "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 20% 0%, rgba(214,180,106,.10), transparent 55%),
-                  radial-gradient(900px 500px at 80% 10%, rgba(255,255,255,.06), transparent 60%),
-                  var(--bg);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+      background:var(--bg);
       color:var(--text);
-      letter-spacing:.2px;
+      line-height:1.6;
     }
 
-    a{color:inherit; text-decoration:none}
-    a:focus-visible, button:focus-visible{outline:2px solid rgba(214,180,106,.75); outline-offset:3px; border-radius:999px}
+    a{color:inherit;text-decoration:none}
 
-    /* ===== Header / Nav ===== */
+    /* ---------- GOLD TEXT (จุดที่เพิ่ม) ---------- */
+    .gold-text{
+      color:var(--gold);
+      font-size:16.5px;        /* <<< ปรับขนาดตรงนี้ */
+      font-weight:600;
+      letter-spacing:.4px;
+    }
+
+    /* ---------- HEADER ---------- */
     header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.25));
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-
-    .navWrap{
-      max-width:1120px;
-      margin:0 auto;
-      padding:14px 18px;
+      padding:20px 28px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:14px;
     }
 
     .brand{
@@ -61,448 +51,111 @@
       align-items:center;
       gap:10px;
       font-weight:700;
-      letter-spacing:.8px;
+      letter-spacing:6px;
     }
+
     .dot{
-      width:8px;height:8px;border-radius:999px;background:var(--gold);
+      width:8px;height:8px;border-radius:999px;
+      background:var(--gold);
       box-shadow:0 0 18px rgba(214,180,106,.45);
     }
 
     nav{
       display:flex;
-      gap:18px;
-      align-items:center;
-      color:var(--muted);
-      font-weight:500;
+      gap:20px;
       font-size:14px;
-    }
-    nav a{padding:8px 10px; border-radius:999px}
-    nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-
-    /* ===== Social Bar (TOP) ===== */
-    .socialBar{
-      max-width:1120px;
-      margin:0 auto;
-      padding:10px 18px 14px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
+      color:var(--muted);
     }
 
-    .socialLeft{
+    /* ---------- SOCIAL ICONS TOP ---------- */
+    .social{
       display:flex;
-      align-items:center;
       gap:10px;
-      color:var(--muted2);
-      font-size:13px;
-      white-space:nowrap;
     }
 
-    .socialIcons{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-
-    .iconBtn{
-      width:42px;height:42px;
-      display:grid;place-items:center;
-      border-radius:999px;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-    }
-    .iconBtn:hover{
-      transform: translateY(-1px);
-      background:rgba(255,255,255,.09);
-      border-color: rgba(214,180,106,.35);
-    }
-    .iconBtn svg{width:20px;height:20px; opacity:.92}
-
-    /* ===== Layout ===== */
-    .wrap{max-width:1120px; margin:0 auto; padding:26px 18px 70px;}
-    .hero{
+    .social a{
+      width:36px;height:36px;
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:22px;
-      align-items:start;
-      margin-top:14px;
+      place-items:center;
+      border-radius:999px;
+      background:var(--panel);
+      border:1px solid var(--stroke);
+      transition:.2s;
     }
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr}
-      .socialBar{flex-direction:column; align-items:flex-start}
-      .socialIcons{justify-content:flex-start}
-      nav{gap:10px; flex-wrap:wrap; justify-content:flex-end}
+
+    .social a:hover{
+      background:var(--panel2);
+      transform:translateY(-1px);
+    }
+
+    /* ---------- SECTION ---------- */
+    section{
+      padding:32px 28px;
+      max-width:1200px;
+      margin:auto;
     }
 
     .card{
-      background:var(--panel);
+      background:linear-gradient(180deg,var(--panel),var(--panel2));
       border:1px solid var(--stroke);
-      border-radius: var(--r);
-      box-shadow: var(--shadow);
+      border-radius:var(--r);
+      padding:22px;
+      box-shadow:var(--shadow);
     }
 
-    /* ===== Banner ===== */
-    .banner{
-      overflow:hidden;
-      border-radius: 22px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-    }
-    .banner img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
+    h1,h2,h3{margin-top:0}
 
-    /* ===== Hero text ===== */
-    h1{
-      margin:16px 0 8px;
-      font-size:56px;
-      line-height:1.02;
-      letter-spacing:1px;
-    }
-    @media(max-width:520px){
-      h1{font-size:44px}
-    }
-
-    .tagline{
-      color:var(--muted);
-      font-size:18px;
-      margin-bottom:14px;
-    }
-
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .ctaRow{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
-    .btn{
-      padding:12px 16px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      color:var(--text);
-      font-weight:600;
-      cursor:pointer;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-    }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.07)}
-    .btn.primary{
-      background: rgba(214,180,106,.14);
-      border-color: rgba(214,180,106,.35);
-    }
-    .btn.primary:hover{
-      background: rgba(214,180,106,.18);
-      border-color: rgba(214,180,106,.55);
-    }
-
-    /* ===== Sections ===== */
-    section{margin-top:26px}
-    .sectionTitleRow{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:14px;
-      margin-bottom:12px;
-    }
-    .sectionTitle{
-      font-size:22px;
-      margin:0;
-      letter-spacing:.2px;
-    }
-    .sectionSub{
-      margin:0;
-      color:var(--muted2);
-      font-size:14px;
-    }
-    .divider{
-      height:1px;
-      background: rgba(255,255,255,.08);
-      margin: 16px 0;
-    }
-
-    .grid4{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap:14px;
-    }
-    @media (max-width: 780px){
-      .grid4{grid-template-columns:1fr}
-    }
-    .miniCard{
-      padding:16px 16px 14px;
-      background: var(--panel2);
-      border:1px solid rgba(255,255,255,.10);
-      border-radius: 16px;
-    }
-    .miniLabel{color:rgba(214,180,106,.95); font-size:13px; margin-bottom:8px}
-    .miniTitle{margin:0 0 6px; font-size:18px}
-    .miniText{margin:0; color:var(--muted); font-size:14px; line-height:1.6}
-
-    .box{
-      padding:16px;
-      border-radius: 18px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-    }
-
-    ul{margin:10px 0 0 20px; color:var(--muted); line-height:1.7}
-
-    /* ===== Contact ===== */
-    .contactGrid{
-      display:grid;
-      grid-template-columns: 1fr .9fr;
-      gap:14px;
-    }
-    @media (max-width: 900px){
-      .contactGrid{grid-template-columns:1fr}
-    }
-
-    .bigLineBtn{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-      padding:14px 16px;
-      border-radius: 16px;
-      border:1px solid rgba(214,180,106,.40);
-      background: rgba(214,180,106,.14);
-      font-weight:700;
-      letter-spacing:.3px;
-    }
-    .bigLineBtn:hover{
-      background: rgba(214,180,106,.18);
-      border-color: rgba(214,180,106,.60);
-    }
-    .bigLineBtn svg{width:20px;height:20px}
-
-    /* ===== Footer signature ===== */
+    /* ---------- FOOTER ---------- */
     footer{
-      margin-top:26px;
-      padding-top:18px;
-      border-top:1px solid rgba(255,255,255,.08);
-      color: var(--muted2);
-      display:flex;
-      justify-content:space-between;
-      gap:14px;
-      flex-wrap:wrap;
+      padding:26px;
+      text-align:center;
+      color:var(--muted);
       font-size:13px;
-    }
-    .sig{
-      color: rgba(214,180,106,.85);
-      font-weight:600;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="navWrap">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>KRUNIKI</span>
-      </div>
 
-      <nav aria-label="Main navigation">
-        <a href="#about">เกี่ยวกับ</a>
-        <a href="#services">บริการ</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">ติดต่อ</a>
-      </nav>
-    </div>
+<header>
+  <div class="brand">
+    <span class="dot"></span>
+    KRUNIKI
+  </div>
 
-    <!-- Social icons (TOP) -->
-    <div class="socialBar" aria-label="KRUNIKI social links">
-      <div class="socialLeft">Connect gently • ติดตาม KRUNIKI</div>
+  <nav>
+    <a href="#about">เกี่ยวกับ</a>
+    <a href="#services">บริการ</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
 
-      <div class="socialIcons">
-        <!-- LINE OA (invite) -->
-        <a class="iconBtn" href="https://lin.ee/qdp20di" target="_blank" rel="noopener noreferrer" aria-label="LINE OA (Invite)">
-          <!-- LINE icon -->
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 3C6.9 3 3 6.32 3 10.41c0 2.38 1.32 4.47 3.38 5.84-.12.42-.43 1.55-.5 1.9-.09.42.16.42.34.3.14-.09 2.26-1.54 3.2-2.18.51.07 1.04.1 1.58.1 5.1 0 9-3.32 9-7.41C21 6.32 17.1 3 12 3Z" stroke="rgba(255,255,255,.92)" stroke-width="1.2"/>
-            <path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01" stroke="rgba(255,255,255,.92)" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </a>
+  <!-- SOCIAL ICONS -->
+  <div class="social">
+    <a href="https://lin.ee/qdp20di" target="_blank">💬</a>
+    <a href="https://shop.line.me/@mew3619k" target="_blank">🛍</a>
+    <a href="https://www.facebook.com/kruniki/" target="_blank">f</a>
+    <a href="https://www.youtube.com/@kruniki" target="_blank">▶</a>
+    <a href="https://www.tiktok.com/@kruniki.official" target="_blank">♪</a>
+    <a href="https://www.instagram.com/kruniki.official/" target="_blank">◎</a>
+  </div>
+</header>
 
-        <!-- LINE SHOP -->
-        <a class="iconBtn" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener noreferrer" aria-label="LINE SHOP">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7 8h14l-2 11H7L5 5H3" stroke="rgba(255,255,255,.92)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="rgba(255,255,255,.92)"/>
-          </svg>
-        </a>
+<section class="card">
+  <p class="gold-text">
+    Connect gently • ติดตาม KRUNIKI
+  </p>
 
-        <!-- Facebook -->
-        <a class="iconBtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M14 8.5V7.2c0-.7.5-1.2 1.2-1.2H17V3h-2.3C12.6 3 11 4.6 11 6.7V8.5H9v3h2V21h3v-9.5h2.5l.5-3H14Z" fill="rgba(255,255,255,.92)"/>
-          </svg>
-        </a>
+  <h2>พื้นที่เรียนรู้ของหัวใจ</h2>
+  <p>
+    ที่นี่คือพื้นที่ของ KRUNIKI สำหรับการเยียวยาใจอย่างเป็นระบบ
+    ผ่านสติ ความนิ่ง และการกลับมาเชื่อมต่อหัวใจของตัวเองอย่างอ่อนโยน
+  </p>
+</section>
 
-        <!-- YouTube -->
-        <a class="iconBtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M21 8.2c0-1.2-1-2.2-2.2-2.2C16.8 5.6 14.4 5.4 12 5.4s-4.8.2-6.8.6C4 6.2 3 7.2 3 8.4v7.2c0 1.2 1 2.2 2.2 2.4 2 .4 4.4.6 6.8.6s4.8-.2 6.8-.6c1.2-.2 2.2-1.2 2.2-2.4V8.2Z" stroke="rgba(255,255,255,.92)" stroke-width="1.2"/>
-            <path d="M10.2 9.3v5.4L15.3 12l-5.1-2.7Z" fill="rgba(255,255,255,.92)"/>
-          </svg>
-        </a>
+<footer>
+  © 2026 KRUNIKI • Heart Stillness Healing
+</footer>
 
-        <!-- TikTok -->
-        <a class="iconBtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M14 3c.5 3.2 2.4 5 5 5v3c-1.9 0-3.6-.7-5-2v6.3c0 3-2.4 5.4-5.4 5.4S3.2 18.3 3.2 15.3c0-3 2.4-5.4 5.4-5.4.4 0 .8 0 1.2.1v3.1c-.4-.2-.8-.3-1.2-.3-1.3 0-2.4 1.1-2.4 2.4 0 1.3 1.1 2.4 2.4 2.4 1.3 0 2.4-1.1 2.4-2.4V3h2Z" fill="rgba(255,255,255,.92)"/>
-          </svg>
-        </a>
-
-        <!-- Instagram -->
-        <a class="iconBtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7.2 3h9.6A4.2 4.2 0 0 1 21 7.2v9.6A4.2 4.2 0 0 1 16.8 21H7.2A4.2 4.2 0 0 1 3 16.8V7.2A4.2 4.2 0 0 1 7.2 3Z" stroke="rgba(255,255,255,.92)" stroke-width="1.2"/>
-            <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="rgba(255,255,255,.92)" stroke-width="1.2"/>
-            <path d="M17.2 6.8h.01" stroke="rgba(255,255,255,.92)" stroke-width="2.4" stroke-linecap="round"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap" id="top">
-    <div class="hero">
-      <div>
-        <div class="banner card">
-          <img src="home-banner.png" alt="KRUNIKI Home Banner" />
-        </div>
-
-        <h1>KRUNIKI</h1>
-        <div class="tagline">Heart Awakening • Self-Healing • Conscious Learning</div>
-
-        <div class="pill">เว็บไซต์กำลังอยู่ระหว่างการจัดเตรียมอย่างอ่อนโยน 🤍</div>
-
-        <div class="ctaRow">
-          <a class="btn primary" href="#services">ดูสิ่งที่มีในตอนนี้</a>
-          <a class="btn" href="#contact">ช่องทางติดต่อ</a>
-        </div>
-      </div>
-
-      <div>
-        <section id="about" class="card" style="padding:18px 18px 16px;">
-          <div class="sectionTitleRow">
-            <h2 class="sectionTitle" style="margin:0;">พื้นที่เรียนรู้ของหัวใจ</h2>
-            <p class="sectionSub">A gentle space to return to yourself.</p>
-          </div>
-          <div class="divider"></div>
-          <div class="box">
-            ที่นี่คือพื้นที่ของ KRUNIKI สำหรับการเยียวยาใจอย่างเป็นระบบ
-            ผ่านการฝึกสติ ความนิ่ง และการกลับมาเชื่อมต่อหัวใจของตัวเองอย่างอ่อนโยน —
-            แบบที่ “ทำได้จริงในชีวิตประจำวัน”
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <section id="services">
-      <div class="sectionTitleRow">
-        <h2 class="sectionTitle">สิ่งที่คุณจะพบที่นี่</h2>
-        <p class="sectionSub">What you’ll find here</p>
-      </div>
-
-      <div class="grid4">
-        <div class="miniCard">
-          <div class="miniLabel">20-Minute Session</div>
-          <h3 class="miniTitle">KRUNIKI Heart Awakening — Session 20 นาที</h3>
-          <p class="miniText">พื้นที่ปลอดภัยสำหรับการรับฟังใจ เยียวยา และกลับสู่ศูนย์กลางภายใน</p>
-        </div>
-
-        <div class="miniCard">
-          <div class="miniLabel">Programs</div>
-          <h3 class="miniTitle">โปรแกรม Self-Healing และการเรียนรู้แบบมีผู้ชี้ทาง</h3>
-          <p class="miniText">เส้นทางเยียวยาอย่างเป็นระบบ ผ่านสติ ลมหายใจ และความเข้าใจตนเอง</p>
-        </div>
-
-        <div class="miniCard">
-          <div class="miniLabel">Practices</div>
-          <h3 class="miniTitle">การฝึกความนิ่งและลมหายใจอย่างลึกซึ้ง</h3>
-          <p class="miniText">Stillness-based &amp; Breath-based Practices เพื่อปรับสมดุลระบบประสาท</p>
-        </div>
-
-        <div class="miniCard">
-          <div class="miniLabel">Learning</div>
-          <h3 class="miniTitle">แหล่งเรียนรู้และเนื้อหาเชิงการศึกษา</h3>
-          <p class="miniText">Learning Resources &amp; Educational Content สำหรับผู้ที่ต้องการเข้าใจการเยียวยาอย่างลึกและมีรากฐาน</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="resources" class="card" style="padding:18px 18px 16px;">
-      <div class="sectionTitleRow">
-        <h2 class="sectionTitle" style="margin:0;">Resources</h2>
-        <p class="sectionSub">กำลังทยอยเพิ่มเนื้อหา</p>
-      </div>
-      <div class="divider"></div>
-      <div class="box">
-        เราจะเพิ่มบทความสั้น ๆ, แบบฝึก, และแนวทางการดูแลหัวใจเป็นลำดับ (เร็ว ๆ นี้: หน้า “Programs”, “Sessions”, และ “Workbook”)
-        <ul>
-          <li>Breath &amp; Stillness Guides</li>
-          <li>Self-Healing Notes</li>
-          <li>Educational Pages (Foundations)</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="card" style="padding:18px 18px 16px;">
-      <div class="sectionTitleRow">
-        <h2 class="sectionTitle" style="margin:0;">ติดต่อ / Follow</h2>
-        <p class="sectionSub">Connect gently</p>
-      </div>
-      <div class="divider"></div>
-
-      <div class="contactGrid">
-        <div class="box">
-          <p style="margin:0 0 10px; color: var(--muted); line-height:1.7;">
-            นิกี้สามารถเชื่อมต่อกันได้ผ่านช่องทางด้านบน (Social Icons) หรือกดปุ่ม LINE OA ด้านขวาเพื่อเริ่มต้นคุยกันอย่างอ่อนโยน 🤍
-          </p>
-          <p style="margin:0; color: var(--muted2); font-size:13px;">
-            * หากคลิกแล้วไม่ไป ให้ลองรีเฟรชหน้าเว็บ (Cmd+R) และรอ GitHub Pages อัปเดตประมาณ 1–3 นาที
-          </p>
-        </div>
-
-        <a class="bigLineBtn" href="https://lin.ee/qdp20di" target="_blank" rel="noopener noreferrer" aria-label="Connect via LINE OA">
-          <!-- LINE icon -->
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 3C6.9 3 3 6.32 3 10.41c0 2.38 1.32 4.47 3.38 5.84-.12.42-.43 1.55-.5 1.9-.09.42.16.42.34.3.14-.09 2.26-1.54 3.2-2.18.51.07 1.04.1 1.58.1 5.1 0 9-3.32 9-7.41C21 6.32 17.1 3 12 3Z" stroke="rgba(0,0,0,.85)" stroke-width="1.2"/>
-            <path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01" stroke="rgba(0,0,0,.85)" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          เชื่อมต่อหัวใจผ่าน LINE OA
-        </a>
-      </div>
-
-      <footer>
-        <div>© <span id="year"></span> KRUNIKI</div>
-        <div class="sig">Heart Stillness Healing</div>
-      </footer>
-    </section>
-  </main>
-
-  <script>
-    // footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
