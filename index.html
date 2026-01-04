@@ -64,6 +64,7 @@
       font-weight:800; letter-spacing:.22em;
       text-transform:uppercase;
       font-size:14px;
+      color: var(--gold); /* ✅ KRUNIKI สีทอง */
     }
     .dot{
       width:8px;height:8px;border-radius:999px;
@@ -129,12 +130,18 @@
     .hero{
       margin-top:22px;
       padding:26px;
+
+      /* ✅ สำคัญ: ทำให้ order ใช้งานได้ (เพื่อจัดลำดับบนมือถือ) */
+      display:flex;
+      flex-direction:column;
+      gap:16px;
     }
     .heroGrid{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
       gap:18px;
       align-items:stretch;
+      order:1;
     }
 
     .goldline{
@@ -205,11 +212,11 @@
     }
 
     .banner{
-      margin-top:16px;
       border-radius: var(--r2);
       overflow:hidden;
       border:1px solid rgba(255,255,255,.08);
       box-shadow: 0 18px 60px rgba(0,0,0,.55);
+      order:2;
     }
     .banner img{
       width:100%;
@@ -341,15 +348,19 @@
       }
       .wrap{padding:18px 14px 64px}
       .hero{padding:18px}
+
+      /* ✅ Mobile order: รูป (banner) -> การ์ดคำคม -> ข้อความ */
+      .banner{order:1}
+      .heroGrid{order:2}
+
+      /* ให้ส่วนใน heroGrid เรียงแนวตั้ง และสลับลำดับ: คำคมก่อน ข้อความ */
       .heroGrid{
-        grid-template-columns: 1fr;
+        display:flex;
+        flex-direction:column;
         gap:14px;
       }
-
-      /* ✅ แก้ “ลำดับ” บนมือถือ: ข้อความ -> การ์ดคำคม -> รูป (ไม่หล่น) */
-      .heroText{order:1}
       .quoteCard{order:2}
-      .banner{order:3; margin-top:12px}
+      .heroText{order:3}
 
       h1{font-size:32px}
       .grid2{grid-template-columns:1fr}
@@ -532,9 +543,9 @@
 
       <div class="contactGrid">
         <div class="note">
-          นิกี้สามารถเชื่อมต่อกันได้ผ่านช่องทางด้านบน (Social Icons) หรือเริ่มต้นคุยกันอย่างอ่อนโยนผ่าน LINE OA 💛
+          KRUNIKI สามารถเชื่อมต่อกันได้ผ่านช่องทางด้านบน (Social Icons) หรือเริ่มต้นคุยกันอย่างอ่อนโยนผ่าน LINE OA 💛
           <div style="margin-top:10px;color:var(--muted2);font-size:13px;">
-            * ถ้าคลิกแล้วไม่ไป ให้ลองรีเฟรชหน้าเว็บ (Cmd+R) และรอ GitHub Pages อัปเดตประมาณ 1–3 นาที
+           
           </div>
         </div>
 
