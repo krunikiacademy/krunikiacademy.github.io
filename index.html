@@ -2,160 +2,691 @@
 <html lang="th">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>KRUNIKI Academy</title>
-  <meta name="description" content="KRUNIKI – Heart Awakening • Self-Healing • Conscious Learning" />
+  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
 
   <style>
     :root{
-      --bg:#070707;
-      --panel:rgba(255,255,255,.06);
-      --panel2:rgba(255,255,255,.04);
-      --stroke:rgba(255,255,255,.12);
-      --text:rgba(255,255,255,.92);
-      --muted:rgba(255,255,255,.70);
-      --gold:#d6b46a;
-      --shadow:0 14px 50px rgba(0,0,0,.55);
-      --r:18px;
+      --bg: #070707;
+      --bg2: #0a0a0a;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.04);
+      --stroke: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.55);
+      --gold: #d6b46a;
+      --gold2: rgba(214,180,106,.20);
+      --shadow: 0 14px 50px rgba(0,0,0,.55);
+      --r: 18px;
+
+      /* ⭐ ปรับ “ตัวอักษรสีทอง” ให้ใหญ่ขึ้นอ่านง่ายขึ้นตรงนี้ */
+      --gold-font: 17px;          /* เดิมมักเล็ก (14-15) ตอนนี้เพิ่มแล้ว */
+      --gold-font-strong: 18px;   /* สำหรับหัวข้อ gold สำคัญ */
     }
 
-    *{box-sizing:border-box}
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
     body{
       margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
-      background:var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans Thai", sans-serif;
       color:var(--text);
-      line-height:1.6;
+      background:
+        radial-gradient(900px 650px at 15% 12%, rgba(214,180,106,.14), transparent 60%),
+        radial-gradient(900px 650px at 90% 20%, rgba(255,255,255,.05), transparent 62%),
+        linear-gradient(180deg, var(--bg), var(--bg2) 35%, #050505);
+      overflow-x:hidden;
     }
 
-    a{color:inherit;text-decoration:none}
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ max-width:1180px; margin:0 auto; padding:22px 20px 80px; }
 
-    /* ---------- GOLD TEXT (จุดที่เพิ่ม) ---------- */
-    .gold-text{
-      color:var(--gold);
-      font-size:16.5px;        /* <<< ปรับขนาดตรงนี้ */
-      font-weight:600;
-      letter-spacing:.4px;
-    }
-
-    /* ---------- HEADER ---------- */
+    /* Header */
     header{
-      padding:20px 28px;
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,7,7,.55);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .topbar{
       display:flex;
       align-items:center;
       justify-content:space-between;
+      gap:16px;
+      padding:14px 20px;
+      max-width:1180px;
+      margin:0 auto;
     }
-
     .brand{
       display:flex;
       align-items:center;
       gap:10px;
       font-weight:700;
-      letter-spacing:6px;
+      letter-spacing:.28em;
     }
-
     .dot{
       width:8px;height:8px;border-radius:999px;
       background:var(--gold);
-      box-shadow:0 0 18px rgba(214,180,106,.45);
+      box-shadow: 0 0 18px rgba(214,180,106,.55);
     }
 
     nav{
       display:flex;
-      gap:20px;
-      font-size:14px;
+      align-items:center;
+      gap:18px;
       color:var(--muted);
+      font-weight:500;
+      font-size:14px;
+    }
+    nav a{
+      padding:8px 10px;
+      border-radius:999px;
+      transition:.18s ease;
+    }
+    nav a:hover{
+      background:rgba(255,255,255,.06);
+      color:rgba(255,255,255,.90);
     }
 
-    /* ---------- SOCIAL ICONS TOP ---------- */
+    /* Social icons on TOP RIGHT */
     .social{
       display:flex;
+      align-items:center;
       gap:10px;
     }
-
-    .social a{
-      width:36px;height:36px;
+    .iconbtn{
+      width:38px;height:38px;
+      border-radius:999px;
       display:grid;
       place-items:center;
-      border-radius:999px;
-      background:var(--panel);
-      border:1px solid var(--stroke);
-      transition:.2s;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 8px 28px rgba(0,0,0,.35);
+      transition:.18s ease;
     }
-
-    .social a:hover{
-      background:var(--panel2);
-      transform:translateY(-1px);
+    .iconbtn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.16);
     }
+    .iconbtn svg{ width:18px; height:18px; opacity:.92; }
 
-    /* ---------- SECTION ---------- */
-    section{
-      padding:32px 28px;
-      max-width:1200px;
-      margin:auto;
+    /* Sections */
+    section{ scroll-margin-top:92px; }
+    .sectionTitleRow{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:14px;
+      margin:26px 0 14px;
     }
-
-    .card{
-      background:linear-gradient(180deg,var(--panel),var(--panel2));
-      border:1px solid var(--stroke);
-      border-radius:var(--r);
-      padding:22px;
-      box-shadow:var(--shadow);
+    .h2{
+      font-size:22px;
+      font-weight:750;
+      letter-spacing:.02em;
+      margin:0;
     }
-
-    h1,h2,h3{margin-top:0}
-
-    /* ---------- FOOTER ---------- */
-    footer{
-      padding:26px;
-      text-align:center;
-      color:var(--muted);
+    .hint{
+      color:var(--muted2);
       font-size:13px;
+    }
+
+    /* Hero */
+    .hero{
+      margin-top:14px;
+      padding:22px;
+      border-radius:var(--r);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-40px;
+      background:
+        radial-gradient(540px 420px at 8% 30%, rgba(214,180,106,.16), transparent 60%),
+        radial-gradient(540px 420px at 85% 15%, rgba(255,255,255,.07), transparent 60%);
+      pointer-events:none;
+      filter: blur(2px);
+    }
+    .heroGrid{
+      position:relative;
+      display:grid;
+      grid-template-columns: 1.25fr .9fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .kicker{
+      color:var(--gold);
+      font-size:var(--gold-font); /* ⭐ ตัวอักษรสีทองที่นิกี้อยากให้ใหญ่ขึ้น */
+      font-weight:650;
+      letter-spacing:.02em;
+      margin:0 0 6px;
+    }
+    .kicker strong{
+      font-size:var(--gold-font-strong);
+      font-weight:750;
+    }
+    .heroTitle{
+      margin:0;
+      font-size:34px;
+      font-weight:820;
+      letter-spacing:.01em;
+      line-height:1.15;
+    }
+    .heroDesc{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+      max-width:62ch;
+    }
+
+    .heroCard{
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+      padding:16px 16px 14px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:8px;
+    }
+    .heroCardTop{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding-bottom:10px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .heroCardTitle{
+      margin:0;
+      font-size:18px;
+      font-weight:800;
+    }
+    .heroCardTag{
+      color:var(--muted2);
+      font-size:13px;
+    }
+    .heroQuote{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    /* Collage image */
+    .collage{
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background:#0a0a0a;
+      box-shadow: 0 14px 50px rgba(0,0,0,.45);
+      position:relative;
+      min-height: 350px;
+    }
+    .collage img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter: saturate(1.02) contrast(1.02);
+    }
+    .watermark{
+      position:absolute;
+      right:14px;
+      top:12px;
+      color:rgba(214,180,106,.55);
+      font-weight:700;
+      letter-spacing:.04em;
+      font-size:12px;
+      user-select:none;
+      pointer-events:none;
+      text-shadow:0 6px 20px rgba(0,0,0,.55);
+    }
+
+    /* Buttons (pills) */
+    .pills{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.86);
+      font-weight:650;
+      font-size:14px;
+      transition:.18s ease;
+    }
+    .pill:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.16);
+    }
+    .pill.gold{
+      background: rgba(214,180,106,.12);
+      border-color: rgba(214,180,106,.25);
+      color: rgba(255,255,255,.92);
+    }
+
+    /* Cards grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:14px;
+      margin-top:16px;
+    }
+    .card{
+      border-radius:16px;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+      padding:16px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-40px;
+      background: radial-gradient(520px 300px at 15% 20%, rgba(214,180,106,.12), transparent 60%);
+      pointer-events:none;
+      opacity:.75;
+    }
+    .cardInner{ position:relative; }
+    .label{
+      color:var(--gold);
+      font-size:var(--gold-font); /* ⭐ label สีทองใหญ่ขึ้น */
+      font-weight:750;
+      margin:0 0 6px;
+    }
+    .title{
+      margin:0;
+      font-size:18px;
+      font-weight:820;
+      letter-spacing:.01em;
+    }
+    .desc{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    /* Resources box */
+    .resources{
+      margin-top:18px;
+      border-radius:16px;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+      padding:16px;
+    }
+    .resources p{
+      margin:0 0 10px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+    .resources ul{
+      margin:0;
+      padding-left:18px;
+      color:rgba(255,255,255,.86);
+    }
+    .resources li{
+      margin:6px 0;
+      color: rgba(255,255,255,.80);
+    }
+
+    /* Contact section */
+    .contactGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:14px;
+      margin-top:16px;
+    }
+    .contactBox{
+      border-radius:16px;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+      padding:16px;
+    }
+    .contactBox .note{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.75;
+      margin:0;
+    }
+    .contactCta{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:10px;
+      padding:16px;
+      border-radius:16px;
+      border:1px solid rgba(214,180,106,.22);
+      background: rgba(214,180,106,.10);
+      height:100%;
+    }
+    .ctaTitle{
+      margin:0;
+      font-weight:850;
+      letter-spacing:.01em;
+      font-size:18px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .ctaDesc{
+      margin:0;
+      color: rgba(255,255,255,.82);
+      line-height:1.7;
+      font-size:14px;
+    }
+    .ctaBtn{
+      margin-top:6px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      background: rgba(0,0,0,.25);
+      border:1px solid rgba(255,255,255,.14);
+      font-weight:800;
+      transition:.18s ease;
+    }
+    .ctaBtn:hover{
+      transform: translateY(-1px);
+      background: rgba(0,0,0,.32);
+      border-color: rgba(255,255,255,.22);
+    }
+
+    /* Footer */
+    footer{
+      margin-top:26px;
+      padding:18px 0 0;
+      color: rgba(255,255,255,.62);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      font-size:13px;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .collage{ min-height: 290px; }
+      .grid{ grid-template-columns: 1fr; }
+      .contactGrid{ grid-template-columns: 1fr; }
+      nav{ display:none; } /* ให้ดูสะอาดบนจอเล็ก */
+    }
+    @media (max-width: 520px){
+      .heroTitle{ font-size:28px; }
+      .topbar{ padding:12px 14px; }
+      .wrap{ padding:18px 14px 70px; }
+      .iconbtn{ width:36px; height:36px; }
+      :root{
+        --gold-font: 16px;
+        --gold-font-strong: 17px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>KRUNIKI</span>
+      </div>
 
-<header>
-  <div class="brand">
-    <span class="dot"></span>
-    KRUNIKI
-  </div>
+      <nav aria-label="main navigation">
+        <a href="#about">เกี่ยวกับ</a>
+        <a href="#services">บริการ</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">ติดต่อ</a>
+      </nav>
 
-  <nav>
-    <a href="#about">เกี่ยวกับ</a>
-    <a href="#services">บริการ</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">ติดต่อ</a>
-  </nav>
+      <!-- Social icons (TOP) -->
+      <div class="social" aria-label="KRUNIKI social links">
+        <!-- LINE OA -->
+        <a class="iconbtn" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+          <!-- chat bubble -->
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 18l-3 3V6.8C4 5.25 5.25 4 6.8 4h10.4C18.75 4 20 5.25 20 6.8v7.6C20 15.95 18.75 17.2 17.2 17.2H9.6L7 18z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M8 9h8M8 12h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </a>
 
-  <!-- SOCIAL ICONS -->
-  <div class="social">
-    <a href="https://lin.ee/qdp20di" target="_blank">💬</a>
-    <a href="https://shop.line.me/@mew3619k" target="_blank">🛍</a>
-    <a href="https://www.facebook.com/kruniki/" target="_blank">f</a>
-    <a href="https://www.youtube.com/@kruniki" target="_blank">▶</a>
-    <a href="https://www.tiktok.com/@kruniki.official" target="_blank">♪</a>
-    <a href="https://www.instagram.com/kruniki.official/" target="_blank">◎</a>
-  </div>
-</header>
+        <!-- LINE SHOP -->
+        <a class="iconbtn" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE Shop">
+          <!-- shopping bag -->
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 8V7a5 5 0 0 1 10 0v1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M6.2 8h11.6l-1 13H7.2l-1-13z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+        </a>
 
-<section class="card">
-  <p class="gold-text">
-    Connect gently • ติดตาม KRUNIKI
-  </p>
+        <!-- Facebook -->
+        <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M14 8.5V7.2c0-.9.6-1.2 1.2-1.2H17V3.5h-2.2C12.9 3.5 12 5 12 7v1.5H10v2.7h2V21h3v-9.8h2.2L18 8.5h-3.0z" fill="currentColor"/>
+          </svg>
+        </a>
 
-  <h2>พื้นที่เรียนรู้ของหัวใจ</h2>
-  <p>
-    ที่นี่คือพื้นที่ของ KRUNIKI สำหรับการเยียวยาใจอย่างเป็นระบบ
-    ผ่านสติ ความนิ่ง และการกลับมาเชื่อมต่อหัวใจของตัวเองอย่างอ่อนโยน
-  </p>
-</section>
+        <!-- YouTube -->
+        <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 7.8a3 3 0 0 0-2.2-2.2C17 5.2 12 5.2 12 5.2s-5 0-6.8.4A3 3 0 0 0 3 7.8 31.6 31.6 0 0 0 2.8 12c0 1.4.1 2.8.2 4.2a3 3 0 0 0 2.2 2.2c1.8.4 6.8.4 6.8.4s5 0 6.8-.4a3 3 0 0 0 2.2-2.2c.1-1.4.2-2.8.2-4.2s-.1-2.8-.2-4.2z" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M10.5 9.5v5l4.5-2.5-4.5-2.5z" fill="currentColor"/>
+          </svg>
+        </a>
 
-<footer>
-  © 2026 KRUNIKI • Heart Stillness Healing
-</footer>
+        <!-- TikTok -->
+        <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M14 4v10.2a3.8 3.8 0 1 1-3.4-3.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M14 4c.9 2.7 2.7 4.5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </a>
 
+        <!-- Instagram -->
+        <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="heroGrid">
+        <div>
+          <p class="kicker"><strong>Connect gently</strong> • ติดตาม KRUNIKI</p>
+          <h1 class="heroTitle">พื้นที่เรียนรู้ของหัวใจ</h1>
+          <p class="heroDesc">
+            ที่นี่คือพื้นที่ของ KRUNIKI สำหรับการเยียวยาใจอย่างเป็นระบบ ผ่านสติ ความนิ่ง
+            และการกลับมาเชื่อมต่อหัวใจของตัวเองอย่างอ่อนโยน — แบบที่ “ทำได้จริงในชีวิตประจำวัน”
+          </p>
+
+          <div class="pills">
+            <a class="pill gold" href="#services">ดูสิ่งที่มีในตอนนี้</a>
+            <a class="pill" href="#contact">ช่องทางติดต่อ</a>
+          </div>
+        </div>
+
+        <div class="heroCard">
+          <div class="heroCardTop">
+            <p class="heroCardTitle">A gentle space</p>
+            <p class="heroCardTag">to return to yourself.</p>
+          </div>
+          <p class="heroQuote">
+            “การกลับบ้านที่หัวใจ” ไม่ได้คือการเปลี่ยนตัวเองให้เป็นคนใหม่ทันที
+            แต่คือการกลับมารับฟังความจริงภายในอย่างไม่ตัดสิน และค่อย ๆ คืนพลังให้ชีวิต
+          </p>
+        </div>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <div class="collage">
+        <div class="watermark">@KRUNIKI</div>
+        <!-- ใช้ไฟล์รูปใน repo: home-banner.png -->
+        <img src="home-banner.png" alt="KRUNIKI collage banner" />
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="sectionTitleRow">
+        <h2 class="h2">สิ่งที่คุณจะพบที่นี่</h2>
+        <div class="hint">What you’ll find here</div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="cardInner">
+            <p class="label">20-Minute Session</p>
+            <p class="title">KRUNIKI Heart Awakening — Session 20 นาที</p>
+            <p class="desc">
+              พื้นที่ปลอดภัยสำหรับการรับฟังใจ เยียวยา และกลับสู่ศูนย์กลางภายใน
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <p class="label">Programs</p>
+            <p class="title">โปรแกรม Self-Healing และการเรียนรู้แบบมีผู้ชี้ทาง</p>
+            <p class="desc">
+              เส้นทางเยียวยาอย่างเป็นระบบ ผ่านสติ ลมหายใจ และความเข้าใจตนเอง
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <p class="label">Practices</p>
+            <p class="title">การฝึกความนิ่งและลมหายใจอย่างลึกซึ้ง</p>
+            <p class="desc">
+              Stillness-based &amp; Breath-based Practices เพื่อปรับสมดุลระบบประสาท
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <p class="label">Learning</p>
+            <p class="title">แหล่งเรียนรู้และเนื้อหาเชิงการศึกษา</p>
+            <p class="desc">
+              Learning Resources &amp; Educational Content สำหรับผู้ที่ต้องการเข้าใจการเยียวยาอย่างลึกและมีรากฐาน
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources">
+      <div class="sectionTitleRow">
+        <h2 class="h2">Resources</h2>
+        <div class="hint">กำลังทยอยเพิ่มเนื้อหา</div>
+      </div>
+
+      <div class="resources">
+        <p>
+          เราจะเพิ่มบทความสั้น ๆ, แบบฝึก, และแนวทางการดูแลหัวใจเป็นลำดับ (เร็ว ๆ นี้: หน้า “Programs”, “Sessions”, และ “Workbook”)
+        </p>
+        <ul>
+          <li>Breath &amp; Stillness Guides</li>
+          <li>Self-Healing Notes</li>
+          <li>Educational Pages (Foundations)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="sectionTitleRow">
+        <h2 class="h2">ติดต่อ / Follow</h2>
+        <div class="hint">Connect gently</div>
+      </div>
+
+      <div class="contactGrid">
+        <div class="contactBox">
+          <p class="note">
+            คุณสามารถเชื่อมต่อกับนิกี้ได้ทาง “ไอคอนโซเชี่ยลด้านบนสุด” (Social Icons)
+            หรือกดปุ่ม LINE OA ด้านขวาเพื่อเริ่มต้นคุยกันอย่างอ่อนโยน 🤍
+            <br /><br />
+           
+          </p>
+        </div>
+
+        <div class="contactCta">
+          <p class="ctaTitle">
+            <!-- small chat icon -->
+            <span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:10px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.10);">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                <path d="M7 18l-3 3V6.8C4 5.25 5.25 4 6.8 4h10.4C18.75 4 20 5.25 20 6.8v7.6C20 15.95 18.75 17.2 17.2 17.2H9.6L7 18z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            เชื่อมต่อหัวใจผ่าน LINE OA
+          </p>
+          <p class="ctaDesc">
+            เริ่มต้นทักได้เลย — นิกี้จะค่อย ๆ พาคุณกลับมาฟังหัวใจตัวเองอย่างปลอดภัย
+          </p>
+          <a class="ctaBtn" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">
+            เปิด LINE OA
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 KRUNIKI</span>
+      <span>•</span>
+      <span>Heart Stillness Healing</span>
+    </footer>
+  </main>
+
+  <script>
+    // Smooth scroll for nav
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (!id || id.length < 2) return;
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', id);
+      });
+    });
+  </script>
 </body>
 </html>
