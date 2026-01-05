@@ -1,1 +1,362 @@
+ <style>
+    :root{
+      --bg:#070707;
+      --panel:rgba(255,255,255,.06);
+      --panel2:rgba(255,255,255,.035);
+      --stroke:rgba(255,255,255,.10);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.70);
+      --muted2:rgba(255,255,255,.52);
 
+      --gold:#d6b46a;
+      --gold2:rgba(214,180,106,.72);
+      --shadow:0 14px 50px rgba(0,0,0,.55);
+
+      --r:18px;
+      --r2:22px;
+
+      /* ✅ ปรับ “ทอง” ให้อ่านง่ายขึ้น */
+      --gold-font: 15.8px;   /* ขนาดทอง (desktop) */
+      --gold-font-m: 15.2px; /* ขนาดทอง (mobile) */
+      --gold-letter: .2px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1000px 600px at 20% 10%, rgba(214,180,106,.11), transparent 55%),
+        radial-gradient(900px 600px at 80% 0%, rgba(255,255,255,.06), transparent 60%),
+        linear-gradient(180deg, #050505, #070707 45%, #050505);
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1180px;margin:0 auto;padding:22px 18px 70px}
+
+    /* HEADER */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(180deg, rgba(0,0,0,.75), rgba(0,0,0,.35));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .topbar{
+      max-width:1180px;margin:0 auto;
+      padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+    }
+
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.22em;
+      text-transform:uppercase;
+      font-size:14px;
+      color: var(--gold); /* ✅ KRUNIKI สีทอง */
+    }
+    .dot{
+      width:8px;height:8px;border-radius:999px;
+      background:var(--gold);
+      box-shadow: 0 0 18px rgba(214,180,106,.55);
+      flex:0 0 auto;
+    }
+
+    nav{
+      display:flex; align-items:center; gap:18px;
+      color:var(--muted);
+      font-size:14px;
+      white-space:nowrap;
+    }
+    nav a{
+      padding:8px 10px;
+      border-radius:999px;
+      transition:.2s ease;
+    }
+    nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .right{
+      display:flex; align-items:center; gap:10px;
+    }
+
+    /* SOCIAL ICONS (top-right) */
+    .social{
+      display:flex; align-items:center; gap:10px;
+    }
+    .iconbtn{
+      width:40px;height:40px;
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      display:grid; place-items:center;
+      box-shadow: 0 10px 22px rgba(0,0,0,.32);
+      transition:.18s ease;
+    }
+    .iconbtn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(214,180,106,.35);
+      background: rgba(214,180,106,.10);
+    }
+    .iconbtn svg{
+      width:18px;height:18px;
+      opacity:.92;
+    }
+    .iconbtn.gold svg{color:var(--gold)}
+    .iconbtn .stroke{stroke:currentColor}
+    .iconbtn .fill{fill:currentColor}
+    .iconbtn{color:rgba(255,255,255,.86)}
+    .iconbtn.gold{color:var(--gold)}
+
+    /* SECTIONS */
+    section{padding:26px 0}
+    .panel{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius: var(--r2);
+      box-shadow: var(--shadow);
+    }
+
+    /* HERO */
+    .hero{
+      margin-top:22px;
+      padding:26px;
+
+      /* ✅ สำคัญ: ทำให้ order ใช้งานได้ (เพื่อจัดลำดับบนมือถือ) */
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+      order:1;
+    }
+
+    .goldline{
+      color:var(--gold2);
+      font-size: var(--gold-font);
+      letter-spacing: var(--gold-letter);
+      font-weight:650;
+    }
+    .goldline strong{color:var(--gold);font-weight:800}
+
+    h1{
+      margin:10px 0 12px;
+      font-size:40px;
+      line-height:1.05;
+      letter-spacing:-.02em;
+    }
+    .lead{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.8;
+      max-width:60ch;
+    }
+
+    .ctaRow{
+      margin-top:16px;
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.06);
+      color:rgba(255,255,255,.88);
+      transition:.18s ease;
+      font-size:14px;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(214,180,106,.35)}
+    .btn.primary{
+      background: rgba(214,180,106,.12);
+      border-color: rgba(214,180,106,.35);
+      color: rgba(255,255,255,.92);
+    }
+
+    .quoteCard{
+      border-radius: var(--r2);
+      border:1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.22);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .quoteTop{
+      display:flex; align-items:baseline; justify-content:space-between;
+      gap:10px;
+      color:rgba(255,255,255,.76);
+      font-size:14px;
+      padding-bottom:12px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .quoteTop .leftTitle{font-weight:750;color:rgba(255,255,255,.86)}
+    .quote{
+      margin:12px 0 0;
+      color:rgba(255,255,255,.78);
+      line-height:1.8;
+      font-size:15px;
+    }
+
+    .banner{
+      border-radius: var(--r2);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow: 0 18px 60px rgba(0,0,0,.55);
+      order:2;
+    }
+    .banner img{
+      width:100%;
+      height:auto;
+      display:block;
+      transform: translateZ(0);
+    }
+
+    /* FIND HERE */
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    .card{
+      background: rgba(255,255,255,.045);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius: var(--r2);
+      padding:16px 16px 14px;
+    }
+    .kicker{
+      color:var(--gold2);
+      font-weight:750;
+      font-size: var(--gold-font);
+      letter-spacing: var(--gold-letter);
+    }
+    .card h3{
+      margin:8px 0 8px;
+      font-size:18px;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:14.5px;
+    }
+
+    /* RESOURCES */
+    .resHead{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px;
+      padding:18px 18px 0;
+    }
+    .resHead h2{
+      margin:0;
+      font-size:26px;
+      letter-spacing:-.01em;
+    }
+    .resTag{
+      color:var(--muted2);
+      font-size:13px;
+    }
+    .resBody{
+      padding:14px 18px 18px;
+    }
+    .resBox{
+      background: rgba(255,255,255,.035);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius: var(--r2);
+      padding:14px 14px 12px;
+      color:var(--muted);
+      line-height:1.8;
+    }
+    .resBox ul{margin:10px 0 0 18px}
+    .resBox li{margin:6px 0}
+
+    /* CONTACT */
+    .contactHead{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:12px;
+      padding:18px 18px 0;
+    }
+    .contactHead h2{margin:0;font-size:24px}
+    .contactHead .small{color:var(--muted2);font-size:13px}
+
+    .contactGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      padding:14px 18px 18px;
+    }
+    .note{
+      background: rgba(255,255,255,.035);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius: var(--r2);
+      padding:14px;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:14.5px;
+    }
+    .lineCta{
+      background: rgba(214,180,106,.10);
+      border:1px solid rgba(214,180,106,.35);
+      border-radius: var(--r2);
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:10px;
+    }
+    .lineCtaTitle{
+      font-weight:850;
+      letter-spacing:-.01em;
+      font-size:18px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .lineCta a.btn{
+      width:max-content;
+    }
+
+    footer{
+      margin-top:22px;
+      color:rgba(255,255,255,.62);
+      font-size:13px;
+      text-align:center;
+      padding:10px 0 0;
+    }
+    footer .gold{color:var(--gold2); font-size: var(--gold-font); letter-spacing: var(--gold-letter);}
+
+    /* RESPONSIVE */
+    @media (max-width: 920px){
+      nav{display:none;}
+    }
+
+    @media (max-width: 860px){
+      :root{
+        --gold-font: var(--gold-font-m);
+      }
+      .wrap{padding:18px 14px 64px}
+      .hero{padding:18px}
+
+      /* ✅ Mobile order: รูป (banner) -> การ์ดคำคม -> ข้อความ */
+      .banner{order:1}
+      .heroGrid{order:2}
+
+      /* ให้ส่วนใน heroGrid เรียงแนวตั้ง และสลับลำดับ: คำคมก่อน ข้อความ */
+      .heroGrid{
+        display:flex;
+        flex-direction:column;
+        gap:14px;
+      }
+      .quoteCard{order:2}
+      .heroText{order:3}
+
+      h1{font-size:32px}
+      .grid2{grid-template-columns:1fr}
+      .contactGrid{grid-template-columns:1fr}
+      .iconbtn{width:38px;height:38px}
+    }
+  </style>
