@@ -1,5 +1,4 @@
- <style>
-    :root{
+     :root{
       --bg:#070707;
       --panel:rgba(255,255,255,.06);
       --panel2:rgba(255,255,255,.035);
@@ -359,4 +358,4 @@
       .contactGrid{grid-template-columns:1fr}
       .iconbtn{width:38px;height:38px}
     }
-  </style>
+  
