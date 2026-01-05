@@ -361,3 +361,17 @@
   .brand span{
   color: var(--gold) !important;
 }
+/* ===== FIX: Services page content order (force correct flow) ===== */
+.panel.hero{
+  display: flex;
+  flex-direction: column;
+}
+
+.panel.hero > .heroGrid{ order: 0; }
+.panel.hero > .subPanel{ order: 1; }
+.panel.hero > .grid2{ order: 2; }
+
+/* กันกรณีมี rule เก่าไปตั้ง order ไว้ */
+.panel.hero > *{
+  align-self: stretch;
+}
