@@ -358,4 +358,6 @@
       .contactGrid{grid-template-columns:1fr}
       .iconbtn{width:38px;height:38px}
     }
-  
+  .brand span{
+  color: var(--gold) !important;
+}
