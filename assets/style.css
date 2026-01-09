@@ -523,3 +523,28 @@ header.siteHeader{
   font-size:.95rem;
   opacity:.9;
 }
+
+/* =========================
+   Bilingual (TH -> EN) Standard
+   KRUNIKI: Thai first, English next line
+========================= */
+
+.th{ display:block; }
+.en{
+  display:block;
+  margin-top:6px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* ช่วยให้หัวข้อ/คีย์เวิร์ดที่เป็น EN ไม่เด่นเกิน */
+.en strong{ color: rgba(255,255,255,.82); font-weight: 700; }
+
+/* ระยะห่างบล็อกที่มี 2 ภาษา */
+.bi{ margin: 0; }
+.bi + .bi{ margin-top: 10px; }
+
+/* ถ้าจะใช้กับหัวข้อ */
+.hbi{ margin:0; }
+.hbi .en{ margin-top:4px; font-size: 13.5px; color: var(--muted2); }
