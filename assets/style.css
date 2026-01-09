@@ -375,3 +375,43 @@
 .panel.hero > *{
   align-self: stretch;
 }
+
+/* =========================
+   Mobile Navigation
+========================= */
+
+/* ปุ่ม hamburger */
+.navToggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #c9a24d;
+  cursor: pointer;
+}
+
+/* mobile / tablet */
+@media (max-width: 768px) {
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    background: rgba(0,0,0,0.92);
+    position: absolute;
+    top: 64px;
+    right: 16px;
+    padding: 16px 20px;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.35);
+    z-index: 1000;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .navToggle {
+    display: block;
+  }
+}
