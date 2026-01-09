@@ -500,3 +500,9 @@ header.siteHeader{
 @media (max-width: 520px){
   .navInner{ gap:10px; }
 }
+
+.navToggle{
+  position: relative;
+  z-index: 2000;
+  pointer-events: auto;
+}
