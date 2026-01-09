@@ -419,3 +419,84 @@
   .navLinks a { padding: 10px 6px; }
   .navLinks a:active { opacity: 0.8; }
 }
+
+/* =========================
+   Mobile / iPad Navigation
+   (Hamburger + Drawer)
+   ========================= */
+
+/* กัน header ลอยทับเนื้อหา (ถ้า header เป็น fixed/sticky) */
+header.siteHeader{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* ให้ nav ข้างในจัดตำแหน่งดี ๆ */
+.navInner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+/* Desktop nav ปกติ */
+.navLinks{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+/* ปุ่ม Hamburger (ซ่อนบน Desktop) */
+.navToggle{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.25);
+  color:#fff;
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+}
+
+/* Drawer (เมนูมือถือ) — ซ่อนไว้ก่อน */
+.mobileDrawer{
+  display:none;
+  margin-top:12px;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.28);
+  backdrop-filter: blur(10px);
+}
+
+.mobileDrawer a{
+  display:block;
+  padding:12px 10px;
+  border-radius:12px;
+  color: rgba(255,255,255,.90);
+  text-decoration:none;
+}
+
+.mobileDrawer a:hover{
+  background: rgba(255,255,255,.06);
+}
+
+/* ====== Responsive: Tablet & Mobile ====== */
+@media (max-width: 980px){
+  /* ซ่อนเมนู Desktop */
+  .navLinks{ display:none; }
+
+  /* โชว์ปุ่ม Hamburger */
+  .navToggle{ display:inline-flex; align-items:center; justify-content:center; }
+
+  /* เปิด drawer เมื่อมี class .isOpen ที่ header */
+  header.siteHeader.isOpen .mobileDrawer{ display:block; }
+}
+
+/* iPad portrait / small phone */
+@media (max-width: 520px){
+  .navInner{ gap:10px; }
+}
