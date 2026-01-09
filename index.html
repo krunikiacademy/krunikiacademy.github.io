@@ -59,6 +59,19 @@
     if (window.innerWidth > 768) closeMenu();
   });
 </script>
+
+<script>
+  (function () {
+    const header = document.querySelector('header.siteHeader');
+    const btn = document.querySelector('.navToggle');
+    if (!header || !btn) return;
+
+    btn.addEventListener('click', function () {
+      const isOpen = header.classList.toggle('isOpen');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  })();
+</script>
   
 <body>
 <header class="siteHeader">
