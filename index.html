@@ -10,67 +10,7 @@
   <link rel="stylesheet" href="assets/style.css">
 
 </head>
-<script>
-  const toggle = document.querySelector('.navToggle');
-  const nav = document.querySelector('.navLinks');
 
-  function openMenu() {
-    nav.classList.add('active');
-    toggle.setAttribute('aria-expanded', 'true');
-  }
-
-  function closeMenu() {
-    nav.classList.remove('active');
-    toggle.setAttribute('aria-expanded', 'false');
-  }
-
-  function isOpen() {
-    return nav.classList.contains('active');
-  }
-
-  // Toggle button
-  toggle.addEventListener('click', (e) => {
-    e.stopPropagation(); // กันคลิกไปโดน document แล้วปิดทันที
-    if (isOpen()) closeMenu();
-    else openMenu();
-  });
-
-  // ปิดเมื่อคลิกลิงก์ในเมนู (มือถือ)
-  nav.querySelectorAll('a').forEach((a) => {
-    a.addEventListener('click', () => closeMenu());
-  });
-
-  // ปิดเมื่อคลิกนอกเมนู
-  document.addEventListener('click', (e) => {
-    if (!isOpen()) return;
-    const clickedInsideMenu = nav.contains(e.target);
-    const clickedToggle = toggle.contains(e.target);
-    if (!clickedInsideMenu && !clickedToggle) closeMenu();
-  });
-
-  // ปิดเมื่อกด ESC
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && isOpen()) closeMenu();
-  });
-
-  // กันกรณีหมุนจอ/ขยายหน้าจอ: ถ้ากลับไป desktop ให้ปิดเมนู mobile
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) closeMenu();
-  });
-</script>
-
-<script>
-  (function () {
-    const header = document.querySelector('header.siteHeader');
-    const btn = document.querySelector('.navToggle');
-    if (!header || !btn) return;
-
-    btn.addEventListener('click', function () {
-      const isOpen = header.classList.toggle('isOpen');
-      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-  })();
-</script>
   <body>
     
 <header class="siteHeader">
@@ -307,5 +247,66 @@
 
 </main>
 
+    <script>
+  const toggle = document.querySelector('.navToggle');
+  const nav = document.querySelector('.navLinks');
+
+  function openMenu() {
+    nav.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    nav.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function isOpen() {
+    return nav.classList.contains('active');
+  }
+
+  // Toggle button
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // กันคลิกไปโดน document แล้วปิดทันที
+    if (isOpen()) closeMenu();
+    else openMenu();
+  });
+
+  // ปิดเมื่อคลิกลิงก์ในเมนู (มือถือ)
+  nav.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => closeMenu());
+  });
+
+  // ปิดเมื่อคลิกนอกเมนู
+  document.addEventListener('click', (e) => {
+    if (!isOpen()) return;
+    const clickedInsideMenu = nav.contains(e.target);
+    const clickedToggle = toggle.contains(e.target);
+    if (!clickedInsideMenu && !clickedToggle) closeMenu();
+  });
+
+  // ปิดเมื่อกด ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen()) closeMenu();
+  });
+
+  // กันกรณีหมุนจอ/ขยายหน้าจอ: ถ้ากลับไป desktop ให้ปิดเมนู mobile
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) closeMenu();
+  });
+</script>
+
+<script>
+  (function () {
+    const header = document.querySelector('header.siteHeader');
+    const btn = document.querySelector('.navToggle');
+    if (!header || !btn) return;
+
+    btn.addEventListener('click', function () {
+      const isOpen = header.classList.toggle('isOpen');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  })();
+</script>
 </body>
 </html>
