@@ -506,3 +506,20 @@ header.siteHeader{
   z-index: 2000;
   pointer-events: auto;
 }
+
+.cardLink{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+
+.cardAction{ margin-top:14px; }
+
+.btnGhost{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.25);
+  font-size:.95rem;
+  opacity:.9;
+}
