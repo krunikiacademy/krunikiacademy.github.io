@@ -415,3 +415,7 @@
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .navLinks a { padding: 10px 6px; }
+  .navLinks a:active { opacity: 0.8; }
+}
