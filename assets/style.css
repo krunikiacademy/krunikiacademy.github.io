@@ -548,3 +548,7 @@ header.siteHeader{
 /* ถ้าจะใช้กับหัวข้อ */
 .hbi{ margin:0; }
 .hbi .en{ margin-top:4px; font-size: 13.5px; color: var(--muted2); }
+
+/* Force show Resources on Desktop nav */
+.navLinks .navRes { display: inline-flex !important; opacity: 1 !important; visibility: visible !important; }
+.navLinks { overflow: visible !important; }
