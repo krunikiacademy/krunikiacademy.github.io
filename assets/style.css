@@ -569,3 +569,22 @@ header.siteHeader{
   object-fit: cover;      
   object-position: 50% 10%; /* ปรับจุดโฟกัสให้เห็นตัวนิกี้ */
 }
+
+/* About – Founder Image (KRUNIKI) */
+.about-founder-img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+  object-fit: cover;
+
+  /* ปรับแสงภาพแบบสุภาพ */
+  filter: brightness(1.08) contrast(1.03);
+}
+
+/* Desktop only */
+@media (min-width: 1024px) {
+  .about-founder-img {
+    max-height: 520px;
+  }
+}
