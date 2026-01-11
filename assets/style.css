@@ -552,3 +552,20 @@ header.siteHeader{
 /* Force show Resources on Desktop nav */
 .navLinks .navRes { display: inline-flex !important; opacity: 1 !important; visibility: visible !important; }
 .navLinks { overflow: visible !important; }
+
+.aboutPhotoFrame{
+  width:100%;
+  aspect-ratio: 4 / 5;    /* ล็อคสัดส่วน */
+  max-height: 520px;      /* กันไม่ให้ยาวเกิน */
+  overflow: hidden;
+  border-radius: 18px;
+  margin-top: 10px;
+}
+
+.aboutPhotoFrame img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;      
+  object-position: 50% 10%; /* ปรับจุดโฟกัสให้เห็นตัวนิกี้ */
+}
