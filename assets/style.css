@@ -614,3 +614,30 @@ header.siteHeader{
   font-size: 1.1rem;
   color: #d7b46a;
 }
+
+.services-list {
+  max-width: 900px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+}
+
+.service-card {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+}
+
+.service-fit {
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+
+.service-card ul {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
