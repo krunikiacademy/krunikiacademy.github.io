@@ -588,3 +588,29 @@ header.siteHeader{
     max-height: 520px;
   }
 }
+
+.services-hero {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services-hero h1 {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.services-sub {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.services-signature {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #d7b46a;
+}
