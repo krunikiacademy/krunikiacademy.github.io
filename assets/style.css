@@ -902,3 +902,68 @@ h1, h2,
   .navDesk{ display:none; }
   .burger{ display:inline-flex; }
 }
+
+/* ===== Mobile Menu (Hamburger) Fix ===== */
+
+/* กันเว็บเลื่อนซ้าย-ขวา (ช่วยเรื่องความแข็งแรงด้วย) */
+html, body { overflow-x: hidden; }
+
+/* ปุ่ม burger */
+.burger{
+  display:none;
+  width:44px;
+  height:44px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(0,0,0,.15);
+  border-radius:12px;
+  cursor:pointer;
+  padding:10px;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+}
+
+/* เส้น 3 เส้นในปุ่ม */
+.burger span{
+  display:block;
+  width:18px;
+  height:2px;
+  background:rgba(255,255,255,.85);
+  border-radius:2px;
+}
+
+/* เมนูมือถือ (แผงเต็มจอ) */
+.navMobile{
+  position:fixed;
+  top:72px;             /* ถ้า header สูงไม่เท่ากัน ปรับเลขนี้ได้ */
+  left:0;
+  right:0;
+  width:100%;
+  max-width:100%;
+  padding:14px 16px;
+  background:rgba(10,10,12,.96);
+  backdrop-filter: blur(10px);
+  border-top:1px solid rgba(255,255,255,.10);
+  z-index:9999;
+}
+
+/* ลิงก์ในเมนูมือถือ */
+.navMobile a{
+  display:block;
+  padding:14px 10px;
+  border-radius:12px;
+  text-decoration:none;
+  color:rgba(255,255,255,.92);
+  font-size:16px;
+  line-height:1.4;
+}
+
+.navMobile a:hover{
+  background:rgba(255,255,255,.06);
+}
+
+/* แสดง burger เฉพาะมือถือ + ซ่อนเมนู desktop */
+@media (max-width: 900px){
+  header .topbar nav { display:none; }   /* nav desktop */
+  .burger{ display:flex; }              /* burger โผล่ */
+}
