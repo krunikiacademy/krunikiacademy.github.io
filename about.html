@@ -17,14 +17,28 @@
       <span>K R U N I K I</span>
     </div>
 
-    <nav aria-label="เมนูหลัก">
-      <a href="index.html#about">เกี่ยวกับ</a>
-      <a href="services.html">บริการ</a>
-      <a href="resources.html">Resources</a>
-      <a href="index.html#contact">ติดต่อ</a>
-    </nav>
+   <!-- HAMBURGER (Mobile) -->
+<button class="burger" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="mobileMenu">
+  <span></span><span></span><span></span>
+</button>
 
-    <div class="right">
+<!-- Desktop Nav -->
+<nav class="navDesk" aria-label="เมนูหลัก">
+  <a href="index.html#about">เกี่ยวกับ</a>
+  <a href="services.html">บริการ</a>
+  <a href="resources.html">Resources</a>
+  <a href="index.html#contact">ติดต่อ</a>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="navMobile" id="mobileMenu" hidden>
+  <a href="index.html#about">เกี่ยวกับ</a>
+  <a href="services.html">บริการ</a>
+  <a href="resources.html">Resources</a>
+  <a href="index.html#contact">ติดต่อ</a>
+</div>
+
+ <div class="right">
       <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
         <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
           <svg viewBox="0 0 24 24" aria-hidden="true">
