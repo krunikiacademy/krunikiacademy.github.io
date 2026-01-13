@@ -202,5 +202,18 @@
   © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
 </footer>
 
+<script>
+  (function(){
+    const btn = document.querySelector('.burger');
+    const menu = document.getElementById('mobileMenu');
+    if(!btn || !menu) return;
+
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      menu.hidden = isOpen;
+    });
+  })();
+</script>  
 </body>
 </html>
