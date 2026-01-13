@@ -848,3 +848,27 @@ pre { max-width: 100%; overflow-x: auto; }
 
 /* กัน grid บางแบบล้น */
 .grid2, .heroGrid, .wrap, .panel { max-width: 100%; }
+
+/* ฟอนต์หลักของเว็บ (เนื้อหา) */
+:root{
+  --brand-serif: "Times New Roman", Times, serif;
+  --body-sans: Arial, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* เนื้อหาโดยรวม */
+body{ font-family: var(--body-sans); }
+
+/* ชื่อแบรนด์ + คำว่า KRUNIKI และชื่อระบบ */
+.brand span,
+.brand,
+.brandName,
+.logoText,
+h1, h2,
+.hero h1,
+.resHead h2{
+  font-family: var(--brand-serif);
+  letter-spacing: .2px;
+}
+
+/* ถ้านิกี้มี class goldline อยู่ */
+.goldline strong{ font-family: var(--brand-serif); }
