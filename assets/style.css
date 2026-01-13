@@ -1,4 +1,4 @@
-     :root{
+      :root{
       --bg:#070707;
       --panel:rgba(255,255,255,.06);
       --panel2:rgba(255,255,255,.035);
@@ -19,7 +19,6 @@
       --gold-font-m: 15.2px; /* ขนาดทอง (mobile) */
       --gold-letter: .2px;
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
