@@ -872,3 +872,33 @@ h1, h2,
 
 /* ถ้านิกี้มี class goldline อยู่ */
 .goldline strong{ font-family: var(--brand-serif); }
+
+.burger{
+  display:none;
+  width:44px;height:44px;
+  border:1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.04);
+  border-radius:12px;
+  align-items:center; justify-content:center;
+  gap:5px;
+}
+.burger span{
+  display:block;
+  width:18px;height:2px;
+  background: rgba(255,255,255,.85);
+  border-radius:2px;
+}
+.navDesk{ display:flex; gap:18px; align-items:center; }
+.navMobile{
+  margin-top:10px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:16px;
+  padding:10px;
+  background: rgba(0,0,0,.35);
+}
+.navMobile a{ display:block; padding:10px 8px; }
+
+@media (max-width: 900px){
+  .navDesk{ display:none; }
+  .burger{ display:inline-flex; }
+}
