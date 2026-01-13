@@ -835,3 +835,16 @@ header.siteHeader{
   .stickyLineCta{ display:flex; }
   body{ padding-bottom: 78px; } /* กันปุ่มลอยทับคอนเทนต์ */
 }
+
+/* กันหน้าเว็บลื่น/ขยับซ้ายขวา */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* กันรูป/วิดีโอ/iframe ล้น */
+img, svg, video, iframe { max-width: 100%; height: auto; }
+
+/* บล็อกยาว ๆ เช่น code / link ยาว */
+code, pre, a { overflow-wrap: anywhere; word-break: break-word; }
+pre { max-width: 100%; overflow-x: auto; }
+
+/* กัน grid บางแบบล้น */
+.grid2, .heroGrid, .wrap, .panel { max-width: 100%; }
