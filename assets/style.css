@@ -965,3 +965,7 @@ html, body { overflow-x: hidden; }
   header .topbar nav { display:none; }   /* nav desktop */
   .burger{ display:flex; }              /* burger โผล่ */
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
