@@ -1,41 +1,47 @@
 // assets/main.js
-document.addEventListener("DOMContentLoaded", () => {
+(() => {
   const btn = document.querySelector(".navToggle");
   const menu = document.getElementById("mobileMenu");
-
   if (!btn || !menu) return;
+
+  // initial state
+  btn.setAttribute("aria-expanded", "false");
+  menu.hidden = true;
+  menu.classList.remove("isOpen");
+
+  const isOpen = () => btn.getAttribute("aria-expanded") === "true";
 
   const openMenu = () => {
     btn.setAttribute("aria-expanded", "true");
+    menu.hidden = false;
     menu.classList.add("isOpen");
-    document.body.classList.add("navOpen");
   };
 
   const closeMenu = () => {
     btn.setAttribute("aria-expanded", "false");
     menu.classList.remove("isOpen");
-    document.body.classList.remove("navOpen");
+    menu.hidden = true;
   };
 
-  const toggleMenu = () => {
-    const isOpen = btn.getAttribute("aria-expanded") === "true";
-    isOpen ? closeMenu() : openMenu();
-  };
-
-  btn.addEventListener("click", toggleMenu);
-
-  // ปิดเมนูเมื่อกดลิงก์ในเมนู (UX ดีขึ้น)
-  menu.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", closeMenu);
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    isOpen() ? closeMenu() : openMenu();
   });
 
-  // ปิดด้วยปุ่ม ESC (desktop/iPad keyboard)
+  menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+
+  document.addEventListener("click", (e) => {
+    if (!isOpen()) return;
+    if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+  });
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeMenu();
   });
 
-  // กันกรณี resize จาก mobile -> desktop แล้วเมนูค้าง
+  // ให้ตรงกับ CSS breakpoint (เราใช้ 980)
   window.addEventListener("resize", () => {
-    if (window.matchMedia("(min-width: 901px)").matches) closeMenu();
+    if (window.matchMedia("(min-width: 981px)").matches) closeMenu();
   });
-});
+})();
