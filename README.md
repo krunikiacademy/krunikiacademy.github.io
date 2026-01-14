@@ -1,1 +1,2 @@
 # krunikiacademy.github.io
+.
