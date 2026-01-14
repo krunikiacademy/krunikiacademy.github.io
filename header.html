@@ -34,17 +34,3 @@
   </nav>
 </header>
 
-<!-- Hamburger Script -->
-<script>
-  (function () {
-    const btn = document.querySelector('.navToggle');
-    const menu = document.getElementById('mobileMenu');
-    if (!btn || !menu) return;
-
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      menu.hidden = open;
-    });
-  })();
-</script>
