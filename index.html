@@ -8,7 +8,7 @@
   <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
   <!-- 🔗 เชื่อมไฟล์ CSS -->
   <link rel="stylesheet" href="assets/style.css">
-
+<script src="assets/main.js" defer></script>
 </head>
 
   <body>
@@ -280,38 +280,5 @@
   });
 </script>
 
-<script>
-  (function () {
-    const header = document.querySelector('header.siteHeader');
-    const btn = document.querySelector('.navToggle');
-    if (!header || !btn) return;
-
-    btn.addEventListener('click', function () {
-      const isOpen = header.classList.toggle('isOpen');
-      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-  })();
-</script>
-
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("site-header").innerHTML = html;
-
-      // เปิด–ปิด Hamburger
-      const btn = document.querySelector('.navToggle');
-      const menu = document.getElementById('mobileMenu');
-
-      if (btn && menu) {
-        btn.addEventListener('click', () => {
-          const isOpen = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!isOpen));
-          menu.hidden = isOpen;
-        });
-      }
-    });
-</script>
-  
 </body>
 </html>
