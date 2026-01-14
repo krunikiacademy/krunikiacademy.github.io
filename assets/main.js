@@ -1,49 +1,72 @@
-/* assets/main.js
-   KRUNIKI Academy — shared JS (safe & minimal)
-   - Mobile hamburger toggle (.navToggle + #mobileMenu)
-*/
-
+// assets/main.js
 (function () {
-  function initHamburger() {
+  async function loadHeader() {
+    const mount = document.getElementById("site-header");
+    if (!mount) return;
+
+    try {
+      const res = await fetch("header.html", { cache: "no-store" });
+      if (!res.ok) throw new Error("Failed to load header.html");
+      const html = await res.text();
+      mount.innerHTML = html;
+
+      // After header is injected, wire up the mobile menu
+      setupMobileMenu();
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function setupMobileMenu() {
     const btn = document.querySelector(".navToggle");
     const menu = document.getElementById("mobileMenu");
 
-    // If a page doesn't have header/menu, do nothing (safe)
     if (!btn || !menu) return;
 
-    // Ensure menu starts hidden (defensive)
-    if (btn.getAttribute("aria-expanded") !== "true") {
-      menu.hidden = true;
-      btn.setAttribute("aria-expanded", "false");
+    function open() {
+      btn.setAttribute("aria-expanded", "true");
+      menu.hidden = false;
+      document.body.classList.add("menuOpen");
     }
 
-    btn.addEventListener("click", () => {
-      const isOpen = btn.getAttribute("aria-expanded") === "true";
-      btn.setAttribute("aria-expanded", String(!isOpen));
-      menu.hidden = isOpen;
+    function close() {
+      btn.setAttribute("aria-expanded", "false");
+      menu.hidden = true;
+      document.body.classList.remove("menuOpen");
+    }
+
+    function isOpen() {
+      return btn.getAttribute("aria-expanded") === "true";
+    }
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      isOpen() ? close() : open();
     });
 
-    // Optional: close menu when click a link (nice UX on mobile)
-    menu.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => {
-        btn.setAttribute("aria-expanded", "false");
-        menu.hidden = true;
-      });
+    // close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!isOpen()) return;
+      const clickedInsideMenu = menu.contains(e.target);
+      const clickedToggle = btn.contains(e.target);
+      if (!clickedInsideMenu && !clickedToggle) close();
     });
 
-    // Optional: close menu on ESC
+    // close on ESC
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        btn.setAttribute("aria-expanded", "false");
-        menu.hidden = true;
-      }
+      if (e.key === "Escape" && isOpen()) close();
+    });
+
+    // if resize to desktop, close
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) close();
     });
   }
 
-  // Run after DOM ready (works even if script in <head>)
+  // Start
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initHamburger);
+    document.addEventListener("DOMContentLoaded", loadHeader);
   } else {
-    initHamburger();
+    loadHeader();
   }
 })();
