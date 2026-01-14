@@ -1,1 +1,0 @@
-# krunikiacademy.github.io
