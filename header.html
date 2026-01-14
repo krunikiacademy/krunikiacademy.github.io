@@ -1,1 +1,50 @@
+<header class="siteHeader">
+  <div class="navInner">
+    <!-- Brand -->
+    <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="brandText">KRUNIKI</span>
+    </a>
 
+    <!-- Desktop Navigation -->
+    <nav class="navLinks" aria-label="Primary navigation">
+      <a href="about.html">เกี่ยวกับ</a>
+      <a href="services.html">บริการ</a>
+      <a href="resources.html">Resources</a>
+      <a href="index.html#contact">ติดต่อ</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <button
+      class="navToggle"
+      type="button"
+      aria-label="เปิดเมนู"
+      aria-expanded="false"
+      aria-controls="mobileMenu">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav id="mobileMenu" class="navDrawer" aria-label="Mobile navigation" hidden>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="services.html">บริการ</a>
+    <a href="resources.html">Resources</a>
+    <a href="index.html#contact">ติดต่อ</a>
+  </nav>
+</header>
+
+<!-- Hamburger Script -->
+<script>
+  (function () {
+    const btn = document.querySelector('.navToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      menu.hidden = open;
+    });
+  })();
+</script>
