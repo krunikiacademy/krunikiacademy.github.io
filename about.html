@@ -10,31 +10,17 @@
 
 <body>
 
-<header>
-  <div class="topbar">
-    <div class="brand" aria-label="KRUNIKI">
-      <span class="dot" aria-hidden="true"></span>
-      <span>K R U N I K I</span>
-    </div>
+  <body>
+
+<div id="site-header"></div>
+
+<main>
+  <!-- เนื้อหาหน้านี้ -->
+</main>
+
+  <header>
  
-  </div>
-<!-- Desktop Nav -->
-<nav class="navDesk" aria-label="เมนูหลัก">
-  <a href="index.html#about">เกี่ยวกับ</a>
-  <a href="services.html">บริการ</a>
-  <a href="resources.html">Resources</a>
-  <a href="index.html#contact">ติดต่อ</a>
-</nav>
-
-<!-- Mobile Menu -->
-<div class="navMobile" id="mobileMenu" hidden>
-  <a href="index.html#about">เกี่ยวกับ</a>
-  <a href="services.html">บริการ</a>
-  <a href="resources.html">Resources</a>
-  <a href="index.html#contact">ติดต่อ</a>
-</div>
-
- <div class="right">
+  <div class="right">
       <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
         <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -211,5 +197,26 @@
     });
   })();
 </script>  
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("site-header").innerHTML = html;
+
+      // เปิด–ปิด Hamburger
+      const btn = document.querySelector('.navToggle');
+      const menu = document.getElementById('mobileMenu');
+
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!isOpen));
+          menu.hidden = isOpen;
+        });
+      }
+    });
+</script>
+    
 </body>
 </html>
