@@ -12,7 +12,36 @@
 </head>
 
   <body>
-<div id="site-header"></div>
+<header class="siteHeader">
+  <div class="navInner">
+    <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="brandText">KRUNIKI</span>
+    </a>
+
+    <nav class="navLinks" aria-label="Primary navigation">
+      <a href="about.html">เกี่ยวกับ</a>
+      <a href="services.html">บริการ</a>
+      <a href="resources.html">Resources</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+
+    <button class="navToggle"
+      type="button"
+      aria-label="เปิดเมนู"
+      aria-expanded="false"
+      aria-controls="mobileMenu">
+      ☰
+    </button>
+  </div>
+
+  <nav id="mobileMenu" class="navDrawer" aria-label="Mobile navigation" hidden>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="services.html">บริการ</a>
+    <a href="resources.html">Resources</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
+</header>
 
   <main>
   <!-- เนื้อหาหน้านี้ -->
