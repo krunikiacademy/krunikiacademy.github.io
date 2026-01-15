@@ -1102,3 +1102,9 @@ header.siteHeader{
   position: relative;
   z-index: 99998;
 }
+/* Gold text (KRUNIKI System highlight) */
+.goldText{
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: .2px;
+}
