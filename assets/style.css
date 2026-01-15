@@ -1073,3 +1073,32 @@ html, body {
     background: rgba(255,255,255,.06);
   }
 }
+/* =========================
+   PATCH: About hamburger click fix
+   (No JS change)
+========================= */
+
+/* ให้หัวแถบ hamburger เป็นชั้นบนสุดเสมอ */
+header.siteHeader{
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
+/* กัน element อื่นมาทับ header */
+.siteHeader, .siteHeader *{
+  pointer-events: auto;
+}
+
+/* ปุ่มต้องกดได้แน่นอน */
+.navToggle{
+  position: relative;
+  z-index: 100000;
+  pointer-events: auto;
+}
+
+/* เมนูมือถือให้อยู่เหนือทุกอย่าง */
+#mobileMenu{
+  position: relative;
+  z-index: 99998;
+}
