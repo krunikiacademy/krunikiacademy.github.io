@@ -1125,3 +1125,48 @@ header.siteHeader{
   font-weight: 600;
   font-size: clamp(18px, 2.6vw, 22px);
 }
+/* ===== Services Hero Spacing ===== */
+
+.services-hero{
+  text-align: center;
+  padding: 64px 24px 72px;
+}
+
+/* หัวเรื่องหลัก */
+.servicesHeroTitle{
+  margin-bottom: 28px;
+  line-height: 1.35;
+}
+
+/* คำอธิบายสั้นใต้หัวเรื่อง */
+.heroQuote{
+  margin-bottom: 36px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* ปุ่มหลัก */
+.heroActions{
+  margin-bottom: 48px;
+}
+
+/* ข้อความอธิบายยาว */
+.services-sub{
+  margin: 0 auto 32px;
+  max-width: 820px;
+  line-height: 1.9;
+  opacity: 0.88;
+}
+
+/* Quote */
+.services-signature{
+  margin: 0 auto 40px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* ปุ่มล่างสุด */
+.ctaRow{
+  margin-top: 12px;
+  gap: 14px;
+}
