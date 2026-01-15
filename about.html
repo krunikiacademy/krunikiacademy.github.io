@@ -235,40 +235,6 @@
 <footer>
   © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
 </footer>
-
-<script>
-  (function(){
-    const btn = document.querySelector('.burger');
-    const menu = document.getElementById('mobileMenu');
-    if(!btn || !menu) return;
-
-    btn.addEventListener('click', () => {
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!isOpen));
-      menu.hidden = isOpen;
-    });
-  })();
-</script>  
-
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("site-header").innerHTML = html;
-
-      // เปิด–ปิด Hamburger
-      const btn = document.querySelector('.navToggle');
-      const menu = document.getElementById('mobileMenu');
-
-      if (btn && menu) {
-        btn.addEventListener('click', () => {
-          const isOpen = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!isOpen));
-          menu.hidden = isOpen;
-        });
-      }
-    });
-</script>
     
 </body>
 </html>
