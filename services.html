@@ -6,23 +6,42 @@
   <title>KRUNIKI Academy — Services</title>
   <meta name="description" content="KRUNIKI — Services • Heart Awakening • Private Guidance • Programs" />
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/main.js" defer></script>
 </head>
 
 <body>
-
-<header>
-  <div class="topbar">
-    <div class="brand" aria-label="KRUNIKI">
+<header class="siteHeader">
+  <div class="navInner">
+    <a class="brand" href="index.html"> 
       <span class="dot" aria-hidden="true"></span>
-      <span>K R U N I K I</span>
-    </div>
+      <span class="brandText">KRUNIKI</span>
+    </a>
 
-    <nav aria-label="เมนูหลัก">
-      <a href="index.html#about">เกี่ยวกับ</a>
+    <nav class="navLinks" aria-label="Primary navigation”>
+      <a href="index.html">หน้าแรก</a>
+      <a href="about.html">เกี่ยวกับ</a>
       <a href="services.html" aria-current="page">บริการ</a>
-      <a href="index.html#resources">Resources</a>
-      <a href="index.html#contact">ติดต่อ</a>
+      <a href="resources.html">Resources</a>
+      <a href="#contact">ติดต่อ</a>
     </nav>
+    
+<button class="navToggle"
+      type="button"
+      aria-label="เปิดเมนู"
+      aria-expanded="false"
+      aria-controls="mobileMenu">
+      ☰
+    </button>
+  </div>
+
+  <nav id="mobileMenu" class="navDrawer" aria-label="Mobile navigation">
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="services.html" aria-current="page">บริการ</a>
+    <a href="resources.html">Resources</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
+</header>
 
     <div class="right">
       <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
