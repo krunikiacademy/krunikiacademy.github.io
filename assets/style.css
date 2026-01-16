@@ -1557,3 +1557,8 @@ hr,
 .cardBody {
   padding-top: 2px;
 }
+
+.card .btn,
+.card .btn.mini {
+  pointer-events: none;
+}
