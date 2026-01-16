@@ -1507,3 +1507,53 @@ hr,
 /* 14) Gold text lock (title only) */
 .goldMain { color: var(--gold-main) !important; }
 .goldSub  { color: var(--gold-soft) !important; }
+
+/* =========================================
+   KRUNIKI — Card Image System (LOCKED)
+   ========================================= */
+
+.cardWithImage {
+  overflow: hidden;
+}
+
+/* Image container */
+.cardImage {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+/* Image itself */
+.cardImage img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(.92) contrast(1.05);
+  transition: transform .6s ease, filter .6s ease;
+}
+
+/* Soft dark overlay for luxury tone */
+.cardImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.15),
+    rgba(0,0,0,.35)
+  );
+  pointer-events: none;
+}
+
+/* Hover (very subtle, not flashy) */
+.cardWithImage:hover .cardImage img {
+  transform: scale(1.03);
+  filter: brightness(.98) contrast(1.08);
+}
+
+/* Card body spacing */
+.cardBody {
+  padding-top: 2px;
+}
