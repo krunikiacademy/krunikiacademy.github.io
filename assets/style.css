@@ -1588,3 +1588,21 @@ a.cardLink:hover .cardBtn{
   border-color:rgba(255,255,255,.45);
   transform:translateY(-1px);
 }
+/* Card image (shared) */
+.cardImg{
+  width:100%;
+  height:170px;            /* ปรับความสูงรูปได้ */
+  object-fit:cover;
+  display:block;
+  border-radius:16px;
+  margin-bottom:14px;
+  filter: brightness(1.08) contrast(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+(เสริม) ถ้าอยากให้การ์ดสวยขึ้นเวลา hover
+
+.cardLink:hover .cardImg{
+  transform: translateY(-1px);
+  transition: transform .25s ease;
+}
