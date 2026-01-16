@@ -1276,3 +1276,234 @@ body {
   gap: 14px;
   margin-top: 28px;
 }
+/* =========================================
+   KRUNIKI — FINAL POLISH (LOCKED)
+   Paste at the END of assets/style.css
+   ========================================= */
+
+/* 1) Smooth rendering / subtle luxury feel */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+/* 2) Premium motion preset (slow, calm, non-flashy) */
+:root{
+  --ease-lux: cubic-bezier(.2,.8,.2,1);
+  --dur-fast: 180ms;
+  --dur-med: 320ms;
+  --dur-slow: 520ms;
+
+  --gold-main: #c9a86a;
+  --gold-soft: #bfa36a;
+
+  --line-gold: rgba(201,168,106,.14);
+  --line-soft: rgba(255,255,255,.06);
+
+  --shadow-soft: 0 18px 50px rgba(0,0,0,.55);
+  --shadow-lux:  0 30px 90px rgba(0,0,0,.62);
+
+  --glass: rgba(255,255,255,.03);
+  --glass-2: rgba(255,255,255,.05);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+}
+
+/* 3) Global link polish */
+a {
+  text-decoration: none;
+}
+
+.navLinks a,
+.navDrawer a {
+  transition: color var(--dur-med) var(--ease-lux), opacity var(--dur-med) var(--ease-lux);
+}
+
+.navLinks a:hover,
+.navDrawer a:hover {
+  opacity: .92;
+}
+
+/* 4) Card polish (hover lift + border glow) */
+.card,
+.cardLink {
+  position: relative;
+  transition:
+    transform var(--dur-med) var(--ease-lux),
+    box-shadow var(--dur-med) var(--ease-lux),
+    border-color var(--dur-med) var(--ease-lux),
+    background var(--dur-med) var(--ease-lux);
+}
+
+.card::after,
+.cardLink::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--dur-med) var(--ease-lux);
+  box-shadow: 0 0 0 1px var(--line-gold);
+}
+
+.card:hover,
+.cardLink:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.card:hover::after,
+.cardLink:hover::after {
+  opacity: 1;
+}
+
+/* Featured card gets slightly stronger glow */
+.card.featured,
+.cardLink.featured {
+  box-shadow: 0 0 0 1px rgba(201,168,106,.10), 0 26px 70px rgba(0,0,0,.60);
+}
+.card.featured:hover,
+.cardLink.featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px rgba(201,168,106,.18), var(--shadow-lux);
+}
+
+/* 5) Button polish (lux touch + consistent spacing) */
+.btn {
+  transition:
+    transform var(--dur-fast) var(--ease-lux),
+    box-shadow var(--dur-med) var(--ease-lux),
+    background var(--dur-med) var(--ease-lux),
+    border-color var(--dur-med) var(--ease-lux),
+    color var(--dur-med) var(--ease-lux);
+  will-change: transform;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0px);
+}
+
+/* Make sure button rows always breathe */
+.ctaRow,
+.heroActions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* 6) Hero typography breathing (fix "ชิดเกิน") */
+.servicesHeroTitle {
+  margin: 0 auto 26px;
+  line-height: 1.22;
+}
+
+.heroQuote {
+  margin: 0 auto 22px;
+  line-height: 1.9;
+}
+
+.services-sub {
+  margin: 18px auto 22px;
+  line-height: 1.9;
+  max-width: 720px;
+  text-align: center; /* ✅ บล็อกนี้ต้องอยู่กลาง */
+}
+
+.services-signature {
+  margin: 22px auto 30px;
+  text-align: center; /* ✅ ล็อกให้อยู่กลาง */
+}
+
+/* 7) Fix "บล็อกไปอยู่ซ้าย" ใน services: 
+      ถ้า .services-sub / blockquote หลุดออกจาก .services-hero ก็ยังคุมให้อยู่กลาง */
+.services-hero,
+.services-hero * {
+  text-align: center;
+}
+
+/* 8) Panel width lock (กันเว็บกว้างผิดปกติ) */
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+/* 9) Luxury separators (subtle lines) */
+hr,
+.divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-soft), transparent);
+  margin: 26px 0;
+}
+
+/* 10) Social icon polish (top row) */
+.iconbtn {
+  transition:
+    transform var(--dur-fast) var(--ease-lux),
+    background var(--dur-med) var(--ease-lux),
+    box-shadow var(--dur-med) var(--ease-lux);
+}
+
+.iconbtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+}
+
+/* 11) Nav polish: cursor + clickable feel everywhere */
+.navLinks a,
+.brand {
+  cursor: pointer;
+}
+
+/* 12) Nav drawer (hamburger) open state polish (uses your main.js .isOpen) */
+.navDrawer {
+  transition:
+    transform var(--dur-med) var(--ease-lux),
+    opacity var(--dur-med) var(--ease-lux);
+}
+
+.navDrawer.isOpen {
+  opacity: 1;
+}
+
+/* 13) Soft glass effect for hero boxes (optional, safe) */
+.services-hero {
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(255,255,255,.06), transparent 55%),
+    radial-gradient(ellipse at center, #1a1a1a 0%, #0b0b0b 70%);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 22px;
+  padding: 56px 48px;
+  box-shadow: 0 0 0 1px rgba(201,168,106,.08), 0 40px 80px rgba(0,0,0,.60);
+}
+
+@media (max-width: 768px) {
+  .services-hero { padding: 40px 24px; }
+}
+
+/* 14) Gold text lock (title only) */
+.goldMain { color: var(--gold-main) !important; }
+.goldSub  { color: var(--gold-soft) !important; }
