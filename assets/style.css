@@ -1170,3 +1170,21 @@ header.siteHeader{
   margin-top: 12px;
   gap: 14px;
 }
+/* ===============================
+   KRUNIKI GLOBAL LUXURY PRESET
+   =============================== */
+
+:root {
+  --gold-main: #c9a86a;
+  --gold-soft: #bfa36a;
+  --text-main: #eaeaea;
+  --text-soft: #cfcfcf;
+  --bg-panel: radial-gradient(ellipse at center, #1a1a1a 0%, #0b0b0b 70%);
+}
+
+body {
+  color: var(--text-main);
+  background: #000;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
