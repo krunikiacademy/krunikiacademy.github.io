@@ -1812,3 +1812,26 @@ a.cardLink:hover .cardBtn{
   display: block;   /* ไม่ใช้ display:none เพื่อให้ transition ทำงาน */
   transform: translateX(110%);
 }
+      
+/* =====================================
+   FORCE MOBILE MENU TO SLIDE FROM RIGHT
+   (override legacy left-based CSS)
+   ===================================== */
+
+#mobileMenu {
+  right: 0 !important;
+  left: auto !important;     /* <<< ตัวนี้คือคีย์ */
+  
+  transform: translateX(110%) !important;
+}
+
+/* open state from main.js */
+#mobileMenu.isOpen {
+  transform: translateX(0) !important;
+}
+
+/* when hidden */
+#mobileMenu[hidden] {
+  display: block !important;
+  transform: translateX(110%) !important;
+}
