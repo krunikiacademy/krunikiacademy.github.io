@@ -10,46 +10,53 @@
 <script src="assets/main.js" defer></script>
 </head>
 
-  <body>
-<header class="siteHeader">
-  <div class="navInner">
-    <a class="brand" href="index.html" aria-label="KRUNIKI Home">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="brandText">KRUNIKI</span>
-    </a>
+ <!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KRUNIKI Academy</title>
+  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
+  <!-- 🔗 เชื่อมไฟล์ CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+<script src="assets/main.js" defer></script>
+</head>
 
-    <nav class="navLinks" aria-label="Primary navigation">
+<body>
+  <header class="siteHeader">
+    <div class="navInner">
+      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="brandText">KRUNIKI</span>
+      </a>
+
+      <nav class="navLinks" aria-label="Primary navigation">
+        <a href="shop.html">SHOP</a>
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">เกี่ยวกับ</a>
+        <a href="services.html">บริการ</a>
+        <a href="resources.html">คลังความรู้</a>
+        <a href="contact.html">ติดต่อ</a>
+      </nav>
+
+      <button class="navToggle"
+        type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        ☰
+      </button>
+    </div>
+
+    <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+      <a href="shop.html">SHOP</a>
       <a href="index.html">หน้าแรก</a>
       <a href="about.html">เกี่ยวกับ</a>
       <a href="services.html">บริการ</a>
       <a href="resources.html">คลังความรู้</a>
       <a href="contact.html">ติดต่อ</a>
     </nav>
-
-    <button class="navToggle"
-      type="button"
-      aria-label="เปิดเมนู"
-      aria-expanded="false"
-      aria-controls="mobileMenu">
-      ☰
-    </button>
-  </div>
-
-  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
-    <a href="index.html">หน้าแรก</a>
-    <a href="about.html">เกี่ยวกับ</a>
-    <a href="services.html">บริการ</a>
-    <a href="resources.html">คลังความรู้</a>
-    <a href="contact.html">ติดต่อ</a>
-  </nav>
-
-</header>
- <div class="topbar">
-    <div class="brand" aria-label="KRUNIKI">
-      <span class="dot" aria-hidden="true"></span>
-      <span>K R U N I K I</span>
-    </div>
-
+  </header>
   
     <div class="right">
       <!-- SOCIAL ICONS (TOP RIGHT) -->
