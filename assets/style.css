@@ -1610,3 +1610,48 @@ a.cardLink:hover .cardBtn{
 /* ทำให้ปุ่ม “ติดมือ” และทั้งการ์ดดูคลิกได้ */
 .cardLink{ text-decoration:none; cursor:pointer; }
 .cardLink:hover .cardBtn{ transform: translateY(-1px); }
+
+.sideMenu {
+  right: 0;
+  left: auto;
+  transform: translateX(110%);
+}
+
+.sideMenu.active {
+  transform: translateX(0);
+}
+
+/* ===== Hamburger Button (KRUNIKI Gold) ===== */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(216, 194, 122, 0.4); /* กรอบทองจาง */
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+  transition: border-color .25s ease, background .25s ease;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #d8c27a; /* gold-soft */
+  margin: 5px 0;
+  transition: background .25s ease;
+}
+
+/* Hover (desktop) */
+.hamburger:hover {
+  border-color: rgba(216, 194, 122, 0.7);
+  background: rgba(216, 194, 122, 0.05);
+}
+
+/* Active (menu open) */
+.hamburger[aria-expanded="true"] span {
+  background: #e5c97b; /* gold-main */
+}
+
+.hamburger {
+  backdrop-filter: blur(4px);
+}
