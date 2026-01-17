@@ -1655,3 +1655,54 @@ a.cardLink:hover .cardBtn{
 .hamburger {
   backdrop-filter: blur(4px);
 }
+/* ===============================
+   FORCE HAMBURGER GOLD (KRUNIKI)
+   =============================== */
+
+.hamburger {
+  display: block !important;
+  background: transparent !important;
+  border: 1px solid rgba(216, 194, 122, 0.45) !important;
+  border-radius: 10px !important;
+  padding: 8px !important;
+}
+
+.hamburger span {
+  background: #d8c27a !important; /* soft gold */
+  width: 22px !important;
+  height: 2px !important;
+  margin: 5px 0 !important;
+  display: block !important;
+}
+
+/* open state */
+.hamburger[aria-expanded="true"] span {
+  background: #e5c97b !important;
+}
+
+/* ===============================
+   FORCE SIDE MENU FROM RIGHT
+   =============================== */
+
+.sideMenu {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+
+  width: 280px !important;
+  height: 100vh !important;
+
+  transform: translateX(110%) !important;
+  transition: transform 0.35s ease !important;
+
+  background: #000 !important;
+  z-index: 1100 !important;
+}
+
+.sideMenu.active {
+  transform: translateX(0) !important;
+}
+
+จุดสำคัญคือ !important
+ใช้เพื่อ “ชนะ CSS เก่าทั้งหมด” แบบเด็ดขาด
