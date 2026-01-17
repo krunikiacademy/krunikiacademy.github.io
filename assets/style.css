@@ -1928,5 +1928,3 @@ header.siteHeader{
   .navLinks{ display:none !important; }
   .navToggle{ display:inline-flex !important; align-items:center; justify-content:center; }
 }
-
-ผลลัพธ์: Desktop จะไม่เห็นเมนูซ้ำแน่นอน เพราะ #mobileMenu ถูกสั่งซ่อนบน desktop แบบ hard lock
