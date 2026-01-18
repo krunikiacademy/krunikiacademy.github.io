@@ -125,9 +125,49 @@
     margin-top:18px !important;
     padding-bottom:24px !important; /* เผื่อหายใจนิดเดียว */
   }
-    #contact{ min-height:auto !important; height:auto !important; }
-main{ min-height:auto !important; }
-  </style>
+  /* ✅ Kill huge bottom gap (hard override) */
+  main, .wrap, #contact{
+    min-height:auto !important;
+    height:auto !important;
+    padding-bottom:0 !important;
+    margin-bottom:0 !important;
+  }
+  #contact{ display:block !important; }
+
+  /* ถ้า panel/section ตัวท้ายถูกดันสูง */
+  #contact .panel{
+    padding-bottom:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  /* footer มักทำให้ดูเหมือนมีช่องว่างล่าง */
+  footer{
+    margin-top:16px !important;
+    padding:18px 0 18px !important;
+  }
+    section{ margin-bottom:24px !important; }
+section:last-of-type{ margin-bottom:0 !important; }
+
+    /* ✅ iPad/tablet: show hamburger, hide center menu */
+  @media (max-width: 1024px){
+    .siteHeader .navLinks{ display:none !important; }
+    .siteHeader .navToggle{ display:inline-flex !important; }
+  }
+  @media (min-width: 1025px){
+    .siteHeader .navToggle{ display:none !important; }
+  }
+
+  /* ✅ Make hamburger visible (not a tiny dot) */
+  .navToggle{
+    width:44px !important;
+    height:44px !important;
+    font-size:22px !important;
+    line-height:1 !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+ </style>
 </head>
   
 <body>
