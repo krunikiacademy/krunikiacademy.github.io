@@ -1616,11 +1616,10 @@ a.cardLink:hover .cardBtn{
 .subBarInner{display:flex;justify-content:flex-end}
 
 /* =========================
-   KRUNIKI MENU LOCK (main.js compatible)
+   KRUNIKI MENU LOCK (RIGHT-ONLY)
    Uses: .navToggle + #mobileMenu.mobileMenu + .isOpen
 ========================= */
 
-/* กันเว็บเลื่อนซ้าย-ขวา */
 html, body { max-width:100%; overflow-x:hidden; }
 
 /* header */
@@ -1628,33 +1627,33 @@ header.siteHeader{
   position: sticky;
   top: 0;
   z-index: 99999;
-  position: relative; /* ✅ สำคัญ */
 }
 
 /* layout */
 .navInner{
   display:flex;
   align-items:center;
-  justify-content:space-between;
   gap:16px;
-}
-
-/* Desktop nav อยู่กลาง */
-.navLinks{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  justify-content:center;
-  flex: 1;
+  justify-content:flex-start; /* ✅ ไม่ใช่ space-between แล้ว */
+  position: relative;         /* ✅ ให้ mobile menu absolute อ้างอิงตรงนี้ */
 }
 
 /* Brand ซ้าย */
 .brand{ flex:0 0 auto; }
 
-/* Hamburger button */
+/* Desktop: menu อยู่ขวา (ชิดขวา) */
+.navLinks{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-left:auto;           /* ✅ ดันเมนูไปขวา */
+  justify-content:flex-end;   /* ✅ เมนูเรียงชิดขวา */
+}
+
+/* Hamburger button (อยู่ขวาสุด) */
 .navToggle{
   flex:0 0 auto;
-  display:none; /* desktop ซ่อน */
+  display:none;               /* desktop ซ่อน */
   width:44px;
   height:44px;
   border-radius:12px;
@@ -1664,14 +1663,15 @@ header.siteHeader{
   font-size:22px;
   line-height:1;
   cursor:pointer;
+  margin-left:12px;           /* ✅ เว้นระยะจากเมนู */
   position: relative;
   z-index: 3001;
   pointer-events:auto;
 }
 
-/* Mobile drawer */
+/* Mobile drawer (เปิดขวา) */
 #mobileMenu.mobileMenu{
-  display:none; /* ปิด default */
+  display:none;               /* ปิด default */
   position:absolute;
   top: 64px;
   right: 16px;
@@ -1686,9 +1686,7 @@ header.siteHeader{
 }
 
 /* เปิดเมื่อ JS ใส่ .isOpen */
-#mobileMenu.mobileMenu.isOpen{
-  display:block;
-}
+#mobileMenu.mobileMenu.isOpen{ display:block; }
 
 #mobileMenu.mobileMenu a{
   display:block;
@@ -1704,7 +1702,7 @@ header.siteHeader{
 
 /* Tablet/Mobile */
 @media (max-width: 980px){
-  .navLinks{ display:none !important; } /* ซ่อนเมนูตัวอักษร */
+  .navLinks{ display:none !important; } /* ✅ ซ่อนเมนูตัวอักษร */
   .navToggle{ display:inline-flex; align-items:center; justify-content:center; }
 }
 
@@ -1730,15 +1728,6 @@ header.siteHeader{
   align-items:center;
   justify-content:space-between;
   gap:16px;
-}
-
-/* Desktop menu centered */
-.navLinks{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:18px;
-  flex: 1;
 }
 
 /* Brand left */
