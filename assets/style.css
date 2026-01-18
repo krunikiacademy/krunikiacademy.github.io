@@ -3226,4 +3226,25 @@ html.menuOpen,
 body.menuOpen{
   overflow: hidden;
 }
+/* 🔧 Bigger Hamburger Icon (IG-size) */
+.siteHeader .navToggle{
+  width:48px;     /* เดิม 44 */
+  height:48px;
+}
 
+.siteHeader .navToggle .hamburger{
+  width:28px;     /* เดิม 22 */
+  height:20px;    /* เดิม 16 */
+}
+
+/* เส้นหนาขึ้น มองชัด */
+.siteHeader .navToggle .hamburger::before,
+.siteHeader .navToggle .hamburger::after,
+.siteHeader .navToggle .hamburger span{
+  height:3px;     /* เดิม 2 */
+}
+
+/* ระยะเส้นใหม่ */
+.siteHeader .navToggle .hamburger::before{ top:0; }
+.siteHeader .navToggle .hamburger span{ top:8.5px; }
+.siteHeader .navToggle .hamburger::after{ top:17px; }
