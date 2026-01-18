@@ -3218,5 +3218,12 @@ footer{
 .siteHeader{ z-index: 9999 !important; }
 #navToggle.navToggle{ z-index: 10000 !important; position: relative !important; }
 .siteHeader, .siteHeader .navInner{ overflow: visible !important; }
-
+}
+/* =========================
+   Global: Lock scroll when mobile menu open
+========================= */
+html.menuOpen,
+body.menuOpen{
+  overflow: hidden;
+}
 
