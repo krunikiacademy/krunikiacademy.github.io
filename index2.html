@@ -67,6 +67,64 @@
       backdrop-filter: blur(2px);
     }
     .menuBackdrop[hidden]{ display:none; }
+
+     /* =========================
+     QUICK FIX (v0.1)
+     1) Social to RIGHT
+     2) Remove huge bottom gap
+  ========================= */
+
+  /* 1) Social to RIGHT */
+  .topbar{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+  }
+  .topbar .right{
+    margin-left:auto;
+    display:flex;
+    justify-content:flex-end;
+    width:100%;
+  }
+  .topbar .social{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:10px;
+  }
+
+  /* 2) Kill the huge bottom space (override whatever old css does) */
+  html, body{
+    margin:0;
+    padding:0;
+    height:auto;
+  }
+
+  /* ถ้า css เก่าตั้ง min-height หรือ padding-bottom ไว้ จะทำให้เกิดช่องว่างล่างบวม */
+  .wrap{
+    padding-bottom:0 !important;
+    margin-bottom:0 !important;
+    min-height:auto !important;
+  }
+  main.wrap{
+    padding-bottom:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  section{
+    margin-bottom:24px; /* ให้มีระยะพอดี ไม่เป็นถนน */
+  }
+  #contact{
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+  }
+  #contact .panel{
+    margin-bottom:0 !important;
+  }
+  footer{
+    margin-top:18px !important;
+    padding-bottom:24px !important; /* เผื่อหายใจนิดเดียว */
+  }
   </style>
 </head>
 
