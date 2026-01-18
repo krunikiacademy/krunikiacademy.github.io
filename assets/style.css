@@ -3299,3 +3299,70 @@ body.menuOpen{
   color:#d6b46a !important;
   background: rgba(214,180,106,.14) !important;
 }
+
+/* FORCE Hamburger icon size = IG icon size */
+.siteHeader .navActions{ position:relative; z-index:10001; }
+
+.siteHeader #navToggle{
+  width:48px;
+  height:48px;
+  border:0;
+  padding:0;
+  border-radius:12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  background:transparent;
+  color: rgba(255,255,255,.95);
+  position:relative;
+  z-index:10002;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.siteHeader #navToggle:hover{ background: rgba(255,255,255,.08); }
+.siteHeader #navToggle:focus-visible{
+  outline:2px solid rgba(255,255,255,.35);
+  outline-offset:2px;
+}
+
+/* ✅ ไอคอน 3 ขีดใหญ่ */
+.siteHeader #navToggle .hamburger{
+  width:30px;
+  height:22px;
+  position:relative;
+  display:block;
+}
+
+/* เส้น 3 ขีด (หนาขึ้น) */
+.siteHeader #navToggle .hamburger::before,
+.siteHeader #navToggle .hamburger::after,
+.siteHeader #navToggle .hamburger span{
+  content:"";
+  position:absolute;
+  left:0;
+  width:100%;
+  height:3px;
+  border-radius:3px;
+  background: currentColor;
+  transition: transform .2s ease, top .2s ease, opacity .2s ease;
+}
+
+.siteHeader #navToggle .hamburger::before{ top:0; }
+.siteHeader #navToggle .hamburger span{ top:9.5px; }
+.siteHeader #navToggle .hamburger::after{ top:19px; }
+
+/* ✅ ตอนเปิด: เป็นสีทอง + เปลี่ยนเป็น X */
+.siteHeader #navToggle.isActive,
+.siteHeader #navToggle[aria-expanded="true"]{
+  color:#d6b46a;
+  background: rgba(214,180,106,.14);
+}
+
+.siteHeader #navToggle.isActive .hamburger::before{ top:9.5px; transform:rotate(45deg); }
+.siteHeader #navToggle.isActive .hamburger span{ opacity:0; }
+.siteHeader #navToggle.isActive .hamburger::after{ top:9.5px; transform:rotate(-45deg); }
+
+/* Mobile/iPad only (ตามของนิกี้) */
+@media (max-width: 860px){ .siteHeader #navToggle{ display:inline-flex; } }
+@media (min-width: 861px){ .siteHeader #navToggle{ display:none; } }
