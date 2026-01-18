@@ -8,122 +8,48 @@
 
   <!-- 🔗 CSS เดิมของนิกี้ -->
   <link rel="stylesheet" href=“assets/style.css">
+  
 <style>
-    <!-- ✅ FIX OVERRIDES: กันเมนูซ้อน + จัด Mobile menu กางจากขวา (ไม่แตะโทนสีหลัก) -->
-  <style>
-    /* Header layout: brand left, menu center, actions right */
-    .siteHeader .navInner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-    }
-    .siteHeader .brand{ flex:0 0 auto; }
-    .siteHeader .navLinks{
-      flex:1 1 auto;
-      display:flex;
-      justify-content:center;
-      gap:18px;
-    }
-    .siteHeader .navActions{
-      flex:0 0 auto;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
+  /* KRUNIKI OVERRIDE PATCH v1.0 */
 
-    /* ✅ Desktop vs Mobile behavior */
-    @media (max-width: 860px){
-      .siteHeader .navLinks{ display:none; } /* กันเมนู desktop โผล่บนมือถือ */
-      .siteHeader .navToggle{ display:inline-flex; }
-    }
-    @media (min-width: 861px){
-      .siteHeader .navToggle{ display:none; }
-      #mobileMenu{ display:none !important; } /* กัน mobile menu โผล่บน desktop */
-    }
-
-    /* ✅ Mobile Menu: slide from right */
-    #mobileMenu.mobileMenu{
-      position:fixed;
-      top:0;
-      right:0;
-      height:100vh;
-      width:min(84vw, 360px);
-      padding:84px 18px 18px;
-      z-index:9999;
-      transform:translateX(100%);
-      transition:transform .25s ease;
-    }
-    #mobileMenu.mobileMenu.isOpen{
-      transform:translateX(0);
-    }
-
-    /* Backdrop */
-    .menuBackdrop{
-      position:fixed;
-      inset:0;
-      z-index:9998;
-      background:rgba(0,0,0,.45);
-      backdrop-filter: blur(2px);
-    }
-    .menuBackdrop[hidden]{ display:none; }
-  /* =========================
-     QUICK FIX (v0.1)
-     1) Social to RIGHT
-     2) Remove huge bottom gap
-  ========================= */
-
-  /* 1) Social to RIGHT */
-  .topbar{
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
+  /* iPad/tablet show hamburger */
+  @media (max-width:1024px){
+    .siteHeader .navLinks{display:none!important;}
+    .siteHeader .navToggle{display:inline-flex!important;}
   }
-  .topbar .right{
-    margin-left:auto;
-    display:flex;
-    justify-content:flex-end;
-    width:100%;
-  }
-  .topbar .social{
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    gap:10px;
+  @media (min-width:1025px){
+    .siteHeader .navToggle{display:none!important;}
+    #mobileMenu{display:none!important;}
   }
 
-  /* 2) Kill the huge bottom space (override whatever old css does) */
-  html, body{
-    margin:0;
-    padding:0;
-    height:auto;
+  /* Hamburger not tiny dot */
+  .navToggle{
+    appearance:none!important;-webkit-appearance:none!important;
+    width:44px!important;height:44px!important;
+    font-size:22px!important;line-height:1!important;
+    display:inline-flex!important;align-items:center!important;justify-content:center!important;
   }
 
-  /* ถ้า css เก่าตั้ง min-height หรือ padding-bottom ไว้ จะทำให้เกิดช่องว่างล่างบวม */
-  .wrap{
-    padding-bottom:0 !important;
-    margin-bottom:0 !important;
-    min-height:auto !important;
-  }
-  main.wrap{
-    padding-bottom:0 !important;
-    margin-bottom:0 !important;
-  }
+  /* Kill huge bottom gap */
+  html,body{margin:0!important;padding:0!important;height:auto!important;}
+  main,.wrap,#contact{min-height:auto!important;height:auto!important;padding-bottom:0!important;margin-bottom:0!important;}
+  #contact .panel{padding-bottom:0!important;margin-bottom:0!important;}
+  section{margin-bottom:24px!important;}
+  section:last-of-type{margin-bottom:0!important;}
+  footer{margin-top:16px!important;padding:18px 0 18px!important;}
 
-  section{
-    margin-bottom:24px; /* ให้มีระยะพอดี ไม่เป็นถนน */
+  /* Mobile menu slide from right */
+  #mobileMenu.mobileMenu{
+    position:fixed!important;top:0!important;right:0!important;height:100vh!important;
+    width:min(84vw,360px)!important;
+    padding:84px 18px 18px!important;
+    z-index:9999!important;
+    transform:translateX(100%)!important;
+    transition:transform .25s ease!important;
   }
-  #contact{
-    margin-bottom:0 !important;
-    padding-bottom:0 !important;
-  }
-  #contact .panel{
-    margin-bottom:0 !important;
-  }
-  footer{
-    margin-top:18px !important;
-    padding-bottom:24px !important; /* เผื่อหายใจนิดเดียว */
-  }
+  #mobileMenu.mobileMenu.isOpen{transform:translateX(0)!important;}
+  .menuBackdrop{position:fixed!important;inset:0!important;z-index:9998!important;background:rgba(0,0,0,.45)!important;backdrop-filter:blur(2px)!important;}
+  .menuBackdrop[hidden]{display:none!important;}
 </style>
 #contact{ min-height:auto !important; height:auto !important; }
 main{ min-height:auto !important; }
@@ -185,40 +111,14 @@ main{ min-height:auto !important; }
   </div>
 
   <!-- HEADER -->
-  <header class="siteHeader">
-    <div class="navInner">
+ <header class="siteHeader">
+  <div class="navInner">
+    <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="brandText">KRUNIKI</span>
+    </a>
 
-      <!-- ✅ Brand LEFT -->
-      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
-        <span class="dot" aria-hidden="true"></span>
-        <span class="brandText">KRUNIKI</span>
-      </a>
-
-      <!-- ✅ Menu CENTER (Thai) -->
-      <nav class="navLinks" aria-label="Primary navigation">
-        <a href="shop.html">ร้านค้า</a>
-        <a href="index.html">หน้าแรก</a>
-        <a href="about.html">เกี่ยวกับ</a>
-        <a href="services.html">บริการ</a>
-        <a href="resources.html">คลังความรู้</a>
-        <a href="contact.html">ติดต่อ</a>
-      </nav>
-
-      <!-- ✅ Actions RIGHT (Hamburger) -->
-      <div class="navActions">
-        <button class="navToggle" id="navToggle" type="button"
-          aria-label="เปิดเมนู"
-          aria-expanded="false"
-          aria-controls="mobileMenu">☰</button>
-      </div>
-
-    </div>
-
-    <!-- Backdrop -->
-    <div id="menuBackdrop" class="menuBackdrop" hidden></div>
-
-    <!-- ✅ Mobile Menu (slide from right) -->
-    <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <nav class="navLinks" aria-label="Primary navigation">
       <a href="shop.html">ร้านค้า</a>
       <a href="index.html">หน้าแรก</a>
       <a href="about.html">เกี่ยวกับ</a>
@@ -226,7 +126,24 @@ main{ min-height:auto !important; }
       <a href="resources.html">คลังความรู้</a>
       <a href="contact.html">ติดต่อ</a>
     </nav>
-  </header>
+
+    <button class="navToggle" id="navToggle" type="button"
+      aria-label="เปิดเมนู"
+      aria-expanded="false"
+      aria-controls="mobileMenu">☰</button>
+  </div>
+
+  <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <a href="shop.html">ร้านค้า</a>
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="services.html">บริการ</a>
+    <a href="resources.html">คลังความรู้</a>
+    <a href="contact.html">ติดต่อ</a>
+  </nav>
+</header>
 
   <main class="wrap">
 
