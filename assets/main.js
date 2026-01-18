@@ -1,32 +1,35 @@
 /* =========================================
-   KRUNIKI - assets/main.js
-   Works with index2.html structure:
-   #navToggle, #mobileMenu, #menuBackdrop
-   Slide from RIGHT only, no overlap bugs
+   KRUNIKI - assets/main.js (v1.1)
+   - Removes old duplicate listeners by cloning nodes
+   - Opens mobile menu from RIGHT only
+   - Works with: #navToggle, #mobileMenu, #menuBackdrop
    ========================================= */
 
 (function () {
   "use strict";
 
-  const btn = document.getElementById("navToggle");
-  const menu = document.getElementById("mobileMenu");
-  const backdrop = document.getElementById("menuBackdrop");
+  const oldBtn = document.getElementById("navToggle");
+  const oldMenu = document.getElementById("mobileMenu");
+  const oldBackdrop = document.getElementById("menuBackdrop");
 
-  // Guard: if any element missing, do nothing safely.
-  if (!btn || !menu || !backdrop) return;
+  if (!oldBtn || !oldMenu || !oldBackdrop) return;
+
+  // ✅ Remove any previous event listeners by cloning
+  const btn = oldBtn.cloneNode(true);
+  oldBtn.parentNode.replaceChild(btn, oldBtn);
+
+  const backdrop = oldBackdrop.cloneNode(true);
+  oldBackdrop.parentNode.replaceChild(backdrop, oldBackdrop);
+
+  const menu = oldMenu; // menu usually has no listeners; keep as is
 
   const OPEN_CLASS = "isOpen";
-  const ACTIVE_CLASS = "isActive"; // for button styling in CSS
+  const ACTIVE_CLASS = "isActive";
   const BODY_LOCK_CLASS = "menuOpen";
 
   function lockScroll(lock) {
-    if (lock) {
-      document.documentElement.classList.add(BODY_LOCK_CLASS);
-      document.body.classList.add(BODY_LOCK_CLASS);
-    } else {
-      document.documentElement.classList.remove(BODY_LOCK_CLASS);
-      document.body.classList.remove(BODY_LOCK_CLASS);
-    }
+    document.documentElement.classList.toggle(BODY_LOCK_CLASS, lock);
+    document.body.classList.toggle(BODY_LOCK_CLASS, lock);
   }
 
   function isOpen() {
@@ -34,68 +37,64 @@
   }
 
   function openMenu() {
-    // Ensure visible
     menu.hidden = false;
     backdrop.hidden = false;
 
-    // Accessibility + active state
     btn.setAttribute("aria-expanded", "true");
     btn.classList.add(ACTIVE_CLASS);
 
-    // Let transitions run
-    requestAnimationFrame(() => {
-      menu.classList.add(OPEN_CLASS);
-      backdrop.classList.add(OPEN_CLASS);
-    });
-
+    requestAnimationFrame(() => menu.classList.add(OPEN_CLASS));
     lockScroll(true);
   }
 
   function closeMenu() {
     menu.classList.remove(OPEN_CLASS);
-    backdrop.classList.remove(OPEN_CLASS);
 
     btn.setAttribute("aria-expanded", "false");
     btn.classList.remove(ACTIVE_CLASS);
 
     lockScroll(false);
 
-    // Wait for transition, then hide
     window.setTimeout(() => {
       menu.hidden = true;
       backdrop.hidden = true;
     }, 220);
   }
 
-  function toggleMenu() {
+  function toggleMenu(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // ✅ kill other handlers (if any) on same click
+      if (typeof e.stopImmediatePropagation === "function") e.stopImmediatePropagation();
+    }
     isOpen() ? closeMenu() : openMenu();
   }
 
   // Click
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    toggleMenu();
-  });
+  btn.addEventListener("click", toggleMenu, true);
 
   // Backdrop closes
-  backdrop.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (isOpen()) closeMenu();
-  });
+  backdrop.addEventListener(
+    "click",
+    (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (typeof e.stopImmediatePropagation === "function") e.stopImmediatePropagation();
+      if (isOpen()) closeMenu();
+    },
+    true
+  );
 
   // ESC closes
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && isOpen()) closeMenu();
   });
 
-  // Clicking links closes
-  menu.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => {
-      if (isOpen()) closeMenu();
-    });
-  });
+  // Clicking any link closes
+  menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
 
-  // Defensive: If resized to desktop width, force close
+  // Defensive: if resized to desktop, close
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 861 && isOpen()) closeMenu();
   });
