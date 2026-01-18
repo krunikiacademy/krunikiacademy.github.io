@@ -3248,3 +3248,54 @@ body.menuOpen{
 .siteHeader .navToggle .hamburger::before{ top:0; }
 .siteHeader .navToggle .hamburger span{ top:8.5px; }
 .siteHeader .navToggle .hamburger::after{ top:17px; }
+
+/* =========================
+   FORCE Hamburger icon size = IG icon size
+========================= */
+
+/* กันปุ่มโดนทับคลิก */
+.siteHeader .navActions{
+  position: relative;
+  z-index: 10001;
+}
+.siteHeader #navToggle{
+  position: relative;
+  z-index: 10002;
+  pointer-events: auto;
+}
+
+/* ขนาดปุ่ม */
+.siteHeader #navToggle.navToggle{
+  width:48px !important;
+  height:48px !important;
+}
+
+/* ✅ ขนาด “ไอคอน 3 ขีด” — เท่าไอคอน IG โดยประมาณ */
+.siteHeader #navToggle .hamburger{
+  width:30px !important;
+  height:22px !important;
+}
+
+/* ✅ เส้นหนาขึ้น = เห็นชัด */
+.siteHeader #navToggle .hamburger::before,
+.siteHeader #navToggle .hamburger::after,
+.siteHeader #navToggle .hamburger span{
+  height:3px !important;
+}
+
+/* ระยะเส้นใหม่ */
+.siteHeader #navToggle .hamburger::before{ top:0 !important; }
+.siteHeader #navToggle .hamburger span{ top:9.5px !important; }
+.siteHeader #navToggle .hamburger::after{ top:19px !important; }
+
+/* สีเส้น (ถ้าพื้นหลังอ่อน/ขาว ให้เป็นดำได้) */
+.siteHeader #navToggle.navToggle{
+  color: rgba(255,255,255,.95) !important;
+}
+
+/* Active = Gold */
+.siteHeader #navToggle.navToggle.isActive,
+.siteHeader #navToggle.navToggle[aria-expanded="true"]{
+  color:#d6b46a !important;
+  background: rgba(214,180,106,.14) !important;
+}
