@@ -3007,3 +3007,133 @@ footer{
   margin-top: 14px !important;
   padding: 18px 0 !important;
 }
+
+/* =========================================
+   KRUNIKI HAMBURGER ICON FIX (v2)
+   - render 3 lines (not font glyph)
+   - never overflow, stays right
+   ========================================= */
+
+#navToggle.navToggle{
+  /* size */
+  width:44px !important;
+  height:44px !important;
+  border-radius:14px !important;
+
+  /* look */
+  border:1px solid rgba(255,255,255,.14) !important;
+  background:rgba(255,255,255,.04) !important;
+  color:transparent !important;         /* hide ☰ glyph */
+  font-size:0 !important;               /* hide ☰ glyph */
+  line-height:0 !important;
+
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  cursor:pointer !important;
+
+  position:relative !important;
+  z-index:6000 !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;           /* prevent “ล้นขอบ” */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* draw 3 lines */
+#navToggle.navToggle::before,
+#navToggle.navToggle::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  width:20px;
+  height:2px;
+  background:rgba(255,255,255,.92);
+  border-radius:2px;
+  transform:translateX(-50%);
+  transition: transform .2s ease, background .2s ease, opacity .2s ease;
+}
+#navToggle.navToggle::before{ top:15px; }
+#navToggle.navToggle::after{ top:27px; }
+
+#navToggle.navToggle span{ display:none !important; } /* safety */
+
+/* middle line via box-shadow trick */
+#navToggle.navToggle{
+  /* middle line */
+  box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+}
+#navToggle.navToggle::before{
+  /* add middle line as shadow */
+  box-shadow: 0 6px 0 0 rgba(255,255,255,.92);
+}
+
+/* active = gold + (optional) morph to X */
+#navToggle.navToggle.isActive::before,
+#navToggle.navToggle[aria-expanded="true"]::before,
+#navToggle.navToggle.isActive::after,
+#navToggle.navToggle[aria-expanded="true"]::after{
+  background: rgba(241,221,170,1);
+}
+#navToggle.navToggle.isActive::before,
+#navToggle.navToggle[aria-expanded="true"]::before{
+  box-shadow:none;
+  top:21px;
+  transform:translateX(-50%) rotate(45deg);
+}
+#navToggle.navToggle.isActive::after,
+#navToggle.navToggle[aria-expanded="true"]::after{
+  top:21px;
+  transform:translateX(-50%) rotate(-45deg);
+}
+
+/* make sure button never goes offscreen on mobile */
+@media (max-width: 860px){
+  .siteHeader .navInner{ padding-right:12px !important; }
+  #navToggle.navToggle{ margin-right:0 !important; }
+}
+
+/* =========================================
+   KRUNIKI BOTTOM GAP FIX (Resources + Contact) v2
+   - reduce excessive frame height/spacing
+   ========================================= */
+
+/* tighten section spacing at bottom */
+#resources{ margin-bottom:16px !important; }
+#contact{ margin-bottom:0 !important; }
+
+/* reduce panel padding only in bottom sections */
+#resources .panel,
+#contact .panel{
+  padding:16px !important;         /* เดิม 20 */
+}
+
+/* tighten resBox + list default margins */
+#resources .resBox{
+  padding:12px !important;         /* เดิม 14 */
+}
+#resources .resBox ul{
+  margin:10px 0 0 !important;      /* default margin often huge */
+  padding-left:18px !important;
+}
+#resources .resBox li{
+  margin:6px 0 !important;
+}
+
+/* contact: tighten grid gap + internal cards */
+#contact .contactGrid{
+  gap:12px !important;             /* เดิม 14 */
+}
+#contact .note,
+#contact .lineCta{
+  padding:14px !important;         /* เดิม 16 */
+}
+
+/* remove any accidental big bottom padding */
+main, .wrap, main.wrap{
+  padding-bottom:0 !important;
+  margin-bottom:0 !important;
+}
+footer{
+  margin-top:12px !important;
+  padding:16px 0 !important;
+}
