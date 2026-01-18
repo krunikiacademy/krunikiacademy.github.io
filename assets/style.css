@@ -2833,3 +2833,92 @@ footer{
   margin-top: 14px !important;
   padding: 18px 0 18px !important;
 }
+
+/* ===============================
+   MOBILE HAMBURGER FIX
+   =============================== */
+
+@media (max-width: 768px) {
+  .navToggle {
+    font-size: 18px !important;   /* ลดขนาด ☰ */
+    line-height: 1 !important;
+    padding: 6px 8px !important;  /* กันล้นขอบ */
+    width: auto !important;
+    height: auto !important;
+  }
+}
+
+.mobileMenu[hidden] {
+  display: none;
+}
+
+/* ===============================
+   FIX EXTRA SPACE BOTTOM
+   =============================== */
+
+html, body {
+  height: auto;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 0 !important;
+}
+
+/* section สุดท้าย */
+section:last-of-type {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* ===============================
+   SAFE OVERRIDE: MOBILE HAMBURGER
+   (NO HTML CHANGE)
+   =============================== */
+
+@media (max-width: 768px) {
+  button.navToggle {
+    font-size: 18px !important;
+    line-height: 1 !important;
+    padding: 6px 8px !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 44px !important;   /* กันล้นขอบ */
+    max-height: 44px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ===============================
+   SAFE OVERRIDE: MOBILE MENU VISIBILITY
+   =============================== */
+
+#mobileMenu {
+  display: block !important; /* ให้ JS คุมด้วย hidden */
+}
+
+#mobileMenu[hidden] {
+  display: none !important;
+}
+
+/* ===============================
+   SAFE FIX: EXTRA BOTTOM SPACE
+   =============================== */
+
+html, body {
+  height: auto !important;
+  min-height: 100% !important;
+}
+
+body {
+  margin: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* ปิดช่องว่าง section สุดท้าย */
+main > section:last-child,
+section:last-of-type {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
