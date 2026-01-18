@@ -3,243 +3,364 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KRUNIKI | Home</title>
-  <meta name="description" content="KRUNIKI — A gentle space to return to yourself • KRUNIKI SoulSync System™ • KRUNIKI Healing System™" />
+  <title>KRUNIKI Academy</title>
+  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
+
+  <!-- 🔗 CSS เดิมของนิกี้ -->
   <link rel="stylesheet" href="assets/style.css">
-  <script src="assets/main.js" defer></script>
+
+  <!-- ✅ FIX OVERRIDES: กันเมนูซ้อน + จัด Mobile menu กางจากขวา (ไม่แตะโทนสีหลัก) -->
+  <style>
+    /* Header layout: brand left, menu center, actions right */
+    .siteHeader .navInner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .siteHeader .brand{ flex:0 0 auto; }
+    .siteHeader .navLinks{
+      flex:1 1 auto;
+      display:flex;
+      justify-content:center;
+      gap:18px;
+    }
+    .siteHeader .navActions{
+      flex:0 0 auto;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    /* ✅ Desktop vs Mobile behavior */
+    @media (max-width: 860px){
+      .siteHeader .navLinks{ display:none; } /* กันเมนู desktop โผล่บนมือถือ */
+      .siteHeader .navToggle{ display:inline-flex; }
+    }
+    @media (min-width: 861px){
+      .siteHeader .navToggle{ display:none; }
+      #mobileMenu{ display:none !important; } /* กัน mobile menu โผล่บน desktop */
+    }
+
+    /* ✅ Mobile Menu: slide from right */
+    #mobileMenu.mobileMenu{
+      position:fixed;
+      top:0;
+      right:0;
+      height:100vh;
+      width:min(84vw, 360px);
+      padding:84px 18px 18px;
+      z-index:9999;
+      transform:translateX(100%);
+      transition:transform .25s ease;
+    }
+    #mobileMenu.mobileMenu.isOpen{
+      transform:translateX(0);
+    }
+
+    /* Backdrop */
+    .menuBackdrop{
+      position:fixed;
+      inset:0;
+      z-index:9998;
+      background:rgba(0,0,0,.45);
+      backdrop-filter: blur(2px);
+    }
+    .menuBackdrop[hidden]{ display:none; }
+  </style>
 </head>
 
 <body>
 
-<header class="siteHeader">
-  <div class="navInner navInner--home">
+  <!-- TOPBAR (Social RIGHT only) -->
+  <div class="topbar">
+    <div class="right">
+      <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+        <!-- LINE OA -->
+        <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+          </svg>
+        </a>
 
-    <!-- LEFT: BRAND -->
-    <a class="brand" href="index.html" aria-label="KRUNIKI Home">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="brandText">KRUNIKI</span>
-    </a>
+        <!-- LINE SHOP -->
+        <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+            <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+            <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+          </svg>
+        </a>
 
-    <!-- CENTER: THAI MENU -->
-    <nav class="navLinks navLinks--center" aria-label="Primary navigation">
+        <!-- FACEBOOK -->
+        <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+          </svg>
+        </a>
+
+        <!-- YOUTUBE -->
+        <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+          </svg>
+        </a>
+
+        <!-- TIKTOK -->
+        <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+          </svg>
+        </a>
+
+        <!-- INSTAGRAM -->
+        <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+            <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+            <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="siteHeader">
+    <div class="navInner">
+
+      <!-- ✅ Brand LEFT -->
+      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="brandText">KRUNIKI</span>
+      </a>
+
+      <!-- ✅ Menu CENTER (Thai) -->
+      <nav class="navLinks" aria-label="Primary navigation">
+        <a href="shop.html">ร้านค้า</a>
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">เกี่ยวกับ</a>
+        <a href="services.html">บริการ</a>
+        <a href="resources.html">คลังความรู้</a>
+        <a href="contact.html">ติดต่อ</a>
+      </nav>
+
+      <!-- ✅ Actions RIGHT (Hamburger) -->
+      <div class="navActions">
+        <button class="navToggle" id="navToggle" type="button"
+          aria-label="เปิดเมนู"
+          aria-expanded="false"
+          aria-controls="mobileMenu">☰</button>
+      </div>
+
+    </div>
+
+    <!-- Backdrop -->
+    <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+    <!-- ✅ Mobile Menu (slide from right) -->
+    <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
       <a href="shop.html">ร้านค้า</a>
-      <a class="isActive" href="index.html" aria-current="page">หน้าแรก</a>
+      <a href="index.html">หน้าแรก</a>
       <a href="about.html">เกี่ยวกับ</a>
       <a href="services.html">บริการ</a>
       <a href="resources.html">คลังความรู้</a>
       <a href="contact.html">ติดต่อ</a>
     </nav>
+  </header>
 
-    <!-- RIGHT: SOCIAL + HAMBURGER -->
-    <div class="navRight">
+  <main class="wrap">
 
-      <!-- Social Icons (2 bars style) -->
-      <div class="socialDock" aria-label="Social links">
-        <a class="socialBtn" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.5.5A3 3 0 0 0 2.4 7.2 31.7 31.7 0 0 0 2 12a31.7 31.7 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.7 31.7 0 0 0 22 12a31.7 31.7 0 0 0-.4-4.8Z"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M10 15.2V8.8L16 12l-6 3.2Z" fill="currentColor"/>
-          </svg>
-        </a>
+    <!-- HERO -->
+    <section id="about" class="panel hero">
+      <div class="heroGrid">
+        <div class="heroText">
+          <div class="goldline">Connect gently • ติดตาม <strong>KRUNIKI</strong></div>
+          <h1>พื้นที่เรียนรู้ของหัวใจ</h1>
+          <p class="lead">
+            ที่นี่คือพื้นที่ของ KRUNIKI สำหรับการเยียวยาใจอย่างเป็นระบบ ผ่านสติ ความนิ่ง
+            และการกลับมาเชื่อมต่อหัวใจของตัวเองอย่างอ่อนโยน — แบบที่ “ทำได้จริงในชีวิตประจำวัน”
+          </p>
 
-        <a class="socialBtn" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v6h3v-6h2.4l.6-3H13V9c0-.6.4-1 1-1Z"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-          </svg>
-        </a>
-
-        <a class="socialBtn" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 7h10v10H7V7Z" fill="none" stroke="currentColor" stroke-width="2"/>
-            <path d="M16.5 7.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            <path d="M12 10a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z" fill="none" stroke="currentColor" stroke-width="2"/>
-            <path d="M7 7c0-2 2-3 3-3h4c1 0 3 1 3 3" fill="none" stroke="currentColor" stroke-width="2"/>
-          </svg>
-        </a>
-
-        <a class="socialBtn" href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14 3v10.2a3.8 3.8 0 1 1-3-3.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M14 3c1 3.5 3.2 5.6 7 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </a>
-
-        <a class="socialBtn" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 12c0 4.4-4 8-9 8-1.1 0-2.2-.2-3.2-.5L4 21l1-3.2C3.7 16.3 3 14.2 3 12c0-4.4 4-8 9-8s9 3.6 9 8Z"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Hamburger -->
-      <button class="navToggle"
-        type="button"
-        aria-label="เปิดเมนู"
-        aria-expanded="false"
-        aria-controls="mobileMenu">☰</button>
-    </div>
-  </div>
-
-  <!-- RIGHT DRAWER -->
-  <nav id="mobileMenu" class="navDrawer navDrawer--right" aria-label="Mobile navigation" hidden>
-    <div class="drawerHead">
-      <div class="drawerBrand">
-        <span class="dot" aria-hidden="true"></span>
-        <span class="brandText">KRUNIKI</span>
-      </div>
-      <button class="drawerClose" type="button" aria-label="ปิดเมนู" data-close-drawer>✕</button>
-    </div>
-
-    <div class="drawerLinks">
-      <a href="shop.html">ร้านค้า</a>
-      <a href="index.html" aria-current="page">หน้าแรก</a>
-      <a href="about.html">เกี่ยวกับ</a>
-      <a href="services.html">บริการ</a>
-      <a href="resources.html">คลังความรู้</a>
-      <a href="contact.html">ติดต่อ</a>
-    </div>
-
-    <div class="drawerSocial">
-      <div class="kicker" style="margin:10px 0 6px;">Follow</div>
-      <div class="socialDock">
-        <a class="socialBtn" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">LINE</a>
-        <a class="socialBtn" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">SHOP</a>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<main class="wrap">
-
-  <!-- HERO (ยึดแกน about.html) -->
-  <section class="panel hero" style="padding:26px;">
-    <div class="goldline">Home • หน้าแรก • <strong>KRUNIKI</strong></div>
-    <h1 style="margin-top:10px;">Return Home to Your Heart</h1>
-
-    <p class="lead" style="max-width:72ch;">
-      KRUNIKI คือพื้นที่ที่พาคุณกลับบ้านที่หัวใจ
-      ผ่านสติ ความนิ่ง และการเยียวยาอย่างเป็นระบบ — แบบที่ “ทำได้จริงในชีวิตประจำวัน”
-      เพื่อให้คุณค่อย ๆ คืนพลังชีวิต โดยไม่เร่ง ไม่ฝืน ไม่ทำร้ายตัวเองซ้ำ
-    </p>
-
-    <div class="ctaRow">
-      <a class="btn primary" href="services.html">เริ่มจากบริการ</a>
-      <a class="btn" href="resources.html">ดูคลังความรู้</a>
-      <a class="btn" href="shop.html">ไปที่ร้านค้า</a>
-    </div>
-
-    <div class="microProof" style="margin-top:14px;">
-      Gentle • Grounded • Real — อ่อนโยนแต่จริง • มีโครงสร้าง • พาไปลึกได้
-    </div>
-  </section>
-
-  <!-- QUICK SECTIONS -->
-  <section>
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
-      <div>
-        <div class="kicker">Start Here</div>
-        <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">
-          เริ่มต้นอย่างปลอดภัย
-        </div>
-      </div>
-      <div style="color:var(--muted2);font-size:13px;">Slow • Safe • Sustainable</div>
-    </div>
-
-    <div class="grid2">
-      <div class="card">
-        <div class="kicker">Services</div>
-        <h3>อยากมีคนดูแลหัวใจแบบอ่อนโยน?</h3>
-        <p>เริ่มจาก Session หรือโปรแกรมที่เหมาะกับคุณ เพื่อสร้าง “ความปลอดภัยภายใน” ก่อน แล้วค่อยไปลึกอย่างมั่นคง</p>
-        <div class="cardAction">
-          <a class="btnGhost" href="services.html">ดูบริการ →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="kicker">Knowledge</div>
-        <h3>อยากฝึกด้วยตัวเองก่อน?</h3>
-        <p>เข้าไปที่คลังความรู้ เพื่อรับเครื่องมือเบื้องต้น (แบบสั้น ใช้ได้จริง) และค่อย ๆ วางรากฐานอย่างอ่อนโยน</p>
-        <div class="cardAction">
-          <a class="btnGhost" href="resources.html">ไปที่คลังความรู้ →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SYSTEMS (เหมือน about แต่ย่อให้เป็น HOME) -->
-  <section>
-    <div class="panel" style="padding:18px;">
-      <div class="resHead" style="padding:0;">
-        <h2 style="margin:0;">KRUNIKI Systems</h2>
-        <div class="resTag">SoulSync System™ • Healing System™</div>
-      </div>
-
-      <div class="resBody" style="padding:14px 0 0;">
-        <div class="grid2">
-          <div class="card">
-            <div class="kicker">KRUNIKI SoulSync System™</div>
-            <h3>ซิงค์หัวใจ–จิต–วิญญาณ กลับสู่ความจริง</h3>
-            <p>แนวทางที่พาคุณกลับมารับฟังตัวเอง ผ่านสติ ความนิ่ง ร่างกาย และถ้อยคำที่มีพลัง เพื่อให้ชีวิต “ไหลกลับ” อย่างเป็นธรรมชาติ</p>
+          <div class="ctaRow">
+            <a class="btn primary" href="#services">ดูสิ่งที่มีในตอนนี้</a>
+            <a class="btn" href="#contact">ช่องทางติดต่อ</a>
           </div>
-          <div class="card">
-            <div class="kicker">KRUNIKI Healing System™</div>
-            <h3>เส้นทางเยียวยาเชิงโครงสร้าง (8 Sessions)</h3>
-            <p>ค่อย ๆ คืนพลังหัวใจ ปรับจิต และหลอมรวมจิตวิญญาณสู่ความสมบูรณ์ ด้วยโครงสร้างที่ชัดและปลอดภัย</p>
-            <div class="cardAction">
-              <a class="btnGhost" href="about.html">อ่านที่มา →</a>
+        </div>
+
+        <div class="quoteCard" aria-label="A gentle space quote">
+          <div class="quoteTop">
+            <div class="leftTitle">A gentle space</div>
+            <div style="opacity:.8;">to return to yourself.</div>
+          </div>
+          <p class="quote">
+            “การกลับบ้านที่หัวใจ” ไม่ได้คือการเปลี่ยนตัวเองให้เป็นคนใหม่ทันที
+            แต่คือการกลับมารับฟังความจริงภายในอย่างไม่ตัดสิน และค่อย ๆ คืนพลังให้ชีวิต
+          </p>
+        </div>
+      </div>
+
+      <div class="banner" aria-label="KRUNIKI Banner">
+        <img src="home-banner.webp" alt="KRUNIKI — Heart Awakening Banner" loading="lazy" decoding="async" />
+      </div>
+    </section>
+
+    <!-- WHAT YOU'LL FIND -->
+    <section id="services">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+        <div>
+          <div class="kicker">สิ่งที่คุณจะพบที่นี่</div>
+          <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">What you’ll find here</div>
+        </div>
+        <div style="color:var(--muted2);font-size:13px;">Heart Stillness Healing</div>
+      </div>
+
+      <!-- ✅ FIX: การ์ดทั้งหมดต้องอยู่ใน grid เดียวกัน -->
+      <div class="grid2">
+
+        <a href="service-20min.html" class="card cardLink" aria-label="ไปหน้าบริการ KRUNIKI Heart Awakening 20 นาที">
+          <div class="kicker">20-Minute Session</div>
+          <h3>KRUNIKI Heart Awakening — Session 20 นาที</h3>
+          <p>พื้นที่ปลอดภัยสำหรับการรับฟังใจ เยียวยา และกลับสู่ศูนย์กลางภายใน</p>
+          <div class="cardAction">
+            <span class="btnGhost">ดูรายละเอียดบริการ →</span>
+          </div>
+        </a>
+
+        <a href="service-programs.html" class="card cardLink" aria-label="ไปหน้าโปรแกรม Self-Healing">
+          <div class="kicker">Programs</div>
+          <h3>โปรแกรม Self-Healing</h3>
+          <p>เส้นทางเยียวยาเชิงระบบ ผ่านสติ ความนิ่ง และการฝึกที่ทำได้จริง</p>
+          <div class="cardAction">
+            <span class="btnGhost">ดูโปรแกรม →</span>
+          </div>
+        </a>
+
+        <a href="practices.html" class="card cardLink" aria-label="ไปหน้าการฝึกความนิ่งและลมหายใจ">
+          <div class="kicker">Practices</div>
+          <h3>การฝึกความนิ่งและลมหายใจอย่างลึกซึ้ง</h3>
+          <p>Stillness-based &amp; Breath-based Practices เพื่อปรับสมดุลระบบประสาท</p>
+          <div class="cardAction">
+            <span class="btnGhost">ดูแนวทางการฝึก →</span>
+          </div>
+        </a>
+
+        <a href="learning.html" class="card cardLink" aria-label="ไปหน้าแหล่งเรียนรู้และเนื้อหาเชิงการศึกษา">
+          <div class="kicker">Learning</div>
+          <h3>แหล่งเรียนรู้และเนื้อหาเชิงการศึกษา</h3>
+          <p>Learning Resources &amp; Educational Content สำหรับผู้ที่ต้องการเข้าใจการเยียวยาอย่างลึกและมีรากฐาน</p>
+          <div class="cardAction">
+            <span class="btnGhost">เข้าสู่แหล่งเรียนรู้ →</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources">
+      <div class="panel">
+        <div class="resHead">
+          <h2>Resources</h2>
+          <div class="resTag">กำลังทยอยเพิ่มเนื้อหา</div>
+        </div>
+        <div class="resBody">
+          <div class="resBox">
+            เราจะเพิ่มบทความสั้น ๆ, แบบฝึก, และแนวทางการดูแลหัวใจเป็นลำดับ (เร็ว ๆ นี้: หน้า “Programs”, “Sessions”, และ “Workbook”)
+            <ul>
+              <li>Breath &amp; Stillness Guides</li>
+              <li>Self-Healing Notes</li>
+              <li>Educational Pages (Foundations)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="panel">
+        <div class="contactHead">
+          <h2>ติดต่อ / Follow</h2>
+          <div class="small">Connect gently</div>
+        </div>
+
+        <div class="contactGrid">
+          <div class="note">
+            KRUNIKI สามารถเชื่อมต่อกันได้ผ่านช่องทางด้านบน (Social Icons) หรือเริ่มต้นคุยกันอย่างอ่อนโยนผ่าน LINE OA 💛
+            <div style="margin-top:10px;color:var(--muted2);font-size:13px;"></div>
+          </div>
+
+          <div class="lineCta">
+            <div class="lineCtaTitle">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color:rgba(255,255,255,.85)">
+                <path d="M21 12c0 4.4-4 8-9 8-1.1 0-2.2-.2-3.2-.5L4 21l1-3.2C3.7 16.3 3 14.2 3 12c0-4.4 4-8 9-8s9 3.6 9 8Z"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              เชื่อมต่อหัวใจผ่าน LINE OA
             </div>
+
+            <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">ไปที่ LINE OA</a>
+            <a class="btn" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ดู LINE Shop</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- CONTACT STRIP -->
-  <section id="contact">
-    <div class="panel">
-      <div class="contactHead">
-        <h2>ติดต่อ / Follow</h2>
-        <div class="small">Connect gently</div>
-      </div>
+      <footer>
+        © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+      </footer>
+    </section>
 
-      <div class="contactGrid">
-        <div class="note">
-          ถ้าคุณอยากให้ KRUNIKI ช่วยดูแลหัวใจของคุณอย่างอ่อนโยน
-          เริ่มต้นคุยกันได้ผ่าน LINE OA 💛
-          <div style="margin-top:10px;color:var(--muted2);font-size:13px;">
-            หรือเริ่มจากคลังความรู้เพื่อฝึกด้วยตัวเองก่อนก็ได้
-          </div>
+  </main>
 
-          <div class="ctaRow" style="margin-top:12px;">
-            <a class="btn" href="resources.html">ไปที่คลังความรู้</a>
-            <a class="btn" href="about.html">อ่านเรื่องราว KRUNIKI</a>
-          </div>
-        </div>
+  <!-- ✅ Hamburger JS: เปิด/ปิด เมนู + backdrop + aria -->
+  <script>
+    (function () {
+      const btn = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      const backdrop = document.getElementById('menuBackdrop');
 
-        <div class="lineCta">
-          <div class="lineCtaTitle">
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color:rgba(255,255,255,.85)">
-              <path d="M21 12c0 4.4-4 8-9 8-1.1 0-2.2-.2-3.2-.5L4 21l1-3.2C3.7 16.3 3 14.2 3 12c0-4.4 4-8 9-8s9 3.6 9 8Z"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-            เชื่อมต่อหัวใจผ่าน LINE OA
-          </div>
+      function openMenu() {
+        menu.hidden = false;
+        backdrop.hidden = false;
+        // ให้ CSS transition ทำงาน
+        requestAnimationFrame(() => menu.classList.add('isOpen'));
+        btn.setAttribute('aria-expanded', 'true');
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+      }
 
-          <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">ไปที่ LINE OA</a>
-          <a class="btn" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ดู LINE Shop</a>
-        </div>
-      </div>
-    </div>
+      function closeMenu() {
+        menu.classList.remove('isOpen');
+        btn.setAttribute('aria-expanded', 'false');
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+        // รอให้ transition จบก่อนซ่อน
+        setTimeout(() => {
+          menu.hidden = true;
+          backdrop.hidden = true;
+        }, 220);
+      }
 
-    <footer>
-      © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
-    </footer>
-  </section>
+      function toggleMenu() {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        isOpen ? closeMenu() : openMenu();
+      }
 
-</main>
+      btn.addEventListener('click', toggleMenu);
+      backdrop.addEventListener('click', closeMenu);
+
+      // ปิดด้วยปุ่ม ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') closeMenu();
+      });
+
+      // กดลิงก์ในเมนูแล้วปิด
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
 
 </body>
 </html>
