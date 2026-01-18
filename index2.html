@@ -7,72 +7,7 @@
   <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
 
   <!-- 🔗 CSS เดิมของนิกี้ -->
-  <link rel="stylesheet" href="assets/style.css">
-
-  <!-- ✅ FIX OVERRIDES: กันเมนูซ้อน + จัด Mobile menu กางจากขวา (ไม่แตะโทนสีหลัก) -->
-  <style>
-    /* Header layout: brand left, menu center, actions right */
-    .siteHeader .navInner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-    }
-    .siteHeader .brand{ flex:0 0 auto; }
-    .siteHeader .navLinks{
-      flex:1 1 auto;
-      display:flex;
-      justify-content:center;
-      gap:18px;
-    }
-    .siteHeader .navActions{
-      flex:0 0 auto;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    /* ✅ Desktop vs Mobile behavior */
-    @media (max-width: 860px){
-      .siteHeader .navLinks{ display:none; } /* กันเมนู desktop โผล่บนมือถือ */
-      .siteHeader .navToggle{ display:inline-flex; }
-    }
-    @media (min-width: 861px){
-      .siteHeader .navToggle{ display:none; }
-      #mobileMenu{ display:none !important; } /* กัน mobile menu โผล่บน desktop */
-    }
-
-    /* ✅ Mobile Menu: slide from right */
-    #mobileMenu.mobileMenu{
-      position:fixed;
-      top:0;
-      right:0;
-      height:100vh;
-      width:min(84vw, 360px);
-      padding:84px 18px 18px;
-      z-index:9999;
-      transform:translateX(100%);
-      transition:transform .25s ease;
-    }
-    #mobileMenu.mobileMenu.isOpen{
-      transform:translateX(0);
-    }
-
-    /* Backdrop */
-    .menuBackdrop{
-      position:fixed;
-      inset:0;
-      z-index:9998;
-      background:rgba(0,0,0,.45);
-      backdrop-filter: blur(2px);
-    }
-    .menuBackdrop[hidden]{ display:none; }
-    
-#contact{ min-height:auto !important; height:auto !important; }
-main{ min-height:auto !important; }
-
-  </style>
-</head>
+  <link rel="stylesheet" href=“assets/style.css">
 
 <style>
   /* =========================
@@ -133,7 +68,8 @@ main{ min-height:auto !important; }
     padding-bottom:24px !important; /* เผื่อหายใจนิดเดียว */
   }
 </style>
-  
+</head>
+
 <body>
 
   <!-- TOPBAR (Social RIGHT only) -->
