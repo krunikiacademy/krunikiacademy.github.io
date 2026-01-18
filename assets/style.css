@@ -3137,3 +3137,36 @@ footer{
   margin-top:12px !important;
   padding:16px 0 !important;
 }
+
+/* ================================
+   KRUNIKI: Tighten TOP space in Resources/Contact panels (Desktop-heavy)
+   ================================ */
+
+/* ลดช่องว่าง “เหนือหัวข้อ” เฉพาะ 2 เฟรมนี้ */
+#resources .panel,
+#contact .panel{
+  padding-top: 12px !important;   /* เดิม 20px -> ลดให้ชิดขึ้น */
+}
+
+/* ลดระยะใต้หัวข้อ/หัวแถบ (กันดูโล่ง) */
+#resources .resHead,
+#contact .contactHead{
+  margin-bottom: 8px !important;  /* เดิม 10-12 */
+}
+
+/* กันบาง browser ใส่ margin-top ให้ h2/h3 เอง */
+#resources h2,
+#contact h2{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* ถ้ายังรู้สึกโล่งเกิน: ลด padding ทั้งเฟรมแบบเบาๆ */
+@media (min-width: 861px){
+  #resources .panel,
+  #contact .panel{
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    padding-bottom: 16px !important;
+  }
+}
