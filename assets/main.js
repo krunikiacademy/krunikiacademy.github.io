@@ -18,17 +18,22 @@
   function openMenu() {
     menu.hidden = false;
     backdrop.hidden = false;
+
     btn.setAttribute("aria-expanded", "true");
     btn.classList.add(ACTIVE_CLASS);
+
     requestAnimationFrame(() => menu.classList.add(OPEN_CLASS));
     lockScroll(true);
   }
 
   function closeMenu() {
     menu.classList.remove(OPEN_CLASS);
+
     btn.setAttribute("aria-expanded", "false");
     btn.classList.remove(ACTIVE_CLASS);
+
     lockScroll(false);
+
     setTimeout(() => {
       menu.hidden = true;
       backdrop.hidden = true;
@@ -47,4 +52,8 @@
   });
 
   menu.querySelectorAll("a").forEach((a) => a.addEventListener("pointerup", closeMenu));
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 861 && btn.getAttribute("aria-expanded") === "true") closeMenu();
+  });
 })();
