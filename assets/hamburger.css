@@ -180,6 +180,7 @@
   font-size: 18px !important;      /* ✅ เพิ่มขนาดตัวอักษร */
   line-height: 1.45 !important;     /* ✅ อ่านชัดขึ้น */
 }
+} /* <-- ปิด @media (max-width: 860px) */
 
 /* (เลือกใช้) ล็อกสกอลล์ตอนเมนูเปิด */
 html.menuOpen, body.menuOpen{
