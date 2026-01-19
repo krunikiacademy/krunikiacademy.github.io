@@ -3206,3 +3206,40 @@ section::after {
   display: none !important;
   background: none !important;
 }
+/* ==============================
+   VERY STRONG — KILL REAL OVERLAY LAYERS
+   Paste at END of assets/style.css
+   ============================== */
+
+/* กัน layer ที่ชอบวางทับทั้งหน้าแบบไม่ตั้งใจ */
+.overlay, .shade, .scrim, .modalOverlay, .bgOverlay, .darkLayer,
+[data-overlay], [aria-hidden="true"].overlay,
+.backdrop, .backdropFilter, .dim, .dimmer {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
+  pointer-events: none !important;
+}
+
+/* กัน element ใดๆที่ “fixed/inset:0” มาทับทั้งหน้า (ยกเว้นเมนูBackdropของนิกี้) */
+body *{
+  /* ไม่ทำอะไรกับทุกตัว */
+}
+body *:not(#menuBackdrop):not(#mobileMenu){
+  /* ถ้าเป็นชั้นทับจอเต็มมักมี position fixed + inset 0 */
+}
+body *:not(#menuBackdrop):not(#mobileMenu)[style*="position: fixed"][style*="inset: 0"]{
+  background: transparent !important;
+  pointer-events: none !important;
+}
+
+/* ดัน content ให้อยู่เหนือชั้นทับที่หลงเหลือ */
+main, section, .wrap, .panel, .card, .heroCard, .heroBox{
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* ให้ backdrop ของ hamburger ทำงานเฉพาะตอนเมนูเปิดจริงๆ */
+#menuBackdrop[hidden]{ display:none !important; }
+#menuBackdrop{ pointer-events:auto !important; }
