@@ -1,36 +1,48 @@
+<!-- HEADER -->
 <header class="siteHeader">
   <div class="navInner">
-    <!-- Brand -->
+
+    <!-- Brand LEFT -->
     <a class="brand" href="index.html" aria-label="KRUNIKI Home">
       <span class="dot" aria-hidden="true"></span>
       <span class="brandText">KRUNIKI</span>
     </a>
 
-    <!-- Desktop Navigation -->
+    <!-- Desktop Menu CENTER (เดิม ไม่แตะโครงสร้าง/ลิงก์) -->
     <nav class="navLinks" aria-label="Primary navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
       <a href="about.html">เกี่ยวกับ</a>
       <a href="services.html">บริการ</a>
-      <a href="resources.html">Resources</a>
-      <a href="index.html#contact">ติดต่อ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
     </nav>
 
-    <!-- Mobile Hamburger -->
-    <button
-      class="navToggle"
-      type="button"
-      aria-label="เปิดเมนู"
-      aria-expanded="false"
-      aria-controls="mobileMenu">
-      ☰
-    </button>
-  </div>
+    <!-- ✅ Mobile/iPad only: Hamburger -->
+    <div class="krActions">
+      <button class="krHam" id="krHam" type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+        </svg>
+      </button>
+    </div>
 
-  <!-- Mobile Menu -->
-  <nav id="mobileMenu" class="navDrawer" aria-label="Mobile navigation" hidden>
+  </div><!-- close .navInner -->
+
+  <!-- Backdrop (behind button) -->
+  <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+  <!-- ✅ Mobile dropdown menu: under ☰, right side, vertical -->
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <a href="shop.html">ร้านค้า</a>
+    <a href="index.html">หน้าแรก</a>
     <a href="about.html">เกี่ยวกับ</a>
     <a href="services.html">บริการ</a>
-    <a href="resources.html">Resources</a>
-    <a href="index.html#contact">ติดต่อ</a>
+    <a href="resources.html">คลังความรู้</a>
+    <a href="contact.html">ติดต่อ</a>
   </nav>
 </header>
 
