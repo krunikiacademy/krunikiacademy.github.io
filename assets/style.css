@@ -3312,3 +3312,30 @@ body *{
 #mobileMenu{ z-index: 10000 !important; }
 #krHam{ z-index: 10070 !important; }
 
+/* ================================
+   RESTORE MOBILE MENU BACKPLATE
+   ================================ */
+
+/* เมนูมือถือ ต้องมีแผ่นดำเหมือนเดิม */
+#mobileMenu{
+  background: rgba(0,0,0,.92) !important;
+  border: 1px solid rgba(229,201,123,.25) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,.55) !important;
+}
+
+/* ลิงก์ในเมนูมือถือ */
+#mobileMenu a{
+  color: #eaeaea !important;
+}
+
+/* ตอน hover/กด ให้เป็นทอง */
+#mobileMenu a:hover,
+#mobileMenu a:focus-visible{
+  color: var(--gold, #c9a86a) !important;
+  background: rgba(255,255,255,.06) !important;
+}
+
+#menuBackdrop{
+  background: rgba(0,0,0,.35) !important;
+  backdrop-filter: blur(2px) !important;
+}
