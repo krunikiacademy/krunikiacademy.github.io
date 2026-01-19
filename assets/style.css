@@ -2606,3 +2606,8 @@ section:last-of-type{ margin-bottom:0 !important; }
   .siteHeader{ top:58px; } /* stays sticky below topbar */
 }
 
+/* ลดความหนาขอบบนของกรอบ RESOURCES และ CONTACT */
+#resources .panel,
+#contact .panel{
+  padding-top: 12px;        /* ลดจากของเดิมที่หนา */
+}
