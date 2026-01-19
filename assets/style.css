@@ -3018,15 +3018,6 @@ body {
   display: none !important;
 }
 
-/* กัน overlay ใด ๆ ที่เคลือบทั้งหน้า */
-.menuBackdrop,
-.navBackdrop,
-.overlay,
-.backdrop{
-  display: none !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
 /* =========================================
    KRUNIKI — STRONG FORCE v2
    KILL "BLACK FILM" ON LOAD (NO TOUCH HAMBURGER)
@@ -3099,14 +3090,6 @@ section::before, section::after,
   content: none !important;
   display: none !important;
 }
-
-/* 2) ฆ่า overlay class ทั่วไป (แต่ยกเว้น backdrop ของเมนู) */
-.overlay, .backdrop, .dimmer, .scrim, .shade, .veil {
-  display: none !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
 /* ยกเว้นของ hamburger */
 #menuBackdrop {
   display: block !important;
