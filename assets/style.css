@@ -3134,13 +3134,6 @@ button::before, button::after{
   pointer-events: none !important;
 }
 
-/* 3) ดัน “ตัวหนังสือ/ปุ่มจริง” ให้อยู่เหนือทุกชั้นเคลือบที่หลงเหลือ */
-.btn, a.btn, button,
-.card, .cardLink{
-  position: relative !important;
-  z-index: 2 !important;
-}
-
 /* =========================================
    STRONG FIX v2 — KILL FULL-PAGE DARK FILM
    Paste at END of assets/style.css
