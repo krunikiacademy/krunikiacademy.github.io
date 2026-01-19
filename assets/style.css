@@ -3296,8 +3296,6 @@ h2.goldMain{
   visibility: visible !important;
 }
 
-/* KILL ALL GLASS / FILM OVERLAY FROM FINAL POLISH */
-
 /* 1) ปิด pseudo-element ฟิล์มบนการ์ดทั้งหมด */
 .card::after,
 .cardLink::after{
@@ -3307,4 +3305,21 @@ h2.goldMain{
 /* 2) เอาชั้นแก้วโปร่งออกจาก hero / กล่องใหญ่ */
 .services-hero{
   background: var(--bg-panel) !important;
+}
+/* FIX v1 — remove glass/film on content blocks (safe) */
+.card, .cardLink, .panel, .heroBox, .heroCard, .services-hero{
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.card::before, .card::after,
+.cardLink::before, .cardLink::after,
+.panel::before, .panel::after,
+.heroBox::before, .heroBox::after,
+.heroCard::before, .heroCard::after,
+.services-hero::before, .services-hero::after{
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
 }
