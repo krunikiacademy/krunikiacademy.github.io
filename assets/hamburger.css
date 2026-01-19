@@ -191,10 +191,11 @@ html.menuOpen, body.menuOpen{
 /* --- เมนู Desktop: ใหญ่ ชัด หนา และ Hover เป็นสีทอง --- */
 @media (min-width: 861px){
   .siteHeader .navLinks a{
-    font-size: 24px;        /* ใหญ่ขึ้นจาก 20 → 24 */
-    line-height: 1.5;      /* โปร่ง อ่านสบาย */
+    font-size: 2ุ4px;
+    line-height: 1.5;
     font-weight: 600;
     letter-spacing: 0.01em;
+    font-family: "Prompt", system-ui, sans-serif;
   }
 }
 
