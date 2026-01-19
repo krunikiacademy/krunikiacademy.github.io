@@ -140,7 +140,7 @@
     top: calc(var(--kr-drop-top) + env(safe-area-inset-top)) !important;
     right: calc(var(--kr-edge) + env(safe-area-inset-right)) !important;
 
-    width: min(68vw, 260px) !important;
+    width: min(68vw, 320px) !important;
     z-index: 10000 !important;
 
     background: rgba(0,0,0,.92) !important;
