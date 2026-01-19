@@ -3429,3 +3429,16 @@ h2.goldMain{
   display: block !important;
   visibility: visible !important;
 }
+
+/* KILL ALL GLASS / FILM OVERLAY FROM FINAL POLISH */
+
+/* 1) ปิด pseudo-element ฟิล์มบนการ์ดทั้งหมด */
+.card::after,
+.cardLink::after{
+  content: none !important;
+}
+
+/* 2) เอาชั้นแก้วโปร่งออกจาก hero / กล่องใหญ่ */
+.services-hero{
+  background: var(--bg-panel) !important;
+}
