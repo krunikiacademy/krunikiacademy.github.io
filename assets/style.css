@@ -3555,3 +3555,31 @@ html.menuOpen, body.menuOpen{ overflow:hidden; }
 
 /* Scroll lock (ตอนเมนูเปิด) */
 html.menuOpen, body.menuOpen{ overflow:hidden; }
+
+.siteHeader .navInner{
+  padding-right: calc(14px + env(safe-area-inset-right));
+}
+.siteHeader .krActions{ position:relative; z-index:10050; }
+
+@media (max-width:860px){
+  .siteHeader .navLinks{ display:none; }
+  .siteHeader #krHam{
+    display:inline-flex;
+    width:44px; height:44px;
+    border:0; padding:0;
+    border-radius:12px;
+    background:transparent;
+    color: rgba(255,255,255,.95);
+    align-items:center; justify-content:center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .siteHeader #krHam .krHamIcon{ width:26px; height:26px; display:block; }
+  .siteHeader #krHam .krHamIcon path{
+    fill:none; stroke:currentColor; stroke-width:2.6; stroke-linecap:round;
+  }
+  .siteHeader #krHam.isActive{ color:#d6b46a; background: rgba(214,180,106,.14); }
+}
+@media (min-width:861px){
+  .siteHeader #krHam{ display:none; }
+}
