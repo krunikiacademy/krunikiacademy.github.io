@@ -3016,3 +3016,27 @@ body {
 #krHam{ position:relative; z-index:10070 !important; }
 #menuBackdrop{ z-index:9990 !important; }
 #mobileMenu{ z-index:10000 !important; }
+
+/* === FORCE REMOVE STUCK BACKDROP / OVERLAY === */
+
+/* ถ้า backdrop ถูกซ่อนไว้ ต้องหายจริง */
+#menuBackdrop[hidden]{
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* ถ้า backdrop เผลอโผล่ค้าง ให้บังคับซ่อน */
+#menuBackdrop{
+  display: none !important;
+}
+
+/* กัน overlay ใด ๆ ที่เคลือบทั้งหน้า */
+.menuBackdrop,
+.navBackdrop,
+.overlay,
+.backdrop{
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
