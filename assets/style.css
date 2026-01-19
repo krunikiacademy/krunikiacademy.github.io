@@ -3172,3 +3172,26 @@ main, .wrap, section, .panel {
   position: relative !important;
   z-index: 1 !important;
 }
+/* =========================
+   FIX SPACING (override)
+   Paste at END of assets/style.css
+   ========================= */
+.panel{
+  padding: 48px 0 !important;
+}
+@media (max-width: 768px){
+  .panel{
+    padding: 36px 0 !important;
+  }
+}
+
+/* =========================
+   KILL STRAY BACKDROP (style.css conflict)
+   Paste at END of assets/style.css
+   ========================= */
+#menuBackdrop{
+  display:none !important;
+}
+#menuBackdrop:not([hidden]){
+  display:block !important;
+}
