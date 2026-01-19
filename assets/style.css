@@ -2609,5 +2609,10 @@ section:last-of-type{ margin-bottom:0 !important; }
 /* ลดความหนาขอบบนของกรอบ RESOURCES และ CONTACT */
 #resources .panel,
 #contact .panel{
-  padding-top: 12px;        /* ลดจากของเดิมที่หนา */
+  padding-top: 8px;        /* ลดจากของเดิมที่หนา */
+}
+
+#resources h2,
+#contact h2{
+  margin-top: 0;
 }
