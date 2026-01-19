@@ -194,48 +194,17 @@
   </div>
 
   <!-- HEADER -->
-  <header class="siteHeader">
-    <div class="navInner">
+<header class="siteHeader">
+  <div class="navInner">
 
-      <!-- ✅ Brand LEFT -->
-      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
-        <span class="dot" aria-hidden="true"></span>
-        <span class="brandText">KRUNIKI</span>
-      </a>
+    <!-- ✅ Brand LEFT -->
+    <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="brandText">KRUNIKI</span>
+    </a>
 
-      <!-- ✅ Menu CENTER (Thai) -->
-      <nav class="navLinks" aria-label="Primary navigation">
-        <a href="shop.html">ร้านค้า</a>
-        <a href="index.html">หน้าแรก</a>
-        <a href="about.html">เกี่ยวกับ</a>
-        <a href="services.html">บริการ</a>
-        <a href="resources.html">คลังความรู้</a>
-        <a href="contact.html">ติดต่อ</a>
-      </nav>
-
-      <!-- ✅ Actions RIGHT (NEW block: social + hamburger) -->
-<div class="krActions">
-
-  <!-- (ถ้านิกี้มี social อยู่แล้ว ไม่ต้องใส่ก็ได้) -->
-  <!-- <a class="krIcon" href="#" aria-label="Instagram">
-    <img src="assets/ig.svg" alt="" />
-  </a> -->
-
-  <button class="krHam" id="krHam" type="button"
-    aria-label="เปิดเมนู"
-    aria-expanded="false"
-    aria-controls="mobileMenu">
-    <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M3 6.5h18M3 12h18M3 17.5h18" />
-    </svg>
-  </button>
-</div>
-
-    <!-- Backdrop -->
-    <div id="menuBackdrop" class="menuBackdrop" hidden></div>
-
-    <!-- ✅ Mobile Menu (slide from right) -->
-    <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <!-- ✅ Menu CENTER (Thai) -->
+    <nav class="navLinks" aria-label="Primary navigation">
       <a href="shop.html">ร้านค้า</a>
       <a href="index.html">หน้าแรก</a>
       <a href="about.html">เกี่ยวกับ</a>
@@ -243,7 +212,34 @@
       <a href="resources.html">คลังความรู้</a>
       <a href="contact.html">ติดต่อ</a>
     </nav>
-  </header>
+
+    <!-- ✅ Actions RIGHT (Hamburger only) -->
+    <div class="krActions">
+      <button class="krHam" id="krHam" type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div><!-- ✅ IMPORTANT: close .navInner -->
+
+  <!-- Backdrop -->
+  <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+  <!-- ✅ Mobile Menu (slide from right) -->
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <a href="shop.html">ร้านค้า</a>
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="services.html">บริการ</a>
+    <a href="resources.html">คลังความรู้</a>
+    <a href="contact.html">ติดต่อ</a>
+  </nav>
+</header>
 
   <main class="wrap">
 
