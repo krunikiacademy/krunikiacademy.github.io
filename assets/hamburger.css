@@ -189,16 +189,23 @@ html.menuOpen, body.menuOpen{
 
 /* CSS ของ header + hamburger ทั้งหมด */
 
+/* =========================
+   DESKTOP menu polish (safe)
+========================= */
+
+:root{
+  --gold: var(--gold-main);
+}
+
 /* --- เมนู Desktop: ใหญ่ ชัด หนา และ Hover เป็นสีทอง --- */
 @media (min-width: 861px){
   .siteHeader .navLinks a{
-    font-size: 2ุ4px;
+    font-size: 24px;
     line-height: 1.5;
     font-weight: 600;
     letter-spacing: 0.01em;
     font-family: "Prompt", system-ui, sans-serif;
   }
-}
 
   /* ชี้เมาส์ / โฟกัส = สีทอง */
   .siteHeader .navLinks a:hover,
