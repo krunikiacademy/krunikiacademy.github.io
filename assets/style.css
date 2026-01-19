@@ -3278,3 +3278,47 @@ button::before, button::after{
   position: relative !important;
   z-index: 2 !important;
 }
+
+/* =========================================
+   STRONG FIX v2 — KILL FULL-PAGE DARK FILM
+   Paste at END of assets/style.css
+   ========================================= */
+
+/* 0) กัน overflow แปลกๆ (เผื่อมี element หลุดแล้ว browser ทำ layer แปลก) */
+html, body{
+  overflow-x: hidden !important;
+}
+
+/* 1) ปิด pseudo-element “ทุกตัว” ที่อาจทำฟิล์มทับทั้งหน้า */
+body::before, body::after,
+main::before, main::after,
+section::before, section::after,
+div::before, div::after{
+  background: transparent !important;
+  opacity: 0 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  mix-blend-mode: normal !important;
+  pointer-events: none !important;
+}
+
+/* 2) ถ้ามี overlay ชั้นใหญ่ที่ถูก fixed/absolute แปะทับ (ให้มัน “ไม่ทับ”) */
+body > .overlay,
+body > .veil,
+body > .film,
+body > .dim,
+body > .shade{
+  display:none !important;
+}
+
+/* 3) ดัน “เนื้อหาจริง” ขึ้นเหนือ layer ที่หลงเหลือ */
+body *{
+  position: relative;
+  z-index: 1;
+}
+
+/* 4) แต่คงค่า z-index ของ hamburger/backdrop ตามเดิม */
+#menuBackdrop{ z-index: 9990 !important; }
+#mobileMenu{ z-index: 10000 !important; }
+#krHam{ z-index: 10070 !important; }
