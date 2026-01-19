@@ -1,4 +1,3 @@
-<style>
 /* =========================================================
    KR Mobile Hamburger Dropdown — FIX v1.1
    ใช้กับ: #krHam, #mobileMenu, #menuBackdrop
@@ -185,4 +184,4 @@
 html.menuOpen, body.menuOpen{
   overflow: hidden !important;
 }
-</style>
+
