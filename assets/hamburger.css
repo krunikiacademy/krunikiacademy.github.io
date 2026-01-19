@@ -1,0 +1,188 @@
+<style>
+/* =========================================================
+   KR Mobile Hamburger Dropdown — FIX v1.1
+   ใช้กับ: #krHam, #mobileMenu, #menuBackdrop
+   - Desktop menu (navLinks) ยังอยู่เหมือนเดิม
+   - Mobile/iPad = dropdown ใต้ปุ่ม ☰ ฝั่งขวา เปิดลงแนวตั้ง
+========================================================= */
+
+:root{
+  --kr-icon: 44px;      /* ขนาดปุ่ม = เท่า IG */
+  --kr-gap: 10px;       /* ระยะห่างเท่า IG */
+  --kr-edge: 14px;      /* ระยะจากขอบขวา */
+  --kr-drop-top: 64px;  /* ระยะจากขอบบนถึงเมนู (ปรับตามความสูง header) */
+}
+
+/* ✅ ล็อก [hidden] ให้ชนะ CSS เก่าเสมอ (กันเมนู/แบ็คดรอปโผล่ซ้อน) */
+#mobileMenu[hidden],
+#menuBackdrop[hidden]{
+  display:none !important;
+}
+
+/* =========================
+   HEADER LAYOUT (สำคัญ: ตัวนี้หายไป เลยทำให้พัง)
+   - ไม่ยุ่งสี/ธีม
+   - ทำให้ Desktop: เมนูกลับไปอยู่กลาง, actions อยู่ขวา
+========================= */
+.siteHeader .navInner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding-right: calc(var(--kr-edge) + env(safe-area-inset-right));
+}
+
+.siteHeader .brand{ flex:0 0 auto; }
+
+/* Desktop menu center */
+.siteHeader .navLinks{
+  flex:1 1 auto;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
+
+/* actions right */
+.siteHeader .krActions{
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap: var(--kr-gap);
+  position: relative;
+  z-index: 10060; /* เหนือ backdrop */
+}
+
+/* =========================
+   DESKTOP (ห้ามแตะเมนูเดิม)
+========================= */
+@media (min-width: 861px){
+  #krHam{ display:none !important; }
+  #mobileMenu{ display:none !important; }
+  #menuBackdrop{ display:none !important; }
+}
+
+/* =========================
+   MOBILE / iPAD
+========================= */
+@media (max-width: 860px){
+
+  /* ซ่อนเมนู desktop เฉพาะบนมือถือ */
+  .siteHeader .navLinks{
+    display:none !important;
+  }
+
+  /* ===== ปุ่ม Hamburger ===== */
+  #krHam{
+    display:inline-flex !important;
+    width: var(--kr-icon) !important;
+    height: var(--kr-icon) !important;
+    border: 0 !important;
+    padding: 0 !important;
+    border-radius: 12px !important;
+
+    background: transparent !important;
+    color: rgba(255,255,255,.95) !important;
+
+    align-items:center !important;
+    justify-content:center !important;
+    cursor:pointer !important;
+
+    -webkit-tap-highlight-color: transparent !important;
+    touch-action: manipulation !important;
+
+    position: relative !important;
+    z-index: 10070 !important; /* อยู่เหนือ backdrop เสมอ */
+  }
+
+  #krHam:hover{
+    background: rgba(255,255,255,.08) !important;
+  }
+
+  #krHam:focus-visible{
+    outline: 2px solid rgba(255,255,255,.35) !important;
+    outline-offset: 2px !important;
+  }
+
+  /* ไอคอน 3 ขีด (SVG) */
+  #krHam .krHamIcon{
+    width: 26px !important;
+    height: 26px !important;
+    display:block !important;
+  }
+
+  #krHam .krHamIcon path{
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+  }
+
+  /* กดแล้ว = สีทอง */
+  #krHam.isActive,
+  #krHam[aria-expanded="true"]{
+    color: #d6b46a !important;
+    background: rgba(214,180,106,.14) !important;
+  }
+
+  /* ===== Backdrop ===== */
+  #menuBackdrop{
+    position: fixed;
+    inset: 0;
+    z-index: 9990 !important;
+    background: rgba(0,0,0,.35);
+    backdrop-filter: blur(2px);
+  }
+
+  /* ===== Mobile Dropdown Menu (ใต้ปุ่ม, ฝั่งขวา, เปิดลง) ===== */
+  #mobileMenu{
+    position: fixed !important;
+
+    top: calc(var(--kr-drop-top) + env(safe-area-inset-top)) !important;
+    right: calc(var(--kr-edge) + env(safe-area-inset-right)) !important;
+
+    width: min(78vw, 320px) !important;
+    z-index: 10000 !important;
+
+    background: rgba(0,0,0,.92) !important;
+    border-radius: 16px !important;
+    padding: 12px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+
+    transform: translateY(-10px) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+
+    transition:
+      opacity .18s ease,
+      transform .18s ease,
+      max-height .22s ease;
+  }
+
+  #mobileMenu.isOpen{
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    max-height: 70vh !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  #mobileMenu a{
+    display:block !important;
+    padding: 12px 12px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+  }
+}
+
+/* (เลือกใช้) ล็อกสกอลล์ตอนเมนูเปิด */
+html.menuOpen, body.menuOpen{
+  overflow: hidden !important;
+}
+</style>
