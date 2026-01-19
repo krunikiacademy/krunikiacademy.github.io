@@ -3195,3 +3195,14 @@ main, .wrap, section, .panel {
 #menuBackdrop:not([hidden]){
   display:block !important;
 }
+/* TEMP: KILL ANY FULL OVERLAY */
+body::before,
+body::after,
+main::before,
+main::after,
+section::before,
+section::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
