@@ -188,12 +188,12 @@ html.menuOpen, body.menuOpen{
 
 /* CSS ของ header + hamburger ทั้งหมด */
 
-/* --- เพิ่มขนาดตัวอักษรเมนู Desktop --- */
+/* --- เพิ่มขนาดตัวอักษรเมนู Desktop (ให้เห็นต่างชัด) --- */
 @media (min-width: 861px){
   .siteHeader .navLinks a{
-    font-size: 24px !important;     /* ใหญ่ขึ้นอีก 1 ระดับ */
-    line-height: 1.45 !important;  /* กระชับขึ้น ไม่ลอย */
-    font-weight: 500 !important;   /* คม อ่านชัด */
-    letter-spacing: -0.01em;       /* กันฟุ้ง */
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
   }
-}
+}}
+
