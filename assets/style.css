@@ -3478,3 +3478,80 @@ html.menuOpen, body.menuOpen{ overflow:hidden; }
   position: relative !important;
   z-index: 10001 !important;
 }
+
+/* =========================
+   KR NEW HAMBURGER BLOCK (no conflict)
+========================= */
+
+/* กันขอบขวาชน gesture area ของ iPad/iPhone */
+.siteHeader .navInner{
+  padding-right: calc(14px + env(safe-area-inset-right));
+}
+
+/* กลุ่ม Actions แบบ social */
+.siteHeader .krActions{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:10px;              /* ระยะเท่าไอคอน IG */
+  position:relative;
+  z-index:10050;
+}
+
+/* ปุ่ม Hamburger (ขนาดเท่าไอคอน IG) */
+.siteHeader .krHam{
+  width:44px;
+  height:44px;
+  border:0;
+  padding:0;
+  border-radius:12px;
+  display:none;          /* default ซ่อน */
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  cursor:pointer;
+
+  /* ให้ iPad กดติดแน่น */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+
+  color: rgba(255,255,255,.95);
+}
+
+.siteHeader .krHam:hover{ background: rgba(255,255,255,.08); }
+.siteHeader .krHam:focus-visible{
+  outline:2px solid rgba(255,255,255,.35);
+  outline-offset:2px;
+}
+
+/* SVG icon คมจริง */
+.siteHeader .krHamIcon{
+  width:26px;
+  height:26px;
+  display:block;
+}
+.siteHeader .krHamIcon path{
+  fill:none;
+  stroke: currentColor;
+  stroke-width:2.6;
+  stroke-linecap:round;
+}
+
+/* Active = Gold */
+.siteHeader .krHam.isActive,
+.siteHeader .krHam[aria-expanded="true"]{
+  color:#d6b46a;
+  background: rgba(214,180,106,.14);
+}
+
+/* ✅ Show only Mobile/iPad */
+@media (max-width: 860px){
+  .siteHeader .krHam{ display:inline-flex; }
+  .siteHeader .navLinks{ display:none; } /* กันเมนู desktop โผล่ */
+}
+@media (min-width: 861px){
+  .siteHeader .krHam{ display:none; }
+}
+
+/* Scroll lock (ตอนเมนูเปิด) */
+html.menuOpen, body.menuOpen{ overflow:hidden; }
