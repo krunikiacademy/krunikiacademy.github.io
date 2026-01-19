@@ -3243,3 +3243,38 @@ main, section, .wrap, .panel, .card, .heroCard, .heroBox{
 /* ให้ backdrop ของ hamburger ทำงานเฉพาะตอนเมนูเปิดจริงๆ */
 #menuBackdrop[hidden]{ display:none !important; }
 #menuBackdrop{ pointer-events:auto !important; }
+
+/* =========================================
+   STRONG FIX — KILL “FILM” OVER CARDS/BUTTONS
+   Paste at END of assets/style.css
+   ========================================= */
+
+/* 1) ปิดชั้นเคลือบที่มักมาจาก pseudo ของการ์ด (ตัวนี้เจอบ่อยสุด) */
+.card::before, .card::after,
+.cardLink::before, .cardLink::after{
+  background: transparent !important;
+  opacity: 0 !important;          /* ✅ ปิดฟิล์มที่ทับอยู่ตลอด */
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  pointer-events: none !important;
+}
+
+/* 2) กันฟิล์มที่เกิดตอน hover/active ของปุ่ม (ถ้ามี pseudo เคลือบปุ่ม) */
+.btn::before, .btn::after,
+a.btn::before, a.btn::after,
+button::before, button::after{
+  background: transparent !important;
+  opacity: 0 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  pointer-events: none !important;
+}
+
+/* 3) ดัน “ตัวหนังสือ/ปุ่มจริง” ให้อยู่เหนือทุกชั้นเคลือบที่หลงเหลือ */
+.btn, a.btn, button,
+.card, .cardLink{
+  position: relative !important;
+  z-index: 2 !important;
+}
