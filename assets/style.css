@@ -249,7 +249,7 @@
     .resHead{
       display:flex; align-items:center; justify-content:space-between;
       gap:12px;
-      padding:8px 18px 0;
+      padding:6px 18px 0;
     }
     .resHead h2{
       margin:0;
@@ -278,7 +278,7 @@
     .contactHead{
       display:flex; align-items:flex-end; justify-content:space-between;
       gap:12px;
-      padding:10px 18px 0;
+      padding:6px 18px 0;
     }
     .contactHead h2{margin:0;font-size:24px}
     .contactHead .small{color:var(--muted2);font-size:13px}
