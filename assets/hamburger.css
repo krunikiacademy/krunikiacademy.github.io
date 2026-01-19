@@ -180,6 +180,10 @@
   }
 }
 
+ font-size: 17px !important;      /* ✅ เพิ่มขนาดตัวอักษร */
+  line-height: 1.4 !important;     /* ✅ อ่านชัดขึ้น */
+}
+
 /* (เลือกใช้) ล็อกสกอลล์ตอนเมนูเปิด */
 html.menuOpen, body.menuOpen{
   overflow: hidden !important;
