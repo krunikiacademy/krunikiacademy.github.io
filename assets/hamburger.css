@@ -140,7 +140,7 @@
     top: calc(var(--kr-drop-top) + env(safe-area-inset-top)) !important;
     right: calc(var(--kr-edge) + env(safe-area-inset-right)) !important;
 
-    width: min(68vw, 320px) !important;
+    width: min(60vw, 320px) !important;
     z-index: 10000 !important;
 
     background: rgba(0,0,0,.92) !important;
@@ -174,7 +174,7 @@
 
   #mobileMenu a{
     display:block !important;
-    padding: 10px 10px !important;
+    padding: 9px 9px !important;
     border-radius: 12px !important;
     text-decoration: none !important;
   }
