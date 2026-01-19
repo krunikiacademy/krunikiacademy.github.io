@@ -3195,17 +3195,6 @@ main, .wrap, section, .panel {
 #menuBackdrop:not([hidden]){
   display:block !important;
 }
-/* TEMP: KILL ANY FULL OVERLAY */
-body::before,
-body::after,
-main::before,
-main::after,
-section::before,
-section::after {
-  content: none !important;
-  display: none !important;
-  background: none !important;
-}
 /* ==============================
    VERY STRONG — KILL REAL OVERLAY LAYERS
    Paste at END of assets/style.css
@@ -3323,15 +3312,3 @@ body *{
 #mobileMenu{ z-index: 10000 !important; }
 #krHam{ z-index: 10070 !important; }
 
-/* ================================
-   KILL GLOBAL DARK OVERLAY ON BODY
-   ================================ */
-
-body:not(#menuBackdrop):not(#mobileMenu),
-body:not(#menuBackdrop):not(#mobileMenu)::before,
-body:not(#menuBackdrop):not(#mobileMenu)::after {
-  background: transparent !important;
-  filter: none !important;
-  content: none !important;
-  display: block !important;
-}
