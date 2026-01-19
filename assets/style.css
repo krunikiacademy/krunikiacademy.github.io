@@ -1240,19 +1240,6 @@ hr,
   transition: transform .6s ease, filter .6s ease;
 }
 
-/* Soft dark overlay for luxury tone */
-.cardImage::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,.15),
-    rgba(0,0,0,.35)
-  );
-  pointer-events: none;
-}
-
 /* Hover (very subtle, not flashy) */
 .cardWithImage:hover .cardImage img {
   transform: scale(1.03);
