@@ -191,7 +191,9 @@ html.menuOpen, body.menuOpen{
 /* --- เพิ่มขนาดตัวอักษรเมนู Desktop --- */
 @media (min-width: 861px){
   .siteHeader .navLinks a{
-    font-size: 22px !important;      /* ✅ เพิ่มขนาดตัวอักษร */
-    line-height: 1.6 !important;   /* ✅ อ่านชัดขึ้น */
+    font-size: 24px !important;     /* ใหญ่ขึ้นอีก 1 ระดับ */
+    line-height: 1.45 !important;  /* กระชับขึ้น ไม่ลอย */
+    font-weight: 500 !important;   /* คม อ่านชัด */
+    letter-spacing: -0.01em;       /* กันฟุ้ง */
   }
 }
