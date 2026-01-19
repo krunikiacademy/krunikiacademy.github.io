@@ -191,6 +191,6 @@ html.menuOpen, body.menuOpen{
 /* --- เพิ่มขนาดตัวอักษรเมนู Desktop --- */
 @media (min-width: 861px){
   .siteHeader .navLinks a{
-    font-size: 17px;
+    font-size: 18px;
   }
 }
