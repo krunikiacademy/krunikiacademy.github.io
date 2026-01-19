@@ -177,10 +177,7 @@
     padding: 9px 9px !important;
     border-radius: 12px !important;
     text-decoration: none !important;
-  }
-}
-
- font-size: 18px !important;      /* ✅ เพิ่มขนาดตัวอักษร */
+  font-size: 18px !important;      /* ✅ เพิ่มขนาดตัวอักษร */
   line-height: 1.45 !important;     /* ✅ อ่านชัดขึ้น */
 }
 
