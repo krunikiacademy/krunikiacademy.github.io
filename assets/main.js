@@ -69,3 +69,70 @@
     if (window.innerWidth >= 861 && btn.getAttribute("aria-expanded") === "true") closeMenu();
   });
 })();
+
+(function () {
+  "use strict";
+
+  const btn = document.getElementById("krHam");
+  const menu = document.getElementById("mobileMenu");
+  const backdrop = document.getElementById("menuBackdrop");
+
+  if (!btn || !menu || !backdrop) return;
+
+  const OPEN_CLASS = "isOpen";
+  const ACTIVE_CLASS = "isActive";
+  const BODY_LOCK_CLASS = "menuOpen";
+
+  function lockScroll(lock) {
+    document.documentElement.classList.toggle(BODY_LOCK_CLASS, lock);
+    document.body.classList.toggle(BODY_LOCK_CLASS, lock);
+  }
+
+  function openMenu() {
+    menu.hidden = false;
+    backdrop.hidden = false;
+
+    btn.setAttribute("aria-expanded", "true");
+    btn.classList.add(ACTIVE_CLASS);
+
+    requestAnimationFrame(() => menu.classList.add(OPEN_CLASS));
+    lockScroll(true);
+  }
+
+  function closeMenu() {
+    menu.classList.remove(OPEN_CLASS);
+
+    btn.setAttribute("aria-expanded", "false");
+    btn.classList.remove(ACTIVE_CLASS);
+
+    lockScroll(false);
+
+    window.setTimeout(() => {
+      menu.hidden = true;
+      backdrop.hidden = true;
+    }, 260);
+  }
+
+  function toggleMenu(e) {
+    e.preventDefault();
+    const isOpen = btn.getAttribute("aria-expanded") === "true";
+    isOpen ? closeMenu() : openMenu();
+  }
+
+  // iPad: pointerup ติดกว่า click
+  btn.addEventListener("pointerup", toggleMenu);
+  backdrop.addEventListener("pointerup", (e) => {
+    e.preventDefault();
+    if (btn.getAttribute("aria-expanded") === "true") closeMenu();
+  });
+
+  menu.querySelectorAll("a").forEach((a) => a.addEventListener("pointerup", closeMenu));
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && btn.getAttribute("aria-expanded") === "true") closeMenu();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 861 && btn.getAttribute("aria-expanded") === "true") closeMenu();
+  });
+})();
