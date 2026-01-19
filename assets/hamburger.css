@@ -185,3 +185,11 @@ html.menuOpen, body.menuOpen{
   overflow: hidden !important;
 }
 
+/* CSS ของ header + hamburger ทั้งหมด */
+
+/* --- เพิ่มขนาดตัวอักษรเมนู Desktop --- */
+@media (min-width: 861px){
+  .siteHeader .navLinks a{
+    font-size: 17px;
+  }
+}
