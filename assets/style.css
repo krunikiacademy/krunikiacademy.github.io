@@ -3142,3 +3142,33 @@ div[style*="position:fixed"][style*="inset:0"]:not(#menuBackdrop):not(#mobileMen
 html, body {
   overflow-x: hidden !important;
 }
+/* =========================================
+   VERY STRONG FORCE v4 — KILL GLOBAL OVERLAY (SAFE)
+   Paste at END of assets/style.css (below v3)
+   ========================================= */
+
+/* 1) Kill any full-page overlay pseudo elements */
+html::before, html::after,
+body::before, body::after,
+main::before, main::after,
+.siteHeader::before, .siteHeader::after,
+.panel::before, .panel::after,
+.wrap::before, .wrap::after,
+section::before, section::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* 2) If something still overlays the page, make sure it can’t block clicks */
+*::before, *::after {
+  pointer-events: none !important;
+}
+
+/* 3) Emergency: ensure main content always above accidental overlays */
+body { position: relative !important; }
+main, .wrap, section, .panel {
+  position: relative !important;
+  z-index: 1 !important;
+}
