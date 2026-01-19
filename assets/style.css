@@ -3040,3 +3040,54 @@ body {
   opacity: 0 !important;
   pointer-events: none !important;
 }
+/* =========================================
+   KRUNIKI — STRONG FORCE v2
+   KILL "BLACK FILM" ON LOAD (NO TOUCH HAMBURGER)
+   Paste at VERY END of assets/style.css
+   ========================================= */
+
+/* 1) Kill fullscreen pseudo-element overlays (common culprit) */
+html::before, html::after,
+body::before, body::after{
+  content: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;          /* กันการทำ fade ดำ */
+  mix-blend-mode: normal !important;
+}
+
+/* 2) If some CSS forces them to exist, neutralize geometry too */
+html::before, html::after,
+body::before, body::after{
+  position: static !important;
+  inset: auto !important;
+  width: auto !important;
+  height: auto !important;
+  transform: none !important;
+}
+
+/* 3) Kill any always-on overlay DIV (visual only) BUT keep hamburger backdrop */
+.overlay,
+.backdrop,
+.scrim,
+.dimmer,
+.dim,
+.film,
+.mask,
+.layer{
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* 4) IMPORTANT: do NOT disable hamburger backdrop */
+#menuBackdrop,
+.menuBackdrop{
+  /* ปล่อยให้ hamburger ใช้ได้ตามเดิม */
+  display: block;
+}
+#menuBackdrop[hidden],
+.menuBackdrop[hidden]{
+  display: none !important;
+}
