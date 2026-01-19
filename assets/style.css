@@ -1919,15 +1919,6 @@ header.siteHeader{
 /* Brand left */
 .brand{ flex: 0 0 auto; }
 
-/* Desktop menu RIGHT (same side as hamburger area) */
-.navLinks{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  justify-content:flex-end;  /* ✅ ขวา */
-  flex: 1;
-}
-
 /* Hamburger right (hidden on desktop) */
 .navToggle{
   flex: 0 0 auto;
@@ -3018,47 +3009,6 @@ body {
   display: none !important;
 }
 
-/* =========================================
-   KRUNIKI — STRONG FORCE v2
-   KILL "BLACK FILM" ON LOAD (NO TOUCH HAMBURGER)
-   Paste at VERY END of assets/style.css
-   ========================================= */
-
-/* 1) Kill fullscreen pseudo-element overlays (common culprit) */
-html::before, html::after,
-body::before, body::after{
-  content: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  filter: none !important;
-  opacity: 1 !important;          /* กันการทำ fade ดำ */
-  mix-blend-mode: normal !important;
-}
-
-/* 2) If some CSS forces them to exist, neutralize geometry too */
-html::before, html::after,
-body::before, body::after{
-  position: static !important;
-  inset: auto !important;
-  width: auto !important;
-  height: auto !important;
-  transform: none !important;
-}
-
-/* 3) Kill any always-on overlay DIV (visual only) BUT keep hamburger backdrop */
-.overlay,
-.backdrop,
-.scrim,
-.dimmer,
-.dim,
-.film,
-.mask,
-.layer{
-  background: transparent !important;
-  box-shadow: none !important;
-  filter: none !important;
-}
-
 /* 4) IMPORTANT: do NOT disable hamburger backdrop */
 #menuBackdrop,
 .menuBackdrop{
@@ -3069,27 +3019,7 @@ body::before, body::after{
 .menuBackdrop[hidden]{
   display: none !important;
 }
-/* =========================================
-   STRONG FORCE GLOBAL v3 — KILL ANY GLOBAL OVERLAY
-   (ไม่แตะ Hamburger / ไม่แตะ #menuBackdrop)
-   Paste at END of assets/style.css
-   ========================================= */
 
-/* 1) ปิดทุก pseudo-element ที่อาจทำเป็นฟิล์มทับหน้า */
-body::before, body::after,
-main::before, main::after,
-section::before, section::after,
-.panel::before, .panel::after,
-.wrap::before, .wrap::after,
-.hero::before, .hero::after,
-.heroCard::before, .heroCard::after,
-.heroBox::before, .heroBox::after,
-.services-hero::before, .services-hero::after,
-.page::before, .page::after,
-.content::before, .content::after {
-  content: none !important;
-  display: none !important;
-}
 /* ยกเว้นของ hamburger */
 #menuBackdrop {
   display: block !important;
