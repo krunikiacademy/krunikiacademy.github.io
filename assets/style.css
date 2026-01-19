@@ -249,7 +249,7 @@
     .resHead{
       display:flex; align-items:center; justify-content:space-between;
       gap:12px;
-      padding:18px 18px 0;
+      padding:10px 18px 0;
     }
     .resHead h2{
       margin:0;
@@ -278,7 +278,7 @@
     .contactHead{
       display:flex; align-items:flex-end; justify-content:space-between;
       gap:12px;
-      padding:18px 18px 0;
+      padding:10px 18px 0;
     }
     .contactHead h2{margin:0;font-size:24px}
     .contactHead .small{color:var(--muted2);font-size:13px}
@@ -2604,12 +2604,6 @@ section:last-of-type{ margin-bottom:0 !important; }
 @media (max-width: 860px){
   .grid2{ grid-template-columns:1fr; }
   .siteHeader{ top:58px; } /* stays sticky below topbar */
-}
-
-/* ลดความหนาขอบบนของกรอบ RESOURCES และ CONTACT */
-#resources .panel,
-#contact .panel{
-  padding-top: 6px;        /* ลดจากของเดิมที่หนา */
 }
 
 #resources h2,
