@@ -188,12 +188,24 @@ html.menuOpen, body.menuOpen{
 
 /* CSS ของ header + hamburger ทั้งหมด */
 
-/* --- เพิ่มขนาดตัวอักษรเมนู Desktop (ให้เห็นต่างชัด) --- */
+/* --- เมนู Desktop: ใหญ่ ชัด หนา และ Hover เป็นสีทอง --- */
 @media (min-width: 861px){
   .siteHeader .navLinks a{
-    font-size: 28px !important;
-    line-height: 1.25 !important;
-    font-weight: 600 !important;
+    font-size: 30px !important;      /* ใหญ่ขึ้นอีก */
+    line-height: 1.25 !important;  
+    font-weight: 600 !important;    /* หนาขึ้น อ่านคม */
+    letter-spacing: -0.01em;
+    transition: color .2s ease;
   }
-}}
 
+  /* ชี้เมาส์ / โฟกัส = สีทอง */
+  .siteHeader .navLinks a:hover,
+  .siteHeader .navLinks a:focus-visible{
+    color: var(--gold) !important;
+  }
+
+  /* หน้าปัจจุบัน (ถ้ามี class active ในอนาคต) */
+  .siteHeader .navLinks a.active{
+    color: var(--gold) !important;
+  }
+}
