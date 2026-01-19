@@ -3091,3 +3091,54 @@ body::before, body::after{
 .menuBackdrop[hidden]{
   display: none !important;
 }
+/* =========================================
+   STRONG FORCE GLOBAL v3 — KILL ANY GLOBAL OVERLAY
+   (ไม่แตะ Hamburger / ไม่แตะ #menuBackdrop)
+   Paste at END of assets/style.css
+   ========================================= */
+
+/* 1) ปิดทุก pseudo-element ที่อาจทำเป็นฟิล์มทับหน้า */
+body::before, body::after,
+main::before, main::after,
+section::before, section::after,
+.panel::before, .panel::after,
+.wrap::before, .wrap::after,
+.hero::before, .hero::after,
+.heroCard::before, .heroCard::after,
+.heroBox::before, .heroBox::after,
+.services-hero::before, .services-hero::after,
+.page::before, .page::after,
+.content::before, .content::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* 2) ฆ่า overlay class ทั่วไป (แต่ยกเว้น backdrop ของเมนู) */
+.overlay, .backdrop, .dimmer, .scrim, .shade, .veil {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* ยกเว้นของ hamburger */
+#menuBackdrop {
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* 3) ถ้ามี element fixed/inset 0 โผล่ทับทั้งหน้า (ยกเว้นของ hamburger) */
+body > *:not(header):not(main):not(footer):not(#menuBackdrop):not(#mobileMenu) {
+  /* ไม่ยุ่ง element โครงสร้างหลัก */
+}
+
+/* เคสที่มักพัง: div fixed full-screen ที่ไม่ใช่ menuBackdrop */
+div[style*="position: fixed"][style*="inset: 0"]:not(#menuBackdrop):not(#mobileMenu),
+div[style*="position:fixed"][style*="inset:0"]:not(#menuBackdrop):not(#mobileMenu) {
+  display: none !important;
+}
+
+/* 4) กันการเลื่อนซ้าย-ขวา (เว็บลอยจากจอ) */
+html, body {
+  overflow-x: hidden !important;
+}
