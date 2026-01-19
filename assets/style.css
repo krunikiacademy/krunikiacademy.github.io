@@ -3339,3 +3339,93 @@ body *{
   background: rgba(0,0,0,.35) !important;
   backdrop-filter: blur(2px) !important;
 }
+
+/* =========================================
+   KRUNIKI — GOLD BUTTON RESTORE (SAFE)
+   Paste at END of assets/style.css
+   ========================================= */
+
+:root{
+  --gold-main: #c9a86a;
+  --gold-soft: #bfa36a;
+}
+
+.btn.primary,
+.btnPrimary,
+a.btn.primary,
+button.btn.primary{
+  background: linear-gradient(180deg, #d6b87c, #a8874f) !important;
+  color: #111 !important;
+  box-shadow: 0 8px 24px rgba(201,168,106,.35) !important;
+  border: 1px solid rgba(201,168,106,.25) !important;
+}
+
+.btn.primary:hover,
+.btnPrimary:hover,
+a.btn.primary:hover,
+button.btn.primary:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(201,168,106,.45) !important;
+}
+
+/* =========================================
+   KRUNIKI — GOLD TEXT RESTORE (SAFE)
+   ========================================= */
+
+.goldMain,
+.goldTitle,
+h1.goldMain,
+h2.goldMain{
+  color: var(--gold-main) !important;
+}
+
+.goldSub,
+.subGold{
+  color: var(--gold-soft) !important;
+}
+
+/* =========================================
+   KRUNIKI — MOBILE MENU BACKDROP RESTORE (SAFE)
+   Paste at END of assets/style.css
+   ========================================= */
+
+/* 1) Ensure backdrop exists + sits above page */
+#menuBackdrop{
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0,0,0,.72) !important;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 9998 !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 2) Ensure mobile menu sits above backdrop */
+#mobileMenu{
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  height: 100vh !important;
+  z-index: 9999 !important;
+}
+
+/* 3) If your JS toggles .isOpen on backdrop/menu */
+#menuBackdrop.isOpen,
+#mobileMenu.isOpen ~ #menuBackdrop{
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* 4) In case you use aria-hidden / data-open instead */
+#menuBackdrop[aria-hidden="false"],
+#menuBackdrop[data-open="true"]{
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Force override if old CSS hides it */
+#menuBackdrop{
+  display: block !important;
+  visibility: visible !important;
+}
