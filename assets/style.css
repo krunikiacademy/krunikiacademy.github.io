@@ -3442,4 +3442,39 @@ body.menuOpen{
 /* Scroll lock */
 html.menuOpen, body.menuOpen{ overflow:hidden; }
 
+#mobileMenu.mobileMenu{
+  background:#111;           /* หรือสีพื้นของนิกี้ */
+  z-index:10000;
+  box-shadow: -18px 0 40px rgba(0,0,0,.35);
+}
 
+/* ===== FORCE SHOW navToggle on Mobile/iPad only ===== */
+
+/* ปุ่มต้องมีพื้นที่ห่างขอบขวา (กันชน iPad gesture area) */
+.siteHeader .navInner{
+  padding-right: calc(14px + env(safe-area-inset-right)) !important;
+}
+
+/* Default: ซ่อนก่อน */
+.siteHeader #navToggle{
+  display: none !important;
+}
+
+/* ✅ Show only on Mobile/iPad */
+@media (max-width: 860px){
+  .siteHeader #navToggle{
+    display: inline-flex !important;
+    width:44px !important;
+    height:44px !important;
+    align-items:center !important;
+    justify-content:center !important;
+    position: relative !important;
+    z-index: 10002 !important;
+  }
+}
+
+/* กันปุ่มโดนทับคลิก */
+.siteHeader .navActions{
+  position: relative !important;
+  z-index: 10001 !important;
+}
