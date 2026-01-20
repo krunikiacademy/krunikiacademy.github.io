@@ -1,1 +1,12 @@
 
+.card, .cardLink, .heroCard, .heroBox, .services-hero{
+  background: var(--card-glass);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-card);
+  color: var(--text-main);
+}
+
+.card p, .cardLink p{
+  color: var(--text-soft);
+}
