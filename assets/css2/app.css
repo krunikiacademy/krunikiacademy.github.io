@@ -1,1 +1,12 @@
+@import url("./core/01_tokens.css");
+@import url("./core/02_base.css");
+@import url("./core/03_typography.css");
+@import url("./core/04_layout.css");
 
+@import url("./components/nav.css");
+@import url("./components/hamburger.css");
+@import url("./components/buttons.css");
+@import url("./components/cards.css");
+
+@import url("./pages/index2.css");
+@import url("./fixes/99_hotfix.css");
