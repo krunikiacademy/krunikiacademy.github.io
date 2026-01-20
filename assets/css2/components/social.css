@@ -1,0 +1,35 @@
+/* components/social.css
+   Floating Social (scoped)
+*/
+
+.krSocial {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 12000;
+}
+
+.krSocial > a {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  text-decoration: none;
+}
+
+.krSocial > a > img,
+.krSocial > a > svg {
+  width: 22px;
+  height: 22px;
+  max-width: 22px;
+  max-height: 22px;
+  display: block;
+}
