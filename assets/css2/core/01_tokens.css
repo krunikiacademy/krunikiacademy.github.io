@@ -1,22 +1,22 @@
-root{
-  /* background (ไม่ดำทึบ) */
-  --bg: #0f1114;
-  --bg-2: #15181d;
-
-  /* glass cards */
-  --card-glass: rgba(18, 20, 24, .55);
-  --card-border: rgba(201,168,106,.18);
+:root{
+  /* background */
+  --bg-0: #0b0b0c;                 /* ไม่ดำทึบสนิทแบบ #000 */
+  --bg-1: #0f1012;
 
   /* text */
-  --text-main: rgba(245, 246, 248, .92);
-  --text-soft: rgba(245, 246, 248, .75);
-  --text-dim:  rgba(245, 246, 248, .60);
+  --text-main: rgba(255,255,255,.92);
+  --text-soft: rgba(255,255,255,.74);
+  --text-mute: rgba(255,255,255,.58);
 
-  /* gold */
-  --gold: #c9a86a;
-  --gold-soft: rgba(201,168,106,.25);
+  /* gold (ปุ่ม/ไฮไลท์) */
+  --gold-0: #d7c28a;
+  --gold-1: #bda56c;
 
-  /* radius / shadow */
-  --r-xl: 22px;
-  --shadow-card: 0 18px 50px rgba(0,0,0,.55);
+  /* glass card */
+  --card-glass: rgba(18,18,20,.58);   /* “glass ดำใส” */
+  --card-border: rgba(255,255,255,.10);
+  --shadow-soft: 0 18px 50px rgba(0,0,0,.55);
+
+  /* radius */
+  --r-lg: 22px;
 }
