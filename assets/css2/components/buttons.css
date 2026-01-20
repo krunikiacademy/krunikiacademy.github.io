@@ -1,1 +1,12 @@
+.btn, button, .cardBtn{
+  font: inherit;
+  color: var(--text-main);
+  background: transparent;
+  border: 1px solid var(--gold-soft);
+  border-radius: 999px;
+  padding: 10px 16px;
+}
 
+.btn:hover, button:hover, .cardBtn:hover{
+  border-color: var(--gold);
+}
