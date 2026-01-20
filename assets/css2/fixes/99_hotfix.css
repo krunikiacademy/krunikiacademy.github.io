@@ -1,1 +1,69 @@
 /* emergency, keep minimal */
+
+/* ================================
+   99_hotfix.css (OVERRIDE LAST)
+   Goal: fix layout drift on index2
+   ================================ */
+
+/* 1) Reset กัน body/section ถูก flex จนทุกอย่างไปกึ่งกลาง */
+html, body { height: 100%; }
+body{
+  margin: 0;
+  min-height: 100%;
+  display: block !important;
+  align-items: initial !important;
+  justify-content: initial !important;
+}
+
+/* 2) บังคับให้ Header อยู่ TOP (ไม่ลอยกลางจอ) */
+.siteHeader,
+header.siteHeader{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
+  background: rgba(0,0,0,.55) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* 3) จัดโครง nav ให้เป็น flex ปกติ */
+.siteHeader .navInner{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px;
+}
+
+.siteHeader .navLinks{
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* 4) กัน content ถูก header บัง (สำคัญมาก) */
+main,
+.page,
+#main,
+.siteMain{
+  padding-top: 72px !important; /* ปรับได้ 64-88 ตามความสูง header */
+}
+
+/* 5) กัน hero/section ถูกตั้ง height แปลก ๆ แล้วดันของขึ้น-ลง */
+.hero,
+.section,
+main > section{
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* 6) ล็อกลิงก์ไม่ให้สีเพี้ยน/อ่านยากเกิน */
+a{ color: inherit; text-decoration-thickness: .08em; text-underline-offset: .2em; }
+.navLinks a{ opacity: .92; }
+.navLinks a:hover{ opacity: 1; }
