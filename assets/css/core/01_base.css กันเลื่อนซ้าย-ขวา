@@ -1,0 +1,22 @@
+*{ box-sizing:border-box; }
+
+html, body{
+  margin:0;
+  padding:0;
+  max-width:100%;
+  overflow-x:hidden; /* กันเลื่อนซ้าย-ขวา */
+}
+
+body{
+  color: var(--text-main);
+  background:
+    radial-gradient(1200px 700px at 50% -10%, rgba(201,168,106,.10), transparent 55%),
+    radial-gradient(900px 600px at 10% 20%, rgba(255,255,255,.05), transparent 60%),
+    linear-gradient(180deg, var(--bg-2), var(--bg-0));
+  background-attachment: fixed;
+
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+
+  font-family: "Prompt", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
