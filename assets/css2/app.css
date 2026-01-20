@@ -1,12 +1,17 @@
-@import url("./core/01_tokens.css");
-@import url("./core/02_base.css");
+/* core */
+@import url("./core/01_base.css");
+@import url("./core/02_fonts.css");
 @import url("./core/03_typography.css");
 @import url("./core/04_layout.css");
 
+/* components */
 @import url("./components/nav.css");
 @import url("./components/hamburger.css");
 @import url("./components/buttons.css");
 @import url("./components/cards.css");
 
+/* pages */
 @import url("./pages/index2.css");
+
+/* fixes (LAST) */
 @import url("./fixes/99_hotfix.css");
