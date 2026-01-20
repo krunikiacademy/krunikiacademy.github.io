@@ -3043,7 +3043,7 @@ html, body {
   overflow-x: hidden !important;
 }
 /* =========================================
-   VERY STRONG FORCE v4 — KILL GLOBAL OVERLAY (SAFE)
+   VERY STRONG FORCE v4 — (SAFE)
    Paste at END of assets/style.css (below v3)
    ========================================= */
 
@@ -3105,12 +3105,7 @@ main, section, .wrap, .panel, .card, .heroCard, .heroBox{
 /* ให้ backdrop ของ hamburger ทำงานเฉพาะตอนเมนูเปิดจริงๆ */
 #menuBackdrop[hidden]{ display:none !important; }
 #menuBackdrop{ pointer-events:auto !important; }
-
-/* =========================================
-   STRONG FIX — KILL “FILM” OVER CARDS/BUTTONS
-   Paste at END of assets/style.css
-   ========================================= */
-
+}
 /* 1) ปิดชั้นเคลือบที่มักมาจาก pseudo ของการ์ด (ตัวนี้เจอบ่อยสุด) */
 .card::before, .card::after,
 .cardLink::before, .cardLink::after{
@@ -3133,11 +3128,6 @@ button::before, button::after{
   -webkit-backdrop-filter: none !important;
   pointer-events: none !important;
 }
-
-/* =========================================
-   STRONG FIX v2 — KILL FULL-PAGE DARK FILM
-   Paste at END of assets/style.css
-   ========================================= */
 
 /* 0) กัน overflow แปลกๆ (เผื่อมี element หลุดแล้ว browser ทำ layer แปลก) */
 html, body{
