@@ -1,1 +1,22 @@
 /* index2 page-only rules (start empty, add when fixing) */
+/* pages/index2.css
+   Page-only stabilizer for index2.html
+   (safe: scope with body/page class if youมี)
+*/
+
+/* ✅ กัน header fixed แล้ว content ไม่ถูกทับ */
+main { padding-top: 72px; }
+
+/* ✅ กู้ container พื้นฐาน (ถ้าใน layout ยังไม่นิ่ง) */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* ✅ กัน section/hero สูงผิดจนดัน layout แปลก */
+.hero, section { height: auto; min-height: auto; }
+
+/* ✅ กัน text จม/ซ้อนเพราะ line-height เพี้ยน */
+body { line-height: 1.6; }
