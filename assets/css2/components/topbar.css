@@ -1,0 +1,58 @@
+/* components/topbar.css
+   Topbar (social right only) - scoped safe
+*/
+
+.topbar{
+  position: sticky;         /* ถ้าอยากให้เกาะบนเวลา scroll */
+  top: 0;
+  z-index: 9000;
+  width: 100%;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.topbar .right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.topbar .social{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+}
+
+/* ปุ่มไอคอน */
+.topbar .social .iconbtn{
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.08);
+  text-decoration: none;
+}
+
+/* ขนาดไอคอน (สำคัญ: ล็อกให้ไม่ใหญ่ทั้งเว็บ) */
+.topbar .social .iconbtn svg{
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* สีไอคอน: ใช้ currentColor จะคุมง่าย */
+.topbar .social .iconbtn{ color: rgba(255,255,255,.92); }
+.topbar .social .iconbtn .fill{ fill: currentColor; }
+.topbar .social .iconbtn .stroke{ stroke: currentColor; }
+
+/* ปุ่มทอง (ตาม class gold ที่นิกี้มี) */
+.topbar .social .iconbtn.gold{
+  border-color: rgba(255,215,140,.35);
+  background: rgba(255,215,140,.12);
+  color: rgba(255,235,200,.95);
+}
