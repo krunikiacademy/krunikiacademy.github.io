@@ -6,7 +6,7 @@
 
 /* components */
 @import url("./components/nav.css");
-@import url("./components/hamburger.css");
+/* @import url("./components/hamburger.css"); */
 @import url("./components/buttons.css");
 @import url("./components/cards.css");
 
@@ -14,4 +14,4 @@
 @import url("./pages/index2.css");
 
 /* fixes (LAST) */
-/* @import url("./fixes/99_hotfix.css"); */
+@import url("./fixes/99_hotfix.css");
