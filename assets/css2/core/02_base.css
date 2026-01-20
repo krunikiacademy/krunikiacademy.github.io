@@ -1,15 +1,14 @@
 *{ box-sizing: border-box; }
-html,body{ height:100%; }
 
-body{
-  margin:0;
-  color: var(--text-main);
-  background:
-    radial-gradient(1200px 600px at 30% 10%, rgba(215,194,138,.10), transparent 60%),
-    radial-gradient(900px 500px at 80% 30%, rgba(255,255,255,.06), transparent 55%),
-    linear-gradient(180deg, var(--bg-0), var(--bg-1));
+html, body{
+  height: 100%;
 }
 
-img{ max-width:100%; height:auto; display:block; }
-a{ color:inherit; }
+body{
+  margin: 0;
+  background: radial-gradient(1200px 800px at 20% 10%, rgba(201,168,106,.10), transparent 55%),
+              radial-gradient(900px 600px at 80% 20%, rgba(255,255,255,.05), transparent 60%),
+              linear-gradient(180deg, var(--bg), var(--bg-2));
+  color: var(--text-main);
+}
 
