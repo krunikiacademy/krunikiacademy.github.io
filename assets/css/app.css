@@ -1,7 +1,19 @@
-/* KRUNIKI CSS Entry Point */
+/* =========================
+   KRUNIKI CSS ENTRY (app.css)
+   Load order matters
+   ========================= */
 
-@import url("core/00_tokens.css");
-@import url("core/01_base.css");
-@import url("components/cards.css");
-@import url("features/hamburger.dropdown.css");
-@import url("fixes/99_hotfix.css");
+/* 1) CORE: tokens/variables must come first */
+@import url("./core/01_base.css");
+
+/* ถ้ายังไม่มีไฟล์ตัวแปร ให้สร้างไฟล์นี้ตามข้อถัดไป แล้วเปิดบรรทัดนี้ */
+@import url("./core/02_tokens.css");
+
+/* 2) FEATURES */
+@import url("./features/hamburger.dropdown.css");
+
+/* 3) COMPONENTS */
+@import url("./components/cards.css");
+
+/* 4) FIXES (ต้องท้ายสุดเสมอ) */
+@import url("./fixes/99_hotfix.css");
