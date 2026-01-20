@@ -1,1 +1,14 @@
+:root{
+  --gold-main: #c9a86a;
+  --gold-soft: #bfa36a;
 
+  --text-main: #eaeaea;
+  --text-soft: #cfcfcf;
+
+  --bg-0: #070707;
+  --bg-1: #0b0b0b;
+  --bg-2: #111111;
+
+  --card-glass: rgba(255,255,255,.04);
+  --card-border: rgba(255,255,255,.08);
+}
