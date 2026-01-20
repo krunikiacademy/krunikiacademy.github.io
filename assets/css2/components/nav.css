@@ -1,1 +1,8 @@
-
+.siteHeader{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10,11,13,.55);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(201,168,106,.10);
+}
