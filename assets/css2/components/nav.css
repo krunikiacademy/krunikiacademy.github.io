@@ -6,3 +6,11 @@
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(201,168,106,.10);
 }
+
+/* HEADER GRID: left (brand+social) | center (desktop nav) | right (actions) */
+.siteHeader .navInner{
+  display:grid;
+  grid-template-columns: auto 1fr auto;
+  align-items:center;
+  column-gap: 18px;
+}
