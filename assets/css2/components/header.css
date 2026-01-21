@@ -115,3 +115,6 @@
   .siteHeader .krActions{ display: none; }
   .mobileMenu, .menuBackdrop{ display: none; }
 }
+
+.siteHeader .brandText{ color: var(--gold) !important; }
+}
