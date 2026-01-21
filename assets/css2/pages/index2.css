@@ -28,3 +28,67 @@ body { line-height: 1.6; }
 /* page safety for header */
 .siteHeader, .siteHeader * { box-sizing: border-box; }
 .siteHeader .navInner { overflow: hidden; }
+
+/* ================================
+   PAGE FIX: index2 HERO LAYOUT
+   ================================ */
+
+/* กัน main ล้นขอบ */
+main.wrap{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* HERO section */
+.hero{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Grid หลักของ hero */
+.heroGrid{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 16px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Responsive: บนจอแคบให้เป็นคอลัมน์เดียว */
+@media (max-width: 900px){
+  .heroGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Text side */
+.heroText{
+  min-width: 0;              /* กัน flex/grid ดันล้น */
+}
+
+/* Quote card */
+.quoteCard{
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Banner image */
+.banner{
+  max-width: 1120px;
+  margin: 40px auto 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.banner img{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
