@@ -24,3 +24,7 @@ body { line-height: 1.6; }
 /* pages/index2.css - safety for this page only */
 .topbar .social .iconbtn svg { width: 20px !important; height: 20px !important; }
 .topbar .social .iconbtn { width: 40px !important; height: 40px !important; }
+
+/* page safety for header */
+.siteHeader, .siteHeader * { box-sizing: border-box; }
+.siteHeader .navInner { overflow: hidden; }
