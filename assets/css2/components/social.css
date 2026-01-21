@@ -42,3 +42,20 @@
 .brandBlock .social{
   justify-content:flex-start;
 }
+
+/* Default size (desktop / iPad / phones ทั่วไป) */
+.social .iconbtn{ width: 34px; height: 34px; }
+.social .iconbtn svg{ width: 18px; height: 18px; }
+
+/* iPhone SE / จอแคบมาก: auto shrink */
+@media (max-width: 420px){
+  .topbar .social{
+    flex-wrap: nowrap;
+    overflow: hidden;                 /* กันล้น */
+    max-width: calc(100vw - 86px);    /* กันที่ให้ ☰ + ช่องว่าง */
+    gap: 6px;
+  }
+
+  .social .iconbtn{ width: 28px; height: 28px; padding: 0; }
+  .social .iconbtn svg{ width: 14px; height: 14px; }
+}
