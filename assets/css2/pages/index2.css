@@ -192,3 +192,93 @@ main.wrap{
 .frame, .cardFrame, .glassFrame, .leftFrame{
   position: static !important;
 }
+
+/* ======================================
+   INDEX2 – SERVICES CARDS (restore 2x2)
+   ====================================== */
+
+#services .grid2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* card = ลิงก์ทั้งใบ (กัน underline + กันเฟรมทับ) */
+#services .card.cardLink{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  border-radius: var(--r-xl);
+  background: var(--card-glass);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-card);
+  text-decoration: none;
+  color: var(--text-main);
+  position: relative;
+  overflow: hidden;
+}
+
+/* กัน pseudo/เฟรมแปลก ๆ ที่อาจมาทับตัวหนังสือจากไฟล์อื่น */
+#services .card.cardLink::before,
+#services .card.cardLink::after{
+  content: none !important;
+}
+
+/* kicker / title / text */
+#services .card .kicker{
+  color: var(--text-soft);
+  font-size: 13px;
+  letter-spacing: .02em;
+}
+
+#services .card h3{
+  margin: 0;
+  line-height: 1.2;
+}
+
+#services .card p{
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+/* ให้ปุ่มอยู่ล่างสุดของการ์ดเสมอ */
+#services .card .cardAction{
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+/* ปุ่มเดิมแบบกรอบทอง + hover ทอง (ใช้ span.btnGhost ที่นิกี้มีอยู่แล้ว) */
+#services .btnGhost{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--gold-soft);
+  color: var(--text-main);
+  background: transparent;
+}
+
+#services .card.cardLink:hover .btnGhost{
+  border-color: var(--gold);
+  background: rgba(201,168,106,.12);
+}
+
+/* hover ทั้งใบให้ดู “ยก” นิด ๆ แบบเดิม */
+#services .card.cardLink:hover{
+  border-color: rgba(201,168,106,.35);
+  transform: translateY(-1px);
+}
+
+/* มือถือ: 1 คอลัมน์ */
+@media (max-width: 720px){
+  #services .grid2{
+    grid-template-columns: 1fr;
+  }
+}
+
+#services a{ text-decoration: none; }
+#services a:hover{ text-decoration: none; }
