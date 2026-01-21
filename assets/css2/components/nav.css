@@ -111,22 +111,6 @@
   .krActions{ display: flex; justify-self: end; }
 }
 
-/* 🔥 REMOVE black bar under social */
-.topbar{
-  background: transparent !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  height: auto !important;
-  min-height: 0 !important;
-}
-
-ถ้าใน CSS เดิมของนิกี้เคยมีอะไรแบบนี้:
-
-.topbar{
-  background: #000;
-  height: 48px;
-  padding: 6px 12px;
-}
 @media (max-width: 900px){
   .brandBlock{
     gap: 6px;          /* ลดช่องว่าง brand ↔ social */
