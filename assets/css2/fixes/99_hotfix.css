@@ -114,3 +114,34 @@ a{ color: inherit; text-decoration-thickness: .08em; text-underline-offset: .2em
 .siteHeader .brandText{
   color:#c9a86a !important;
 }
+
+/* ===== KRUNIKI GOLD SYSTEM (HOTFIX) ===== */
+
+/* Brand */
+.siteHeader .brandText{ color: var(--gold) !important; }
+
+/* Remove underline everywhere */
+a{ text-decoration: none !important; }
+
+/* Desktop menu hover gold */
+.siteHeader .navLinks a{
+  color: var(--text-main) !important;
+}
+.siteHeader .navLinks a:hover,
+.siteHeader .navLinks a:focus-visible{
+  color: var(--gold) !important;
+}
+
+/* Buttons: gold border + active gold */
+.btn, button, .cardBtn, .btnGhost, a.btn{
+  border: 1px solid var(--gold-soft) !important;
+  color: var(--text-main) !important;
+  background: transparent !important;
+}
+.btn:hover, button:hover, .cardBtn:hover, .btnGhost:hover, a.btn:hover{
+  border-color: var(--gold) !important;
+}
+.btn:active, button:active, .cardBtn:active, .btnGhost:active, a.btn:active{
+  border-color: var(--gold) !important;
+  background: rgba(201,168,106,.18) !important;
+}
