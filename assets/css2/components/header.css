@@ -1,0 +1,117 @@
+/* components/header.css
+   Safe header layout for index2
+*/
+
+.siteHeader{
+  position: sticky;
+  top: 0;
+  z-index: 8000;
+  width: 100%;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* โครง nav หลัก */
+.siteHeader .navInner{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Brand LEFT */
+.siteHeader .brand{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+  text-decoration: none;
+}
+
+/* ป้องกัน dot ทำให้ layout ล้น */
+.siteHeader .brand .dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.9);
+  position: static;           /* สำคัญ: ห้าม absolute */
+  transform: none;
+  flex-shrink: 0;
+}
+
+/* Desktop menu CENTER */
+.siteHeader .navLinks{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  flex: 1 1 auto;
+  justify-content: center;
+  min-width: 0;              /* กัน flex ดันล้น */
+  white-space: nowrap;
+}
+
+.siteHeader .navLinks a{
+  text-decoration: none;
+}
+
+/* Actions RIGHT */
+.siteHeader .krActions{
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger button */
+.siteHeader .krHam{
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Mobile dropdown */
+.mobileMenu{
+  position: absolute;
+  top: 100%;
+  right: 16px;
+  width: min(280px, calc(100vw - 32px));
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(0,0,0,.9);
+  border: 1px solid rgba(255,255,255,.10);
+  z-index: 9000;
+}
+
+/* Backdrop */
+.menuBackdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  z-index: 8500;
+}
+
+/* Responsive rules */
+@media (max-width: 900px){
+  .siteHeader .navLinks{ display: none; }
+  .siteHeader .krActions{ display: flex; }
+}
+
+@media (min-width: 901px){
+  .siteHeader .krActions{ display: none; }
+  .mobileMenu, .menuBackdrop{ display: none; }
+}
