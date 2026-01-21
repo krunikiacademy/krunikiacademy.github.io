@@ -133,3 +133,26 @@
   .brandBlock{ min-width: 0; }      /* กันดันคอลัมน์ขวา */
   .krActions{ justify-self: end; }  /* ☰ ชิดขวาแน่นอน */
 }
+
+/* Tablet + Mobile */
+@media (max-width: 1023px){
+  .navLinks{ display: none !important; }
+  .krActions{ display: flex !important; }
+}
+
+/* Desktop */
+@media (min-width: 1024px){
+  .navLinks{ display: flex !important; }
+  .krActions{ display: none !important; }
+}
+
+@media (max-width: 1023px){
+  .siteHeader .navInner{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    column-gap: 10px;
+  }
+  .brandBlock{ min-width: 0; }
+  .krActions{ justify-self: end; position: relative; z-index: 50; }
+}
