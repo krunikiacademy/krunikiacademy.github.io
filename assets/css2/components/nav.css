@@ -87,6 +87,15 @@
   .krActions{ display: flex; }    /* show hamburger */
 }
 
+/* --- Header layout --- */
+/* ... โค้ด header/grid อื่น ๆ ... */
+
+/* --- Fix hamburger tap layer --- */
+.krActions{
+  position: relative;
+  z-index: 50;
+}
+
 @media (min-width: 901px){
   .navLinks{ display: flex; }
   .krActions{ display: none; }
