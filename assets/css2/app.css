@@ -5,8 +5,9 @@
 @import url("./core/04_layout.css");
 
 /* components */
-@import url("./components/nav.css");
+@import url("./components/header.css");
 @import url("./components/topbar.css");
+@import url("./components/nav.css");
 @import url("./components/hamburger.css"); 
 @import url("./components/buttons.css");
 @import url("./components/cards.css");
