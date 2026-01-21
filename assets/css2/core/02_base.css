@@ -56,3 +56,15 @@ a:focus-visible{
   outline-offset: 3px;
   border-radius: 8px;
 }
+
+/* Brand: KRUNIKI (header left) */
+.brandText{
+  font-family: "Times New Roman", Times, serif;
+  color: var(--gold);
+  letter-spacing: .06em;
+  font-weight: 700;
+}
+
+.brand .dot{
+  background: var(--gold);
+}
