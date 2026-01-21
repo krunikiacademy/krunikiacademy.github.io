@@ -23,3 +23,15 @@
   align-items:center;
   white-space: nowrap;  /* กันตกบรรทัด */
 }
+
+/* Mobile/Tablet: hide desktop nav, show hamburger */
+@media (max-width: 900px){
+  .navLinks{ display:none; }
+  .krActions{ display:flex; }
+}
+
+/* Desktop: show desktop nav, hide hamburger */
+@media (min-width: 901px){
+  .navLinks{ display:flex; }
+  .krActions{ display:none; }
+}
