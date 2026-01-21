@@ -91,3 +91,22 @@
   .navLinks{ display: flex; }
   .krActions{ display: none; }
 }
+
+@media (max-width: 900px){
+  .siteHeader .navInner{
+    grid-template-columns: 1fr auto; /* ซ้ายยืดได้ ขวาจองที่ให้ ☰ */
+    column-gap: 12px;
+  }
+  .brandBlock{ min-width: 0; }       /* กันดันคอลัมน์ขวา */
+  .navLinks{ display: none !important; }
+  .krActions{ display: flex; justify-self: end; }
+}
+@media (max-width: 900px){
+  .siteHeader .navInner{
+    grid-template-columns: 1fr auto; /* ซ้ายยืดได้ ขวาจองที่ให้ ☰ */
+    column-gap: 12px;
+  }
+  .brandBlock{ min-width: 0; }       /* กันดันคอลัมน์ขวา */
+  .navLinks{ display: none !important; }
+  .krActions{ display: flex; justify-self: end; }
+}
