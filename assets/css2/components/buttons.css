@@ -10,3 +10,39 @@
 .btn:hover, button:hover, .cardBtn:hover{
   border-color: var(--gold);
 }
+
+/* ===== Buttons (global) ===== */
+.btn, button, .cardBtn{
+  font: inherit;
+  color: var(--text-main);
+  background: transparent;
+  border: 1px solid var(--gold-soft);
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, color .18s ease, transform .06s ease;
+}
+
+.btn:hover, button:hover, .cardBtn:hover{
+  border-color: var(--gold);
+  background: rgba(201,168,106,.10);
+}
+
+/* ตอนกด */
+.btn:active, button:active, .cardBtn:active{
+  border-color: var(--gold);
+  background: rgba(201,168,106,.18);
+  transform: translateY(1px);
+}
+
+/* แบบ “กดค้าง/เลือกอยู่” (ถ้านิกี้ใส่ class active เอง) */
+.btn.isActive, .cardBtn.isActive, button.isActive{
+  background: rgba(201,168,106,.22);
+  border-color: var(--gold);
+}
+
+/* focus สวยและชัด */
+.btn:focus-visible, button:focus-visible, .cardBtn:focus-visible{
+  outline: 2px solid var(--gold-soft);
+  outline-offset: 3px;
+}
