@@ -285,3 +285,20 @@ main.wrap{
 
 #services{ position: relative; z-index: 1; }
 #services .card *{ position: relative; z-index: 1; }
+
+/* ===== index2 page tuning ===== */
+
+/* ข้อความยาว/lead */
+.hero .lead{
+  color: var(--text-soft);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 58ch;
+}
+
+/* หัวข้อย่อย/บรรทัดทอง */
+.goldline{
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: .02em;
+}
