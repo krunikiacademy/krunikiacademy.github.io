@@ -67,3 +67,45 @@ main > section{
 a{ color: inherit; text-decoration-thickness: .08em; text-underline-offset: .2em; }
 .navLinks a{ opacity: .92; }
 .navLinks a:hover{ opacity: 1; }
+
+/* ===== FORCE FIX: header layout + responsive (TEMP) ===== */
+
+/* 1) lock header 3 columns */
+.siteHeader .navInner{
+  display: grid !important;
+  grid-template-columns: auto 1fr auto !important;
+  align-items: center !important;
+  column-gap: 18px !important;
+}
+
+/* 2) left block (brand + social) stick left */
+.siteHeader .brandBlock{
+  justify-self: start !important;
+  width: max-content !important;
+}
+
+/* 3) social align left under brand */
+.siteHeader .brandBlock .social{
+  justify-content: flex-start !important;
+}
+
+/* 4) center desktop nav */
+.siteHeader .navLinks{
+  justify-self: center !important;
+  display: flex !important;
+  gap: 22px !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+}
+
+/* 5) responsive: hide desktop nav on mobile/tablet */
+@media (max-width: 900px){
+  .siteHeader .navLinks{ display: none !important; }
+  .siteHeader .krActions{ display: flex !important; }
+}
+
+/* 6) desktop: show desktop nav, hide hamburger */
+@media (min-width: 901px){
+  .siteHeader .navLinks{ display: flex !important; }
+  .siteHeader .krActions{ display: none !important; }
+}
