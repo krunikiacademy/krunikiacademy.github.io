@@ -302,3 +302,11 @@ main.wrap{
   font-size: 14px;
   letter-spacing: .02em;
 }
+
+/* Kicker above headings: never overlap */
+.kicker{
+  display: block;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+  position: static;
+}
