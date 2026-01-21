@@ -121,3 +121,15 @@
     padding-bottom: 6px;
   }
 }
+
+@media (max-width: 420px){
+  .siteHeader .navInner{
+    display: grid;
+    grid-template-columns: 1fr auto; /* ซ้ายยืด/หด, ขวาคงที่ */
+    align-items: start;
+    column-gap: 10px;
+  }
+
+  .brandBlock{ min-width: 0; }      /* กันดันคอลัมน์ขวา */
+  .krActions{ justify-self: end; }  /* ☰ ชิดขวาแน่นอน */
+}
