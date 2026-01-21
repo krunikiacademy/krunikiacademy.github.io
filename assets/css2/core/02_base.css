@@ -68,3 +68,9 @@ a:focus-visible{
 .brand .dot{
   background: var(--gold);
 }
+
+h1,h2,h3{
+  font-family: "Times New Roman", Times, serif;
+  color: var(--text-main);
+  letter-spacing: -.01em;
+}
