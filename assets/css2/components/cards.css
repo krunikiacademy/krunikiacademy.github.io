@@ -10,4 +10,17 @@
   color: var(--text-soft);
 }
 
+/* ===== Frames / Cards (global) ===== */
+.card, .frame, .panel, .glass, .quoteCard{
+  background: var(--card-glass);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
 
+/* spacing มาตรฐาน (ถ้าอยากให้ทุกการ์ดมี padding) */
+.card, .frame, .panel, .glass{
+  padding: 18px;
+}
