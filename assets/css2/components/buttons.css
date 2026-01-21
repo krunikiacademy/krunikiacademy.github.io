@@ -46,3 +46,22 @@
   outline: 2px solid var(--gold-soft);
   outline-offset: 3px;
 }
+
+.btn, button, .cardBtn, .btnGhost{
+  border: 1px solid var(--gold-soft);
+}
+
+.btn:hover, button:hover, .cardBtn:hover, .btnGhost:hover{
+  border-color: var(--gold);
+}
+
+.btn:active, button:active, .cardBtn:active, .btnGhost:active{
+  border-color: var(--gold);
+  background: rgba(201,168,106,.18);
+}
+
+/* สำหรับคีย์บอร์ด/มือถือ: แตะแล้วมี state สวย */
+.btn:focus-visible, button:focus-visible, .cardBtn:focus-visible, .btnGhost:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(201,168,106,.22);
+}
