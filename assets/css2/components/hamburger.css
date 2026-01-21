@@ -1,1 +1,19 @@
 /* reserved for hamburger overrides if needed */
+/* Backdrop/menu: when hidden must not block scroll */
+.menuBackdrop[hidden],
+.mobileMenu[hidden]{
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* When shown */
+.menuBackdrop{
+  position: fixed;
+  inset: 0;
+  pointer-events: auto;
+}
+
+.mobileMenu{
+  position: absolute; /* หรือ fixed ตามดีไซน์ */
+  pointer-events: auto;
+}
