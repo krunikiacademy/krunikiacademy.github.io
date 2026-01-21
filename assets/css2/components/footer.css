@@ -1,0 +1,11 @@
+/* Footer copyright */
+.footerCopy, .copyright, .siteFooter .copy{
+  text-align: center;
+  color: rgba(255,255,255,.9);
+}
+
+.footerCopy .gold, 
+.copyright .gold,
+.siteFooter .gold{
+  color: var(--gold);
+}
