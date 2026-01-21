@@ -56,3 +56,57 @@
   background: rgba(255,215,140,.12);
   color: rgba(255,235,200,.95);
 }
+
+/* components/topbar.css - scoped to .topbar only */
+
+.topbar{
+  width: 100%;
+  position: relative;
+  z-index: 9000;
+}
+
+.topbar .right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.topbar .social{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  flex-wrap: wrap;              /* กันล้นขอบบนจอแคบ */
+}
+
+/* ปุ่ม */
+.topbar .social .iconbtn{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.08);
+  text-decoration: none;
+  color: rgba(255,255,255,.92);
+}
+
+/* ล็อกขนาด SVG เฉพาะใน topbar */
+.topbar .social .iconbtn svg{
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* map สีให้ path/circle ด้วย currentColor */
+.topbar .social .iconbtn .fill{ fill: currentColor; }
+.topbar .social .iconbtn .stroke{ stroke: currentColor; }
+
+/* gold variant */
+.topbar .social .iconbtn.gold{
+  border-color: rgba(255,215,140,.35);
+  background: rgba(255,215,140,.12);
+  color: rgba(255,235,200,.95);
+}
