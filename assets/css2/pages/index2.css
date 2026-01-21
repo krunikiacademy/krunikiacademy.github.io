@@ -93,6 +93,9 @@ main.wrap{
   height: auto;
 }
 
+/* ================================
+   DEBUG: FORCE SHOW TOPBAR SOCIAL
+   ================================ */
 /* บังคับให้ topbar + social ต้องแสดง */
 .topbar,
 .topbar .right,
