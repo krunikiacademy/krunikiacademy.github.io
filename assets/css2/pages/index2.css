@@ -282,3 +282,6 @@ main.wrap{
 
 #services a{ text-decoration: none; }
 #services a:hover{ text-decoration: none; }
+
+#services{ position: relative; z-index: 1; }
+#services .card *{ position: relative; z-index: 1; }
