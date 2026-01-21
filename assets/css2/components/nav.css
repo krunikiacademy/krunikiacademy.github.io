@@ -14,3 +14,12 @@
   align-items:center;
   column-gap: 18px;
 }
+
+/* Center desktop nav */
+.navLinks{
+  justify-self:center;  /* กลางคอลัมน์กลาง */
+  display:flex;
+  gap: 22px;
+  align-items:center;
+  white-space: nowrap;  /* กันตกบรรทัด */
+}
