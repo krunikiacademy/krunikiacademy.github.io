@@ -33,3 +33,12 @@
   max-height: 22px;
   display: block;
 }
+
+.brandBlock{
+  justify-self:start;   /* ชิดซ้ายใน grid */
+  align-items:flex-start;
+}
+
+.brandBlock .social{
+  justify-content:flex-start;
+}
