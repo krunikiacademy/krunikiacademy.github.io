@@ -93,3 +93,97 @@ main.wrap{
   height: auto;
 }
 
+/* ================================
+   INDEX2 – RESTORE CARD GRID (2x2)
+   ================================ */
+
+/* 1) กันการ์ด/เฟรมทับตัวอักษร: ยก z-index ของข้อความใน card */
+#services .card, 
+#index2Cards .card,
+.sectionCards .card,
+.cardsGrid .card{
+  position: relative;
+  overflow: hidden;
+}
+
+#services .card * , 
+#index2Cards .card *,
+.sectionCards .card *,
+.cardsGrid .card *{
+  position: relative;
+  z-index: 1;
+}
+
+/* ถ้ามีพื้น/เฟรมที่เป็นชิ้นทับตัวอักษร (มักมาจาก ::before/::after) */
+#services .card::before,
+#services .card::after,
+#index2Cards .card::before,
+#index2Cards .card::after,
+.sectionCards .card::before,
+.sectionCards .card::after,
+.cardsGrid .card::before,
+.cardsGrid .card::after{
+  content: none !important;
+}
+
+/* 2) คืนค่า Layout: 4 การ์ด = 2 คอลัมน์ */
+#services .cardsGrid,
+#index2Cards .cardsGrid,
+.sectionCards .cardsGrid,
+.cardsGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* 3) ระยะหายใจใน card (กันหัวข้อโดนทับ) */
+#services .card,
+#index2Cards .card,
+.sectionCards .card,
+.cardsGrid .card{
+  padding: 18px 18px 16px;
+  border-radius: var(--r-xl, 22px);
+  background: var(--card-glass, rgba(18,20,24,.55));
+  border: 1px solid var(--card-border, rgba(201,168,106,.18));
+  box-shadow: var(--shadow-card, 0 18px 50px rgba(0,0,0,.55));
+}
+
+/* 4) ปุ่มใน card: ขอบทอง + กดแล้วทอง */
+#services .card .cardBtn,
+#index2Cards .card .cardBtn,
+.sectionCards .card .cardBtn,
+.cardsGrid .card .cardBtn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--gold-soft, rgba(201,168,106,.25));
+  color: var(--text-main, rgba(245,246,248,.92));
+  background: transparent;
+  text-decoration: none;
+}
+
+#services .card .cardBtn:hover,
+#services .card .cardBtn:focus-visible,
+#index2Cards .card .cardBtn:hover,
+#index2Cards .card .cardBtn:focus-visible,
+.sectionCards .card .cardBtn:hover,
+.sectionCards .card .cardBtn:focus-visible,
+.cardsGrid .card .cardBtn:hover,
+.cardsGrid .card .cardBtn:focus-visible{
+  border-color: var(--gold, #c9a86a);
+  background: rgba(201,168,106,.12);
+  outline: none;
+}
+
+/* 5) มือถือ: 1 คอลัมน์ */
+@media (max-width: 720px){
+  #services .cardsGrid,
+  #index2Cards .cardsGrid,
+  .sectionCards .cardsGrid,
+  .cardsGrid{
+    grid-template-columns: 1fr;
+  }
+}
