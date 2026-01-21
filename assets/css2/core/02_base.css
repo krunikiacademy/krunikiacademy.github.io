@@ -12,3 +12,26 @@ body{
   color: var(--text-main);
 }
 
+html, body{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* กันล้นจอแนวนอน */
+}
+
+img, svg, video{
+  max-width: 100%;
+  height: auto;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #0f1114; /* กัน fallback เป็นขาว */
+}
+
+main{
+  display: block;
+}
+
+.wrap{
+  min-height: 100vh;
+}
