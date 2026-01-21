@@ -109,3 +109,8 @@ a{ color: inherit; text-decoration-thickness: .08em; text-underline-offset: .2em
   .siteHeader .navLinks{ display: flex !important; }
   .siteHeader .krActions{ display: none !important; }
 }
+
+/* BRAND COLOR FORCE */
+.siteHeader .brandText{
+  color:#c9a86a !important;
+}
