@@ -35,3 +35,59 @@
   .navLinks{ display:flex; }
   .krActions{ display:none; }
 }
+
+/* HEADER GRID */
+.siteHeader .navInner{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 18px;
+}
+
+/* Brand + Social LEFT */
+.brandBlock{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-self: start;
+}
+
+/* Remove extra right wrappers effect (topbar simplified) */
+.topbar{ display: block; }
+.topbar .social{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Desktop nav CENTER */
+.navLinks{
+  justify-self: center;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* ✅ remove underline/colored line under brand/menu */
+.siteHeader a{
+  text-decoration: none;
+  border-bottom: 0;
+}
+.siteHeader a:focus,
+.siteHeader a:focus-visible{
+  outline: none;
+  box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .navLinks{ display: none; }     /* hide desktop nav */
+  .krActions{ display: flex; }    /* show hamburger */
+}
+
+@media (min-width: 901px){
+  .navLinks{ display: flex; }
+  .krActions{ display: none; }
+}
