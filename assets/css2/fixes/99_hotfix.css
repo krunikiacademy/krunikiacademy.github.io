@@ -146,4 +146,6 @@ a{ text-decoration: none !important; }
   background: rgba(201,168,106,.18) !important;
 }
 
-
+.siteHeader .brandText{
+  color: var(--gold-main) !important;
+}
