@@ -1,5 +1,5 @@
 :root{
-  /* background (ไม่ดำทึบ) */
+  /* background */
   --bg: #0f1114;
   --bg-2: #15181d;
 
@@ -16,18 +16,11 @@
   --gold: #c9a86a;
   --gold-soft: rgba(201,168,106,.25);
 
+  /* bridge (ให้คงไว้ตอนนี้) */
+  --gold-main: var(--gold);
+  --gold-soft-main: var(--gold-soft);
+
   /* radius / shadow */
   --r-xl: 22px;
   --shadow-card: 0 18px 50px rgba(0,0,0,.55);
-}
-
-:root{
-  --bg: #0f1114;
-  ...
-  --gold: #c9a86a;
-  --gold-soft: rgba(201,168,106,.25);
-
-  /* 🔒 Bridge for new system */
-  --gold-main: var(--gold);
-  --gold-soft-main: var(--gold-soft);
 }
