@@ -403,3 +403,22 @@ main.wrap{
     margin-top: 16px;
   }
 }
+
+Step 2) โค้ดที่ต้องใส่
+
+/* ======================================
+   INDEX2: Card kicker to gold
+   เปลี่ยนตัวอักษรเล็กบนขอบการ์ดเป็นสีทอง
+   ====================================== */
+
+/* เฉพาะการ์ดใน section services */
+.page--index2 #services .card .kicker{
+  color: var(--gold) !important;
+  letter-spacing: 0.04em;      /* ให้ดูพรีเมียมขึ้นนิด */
+  font-weight: 600;
+}
+
+/* ถ้ามี opacity เดิมติดอยู่ ให้บังคับชัด */
+.page--index2 #services .card .kicker{
+  opacity: 1 !important;
+}
