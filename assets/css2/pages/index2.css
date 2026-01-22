@@ -387,3 +387,19 @@ main.wrap{
 .page--index2 #services > div:first-child{
   flex-wrap: wrap;
 }
+
+/* ======================================
+   INDEX2: Services header top spacing
+   กัน kicker ชนกรอบ banner
+   ====================================== */
+
+.page--index2 #services .kicker{
+  margin-top: 12px;   /* ระยะห่างจากกรอบบน */
+}
+
+/* มือถือเล็ก: เพิ่มอีกนิดให้หายอึดอัด */
+@media (max-width: 768px){
+  .page--index2 #services .kicker{
+    margin-top: 16px;
+  }
+}
