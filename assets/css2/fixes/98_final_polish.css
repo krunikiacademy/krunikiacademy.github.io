@@ -169,4 +169,39 @@ hr, .divider{
   padding-top: 0;
 }
 
+/* =========================================
+   HERO: Quote card spacing + prevent overflow
+   ========================================= */
 
+.page--index2 .quoteCard{
+  padding: 22px 22px;             /* เพิ่มพื้นที่หายใจใน card */
+  box-sizing: border-box;
+  overflow: hidden;               /* กันตัวอักษรล้นขอบ */
+}
+
+/* กล่องหัวข้อบนของ quote */
+.page--index2 .quoteCard .quoteTop{
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* หัวข้อ A gentle space */
+.page--index2 .quoteCard .leftTitle{
+  margin: 0 0 4px;
+  line-height: 1.2;
+  letter-spacing: .02em;
+}
+
+/* บรรทัด to return to yourself. (ที่เป็น inline style) */
+.page--index2 .quoteCard .quoteTop > div:last-child{
+  line-height: 1.35;
+}
+
+/* ตัว quote หลัก */
+.page--index2 .quoteCard .quote{
+  margin: 0;                      /* กัน margin ดันชนขอบ */
+  line-height: 1.75;
+  max-width: 100%;
+  overflow-wrap: anywhere;         /* กันคำยาว ๆ ดันออกนอก card */
+}
