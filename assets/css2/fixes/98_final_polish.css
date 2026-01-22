@@ -293,3 +293,41 @@ footer .gold{
     grid-template-columns: 1fr;
   }
 }
+
+/* ===============================
+   GOLD BUTTON – LINE CTA
+   =============================== */
+
+/* ปุ่ม LINE OA และ LINE SHOP ให้เป็นทองเหมือนกัน */
+
+.contactGrid .lineCta .btn{
+  padding: 16px 28px;
+  font-size: 16px;
+  border-radius: 999px;
+  width: fit-content;
+
+  background: linear-gradient(180deg, #e0c58a 0%, #b89455 100%);
+  color: #1a1a1a;
+  font-weight: 500;
+
+  border: none;
+  box-shadow:
+    0 8px 22px rgba(201,168,106,.45),
+    inset 0 1px 0 rgba(255,255,255,.35);
+
+  transition: all .25s ease;
+}
+
+/* Hover effect */
+.contactGrid .lineCta .btn:hover{
+  transform: translateY(-1px);
+  box-shadow:
+    0 12px 30px rgba(201,168,106,.55),
+    inset 0 1px 0 rgba(255,255,255,.45);
+}
+
+/* ให้ปุ่มสองอันหน้าตาเหมือนกัน */
+.contactGrid .lineCta .btn.primary{
+  background: linear-gradient(180deg, #e0c58a 0%, #b89455 100%);
+  color: #1a1a1a;
+}
