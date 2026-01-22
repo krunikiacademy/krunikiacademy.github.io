@@ -422,3 +422,13 @@ Step 2) โค้ดที่ต้องใส่
 .page--index2 #services .card .kicker{
   opacity: 1 !important;
 }
+
+/* ✅ FORCE: Kicker in 4 cards -> Gold (locked) */
+body.page--index2 #services .grid2 a.card.cardLink .kicker,
+body.page--index2 #services .grid2 a.card .kicker,
+body.page--index2 #services .kicker{
+  color: #c9a86a !important;   /* ใช้ HEX ตรงๆ กัน var โดนทับ */
+  opacity: 1 !important;
+  font-weight: 650;
+  letter-spacing: .04em;
+}
