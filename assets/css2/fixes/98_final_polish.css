@@ -385,3 +385,11 @@ footer .gold{
     0 14px 36px rgba(201,168,106,.65),
     inset 0 1px 0 rgba(255,255,255,.55);
 }
+
+/* FORCE BRAND DOT TO GOLD */
+.siteHeader .brand .dot{
+  background: linear-gradient(180deg, #e0c58a 0%, #b89455 100%) !important;
+  box-shadow:
+    0 0 0 1px rgba(201,168,106,.45),
+    0 0 10px rgba(201,168,106,.65);
+}
