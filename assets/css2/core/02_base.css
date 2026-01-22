@@ -74,3 +74,28 @@ h1,h2,h3{
   color: var(--text-main);
   letter-spacing: -.01em;
 }
+
+/* ===== Anti horizontal scroll (iPad/iOS safe) ===== */
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* กัน iOS มีพื้นหลังขาวเวลาเด้ง/ยืด */
+html{
+  background: var(--bg);
+}
+body{
+  background-color: var(--bg);
+}
+
+/* รูป/สื่อห้ามดันเว็บล้น */
+img, svg, video, canvas{
+  max-width: 100%;
+  height: auto;
+}
+
+/* กันกรณีบาง element ยาวจนดันล้น (ข้อความ/ลิงก์) */
+*{
+  word-wrap: break-word;
+}
