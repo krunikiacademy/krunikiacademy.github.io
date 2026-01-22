@@ -207,20 +207,19 @@ hr, .divider{
 }
 
 /* =========================================
-   Contact Card – Final layout fix
-   Page: contact.html
-   File: 98_final_polish.css
+   Contact Card layout fix (page--contact)
+   Put in: assets/css2/fixes/98_final_polish.css
    ========================================= */
 
-/* ล็อกเฉพาะหน้า contact */
+/* 1) กริดหลัก: เว้นระยะให้หายใจ + กันชน */
 .page--contact .contactGrid{
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
+  grid-template-columns: 1.1fr .9fr; /* ซ้ายข้อความ / ขวากล่อง LINE */
   gap: 18px;
   align-items: start;
 }
 
-/* มือถือเรียงลงคอลัมน์เดียว */
+/* มือถือให้เรียงลง 1 คอลัมน์ */
 @media (max-width: 860px){
   .page--contact .contactGrid{
     grid-template-columns: 1fr;
@@ -228,48 +227,53 @@ hr, .divider{
   }
 }
 
-/* กล่องซ้าย: note */
+/* 2) note: กันข้อความชิดขอบ + อ่านง่าย */
 .page--contact .note{
   padding: 16px 18px;
-  border-radius: 22px;
+  border-radius: var(--r-xl, 22px);
   background: rgba(255,255,255,.03);
   border: 1px solid rgba(255,255,255,.06);
   line-height: 1.75;
 }
 
-/* กล่องขวา: lineCta */
+/* 3) กล่อง LINE CTA: ให้เหมือนกล่องการ์ดเดิม + มีกรอบทองบางๆ */
 .page--contact .lineCta{
   padding: 18px 18px;
-  border-radius: 22px;
+  border-radius: var(--r-xl, 22px);
   background: rgba(255,255,255,.03);
-  border: 1px solid rgba(201,168,106,.22);   /* กรอบทองบาง */
+  border: 1px solid rgba(201,168,106,.22);
   box-shadow: 0 18px 50px rgba(0,0,0,.45);
-
-  display: flex;
-  flex-direction: column;
-  gap: 12px;   /* กันปุ่มชนกัน */
 }
 
-/* หัวข้อ LINE OA */
+/* 4) หัวข้อในกล่อง LINE: จัดแนวไอคอน+ตัวหนังสือ + ไม่ชน */
 .page--contact .lineCtaTitle{
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 
   font-weight: 600;
   line-height: 1.25;
-  color: var(--text-main);
+  color: var(--text-main, rgba(245,246,248,.92));
 }
 
-/* ไอคอนให้เป็นทอง */
+/* ไอคอนให้เป็นทองนุ่มๆ */
 .page--contact .lineCtaTitle svg{
-  color: var(--gold) !important;
+  color: rgba(201,168,106,.95) !important;
   flex: 0 0 auto;
 }
 
-/* ปุ่มในกล่อง LINE: เรียงสวย ไม่ชน */
+/* 5) โซนปุ่มในกล่อง LINE: ไม่ให้ชนกัน */
+.page--contact .lineCta .ctaRow,
+.page--contact .lineCta .contactActions,
+.page--contact .lineCta .contactCtas{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* ถ้าปุ่มเป็น <a class="btn"> อยู่ใน lineCta ให้กินความกว้างพอดี */
 .page--contact .lineCta .btn{
-  align-self: flex-start;
   white-space: nowrap;
 }
