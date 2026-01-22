@@ -414,3 +414,13 @@ footer .gold{
     transition-duration: 0ms !important;
   }
 }
+
+@media (max-width: 1024px){
+  html{ scroll-behavior: auto !important; }
+}
+
+@media (max-width: 1024px){
+  body{
+    text-rendering: auto !important;
+  }
+}
