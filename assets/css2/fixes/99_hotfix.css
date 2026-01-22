@@ -149,3 +149,19 @@ a{ text-decoration: none !important; }
 .siteHeader .brandText{
   color: var(--gold-main) !important;
 }
+
+/* ===== iPad white gap / floating header-footer safe ===== */
+
+/* ล็อกพื้นหลังของ header ให้ชัด */
+.siteHeader{
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.55);
+}
+
+/* ล็อกพื้นหลัง footer กันขาวโผล่ */
+footer{
+  display: block;
+  width: 100%;
+  background: transparent; /* ถ้าอยากให้ทึบค่อยเปลี่ยนทีหลัง */
+}
