@@ -333,3 +333,57 @@ main.wrap{
 #services h3{
   margin-top: 6px;
 }
+
+/* ================================
+   INDEX2: CTA buttons (small phones)
+   iPhone SE / 6s safe layout
+   ================================ */
+
+/* ปกติ: อยู่แถวเดียว + มีช่องว่าง */
+.page--index2 .ctaRow{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;         /* กันล้น */
+  align-items: center;
+}
+
+/* จอเล็กมาก: ให้เรียงเป็นแนวตั้ง ไม่ซ้อนกัน */
+@media (max-width: 375px){
+  .page--index2 .ctaRow{
+    flex-direction: column;
+    align-items: stretch;  /* ให้ปุ่มกว้างเต็ม */
+    gap: 10px;
+  }
+
+  .page--index2 .ctaRow .btn{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 16px;    /* กดง่าย */
+    white-space: normal;   /* กันข้อความดันล้น */
+  }
+}
+
+/* ======================================
+   INDEX2: Services header padding safe
+   กันหัวข้อชนขอบทุกหน้าจอ
+   ====================================== */
+
+/* ให้ section มี padding เท่ากับ card spacing (ใช้ 18px แบบเดียวกับ wrap) */
+.page--index2 #services{
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* มือถือเล็ก: ลดนิดให้พอดีจอ */
+@media (max-width: 768px){
+  .page--index2 #services{
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+/* กันบรรทัดขวา (Heart Stillness Healing) หลุด/ดันชนขอบ */
+.page--index2 #services > div:first-child{
+  flex-wrap: wrap;
+}
