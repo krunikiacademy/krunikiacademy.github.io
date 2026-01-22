@@ -147,6 +147,26 @@ hr, .divider{
   fill: var(--gold);
 }
 
+/* =========================================
+   HERO: goldline (mini) not overlapping h1
+   ========================================= */
 
+.page--index2 .heroText .goldline{
+  display: inline-block;          /* กัน margin พฤติกรรมแปลก */
+  margin: 0 0 10px;               /* ช่องไฟล่างก่อน h1 */
+  padding: 0;                     /* กัน padding แปลกจากไฟล์อื่น */
+  line-height: 1.25;              /* ป้องกันชน */
+  font-size: 14px;                /* mini คุมขนาด */
+  letter-spacing: .03em;
+  color: var(--gold);
+  position: relative;             /* กันโดน absolute จากที่อื่น */
+  top: auto;
+}
+
+.page--index2 .heroText h1{
+  margin-top: 0;                  /* กัน margin collapse แปลก ๆ */
+  line-height: 1.15;
+  padding-top: 0;
+}
 
 
