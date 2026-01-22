@@ -22,6 +22,12 @@
 }
 
 :root{
+  --bg: #0f1114;
+  ...
+  --gold: #c9a86a;
+  --gold-soft: rgba(201,168,106,.25);
+
+  /* 🔒 Bridge for new system */
   --gold-main: var(--gold);
   --gold-soft-main: var(--gold-soft);
 }
