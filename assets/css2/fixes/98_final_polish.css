@@ -393,3 +393,24 @@ footer .gold{
     0 0 0 1px rgba(201,168,106,.45),
     0 0 10px rgba(201,168,106,.65);
 }
+
+/* ===== Touch devices: reduce heavy effects ===== */
+@media (hover: none) and (pointer: coarse){
+  /* ตัด hover lift ที่ทำให้คำนวณเงาหนัก ๆ */
+  .card:hover,
+  .cardLink:hover,
+  .btn:hover{
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .card::after,
+  .cardLink::after{
+    display: none !important;
+  }
+
+  /* ลด transition ให้เบาลง */
+  *{
+    transition-duration: 0ms !important;
+  }
+}
