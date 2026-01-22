@@ -146,3 +146,24 @@ hr, .divider{
   color: var(--gold);
   fill: var(--gold);
 }
+
+/* 2) Fix mini-title overlapping main title */
+:where(.kicker,.eyebrow,.miniTitle,.sectionMini,.leadMini){
+  display: block;
+  margin: 0 0 10px 0 !important;
+  line-height: 1.35 !important;
+  letter-spacing: .02em;
+}
+
+/* กันหัวข้อใหญ่ถูกดันขึ้นมาชน */
+:where(h1,h2,.title,.heroTitle,.sectionTitle){
+  margin-top: 0 !important;
+  line-height: 1.12;
+}
+
+/* ถ้ามีเคสที่ mini ถูก position absolute (เจอบ่อย) */
+:where(.kicker,.eyebrow,.miniTitle)[style*="position"],
+:where(.kicker,.eyebrow,.miniTitle).isAbsolute{
+  position: static !important;
+  transform: none !important;
+}
