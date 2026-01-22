@@ -432,3 +432,8 @@ body.page--index2 #services .kicker{
   font-weight: 650;
   letter-spacing: .04em;
 }
+
+/* ✅ Contact card chat icon -> Gold */
+.page--index2 #contact .lineCtaTitle svg{
+  color: #c9a86a !important;
+}
