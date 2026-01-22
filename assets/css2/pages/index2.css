@@ -437,3 +437,8 @@ body.page--index2 #services .kicker{
 .page--index2 #contact .lineCtaTitle svg{
   color: #c9a86a !important;
 }
+
+/* ✅ Contact section: "Connect gently" -> Gold */
+.page--index2 #contact .contactHead .small{
+  color: #c9a86a !important;
+}
