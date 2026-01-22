@@ -1,0 +1,124 @@
+/* =========================================
+   KRUNIKI — FINAL POLISH (SAFE)
+   file: assets/css2/fixes/98_final_polish.css
+   ========================================= */
+
+/* 1) Smooth rendering */
+html{ scroll-behavior:smooth; }
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2) Motion tokens */
+:root{
+  --ease-lux: cubic-bezier(.2,.8,.2,1);
+  --dur-fast: 180ms;
+  --dur-med: 320ms;
+  --dur-slow: 520ms;
+
+  --gold-main: #c9a86a;
+  --gold-soft: #bfa36a;
+
+  --line-gold: rgba(201,168,106,.14);
+  --line-soft: rgba(255,255,255,.06);
+
+  --shadow-soft: 0 18px 50px rgba(0,0,0,.55);
+  --shadow-lux:  0 30px 90px rgba(0,0,0,.62);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{ transition-duration:0ms !important; animation-duration:0ms !important; }
+}
+
+/* 3) Links: เอาเส้นใต้เฉพาะที่ต้องการ (ไม่ยิงทั้งเว็บ) */
+.siteHeader a,
+.navLinks a,
+.mobileMenu a,
+.card a{ text-decoration:none; }
+
+/* 4) Nav hover gold (Desktop) */
+.navLinks a{
+  transition: color var(--dur-med) var(--ease-lux), opacity var(--dur-med) var(--ease-lux);
+}
+.navLinks a:hover{ color: var(--gold-main); }
+
+/* 5) Mobile menu polish (แทน navDrawer) */
+.mobileMenu a{
+  transition: color var(--dur-med) var(--ease-lux), opacity var(--dur-med) var(--ease-lux);
+}
+.mobileMenu a:hover{ color: var(--gold-main); }
+
+/* 6) Card hover polish */
+.page--index2 .card,
+.page--index2 .cardLink{
+  position: relative;
+  transition:
+    transform var(--dur-med) var(--ease-lux),
+    box-shadow var(--dur-med) var(--ease-lux),
+    border-color var(--dur-med) var(--ease-lux);
+}
+.page--index2 .card::after,
+.page--index2 .cardLink::after{
+  content:"";
+  position:absolute; inset:0;
+  border-radius: inherit;
+  pointer-events:none;
+  opacity:0;
+  transition: opacity var(--dur-med) var(--ease-lux);
+  box-shadow: 0 0 0 1px var(--line-gold);
+}
+.page--index2 .card:hover,
+.page--index2 .cardLink:hover{
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+.page--index2 .card:hover::after,
+.page--index2 .cardLink:hover::after{ opacity:1; }
+
+/* 7) Hero text: คุมเฉพาะบล็อก ไม่ใช้ * */
+.servicesHeroTitle{ margin: 0 auto 26px; line-height: 1.22; }
+.heroQuote{ margin: 0 auto 22px; line-height: 1.9; }
+.services-sub{
+  margin: 18px auto 22px;
+  line-height: 1.9;
+  max-width: 720px;
+  text-align: center;
+}
+.services-signature{
+  margin: 22px auto 30px;
+  text-align: center;
+}
+
+/* 8) Wrap (มีผลเฉพาะเมื่อมี .wrap จริง) */
+.wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+@media (max-width:768px){
+  .wrap{ padding-left:14px; padding-right:14px; }
+}
+
+/* 9) HR / divider */
+hr, .divider{
+  border:none;
+  height:1px;
+  background: linear-gradient(90deg, transparent, var(--line-soft), transparent);
+  margin: 26px 0;
+}
+
+/* 10) Social icon hover */
+.iconbtn{
+  transition: transform var(--dur-fast) var(--ease-lux), box-shadow var(--dur-med) var(--ease-lux);
+}
+.iconbtn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+}
+
+/* 11) Gold text utilities */
+.goldMain{ color: var(--gold-main) !important; }
+.goldSub{  color: var(--gold-soft) !important; }
