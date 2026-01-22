@@ -122,3 +122,27 @@ hr, .divider{
 /* 11) Gold text utilities */
 .goldMain{ color: var(--gold-main) !important; }
 .goldSub{  color: var(--gold-soft) !important; }
+
+/* =========================================
+   98_final_polish.css  (SAFE OVERRIDES)
+   ========================================= */
+
+/* 1) Header: gold for icons / pills near brand */
+.siteHeader .iconbtn{
+  border: 1px solid rgba(201,168,106,.35);
+  background: rgba(0,0,0,.22);
+  box-shadow: 0 0 0 1px rgba(201,168,106,.10);
+}
+
+.siteHeader .iconbtn:hover{
+  border-color: rgba(201,168,106,.70);
+  box-shadow: 0 0 0 1px rgba(201,168,106,.22), 0 12px 24px rgba(0,0,0,.35);
+  transform: translateY(-1px);
+}
+
+/* ไอคอนข้างในให้เป็นทอง (รองรับ svg / icon font) */
+.siteHeader .iconbtn svg,
+.siteHeader .iconbtn i{
+  color: var(--gold);
+  fill: var(--gold);
+}
