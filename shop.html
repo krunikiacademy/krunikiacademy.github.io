@@ -127,139 +127,142 @@
   <main class="wrap">
 
       <!-- HERO (ใน main) = Banner + Story + CTA -->
-  <section class="shopHero">
+ <main class="pageMain shopPage">
+
+  <!-- HERO: Banner + Story (โครงวางให้ “เข้ากับสไตล์ index” โดยใช้ class กลาง ๆ) -->
+  <section class="section heroSection shopHero">
     <div class="container">
-      <div class="shopHeroInner">
-        <div class="shopHeroText">
-          <h1 class="shopTitle">KRUNIKI Shop</h1>
-          <p class="shopStory">
-            ที่นี่คือร้านของ “พลังรักแท้จากตัวเอง” — รวม eBook, แทร็กสมาธิ, Brainwaves
-            และสินค้าที่ช่วยให้คุณกลับมาอยู่กับใจได้ง่ายขึ้นในชีวิตจริง
+      <div class="heroGrid">
+        <div class="heroText">
+          <p class="kicker">KRUNIKI Shop</p>
+          <h1 class="heroTitle">เลือกเส้นทางที่เหมาะกับคุณ</h1>
+
+          <p class="heroLead">
+            ที่นี่คือร้านของ “พลังรักแท้จากตัวเอง” — รวม eBook, ไฟล์สมาธิ และ Brainwaves
+            ที่ออกแบบมาเพื่อช่วยให้คุณกลับมารู้สึกดีกับตัวเองได้อย่างอ่อนโยน และต่อเนื่อง
           </p>
 
-          <div class="heroCTA">
+          <ul class="heroBullets">
+            <li>เริ่มจาก “อ่าน” เพื่อคืนคุณค่าในตัวเอง</li>
+            <li>ต่อด้วย “ฟัง” เพื่อรีเซ็ตใจในวันที่หนัก</li>
+            <li>และ “ปรับคลื่นสมอง” เพื่อโฟกัส/ผ่อนคลายลึก</li>
+          </ul>
+
+          <div class="heroCtaRow">
             <a class="btnPrimary" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
               ไปเลือกซื้อใน LINE SHOP
             </a>
-            <a class="btnGhost" href="#mini-quest">
-              ช่วยฉันเลือกสินค้า
+            <a class="btnGhost" href="#shop-products">
+              ดูสินค้าทั้งหมด
             </a>
           </div>
         </div>
 
-        <!-- Banner Image  -->
-        <div class="shopHeroBanner">
-          <img src="assets/images/banners/shop-banner.webp" alt="KRUNIKI Shop Banner">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 1x3 CARDS (รูปทุกใบ) -->
-  <section class="shopCards">
-    <div class="container">
-      <h2 class="sectionTitle">เลือกเส้นทางที่เหมาะกับคุณ</h2>
-
-      <div class="grid3">
-        <!-- Card 1 -->
-        <article class="cardProduct">
-          <div class="cardImage">
-            <img src="assets/images/products/ebook-raktae.webp" alt="eBook รักแท้จากตัวเอง">
-          </div>
-          <div class="cardBody">
-            <p class="tag">eBook</p>
-            <h3>รักแท้จากตัวเอง</h3>
-            <p class="cardDesc">เริ่มจากการอ่านเพื่อ “คืนคุณค่า” ให้หัวใจ และเห็นตัวเองชัดขึ้นอย่างอ่อนโยน</p>
-            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
-              ซื้อใน LINE SHOP
-            </a>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="cardProduct">
-          <div class="cardImage">
-            <img src="assets/images/products/meditation-track.webp" alt="แทร็กสมาธิ KRUNIKI">
-          </div>
-          <div class="cardBody">
-            <p class="tag">Meditation Track</p>
-            <h3>แทร็กสมาธิ (Guided)</h3>
-            <p class="cardDesc">เหมาะสำหรับวันที่ใจหนัก — เปิดแล้ว “กลับบ้านที่หัวใจ” ได้ทันที</p>
-            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
-              ซื้อใน LINE SHOP
-            </a>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="cardProduct">
-          <div class="cardImage">
-            <img src="assets/images/products/brainwaves.webp" alt="Theta & Alpha Waves">
-          </div>
-          <div class="cardBody">
-            <p class="tag">Brainwaves</p>
-            <h3>Theta / Alpha Waves</h3>
-            <p class="cardDesc">สำหรับโหมดลึก (Theta) และโหมดนิ่งโฟกัส (Alpha) — เลือกตามจุดประสงค์ของวัน</p>
-            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
-              ซื้อใน LINE SHOP
-            </a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- MINI QUEST (ช่วยตัดสินใจ) -->
-  <section id="mini-quest" class="miniQuest">
-    <div class="container">
-      <div class="questBox">
-        <h2 class="sectionTitle">Mini Quest: วันนี้คุณต้องการอะไรที่สุด?</h2>
-        <p class="muted">เลือก 1 ข้อ แล้วกดปุ่ม ระบบจะพาคุณไปทางที่เหมาะที่สุด</p>
-
-        <div class="questGrid">
-          <button class="questBtn" type="button" data-go="ebook">
-            ฉันอยาก “เข้าใจตัวเอง” และเริ่มฮีลจากราก
-          </button>
-          <button class="questBtn" type="button" data-go="meditation">
-            ฉันอยาก “สงบเร็ว” คืนใจให้กลับมาเดี๋ยวนี้
-          </button>
-          <button class="questBtn" type="button" data-go="brainwaves">
-            ฉันอยาก “ปรับสมอง/คลื่น” เพื่อโฟกัสและผ่อนคลายลึก
-          </button>
-        </div>
-
-        <div class="questResult" aria-live="polite">
-          <p class="resultText">เลือกข้อที่ตรงกับคุณ แล้วระบบจะบอก “ตัวเลือกที่แนะนำ”</p>
-          <div class="resultCTA">
-            <a class="btnPrimary" id="questLink" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
-              ไปเลือกใน LINE SHOP
-            </a>
-          </div>
+        <div class="heroMedia">
+          <img
+            class="heroBannerImg"
+            src="assets/images/banners/shop-banner.webp"
+            alt="KRUNIKI Shop Banner"
+            loading="eager"
+          />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CLOSE THE SALE (ปิดการขาย) -->
-  <section class="closeSale">
+  <!-- PRODUCTS: 4 Cards (Desktop = 4 ต่อแถว) -->
+  <section id="shop-products" class="section productsSection">
     <div class="container">
-      <div class="closeInner">
-        <h2 class="sectionTitle">พร้อมกลับบ้านที่หัวใจแล้วใช่ไหม</h2>
-        <p class="muted">
-          เลือกสิ่งที่พาคุณ “กลับมารู้สึก” ได้ง่ายที่สุดวันนี้ — แล้วค่อยขยายให้ลึกขึ้นตามจังหวะของคุณ
+      <h2 class="sectionTitle">สินค้าแนะนำ</h2>
+      <p class="sectionLead">
+        เลือก 1 อย่างที่ “พาคุณกลับมารู้สึกดี” ได้ง่ายที่สุดวันนี้ แล้วค่อยขยายให้ลึกขึ้นตามจังหวะของคุณ
+      </p>
+
+      <div class="productGrid grid-4">
+        <!-- Card 1: eBook -->
+        <article class="card productCard">
+          <a class="cardMedia" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="eBook รักแท้จากตัวเอง">
+            <img src="assets/images/products/ebook-raktae.webp" alt="eBook รักแท้จากตัวเอง" loading="lazy">
+          </a>
+          <div class="cardBody">
+            <p class="cardTag">eBook</p>
+            <h3 class="cardTitle">รักแท้จากตัวเอง</h3>
+            <p class="cardDesc">
+              สำหรับคนที่อยาก “คืนคุณค่า” ให้ตัวเองอย่างจริงจัง — อ่านแล้วเห็นรากของความเจ็บ
+              และเริ่มพูดกับตัวเองด้วยความอ่อนโยนได้อีกครั้ง
+            </p>
+            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อใน LINE SHOP</a>
+          </div>
+        </article>
+
+        <!-- Card 2: Meditation Track -->
+        <article class="card productCard">
+          <a class="cardMedia" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="Meditation Track">
+            <img src="assets/images/products/meditation-track.webp" alt="Meditation Track (ไฟล์สมาธิ)" loading="lazy">
+          </a>
+          <div class="cardBody">
+            <p class="cardTag">Meditation Track</p>
+            <h3 class="cardTitle">ไฟล์สมาธิ (Guided)</h3>
+            <p class="cardDesc">
+              เหมาะกับวันที่ใจหนัก/ฟุ้ง/เหนื่อย — เปิดฟังแล้ว “กลับบ้านที่หัวใจ”
+              ได้ทันที ด้วยเสียงนำทางที่อ่อนโยนแบบ KRUNIKI
+            </p>
+            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อใน LINE SHOP</a>
+          </div>
+        </article>
+
+        <!-- Card 3: Brainwaves -->
+        <article class="card productCard">
+          <a class="cardMedia" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="Brainwaves Theta & Alpha">
+            <img src="assets/images/products/brainwaves.webp" alt="Brainwaves (Theta & Alpha Waves)" loading="lazy">
+          </a>
+          <div class="cardBody">
+            <p class="cardTag">Brainwaves</p>
+            <h3 class="cardTitle">Theta / Alpha Waves</h3>
+            <p class="cardDesc">
+              Theta สำหรับความนิ่งลึกและการผ่อนคลายภายใน  
+              Alpha สำหรับโฟกัสเบาสบายและสมองปลอดโปร่ง
+            </p>
+            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อใน LINE SHOP</a>
+          </div>
+        </article>
+
+        <!-- Card 4: Elephant Pants -->
+        <article class="card productCard">
+          <a class="cardMedia" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="Elephant Pants">
+            <img src="assets/images/products/elephant-pants.webp" alt="Elephant Pants (กางเกงช้าง/กางเกงฮาเร็ม)" loading="lazy">
+          </a>
+          <div class="cardBody">
+            <p class="cardTag">Lifestyle</p>
+            <h3 class="cardTitle">Elephant Pants</h3>
+            <p class="cardDesc">
+              ความสบายที่ใส่แล้วใจเบาลง — เหมาะกับวันพักฟื้นพลัง
+              หรือวันที่อยากอยู่กับตัวเองแบบไม่เร่ง ไม่ฝืน
+            </p>
+            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อใน LINE SHOP</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA: ปิดท้าย -->
+  <section class="section closingCtaSection">
+    <div class="container">
+      <div class="ctaBox">
+        <h2 class="sectionTitle">พร้อมเริ่ม “กลับบ้านที่หัวใจ” แล้วใช่ไหม</h2>
+        <p class="sectionLead">
+          เลือก 1 อย่างที่เหมาะกับคุณตอนนี้ แล้วปล่อยให้การเปลี่ยนแปลงค่อย ๆ เปิดออกอย่างเป็นธรรมชาติ
         </p>
-
-        <div class="closeCTA">
+        <div class="ctaRow">
           <a class="btnPrimary" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
             เปิดร้าน LINE SHOP ตอนนี้
           </a>
-          <a class="btnGhost" href="index.html">
-            กลับหน้าแรก
-          </a>
+          <a class="btnGhost" href="index.html">กลับหน้าแรก</a>
         </div>
       </div>
     </div>
-    
+   
       <footer>
         © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
       </footer>
