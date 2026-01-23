@@ -129,11 +129,16 @@
   <!-- HERO: Banner + Story (โครงวางให้ “เข้ากับสไตล์ index” โดยใช้ class กลาง ๆ) -->
   <section class="hero hero--shop">
   <div class="container hero__grid">
+
+    <!-- LEFT: text (เหมือน index) -->
     <div class="hero__text">
-      <p class="hero__kicker">KRUNIKI Shop</p>
-      <h1 class="hero__title">เลือกเส้นทางที่เหมาะกับคุณ</h1>
+      <p class="hero__kicker">Connect gently · ร้านค้า KRUNIKI</p>
+
+      <h1 class="hero__title">เลือกสิ่งที่พาคุณ “กลับมารู้สึกกับตัวเอง”</h1>
+
       <p class="hero__lead">
-        รวม eBook, ไฟล์สมาธิ และ Brainwaves เพื่อพาคุณกลับมารู้สึกดีกับตัวเองอย่างอ่อนโยน
+        ที่นี่คือพื้นที่รวม eBook, Meditation Track และ Brainwaves
+        เพื่อช่วยให้คุณค่อย ๆ กลับมาเห็นคุณค่าในตัวเอง — แบบอ่อนโยนและทำได้จริงในชีวิตประจำวัน
       </p>
 
       <div class="hero__actions">
@@ -142,7 +147,42 @@
         </a>
         <a class="btnGhost" href="#shop-products">ดูสินค้าทั้งหมด</a>
       </div>
+
+      <!-- Mini Quest (สไตล์ index: ปุ่มยาว ๆ เป็นตัวเลือก) -->
+      <div class="miniQuest" aria-label="Mini Quest">
+        <p class="miniQuest__title">Mini Quest: วันนี้คุณต้องการอะไรที่สุด?</p>
+        <div class="miniQuest__choices">
+          <a class="chip" href="#card-1">เริ่มจาก “eBook” เพื่อเข้าใจตัวเอง</a>
+          <a class="chip" href="#card-2">พักใจด้วย “Meditation Track”</a>
+          <a class="chip" href="#card-3">ปรับคลื่นด้วย “Brainwaves”</a>
+          <a class="chip" href="#card-4">เติมความสบายด้วย “Elephant Pants”</a>
+        </div>
+      </div>
     </div>
+
+    <!-- RIGHT: hero card (เหมือนกล่องขวาใน index) -->
+    <aside class="hero__card" aria-label="Shop Note">
+      <p class="hero__cardTitle">A gentle space to return to yourself.</p>
+      <div class="hero__cardBody">
+        <p>
+          “การกลับบ้านที่หัวใจ” ไม่ได้แปลว่าต้องเปลี่ยนตัวเองให้เป็นคนใหม่ทันที
+          แต่คือการได้กลับมารับฟังความจริงภายในอย่างไม่ตัดสิน
+          แล้วค่อย ๆ คืนพลังให้ชีวิต — ทีละนิด อย่างมั่นคง
+        </p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- BANNER (ขนาด/ฟีลเดียวกับ index: อยู่ใต้ hero) -->
+  <div class="container hero__bannerWrap">
+    <img
+      class="hero__banner"
+      src="assets/images/banners/shop-banner.webp"
+      alt="KRUNIKI — Heart & Healing Shop"
+      loading="lazy"
+    />
+  </div>
 
     <div class="hero__media">
       <img
