@@ -127,10 +127,10 @@
  <main class="pageMain shopPage">
 
   <!-- HERO: Banner + Story (โครงวางให้ “เข้ากับสไตล์ index” โดยใช้ class กลาง ๆ) -->
-  <section class="hero hero--shop">
-  <div class="container hero__grid">
+<section id="shop" class="panel hero">
+  <div class="heroGrid">
 
-       <!-- LEFT -->
+    <!-- LEFT -->
     <div class="heroText">
       <div class="goldline">Connect gently • ร้านค้า <strong>KRUNIKI</strong></div>
 
@@ -139,7 +139,7 @@
       <p class="lead">
         ที่นี่คือพื้นที่รวม eBook, Meditation Track และ Brainwaves
         เพื่อช่วยให้คุณค่อย ๆ กลับมาเห็นคุณค่าในตัวเองอย่างอ่อนโยน —
-        แบบที่ทำได้จริงในชีวิตประจำวัน
+        แบบที่ “ทำได้จริงในชีวิตประจำวัน”
       </p>
 
       <div class="ctaRow">
@@ -148,6 +148,20 @@
         </a>
         <a class="btn" href="#products">ดูสินค้าทั้งหมด</a>
       </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="quoteCard" aria-label="Shop quote">
+      <div class="quoteTop">
+        <div class="leftTitle">A gentle space</div>
+        <div style="opacity:.8;">to return to yourself.</div>
+      </div>
+      <p class="quote">
+        “การกลับบ้านที่หัวใจ” ไม่ได้คือการเปลี่ยนตัวเองให้เป็นคนใหม่ทันที
+        แต่คือการกลับมารับฟังความจริงภายในอย่างไม่ตัดสิน
+        และค่อย ๆ คืนพลังให้ชีวิต
+      </p>
+    </div>
 
       <!-- Mini Quest (สไตล์ index: ปุ่มยาว ๆ เป็นตัวเลือก) -->
       <div class="miniQuest" aria-label="Mini Quest">
@@ -183,16 +197,6 @@
       alt="KRUNIKI — Heart & Healing Shop"
       loading="lazy"
     />
-  </div>
-
-    <div class="hero__media">
-      <img
-        src="assets/images/banners/shop-banner.webp"
-        alt="KRUNIKI Shop Banner"
-        class="hero__img"
-        loading="eager"
-      />
-    </div>
   </div>
 </section>
 
