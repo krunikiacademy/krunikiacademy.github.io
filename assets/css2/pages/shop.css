@@ -1,69 +1,36 @@
-/* =========================
-   SHOP PAGE (shop.html)
-   ========================= */
+/* ===== SHOP HERO (match index hero sizing) ===== */
 
-/* 4 cards per row (Desktop) */
-.shopPage .productGrid.grid-4{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+.hero{
+  padding: 22px 0;
 }
 
-/* Tablet */
-@media (max-width: 980px){
-  .shopPage .productGrid.grid-4{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
 }
 
-/* Mobile */
-@media (max-width: 640px){
-  .shopPage .productGrid.grid-4{
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Hero layout */
-.shopPage .heroGrid{
+.hero__grid{
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 18px;
   align-items: center;
 }
 
+.hero__media{
+  width: 100%;
+}
+
+.hero__img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/* responsive */
 @media (max-width: 980px){
-  .shopPage .heroGrid{
+  .hero__grid{
     grid-template-columns: 1fr;
   }
-}
-
-.shopPage .heroBannerImg{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-}
-
-/* Buttons & CTA spacing */
-.shopPage .heroCtaRow,
-.shopPage .ctaRow{
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 14px;
-}
-
-/* Card images */
-.shopPage .cardMedia img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Closing CTA box */
-.shopPage .ctaBox{
-  border-radius: 16px;
-  padding: 16px;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.04);
 }
