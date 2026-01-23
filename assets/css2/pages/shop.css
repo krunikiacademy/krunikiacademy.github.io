@@ -35,32 +35,7 @@
   }
 }
 
-/* shop hero card wrapper (ไม่ชนระบบ .card เดิม) */
-.shopHeroCard{
-  width: 100%;
-  border: 1px solid var(--gold, #c9a86a);
-  border-radius: 24px;
-  padding: 48px 56px;
-}
 
-/* ล็อก grid ของ hero เฉพาะใน shopHeroCard */
-.shopHeroCard .heroGrid{
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: 48px;
-  align-items: start;
-}
-
-/* กันข้อความแตกเป็นตัว ๆ เพราะกล่องแคบ/overflow */
-.shopHeroCard .heroText,
-.shopHeroCard .hero__card{
-  min-width: 0;
-}
-
-@media (max-width: 900px){
-  .shopHeroCard{
-    padding: 28px 22px;
-  }
   .shopHeroCard .heroGrid{
     grid-template-columns: 1fr;
     gap: 22px;
