@@ -127,118 +127,138 @@
   <main class="wrap">
 
     <!-- HERO -->
-    <section class="shop-hero">
+      <!-- HERO (ใน main) = Banner + Story + CTA -->
+  <section class="shopHero">
     <div class="container">
-      <h1>KRUNIKI Shop</h1>
-      <p>เลือกสิ่งที่พาหัวใจกลับบ้าน — eBook, แทร็กสมาธิ, Brainwaves และสินค้าไลฟ์สไตล์</p>
+      <div class="shopHeroInner">
+        <div class="shopHeroText">
+          <h1 class="shopTitle">KRUNIKI Shop</h1>
+          <p class="shopStory">
+            ที่นี่คือร้านของ “พลังรักแท้จากตัวเอง” — รวม eBook, แทร็กสมาธิ, Brainwaves
+            และสินค้าที่ช่วยให้คุณกลับมาอยู่กับใจได้ง่ายขึ้นในชีวิตจริง
+          </p>
 
-      <div class="shop-actions">
-        <a class="btn-line-shop" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
-          ไปที่ร้าน LINE SHOP
-        </a>
-        <a class="btn-secondary" href="index.html">กลับหน้าแรก</a>
+          <div class="heroCTA">
+            <a class="btnPrimary" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+              ไปเลือกซื้อใน LINE SHOP
+            </a>
+            <a class="btnGhost" href="#mini-quest">
+              ช่วยฉันเลือกสินค้า
+            </a>
+          </div>
+        </div>
+
+        <!-- Banner Image  -->
+        <div class="shopHeroBanner">
+          <img src="assets/images/banners/shop-banner.webp" alt="KRUNIKI Shop Banner">
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="shop-filters" aria-label="ตัวกรองสินค้า">
-    <div class="container filter-row">
-      <button class="filter-btn is-active" type="button" data-filter="all">ทั้งหมด</button>
-      <button class="filter-btn" type="button" data-filter="ebook">eBook</button>
-      <button class="filter-btn" type="button" data-filter="meditation">แทร็กสมาธิ</button>
-      <button class="filter-btn" type="button" data-filter="brainwaves">Brainwaves</button>
-      <button class="filter-btn" type="button" data-filter="physical">สินค้าจัดส่ง</button>
-    </div>
-  </section>
-
-  <section class="shop-grid">
-    <div class="container product-grid">
-
-      <!-- 1) eBook -->
-      <article class="product-card" data-category="ebook">
-        <div class="product-media">
-          <img src="assets/images/products/ebook-raktae.jpg" alt="eBook รักแท้จากตัวเอง">
-        </div>
-        <div class="product-body">
-          <p class="badge">eBook</p>
-          <h3>รักแท้จากตัวเอง</h3>
-          <p class="desc">หนังสือดิจิทัลเพื่อพาหัวใจกลับบ้าน และเริ่มคืนคุณค่าในตัวเองอย่างอ่อนโยน</p>
-          <div class="product-actions">
-            <a class="btn-line-shop" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อผ่าน LINE SHOP</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 2) Meditation Track -->
-      <article class="product-card" data-category="meditation">
-        <div class="product-media">
-          <img src="assets/images/products/meditation-track.jpg" alt="แทร็กสมาธิ - KRUNIKI">
-        </div>
-        <div class="product-body">
-          <p class="badge">แทร็กสมาธิ</p>
-          <h3>Guided Meditation Track</h3>
-          <p class="desc">เสียงนำสมาธิสำหรับการคืนพลังหัวใจ ปรับคลื่นใจ และรีเซ็ตพลังงานในวันหนัก ๆ</p>
-          <div class="product-actions">
-            <a class="btn-line-shop" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อผ่าน LINE SHOP</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 3) Theta -->
-      <article class="product-card" data-category="brainwaves">
-        <div class="product-media">
-          <img src="assets/images/products/theta-waves.jpg" alt="Theta Waves - KRUNIKI">
-        </div>
-        <div class="product-body">
-          <p class="badge">Brainwaves</p>
-          <h3>Theta Waves</h3>
-          <p class="desc">สำหรับการผ่อนคลายลึก การเยียวยา และภาวะจิตที่นิ่งนุ่ม (เหมาะฟังตามคำแนะนำ)</p>
-          <div class="product-actions">
-            <a class="btn-line-shop" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อผ่าน LINE SHOP</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 4) Alpha -->
-      <article class="product-card" data-category="brainwaves">
-        <div class="product-media">
-          <img src="assets/images/products/alpha-waves.jpg" alt="Alpha Waves - KRUNIKI">
-        </div>
-        <div class="product-body">
-          <p class="badge">Brainwaves</p>
-          <h3>Alpha Waves</h3>
-          <p class="desc">สำหรับโฟกัสเบาสบาย สมองปลอดโปร่ง และการทำงาน/เรียนในโหมดใจนิ่ง</p>
-          <div class="product-actions">
-            <a class="btn-line-shop" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อผ่าน LINE SHOP</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 5) กางเกงช้าง -->
-      <article class="product-card" data-category="physical">
-        <div class="product-media">
-          <img src="assets/images/products/elephant-pants.jpg" alt="กางเกงช้าง - KRUNIKI">
-        </div>
-        <div class="product-body">
-          <p class="badge">สินค้าจัดส่ง</p>
-          <h3>กางเกงช้าง</h3>
-          <p class="desc">ไอเท็มสบาย ๆ ใส่ได้ทุกวัน (รายละเอียดสี/ไซซ์ดูใน LINE SHOP)</p>
-          <div class="product-actions">
-            <a class="btn-line-shop" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อผ่าน LINE SHOP</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="shop-notes">
+  <!-- 1x3 CARDS (รูปทุกใบ) -->
+  <section class="shopCards">
     <div class="container">
-      <h2>วิธีรับสินค้า</h2>
-      <ul class="notes">
-        <li><strong>สินค้าดิจิทัล:</strong> ซื้อแล้วรับรายละเอียด/ลิงก์ตามระบบใน LINE SHOP</li>
-        <li><strong>สินค้าจัดส่ง:</strong> รายละเอียดการจัดส่ง/สี/ไซซ์ ดูในหน้า LINE SHOP</li>
-      </ul>
+      <h2 class="sectionTitle">เลือกเส้นทางที่เหมาะกับคุณ</h2>
+
+      <div class="grid3">
+        <!-- Card 1 -->
+        <article class="cardProduct">
+          <div class="cardImage">
+            <img src="assets/images/products/ebook-raktae.webp" alt="eBook รักแท้จากตัวเอง">
+          </div>
+          <div class="cardBody">
+            <p class="tag">eBook</p>
+            <h3>รักแท้จากตัวเอง</h3>
+            <p class="cardDesc">เริ่มจากการอ่านเพื่อ “คืนคุณค่า” ให้หัวใจ และเห็นตัวเองชัดขึ้นอย่างอ่อนโยน</p>
+            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+              ซื้อใน LINE SHOP
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="cardProduct">
+          <div class="cardImage">
+            <img src="assets/images/products/meditation-track.webp" alt="แทร็กสมาธิ KRUNIKI">
+          </div>
+          <div class="cardBody">
+            <p class="tag">Meditation Track</p>
+            <h3>แทร็กสมาธิ (Guided)</h3>
+            <p class="cardDesc">เหมาะสำหรับวันที่ใจหนัก — เปิดแล้ว “กลับบ้านที่หัวใจ” ได้ทันที</p>
+            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+              ซื้อใน LINE SHOP
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="cardProduct">
+          <div class="cardImage">
+            <img src="assets/images/products/brainwaves.webp" alt="Theta & Alpha Waves">
+          </div>
+          <div class="cardBody">
+            <p class="tag">Brainwaves</p>
+            <h3>Theta / Alpha Waves</h3>
+            <p class="cardDesc">สำหรับโหมดลึก (Theta) และโหมดนิ่งโฟกัส (Alpha) — เลือกตามจุดประสงค์ของวัน</p>
+            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+              ซื้อใน LINE SHOP
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINI QUEST (ช่วยตัดสินใจ) -->
+  <section id="mini-quest" class="miniQuest">
+    <div class="container">
+      <div class="questBox">
+        <h2 class="sectionTitle">Mini Quest: วันนี้คุณต้องการอะไรที่สุด?</h2>
+        <p class="muted">เลือก 1 ข้อ แล้วกดปุ่ม ระบบจะพาคุณไปทางที่เหมาะที่สุด</p>
+
+        <div class="questGrid">
+          <button class="questBtn" type="button" data-go="ebook">
+            ฉันอยาก “เข้าใจตัวเอง” และเริ่มฮีลจากราก
+          </button>
+          <button class="questBtn" type="button" data-go="meditation">
+            ฉันอยาก “สงบเร็ว” คืนใจให้กลับมาเดี๋ยวนี้
+          </button>
+          <button class="questBtn" type="button" data-go="brainwaves">
+            ฉันอยาก “ปรับสมอง/คลื่น” เพื่อโฟกัสและผ่อนคลายลึก
+          </button>
+        </div>
+
+        <div class="questResult" aria-live="polite">
+          <p class="resultText">เลือกข้อที่ตรงกับคุณ แล้วระบบจะบอก “ตัวเลือกที่แนะนำ”</p>
+          <div class="resultCTA">
+            <a class="btnPrimary" id="questLink" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+              ไปเลือกใน LINE SHOP
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE THE SALE (ปิดการขาย) -->
+  <section class="closeSale">
+    <div class="container">
+      <div class="closeInner">
+        <h2 class="sectionTitle">พร้อมกลับบ้านที่หัวใจแล้วใช่ไหม</h2>
+        <p class="muted">
+          เลือกสิ่งที่พาคุณ “กลับมารู้สึก” ได้ง่ายที่สุดวันนี้ — แล้วค่อยขยายให้ลึกขึ้นตามจังหวะของคุณ
+        </p>
+
+        <div class="closeCTA">
+          <a class="btnPrimary" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+            เปิดร้าน LINE SHOP ตอนนี้
+          </a>
+          <a class="btnGhost" href="index.html">
+            กลับหน้าแรก
+          </a>
+        </div>
+      </div>
     </div>
     
       <footer>
