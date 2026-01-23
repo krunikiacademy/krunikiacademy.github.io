@@ -124,51 +124,36 @@
   </nav>
 </header>
 
-  <main class="wrap">
-
-      <!-- HERO (ใน main) = Banner + Story + CTA -->
  <main class="pageMain shopPage">
 
   <!-- HERO: Banner + Story (โครงวางให้ “เข้ากับสไตล์ index” โดยใช้ class กลาง ๆ) -->
-  <section class="section heroSection shopHero">
-    <div class="container">
-      <div class="heroGrid">
-        <div class="heroText">
-          <p class="kicker">KRUNIKI Shop</p>
-          <h1 class="heroTitle">เลือกเส้นทางที่เหมาะกับคุณ</h1>
+  <section class="hero hero--shop">
+  <div class="container hero__grid">
+    <div class="hero__text">
+      <p class="hero__kicker">KRUNIKI Shop</p>
+      <h1 class="hero__title">เลือกเส้นทางที่เหมาะกับคุณ</h1>
+      <p class="hero__lead">
+        รวม eBook, ไฟล์สมาธิ และ Brainwaves เพื่อพาคุณกลับมารู้สึกดีกับตัวเองอย่างอ่อนโยน
+      </p>
 
-          <p class="heroLead">
-            ที่นี่คือร้านของ “พลังรักแท้จากตัวเอง” — รวม eBook, ไฟล์สมาธิ และ Brainwaves
-            ที่ออกแบบมาเพื่อช่วยให้คุณกลับมารู้สึกดีกับตัวเองได้อย่างอ่อนโยน และต่อเนื่อง
-          </p>
-
-          <ul class="heroBullets">
-            <li>เริ่มจาก “อ่าน” เพื่อคืนคุณค่าในตัวเอง</li>
-            <li>ต่อด้วย “ฟัง” เพื่อรีเซ็ตใจในวันที่หนัก</li>
-            <li>และ “ปรับคลื่นสมอง” เพื่อโฟกัส/ผ่อนคลายลึก</li>
-          </ul>
-
-          <div class="heroCtaRow">
-            <a class="btnPrimary" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
-              ไปเลือกซื้อใน LINE SHOP
-            </a>
-            <a class="btnGhost" href="#shop-products">
-              ดูสินค้าทั้งหมด
-            </a>
-          </div>
-        </div>
-
-        <div class="heroMedia">
-          <img
-            class="heroBannerImg"
-            src="assets/images/banners/shop-banner.webp"
-            alt="KRUNIKI Shop Banner"
-            loading="eager"
-          />
-        </div>
+      <div class="hero__actions">
+        <a class="btnPrimary" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+          ไปเลือกซื้อใน LINE SHOP
+        </a>
+        <a class="btnGhost" href="#shop-products">ดูสินค้าทั้งหมด</a>
       </div>
     </div>
-  </section>
+
+    <div class="hero__media">
+      <img
+        src="assets/images/banners/shop-banner.webp"
+        alt="KRUNIKI Shop Banner"
+        class="hero__img"
+        loading="eager"
+      />
+    </div>
+  </div>
+</section>
 
   <!-- PRODUCTS: 4 Cards (Desktop = 4 ต่อแถว) -->
   <section id="shop-products" class="section productsSection">
