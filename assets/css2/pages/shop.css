@@ -203,3 +203,9 @@
 .shopPage .pCard--lite{
   background: rgba(255,255,255,.04);
 }
+
+.shopPage .productGrid > .pCard:nth-child(5){
+  grid-column: 1 / -1;   /* กิน 2 คอลัมน์ */
+  max-width: 520px;
+  margin: 0 auto;
+}
