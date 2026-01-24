@@ -259,3 +259,23 @@
 .shopPage .cardGrid > *{
   min-width: 0;
 }
+
+/* Closing CTA spacing (match index2 feel) */
+.shopPage .closingCtaSection{
+  padding: 26px 0 34px;
+}
+
+.shopPage .closingCta{
+  text-align: left;
+}
+
+.shopPage .closingCta .sectionTitle{
+  margin: 8px 0 10px;
+  line-height: 1.2;
+}
+
+.shopPage .closingCta .sectionLead{
+  margin: 0 0 14px;
+  opacity: .92;
+  max-width: 70ch;
+}
