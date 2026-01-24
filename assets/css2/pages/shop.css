@@ -109,3 +109,97 @@
 .shopPage #shop .heroText h1{
   margin-top: 2px;
 }
+
+/* ================================
+   Recommended Products (Shop)
+   ================================ */
+
+.shopPage .recommended .sectionHead{
+  margin: 24px 0 18px;
+}
+
+.shopPage .recommended .sectionTitle{
+  margin: 6px 0 8px;
+  line-height: 1.2;
+}
+
+.shopPage .recommended .sectionLead{
+  margin: 0;
+  opacity: .92;
+  max-width: 68ch;
+}
+
+/* 2x2 grid (responsive) */
+.shopPage .productGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+@media (max-width: 980px){
+  .shopPage .productGrid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Card */
+.shopPage .pCard{
+  border: 1px solid rgba(214, 179, 106, 0.40); /* ทองอ่อนกว่าเส้นปุ่ม */
+  border-radius: 18px;
+  background: rgba(0,0,0,.30);
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0,0,0,.22);
+}
+
+.shopPage .pImg{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Body */
+.shopPage .pBody{
+  padding: 16px 16px 18px;
+}
+
+.shopPage .pKicker{
+  margin: 0 0 6px;
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.shopPage .pTitle{
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.shopPage .pDesc{
+  margin: 0 0 10px;
+  opacity: .92;
+}
+
+.shopPage .pQuote{
+  margin: 0 0 14px;
+  color: rgba(232, 216, 168, .92);
+  font-style: italic;
+}
+
+/* Button: soft gold border */
+.shopPage .btnSoftGold{
+  border: 1px solid rgba(214, 179, 106, 0.45);
+  background: transparent;
+}
+
+.shopPage .btnSoftGold:hover{
+  border-color: rgba(214, 179, 106, 0.70);
+  background: rgba(201,168,106,.10);
+}
+
+/* Slightly lighter vibe for Elephant Pants */
+.shopPage .pCard--lite{
+  background: rgba(255,255,255,.04);
+}
