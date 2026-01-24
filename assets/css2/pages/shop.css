@@ -209,3 +209,73 @@
   max-width: 520px;
   margin: 0 auto;
 }
+
+/* ================================
+   Global: stop horizontal scroll (mobile/iPad)
+   ================================ */
+
+html, body{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  position: relative;
+}
+
+.container,
+.pageMain,
+.page-wrapper,
+main{
+  max-width: 100%;
+}
+
+.container{
+  overflow-x: clip; /* กันล้นแบบเนียน (ถ้าเบราว์เซอร์ไม่รองรับจะข้ามเอง) */
+}
+
+(รูป banner, card img, embed มักทำให้ล้น)
+
+img, video, iframe, svg{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* หลีกเลี่ยง 100vw ที่ทำให้ล้นบน iOS */
+[class*="wrap"], [class*="container"], header, footer, section, main{
+  max-width: 100%;
+}
+
+/* กัน element บางตัวที่ใช้ width:100vw */
+.hero__banner,
+.hero__img{
+  width: 100%;
+}
+
+.siteHeader, .site-header, header{
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.navInner, .nav-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* กันลิงก์ยาว ๆ ดันออก */
+.navLinks, .nav-links{
+  min-width: 0;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.heroGrid > *,
+.hero__grid > *,
+.productGrid > *,
+.cardGrid > *{
+  min-width: 0;
+}
