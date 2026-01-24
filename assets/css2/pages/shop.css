@@ -105,3 +105,7 @@
   margin-top: 0;             /* ตัด margin บนที่อาจซ้อน */
   line-height: 1.25;        /* กันตัวอักษรเบียด */
 }
+
+.shopPage #shop .heroText h1{
+  margin-top: 2px;
+}
