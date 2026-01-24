@@ -210,3 +210,19 @@
   margin: 0 auto;
 }
 
+/* FIX: card 5 must NOT be centered/spanned */
+.shopPage .productGrid{
+  justify-items: stretch; /* กันกรณีมี center มาจากไฟล์อื่น */
+}
+
+.shopPage .productGrid > .pCard{
+  width: 100%;
+  margin: 0;              /* กัน auto-center */
+}
+
+.shopPage .productGrid > .pCard:nth-child(5){
+  grid-column: auto !important; /* ยกเลิก span 2 คอลัมน์ */
+  max-width: none !important;
+  margin: 0 !important;
+  justify-self: stretch !important;
+}
