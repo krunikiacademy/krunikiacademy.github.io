@@ -179,81 +179,98 @@
     />
   </div>
           
-  <!-- PRODUCTS: 4 Cards (Desktop = 4 ต่อแถว) -->
-  <section id="shop-products" class="section productsSection">
-    <div class="container">
-      <h2 class="sectionTitle">สินค้าแนะนำ</h2>
+ <!-- =========================
+     Recommended Products (2x2)
+     ========================= -->
+<section id="recommended" class="panel recommended">
+  <div class="container">
+
+    <header class="sectionHead">
+      <div class="goldline">🛍 สินค้าแนะนำ • Recommended Products</div>
+      <h2 class="sectionTitle">เลือกสิ่งที่เหมาะกับหัวใจคุณ “ตอนนี้”</h2>
       <p class="sectionLead">
-        เลือก 1 อย่างที่ “พาคุณกลับมารู้สึกดี” ได้ง่ายที่สุดวันนี้ แล้วค่อยขยายให้ลึกขึ้นตามจังหวะของคุณ
+        4 หมวดนี้คือทางลัดที่ช่วยให้คุณเริ่มได้ทันที—ไม่ต้องฝืน ไม่ต้องรีบ
+        แค่เลือกสิ่งที่รู้สึกว่า “ใช่” แล้วให้มันพาคุณกลับบ้านที่หัวใจ
       </p>
+    </header>
 
-      <div class="productGrid grid-4">
-        <!-- Card 1: eBook -->
-        <article class="card productCard">
-          <a class="cardMedia" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="eBook รักแท้จากตัวเอง">
-            <img src="assets/images/products/ebook-raktae.webp" alt="eBook รักแท้จากตัวเอง" loading="lazy">
-          </a>
-          <div class="cardBody">
-            <p class="cardTag">eBook</p>
-            <h3 class="cardTitle">รักแท้จากตัวเอง</h3>
-            <p class="cardDesc">
-              สำหรับคนที่อยาก “คืนคุณค่า” ให้ตัวเองอย่างจริงจัง — อ่านแล้วเห็นรากของความเจ็บ
-              และเริ่มพูดกับตัวเองด้วยความอ่อนโยนได้อีกครั้ง
-            </p>
-            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อใน LINE SHOP</a>
-          </div>
-        </article>
+    <div class="productGrid">
 
-        <!-- Card 2: Meditation Track -->
-        <article class="card productCard">
-          <a class="cardMedia" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="Meditation Track">
-            <img src="assets/images/products/meditation-track.webp" alt="Meditation Track (ไฟล์สมาธิ)" loading="lazy">
-          </a>
-          <div class="cardBody">
-            <p class="cardTag">Meditation Track</p>
-            <h3 class="cardTitle">ไฟล์สมาธิ (Guided)</h3>
-            <p class="cardDesc">
-              เหมาะกับวันที่ใจหนัก/ฟุ้ง/เหนื่อย — เปิดฟังแล้ว “กลับบ้านที่หัวใจ”
-              ได้ทันที ด้วยเสียงนำทางที่อ่อนโยนแบบ KRUNIKI
-            </p>
-            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อใน LINE SHOP</a>
-          </div>
-        </article>
+      <!-- 1) Ebook Package -->
+      <article class="pCard">
+        <img class="pImg"
+             src="assets/images/shop/rec-ebook-package.webp"
+             alt="Ebook Package — KRUNIKI"
+             loading="lazy">
+        <div class="pBody">
+          <p class="pKicker">Ebook Package</p>
+          <h3 class="pTitle">Ebook Package</h3>
+          <p class="pDesc">
+            จุดเริ่มต้นของการกลับมารักตัวเองอย่างแท้จริง—รวม eBook และชุดฝึกหัวใจ
+            ที่ออกแบบให้ “ทำตามได้จริง” และค่อย ๆ พาหัวใจกลับมาแข็งแรงอย่างเป็นระบบ
+          </p>
+          <p class="pQuote">“เส้นทางแรกของการเยียวยาหัวใจจากภายใน”</p>
+          <a class="btn btnSoftGold pBtn" href="shop-ebook-package.html">ดูรายละเอียดแพ็กเกจ</a>
+        </div>
+      </article>
 
-        <!-- Card 3: Brainwaves -->
-        <article class="card productCard">
-          <a class="cardMedia" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="Brainwaves Theta & Alpha">
-            <img src="assets/images/products/brainwaves.webp" alt="Brainwaves (Theta & Alpha Waves)" loading="lazy">
-          </a>
-          <div class="cardBody">
-            <p class="cardTag">Brainwaves</p>
-            <h3 class="cardTitle">Theta / Alpha Waves</h3>
-            <p class="cardDesc">
-              Theta สำหรับความนิ่งลึกและการผ่อนคลายภายใน  
-              Alpha สำหรับโฟกัสเบาสบายและสมองปลอดโปร่ง
-            </p>
-            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อใน LINE SHOP</a>
-          </div>
-        </article>
+      <!-- 2) Meditation Tracks -->
+      <article class="pCard">
+        <img class="pImg"
+             src="assets/images/shop/rec-meditation-tracks.webp"
+             alt="Meditation Tracks — KRUNIKI"
+             loading="lazy">
+        <div class="pBody">
+          <p class="pKicker">Meditation Tracks</p>
+          <h3 class="pTitle">Meditation Tracks</h3>
+          <p class="pDesc">
+            เสียงสมาธิที่ช่วยให้หัวใจสงบลงอย่างนุ่มนวล—เหมาะสำหรับคืนที่เหนื่อย
+            หรือวันที่อยากกลับมาอยู่กับตัวเองแบบไม่ต้องใช้แรง
+          </p>
+          <p class="pQuote">“สมาธิสำหรับการพักใจในทุกวัน”</p>
+          <a class="btn btnSoftGold pBtn" href="shop-meditation-tracks.html">เลือกเสียงที่เหมาะกับคุณ</a>
+        </div>
+      </article>
 
-        <!-- Card 4: Elephant Pants -->
-        <article class="card productCard">
-          <a class="cardMedia" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="Elephant Pants">
-            <img src="assets/images/products/elephant-pants.webp" alt="Elephant Pants (กางเกงช้าง/กางเกงฮาเร็ม)" loading="lazy">
-          </a>
-          <div class="cardBody">
-            <p class="cardTag">Lifestyle</p>
-            <h3 class="cardTitle">Elephant Pants</h3>
-            <p class="cardDesc">
-              ความสบายที่ใส่แล้วใจเบาลง — เหมาะกับวันพักฟื้นพลัง
-              หรือวันที่อยากอยู่กับตัวเองแบบไม่เร่ง ไม่ฝืน
-            </p>
-            <a class="btnLine" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ซื้อใน LINE SHOP</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+      <!-- 3) Brainwaves -->
+      <article class="pCard">
+        <img class="pImg"
+             src="assets/images/shop/rec-brainwaves.webp"
+             alt="Brainwaves — KRUNIKI"
+             loading="lazy">
+        <div class="pBody">
+          <p class="pKicker">Brainwaves</p>
+          <h3 class="pTitle">Brainwaves</h3>
+          <p class="pDesc">
+            คลื่นสมองเพื่อการพักระบบประสาทและจิตใต้สำนึก—ช่วยให้สมอง “ปล่อย”
+            ง่ายขึ้น ลึกขึ้น และเปิดรับการเปลี่ยนแปลงอย่างเป็นธรรมชาติ
+          </p>
+          <p class="pQuote">“ปรับคลื่นสมอง เพื่อรีเซ็ตพลังชีวิต”</p>
+          <a class="btn btnSoftGold pBtn" href="shop-brainwaves.html">ดูชุดคลื่นสมองทั้งหมด</a>
+        </div>
+      </article>
+
+      <!-- 4) Elephant Pants -->
+      <article class="pCard pCard--lite">
+        <img class="pImg"
+             src="assets/images/shop/rec-elephant-pants.webp"
+             alt="Elephant Pants — KRUNIKI"
+             loading="lazy">
+        <div class="pBody">
+          <p class="pKicker">Elephant Pants</p>
+          <h3 class="pTitle">Elephant Pants</h3>
+          <p class="pDesc">
+            กางเกงช้างสำหรับวันสบาย ๆ ที่อยากหายใจโล่ง ๆ—ใส่แล้วผ่อนคลาย
+            เหมาะกับวันพักใจ เดินเล่น ทำงานเบา ๆ หรืออยู่กับตัวเองแบบอ่อนโยน
+          </p>
+          <p class="pQuote">“ความสบายเรียบง่าย สำหรับวันพักใจ”</p>
+          <a class="btn btnSoftGold pBtn" href="shop-elephant-pants.html">ไปดูสี/ลายที่มี</a>
+        </div>
+      </article>
+
+    </div><!-- /productGrid -->
+  </div>
+</section>
 
   <!-- CTA: ปิดท้าย -->
   <section class="section closingCtaSection">
