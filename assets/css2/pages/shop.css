@@ -226,3 +226,36 @@
   margin: 0 !important;
   justify-self: stretch !important;
 }
+
+/* SHOP ONLY: anti horizontal scroll */
+.shopPage{
+  overflow-x: hidden;
+}
+
+.shopPage html,
+.shopPage body{
+  overflow-x: hidden;
+}
+
+.shopPage main,
+.shopPage header,
+.shopPage footer,
+.shopPage section{
+  max-width: 100%;
+}
+
+.shopPage img,
+.shopPage video,
+.shopPage iframe,
+.shopPage svg{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.shopPage .heroGrid > *,
+.shopPage .hero__grid > *,
+.shopPage .productGrid > *,
+.shopPage .cardGrid > *{
+  min-width: 0;
+}
