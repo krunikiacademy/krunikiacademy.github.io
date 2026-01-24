@@ -1,85 +1,55 @@
-✅ CSS Fix: iPhone SE / 6S (ไม่ให้ปุ่มทับกัน)
+/* =========================================
+   SHOP: CTA buttons + hero grid (iPhone safe)
+   - Fix: buttons overlap on iPhone SE / 6S
+   - Fix: grid stack on small screens
+   ========================================= */
 
-/* ===== CTA ROW (default) ===== */
-.ctaRow{
+/* Scope เฉพาะหน้า shop เพื่อชนะ CSS ตัวอื่น */
+.shopPage .ctaRow,
+.page--shop .ctaRow{
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;          /* กันล้น */
-  align-items: center;
-}
-
-/* ทำให้ <a class="btn"> ไม่เป็น inline ที่คุมความสูงยาก */
-.ctaRow .btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  line-height: 1.15;
-  white-space: normal;      /* ห้ามบังคับบรรทัดเดียว */
-}
-
-/* ===== iPhone SE / iPhone 6S and small screens ===== */
-@media (max-width: 390px){
-  .ctaRow{
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .ctaRow .btn{
-    width: 100%;
-    min-height: 44px;       /* แตะง่ายตามมาตรฐานมือถือ */
-    padding: 12px 14px;     /* ลดความหนาเล็กน้อย */
-  }
-}
-
-/* responsive */
-@media (max-width: 980px){
-  .hero__grid{
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-}
-
-/* ===== CTA FIX FOR SMALL IPHONES (SE / 6S) ===== */
-
-.ctaRow{
-  display: flex;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 12px;
   align-items: center;
 }
 
-.ctaRow .btn{
+/* กันกรณีมี CSS ตัวอื่นทำให้ .btn เป็น inline/แปลก */
+.shopPage .ctaRow > .btn,
+.page--shop .ctaRow > .btn{
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  line-height: 1.15;
+  line-height: 1.2;
   white-space: normal;
+  max-width: 100%;
 }
 
-/* iPhone SE / iPhone 6S */
+/* Small phones: force stack (SE/6S) */
 @media (max-width: 390px){
-  .ctaRow{
+  .shopPage .ctaRow,
+  .page--shop .ctaRow{
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
   }
 
-  .ctaRow .btn{
+  .shopPage .ctaRow > .btn,
+  .page--shop .ctaRow > .btn{
     width: 100%;
     min-height: 44px;
     padding: 12px 14px;
+    box-sizing: border-box;
   }
 }
 
-และแก้ responsive grid ให้ตรง class ที่ใช้จริง:
-
 /* ===== HERO GRID RESPONSIVE (SHOP ONLY) ===== */
+/* ให้ grid กลายเป็น 1 คอลัมน์ตั้งแต่จอเล็กลงมา */
 @media (max-width: 980px){
-  .hero__grid,
-  .heroGrid{        /* เผื่อกรณี HTML ใช้ชื่อเดิม */
+  .shopPage .hero__grid,
+  .shopPage .heroGrid,
+  .page--shop .hero__grid,
+  .page--shop .heroGrid{
     grid-template-columns: 1fr;
     gap: 22px;
   }
