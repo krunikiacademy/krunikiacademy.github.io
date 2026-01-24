@@ -165,3 +165,86 @@ footer{
   width: 100%;
   background: transparent; /* ถ้าอยากให้ทึบค่อยเปลี่ยนทีหลัง */
 }
+
+/* ================================
+   Global: stop horizontal scroll (mobile/iPad)
+   Safe for iOS/Safari + iPad
+   ================================ */
+
+/* 1) กัน scroll แนวนอนแบบชัวร์ */
+html{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 2) กัน element ใหญ่ดันล้น (แต่ไม่ไปทำ layout แปลก) */
+main, header, footer, section{
+  max-width: 100%;
+}
+
+/* container ต้องไม่ล้น แต่ "ไม่ใช้ clip เป็นค่าเดียว" */
+.container{
+  max-width: 1100px;      /* รักษาระบบเดิม */
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* 3) media ต้องไม่ดันจอ */
+img, video, iframe, svg{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 4) เลี่ยง 100vw ที่ทำให้ล้นบน iOS (ให้ใช้ 100% แทน) */
+.hero__banner,
+.hero__img,
+.hero__media{
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 5) Header/Footer: กันล้นจาก nav/ชื่อยาว */
+.siteHeader, .site-header, header{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* ใช้ hidden เพื่อรองรับ iOS เก่า */
+}
+
+/* nav inner: ป้องกันล้น */
+.navInner, .nav-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+  min-width: 0;
+}
+
+/* ลิงก์ยาว ๆ/เมนู wrap ได้ */
+.navLinks, .nav-links{
+  min-width: 0;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+/* 6) Grid children ต้อง min-width:0 กันข้อความดันคอลัมน์ */
+.heroGrid > *,
+.hero__grid > *,
+.productGrid > *,
+.cardGrid > *{
+  min-width: 0;
+}
+
+/* 7) กัน element ใด ๆ ที่ "เผลอ" กว้างเกินจอ */
+*{
+  max-width: 100%;
+}
