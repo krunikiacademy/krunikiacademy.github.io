@@ -60,10 +60,10 @@
    ================================ */
 
 .shopPage .hero__card{
-  border: 1px solid var(--gold-soft);
+  border: 1px solid rgba(214, 179, 106, 0.45);  /* ทองอ่อนกว่า gold-soft */
   border-radius: 18px;
   padding: 22px 22px 24px;
-  background: rgba(0, 0, 0, 0.35);   /* ดำโปร่ง กลืนกับ hero */
+  background: rgba(0, 0, 0, 0.35);
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
   max-width: 100%;
 }
@@ -91,3 +91,5 @@
     padding: 20px 18px 22px;
   }
 }
+
+
