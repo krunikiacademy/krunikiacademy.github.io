@@ -166,3 +166,36 @@ footer{
   background: transparent; /* ถ้าอยากให้ทึบค่อยเปลี่ยนทีหลัง */
 }
 
+/* ================================
+   iOS: Make hamburger reliably clickable
+   ================================ */
+
+.navToggle, .hamburger, .menuToggle{
+  position: relative;
+  z-index: 9999;              /* อยู่หน้าทุก layer */
+  min-width: 44px;            /* Apple tap target */
+  min-height: 44px;
+  padding: 10px 12px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation; /* ลด delay/กัน double tap weirdness */
+  cursor: pointer;
+}
+
+/* กัน layer โปร่งใสมาทับ */
+.siteHeader{
+  position: relative;
+  z-index: 9998;
+}
+
+/* แผงเมนูที่เปิด ต้องกดได้ทุกลิงก์ */
+.siteHeader .navLinks{
+  position: relative;
+  z-index: 9997;
+}
+
+.siteHeader .navLinks a{
+  display: block;
+  padding: 12px 10px;         /* ทำให้แตะง่าย */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
