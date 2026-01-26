@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KRUNIKI Academy</title>
+  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
+<style>
+  :root{
+    --font-brand: "Times New Roman", Times, serif;
+    --font-head:  "Times New Roman", Times, serif;
+  }
+</style>
+  
+  <!-- 🔗 CSS เดิมของนิกี้ -->
+  <link rel="stylesheet" href="assets/css2/app.css">
+  <link rel="stylesheet" href="assets/css2/core/02_base.css">
+  <link rel="stylesheet" href="assets/hamburger.css">
+  <link rel="stylesheet" href="assets/css2/pages/index2.css">
+  <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css">
+  <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
+
+  <!-- เฉพาะหน้า shop -->
+<link rel="stylesheet" href="assets/css2/pages/shop.css">
+  <script src="assets/main.js" defer></script>
+</head>
+  
+<body class="page--shop shopPage">
+
+ <!-- HEADER -->
+<header class="siteHeader">
+  <div class="navInner">
+
+    <!-- Brand + Social (LEFT) -->
+    <div class="brandBlock">
+      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="brandText">KRUNIKI</span>
+      </a>
+
+      <!-- Social row under brand -->
+      <div class="topbar">
+        <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+          <!-- LINE OA -->
+          <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+            </svg>
+          </a>
+
+          <!-- LINE SHOP -->
+          <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+              <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+              <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+            </svg>
+          </a>
+
+          <!-- FACEBOOK -->
+          <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+            </svg>
+          </a>
+
+          <!-- YOUTUBE -->
+          <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+            </svg>
+          </a>
+
+          <!-- TIKTOK -->
+          <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+            </svg>
+          </a>
+
+          <!-- INSTAGRAM -->
+          <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+              <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+              <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div><!-- ✅ ปิด brandBlock ให้ครบ -->
+
+    <!-- Desktop Menu (CENTER) -->
+    <nav class="navLinks" aria-label="Primary navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
+      <a href="about.html">เกี่ยวกับ</a>
+      <a href="services.html">บริการ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+
+    <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+    <div class="krActions">
+      <button class="krHam" id="krHam" type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div><!-- close .navInner -->
+
+  <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <a href="shop.html">ร้านค้า</a>
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="services.html">บริการ</a>
+    <a href="resources.html">คลังความรู้</a>
+    <a href="contact.html">ติดต่อ</a>
+  </nav>
+</header>
+
+<main class="pageMain ebookPage">
+
+  <!-- ================================
+       HERO PRODUCT
+       ================================ -->
+  <section class="panel hero productHero">
+    <div class="container">
+
+      <div class="heroGrid">
+
+        <!-- LEFT: TEXT -->
+        <div class="heroText">
+          <div class="goldline">eBook Package • KRUNIKI</div>
+          <h1>รักแท้จากตัวเอง</h1>
+
+          <p class="lead">
+            “รักแท้จากตัวเอง” ไม่ใช่แค่หนังสือ —  
+            แต่คือประตูบานแรก สู่การเยียวยา ฟื้นหัวใจ  
+            และปลุกตัวตนที่แท้จริงให้กลับมาอีกครั้ง
+          </p>
+
+          <p>
+            ส่งไฟล์ PDF ทาง LINE / Email / Google Drive  
+            เปิดอ่านได้ทันทีบนมือถือ iPad และคอมพิวเตอร์
+          </p>
+
+        </div>
+
+        <!-- RIGHT: IMAGE (ใส่ภาพทีหลังได้) -->
+        <div class="heroMedia">
+          <img 
+            src="assets/images/products/ebook-cover.webp" 
+            alt="eBook รักแท้จากตัวเอง"
+            class="hero__img"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       PRODUCT STORY
+       ================================ -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="sectionTitle">นี่ไม่ใช่แค่หนังสือ… แต่คือพื้นที่ปลอดภัยของหัวใจ</h2>
+
+      <p class="sectionLead">
+        หากคุณกำลังมองหาความเข้าใจ ความรัก และการปลดปล่อยตัวเองจากความเจ็บปวดในอดีต  
+        eBook “รักแท้จากตัวเอง” เล่มนี้ถูกเขียนขึ้นเพื่อคุณ
+      </p>
+
+      <p>
+        นี่ไม่ใช่แค่หนังสือ แต่เป็นพื้นที่ที่คุณจะได้เรียนรู้การรักตัวเองอย่างแท้จริง  
+        เยียวยาบาดแผลลึกในใจ และค่อย ๆ กลับมารู้สึกว่า  
+        <strong>“ฉันมีค่าอยู่แล้ว… โดยไม่ต้องเป็นใครเลย”</strong>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ================================
+       INSIDE THE BOOK (4 PARTS)
+       ================================ -->
+  <section class="section softBg">
+    <div class="container">
+
+      <h2 class="sectionTitle">ภายในเล่มประกอบด้วย 4 ส่วนสำคัญ</h2>
+
+      <div class="cardGrid grid-2x2">
+
+        <div class="card cardGold">
+          <h3>ส่วนที่ 1 — การก้าวข้ามความเจ็บปวด</h3>
+          <p>
+            บทที่เข้าใจหัวใจของคุณมากที่สุด  
+            พาคุณลุกขึ้นจากซากความรู้สึกเดิม… อย่างช้า ๆ แต่มั่นคง  
+            ด้วยความรักที่คุณอาจไม่เคยได้รับจากใครมาก่อน
+          </p>
+        </div>
+
+        <div class="card cardGold">
+          <h3>ส่วนที่ 2 — ศิลปะแห่งการพูดกับตัวเองด้วยความรัก</h3>
+          <p>
+            เรียนรู้การโอบกอดตัวเองใหม่  
+            ผ่านเสียงในใจ และปลดเปลื้องคำพูดเก่า ๆ  
+            ที่เคยทำร้ายตัวเองโดยไม่รู้ตัว
+          </p>
+        </div>
+
+        <div class="card cardGold">
+          <h3>ส่วนที่ 3 — เปลี่ยนคำ เปลี่ยนใจ เปลี่ยนชีวิต</h3>
+          <p>
+            จากความรู้สึกไม่คู่ควร → สู่ความรักที่เต็มเปี่ยม  
+            จากความคิดจำกัด → สู่การสร้างโลกใบใหม่จากข้างใน  
+            ถ้อยคำที่ช่วยคุณเปลี่ยนชีวิตได้จริง
+          </p>
+        </div>
+
+        <div class="card cardGold">
+          <h3>ส่วนที่ 4 — แสงรู้แจ้งภายใน</h3>
+          <p>
+            บทที่พาคุณกลับไปพบ “แสงเดิมแท้” ในตัวเอง  
+            และจำได้อีกครั้งว่า  
+            <strong>คุณคือแสงแห่งรักแท้ ที่ไม่เคยหายไปจากจักรวาลนี้เลย</strong>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================
+       BONUS
+       ================================ -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="sectionTitle">BONUS พิเศษภายในชุดนี้</h2>
+
+      <ul class="featureList">
+        <li>🧘‍♀️ ไฟล์เสียงสมาธิ “ลมหายใจแห่งแสง”</li>
+        <li>🫀 ไฟล์เสียงสมาธิ “เชื่อมต่อหัวใจตัวเอง”</li>
+        <li>📝 Affirmation "รักแท้จากตัวเอง" (PDF)</li>
+        <li>📓 Journaling Practice: บทฝึกเขียนเยียวยาใจ (PDF)</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ================================
+       PACKAGES
+       ================================ -->
+  <section id="packages" class="section softBg">
+    <div class="container">
+
+      <h2 class="sectionTitle">เลือกแพ็กเกจที่ตรงกับหัวใจของคุณ</h2>
+      <p class="sectionLead">
+        ทุกชุดออกแบบมาเพื่อเยียวยาอย่างลึกซึ้ง  
+        ผ่านคำเขียน เสียงกระซิบ และคลื่นสมาธิ Theta
+      </p>
+
+      <div class="productGrid grid-2x2">
+
+        <!-- Package 1 -->
+        <div class="card cardGold">
+          <h3>Heartlight Entry</h3>
+          <p class="price">690 บาท</p>
+
+          <ul>
+            <li>eBook (209 หน้า)</li>
+            <li>สคริปต์สมาธิ 2 ชุด</li>
+            <li>“ลมหายใจแห่งแสง”</li>
+            <li>“เชื่อมต่อหัวใจตัวเอง”</li>
+          </ul>
+
+          <p class="small">
+            เหมาะสำหรับผู้เริ่มต้นเยียวยาหัวใจ  
+            ใช้ฝึกได้ทันที ไม่ต้องมีพื้นฐาน
+          </p>
+
+          <a class="btn primary" href="https://shop.line.me/@mew3619k/product/1007888122" target="_blank">
+            สั่งซื้อแพ็กนี้
+          </a>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="card cardGold">
+          <h3>Soul Whisper Set</h3>
+          <p class="price">990 บาท</p>
+
+          <ul>
+            <li>eBook (PDF)</li>
+            <li>Voice Only 2 แทร็ก</li>
+            <li>เวอร์ชันกระซิบอ่อนโยน</li>
+          </ul>
+
+          <p class="small">
+            เหมาะสำหรับผู้ที่ชอบฝึกสมาธิด้วยเสียงนำ  
+            ฟังตัวเองได้ลึกขึ้น…โดยไม่ต้องเร่ง
+          </p>
+
+          <a class="btn primary" href="https://shop.line.me/@mew3619k/product/1007257832" target="_blank">
+            สั่งซื้อแพ็กนี้
+          </a>
+        </div>
+
+        <!-- Package 3 (Recommended) -->
+        <div class="card cardGold recommended">
+          <div class="badge">แนะนำ</div>
+
+          <h3>Theta Soul Healing Set</h3>
+          <p class="price">1,490 บาท</p>
+
+          <ul>
+            <li>eBook (PDF)</li>
+            <li>Voice Only 2 แทร็ก</li>
+            <li>Theta Brainwave 2 แทร็ก</li>
+          </ul>
+
+          <p class="small">
+            เหมาะสำหรับผู้ที่ต้องการ Healing Brainwave จริงจัง  
+            ใช้ฟังก่อนนอน หรือเปิดใจรับพลังใหม่
+          </p>
+
+          <a class="btn primary" href="https://shop.line.me/@mew3619k/product/1007888153" target="_blank">
+            สั่งซื้อแพ็กนี้
+          </a>
+        </div>
+
+        <!-- Package 4 -->
+        <div class="card cardGold">
+          <h3>Soul Awakening Master Set</h3>
+          <p class="price">2,490 บาท</p>
+
+          <ul>
+            <li>eBook (PDF)</li>
+            <li>ไฟล์เสียง 4 แทร็ก</li>
+            <li>Mini Course 1.30 ชม.</li>
+          </ul>
+
+          <p class="small">
+            เหมาะสำหรับผู้ที่ต้องการเยียวยาแบบครบองค์รวม  
+            พร้อมเส้นทางฝึกฝนต่ออย่างเป็นระบบ
+          </p>
+
+          <a class="btn primary" href="https://shop.line.me/@mew3619k/product/1007888161" target="_blank">
+            สั่งซื้อแพ็กนี้
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       FINAL CTA
+       ================================ -->
+  <section class="section closingCtaSection">
+    <div class="container">
+
+      <div class="ctaBox">
+        <h2 class="sectionTitle">พร้อมให้หัวใจกลับมาเต็มเปี่ยมอีกครั้งหรือยัง?</h2>
+        <p class="sectionLead">
+          เลือกแพ็กเกจที่ตรงกับพลังของคุณ  
+          แล้วปล่อยให้การเยียวยาเริ่มต้นอย่างอ่อนโยนตั้งแต่วันนี้
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="#packages">
+            เลือกแพ็กเกจ
+          </a>
+          <a class="btn" href="shop.html">
+            กลับไปหน้าร้านค้า
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+   
+      <footer>
+        © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+      </footer>
+    </section>
+  </main>
+
+</body>
+</html>
