@@ -306,3 +306,39 @@ main, .page, #main, .siteMain{
     display: none; 
   }
 }
+
+/* ================================
+   KRUNIKI iOS Tap Reliability (SAFE)
+   Do NOT touch JS / state logic
+   ================================ */
+
+/* ทำให้ปุ่ม krHam แตะง่ายขึ้น โดยไม่เปลี่ยน behavior */
+.krHam{
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px 12px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* กัน SVG กิน tap */
+.krHamIcon,
+.krHamIcon *{
+  pointer-events: none;
+}
+
+/* ลิงก์ใน mobile menu: เพิ่มพื้นที่แตะ */
+.mobileMenu a{
+  min-height: 44px;
+  padding: 14px 12px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* ปิด blur เฉพาะ iOS (ตัวนี้ช่วยเรื่องแตะหลุดได้จริง) */
+@supports (-webkit-touch-callout: none){
+  .siteHeader{
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
