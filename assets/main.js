@@ -57,3 +57,58 @@
     if (window.innerWidth >= 861 && btn.getAttribute("aria-expanded") === "true") closeMenu();
   });
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const ham = document.getElementById("krHam");
+  const menu = document.getElementById("mobileMenu");
+  const backdrop = document.getElementById("menuBackdrop");
+  const header = document.querySelector(".siteHeader");
+  if (!ham || !menu || !backdrop || !header) return;
+
+  // กัน bind ซ้ำ (อาการแตะแล้วเหมือนต้องแตะหลายครั้งเพราะ toggle สองรอบ)
+  if (ham.dataset.bound === "1") return;
+  ham.dataset.bound = "1";
+
+  const openMenu = () => {
+    header.classList.add("isMenuOpen");
+    menu.hidden = false;
+    backdrop.hidden = false;
+    ham.setAttribute("aria-expanded", "true");
+  };
+
+  const closeMenu = () => {
+    header.classList.remove("isMenuOpen");
+    menu.hidden = true;
+    backdrop.hidden = true;
+    ham.setAttribute("aria-expanded", "false");
+  };
+
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const isOpen = !menu.hidden;
+    isOpen ? closeMenu() : openMenu();
+  };
+
+  // iOS: ใช้ pointerup/touchstart ให้ติดมือกว่า click
+  ham.addEventListener("pointerup", toggleMenu, { passive: false });
+  ham.addEventListener("touchstart", toggleMenu, { passive: false });
+
+  // แตะ backdrop ปิด
+  backdrop.addEventListener("pointerup", (e) => {
+    e.preventDefault();
+    closeMenu();
+  }, { passive: false });
+
+  // แตะลิงก์แล้วปิด (กันค้าง)
+  menu.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (!a) return;
+    closeMenu();
+  });
+
+  // กด ESC ปิด (desktop)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+});
