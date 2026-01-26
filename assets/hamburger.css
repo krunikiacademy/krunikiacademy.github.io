@@ -218,3 +218,91 @@ html.menuOpen, body.menuOpen{
     color: var(--gold) !important;
   }
 }
+
+/* ================================
+   KRUNIKI HEADER + HAMBURGER SYSTEM
+   Stable version for iOS / iPad / Desktop
+   ================================ */
+
+.siteHeader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  overflow: visible;
+}
+
+/* layout: flex only (no grid mixing) */
+.siteHeader .navInner{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  overflow: visible;
+}
+
+/* desktop nav */
+.siteHeader .navLinks{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* กัน header บัง content */
+main, .page, #main, .siteMain{
+  padding-top: 72px;
+}
+
+/* ================================
+   MOBILE / TABLET
+   ================================ */
+
+@media (max-width: 900px){
+
+  /* ซ่อนเมนู desktop */
+  .siteHeader .navLinks{ 
+    display: none; 
+  }
+
+  /* แสดง hamburger / actions */
+  .siteHeader .krActions{ 
+    display: flex; 
+  }
+
+  /* hamburger tap target */
+  .navToggle, .hamburger, .menuToggle,
+  .siteHeader .krActions button{
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px 12px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    cursor: pointer;
+    position: relative;
+    z-index: 10000;
+  }
+}
+
+/* ================================
+   DESKTOP
+   ================================ */
+
+@media (min-width: 901px){
+
+  .siteHeader .navLinks{ 
+    display: flex; 
+  }
+
+  .siteHeader .krActions{ 
+    display: none; 
+  }
+}
