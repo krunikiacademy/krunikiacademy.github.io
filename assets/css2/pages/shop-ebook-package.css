@@ -652,3 +652,23 @@
     gap: 18px;
   }
 }
+
+/* ======================================
+   DESKTOP ONLY
+   INSIDE THE BOOK – 4 PARTS SPACING
+   ====================================== */
+
+@media (min-width: 1024px){
+
+  /* เพิ่มช่องไฟระหว่างการ์ด (แนวตั้งสำคัญที่สุด) */
+  .section.softBg .cardGrid.grid-2x2{
+    gap: 32px 28px;          /* row | column */
+    margin-top: 32px;        /* เว้นจากหัวข้อ */
+  }
+
+  /* เพิ่ม breathing space ให้การ์ดดูไม่อึดอัด */
+  .section.softBg .cardGrid.grid-2x2 .card{
+    padding: 26px 28px;
+  }
+
+}
