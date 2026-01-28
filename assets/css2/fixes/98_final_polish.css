@@ -424,3 +424,22 @@ footer .gold{
     text-rendering: auto !important;
   }
 }
+
+/* ======================================
+   iPhone SE – Best Seller badge safe zone
+   ====================================== */
+@media (max-width: 375px) {
+  .card.cardGold.recommended {
+    position: relative;
+  }
+
+  .card.cardGold.recommended .badge,
+  .card.cardGold.recommended .bestSeller {
+    top: 20px;          /* ขยับลงมาในพื้นที่ว่าง */
+    right: 12px;
+    font-size: 11px;
+    line-height: 1.2;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+}
