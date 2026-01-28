@@ -119,3 +119,18 @@
 .productHero + section{
   margin-top: 8px;
 }
+
+/* === Soft Gold Card Border (KRUNIKI Style) === */
+.productHero{
+  border: 1px solid rgba(212, 175, 55, 0.35); /* Soft Gold */
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0)
+    );
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 160, 0.12),
+    0 12px 32px rgba(0,0,0,0.45);
+}
