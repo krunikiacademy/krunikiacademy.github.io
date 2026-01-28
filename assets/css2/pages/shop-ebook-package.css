@@ -617,3 +617,25 @@
 .page--shop-ebook #packages .sectionLead{
   margin-bottom: 18px;
 }
+
+✅ CSS Override เฉพาะ INSIDE THE BOOK (4 PARTS)
+
+/* ======================================
+   SHOP EBOOK PACKAGE
+   INSIDE THE BOOK (4 PARTS) – SQUARE CARDS
+   ====================================== */
+
+/* scope ให้แคบมาก: เฉพาะ section นี้ */
+#packages ~ .section .cardGrid.grid-2x2 .card.cardGold,
+.section.softBg .cardGrid.grid-2x2 .card.cardGold{
+  border-radius: 0 !important;          /* 🔴 ลบมุมโค้งทั้งหมด */
+  border: 1px solid rgba(201,168,106,.28); /* ทองอ่อน Lux */
+  background: rgba(18,20,24,.55);
+  box-shadow: 0 16px 40px rgba(0,0,0,.45);
+}
+
+/* กัน pseudo-element จากไฟล์อื่น */
+.section.softBg .cardGrid.grid-2x2 .card.cardGold::before,
+.section.softBg .cardGrid.grid-2x2 .card.cardGold::after{
+  content: none !important;
+}
