@@ -425,37 +425,4 @@ footer .gold{
   }
 }
 
-/* ======================================
-   MOBILE FIX – Best Seller badge
-   target: .bestSellerCard .badge.bestSeller
-   ====================================== */
 
-/* iPhone SE / small phones */
-@media (max-width: 360px){
-
-  #packages .bestSellerCard{
-    position: relative;
-  }
-
-  #packages .bestSellerCard .badge.bestSeller{
-    position: absolute;
-    top: 28px !important;     /* ขยับลงมาจากขอบบน */
-    right: 12px !important;
-    z-index: 3;
-
-    font-size: 11px !important;
-    padding: 6px 12px !important;
-    line-height: 1.2 !important;
-
-    white-space: nowrap;
-  }
-}
-
-/* iPhone 6S / 375px */
-@media (max-width: 390px){
-
-  #packages .bestSellerCard .badge.bestSeller{
-    top: 22px;
-    font-size: 12px;
-  }
-}
