@@ -672,3 +672,50 @@
   }
 
 }
+
+/* ======================================
+   BEST SELLER BADGE – LUX GOLD
+   (เฉพาะ Package 4)
+   ====================================== */
+
+.bestSellerCard{
+  position: relative;
+}
+
+/* ตัวป้าย */
+.bestSellerCard .badge.bestSeller{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  padding: 6px 14px;
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  color: #3b2a12;
+  background: linear-gradient(
+    135deg,
+    #f3d9a4 0%,
+    #e6be74 50%,
+    #c9a86a 100%
+  );
+
+  box-shadow:
+    0 6px 18px rgba(201,168,106,.35),
+    inset 0 1px 0 rgba(255,255,255,.45);
+
+  z-index: 2;
+}
+
+/* กันป้ายชนขอบการ์ดบนจอเล็ก */
+@media (max-width: 420px){
+  .bestSellerCard .badge.bestSeller{
+    top: 14px;
+    right: 14px;
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}
