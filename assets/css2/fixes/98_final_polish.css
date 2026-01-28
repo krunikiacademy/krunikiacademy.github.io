@@ -426,20 +426,36 @@ footer .gold{
 }
 
 /* ======================================
-   iPhone SE – Best Seller badge safe zone
+   MOBILE FIX – Best Seller badge
+   target: .bestSellerCard .badge.bestSeller
    ====================================== */
-@media (max-width: 375px) {
-  .card.cardGold.recommended {
+
+/* iPhone SE / small phones */
+@media (max-width: 360px){
+
+  #packages .bestSellerCard{
     position: relative;
   }
 
-  .card.cardGold.recommended .badge,
-  .card.cardGold.recommended .bestSeller {
-    top: 20px;          /* ขยับลงมาในพื้นที่ว่าง */
-    right: 12px;
-    font-size: 11px;
-    line-height: 1.2;
-    padding: 6px 12px;
+  #packages .bestSellerCard .badge.bestSeller{
+    position: absolute;
+    top: 28px !important;     /* ขยับลงมาจากขอบบน */
+    right: 12px !important;
+    z-index: 3;
+
+    font-size: 11px !important;
+    padding: 6px 12px !important;
+    line-height: 1.2 !important;
+
     white-space: nowrap;
+  }
+}
+
+/* iPhone 6S / 375px */
+@media (max-width: 390px){
+
+  #packages .bestSellerCard .badge.bestSeller{
+    top: 22px;
+    font-size: 12px;
   }
 }
