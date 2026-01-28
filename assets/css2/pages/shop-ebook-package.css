@@ -639,3 +639,32 @@
 .section.softBg .cardGrid.grid-2x2 .card.cardGold::after{
   content: none !important;
 }
+
+✅ CSS: บังคับ 2×2 + spacing ที่เหมาะสม (เฉพาะ section นี้)
+
+/* ======================================
+   INSIDE THE BOOK (4 PARTS)
+   2x2 GRID + LUX SPACING
+   ====================================== */
+
+/* grid หลัก */
+.section.softBg .cardGrid.grid-2x2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 28px;            /* ช่องไฟแนวตั้ง | แนวนอน */
+  margin-top: 24px;
+}
+
+/* การ์ดแต่ละใบ */
+.section.softBg .cardGrid.grid-2x2 .card{
+  padding: 22px 24px;
+  min-height: 100%;
+}
+
+/* มือถือ / แท็บเล็ตเล็ก */
+@media (max-width: 768px){
+  .section.softBg .cardGrid.grid-2x2{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
