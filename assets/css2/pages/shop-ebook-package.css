@@ -798,3 +798,48 @@ assets/css2/fixes/98_final_polish.css (ถูกที่แล้ว 👍)
     margin-bottom: 12px;
   }
 }
+
+✅ FIX เฉพาะ iPhone 6S (375×667) เท่านั้น
+
+/* =========================================
+   SHOP: iPhone 6S only fix
+   - widen cards
+   - prevent CTA button overlap
+   ========================================= */
+
+/* iPhone 6/6S/7/8 portrait = 375px x 667px */
+@media (width: 375px) and (height: 667px) and (orientation: portrait){
+
+  /* 1) grid ให้เป็น 1 คอลัมน์เต็มจอ = การ์ดไม่แคบ */
+  .productGrid{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* 2) การ์ดให้เต็มความกว้าง + กันโดน max-width กดทับ */
+  .productGrid .pCard{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* 3) รูปไม่เล็กเกิน/ไม่ดัน layout */
+  .productGrid .pImg{
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* 4) ปุ่ม CTA ไม่ให้ซ้อน: ให้เป็น block เต็มกว้าง */
+  .productGrid .pBtn{
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    padding: 12px 14px !important;
+    min-height: 44px !important; /* tap target iOS */
+  }
+}
