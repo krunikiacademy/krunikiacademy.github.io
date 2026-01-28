@@ -719,12 +719,23 @@
     padding: 5px 12px;
   }
 }
+✅ CSS แก้เฉพาะ iPhone SE (ขยับป้ายลง)
 
+ใส่ในไฟล์
+assets/css2/fixes/98_final_polish.css (ถูกที่แล้ว 👍)
+
+/* iPhone SE / small screen fix */
 @media (max-width: 375px) {
+  .bestSellerCard {
+    position: relative;
+  }
+
   .bestSellerCard .badge.bestSeller {
+    top: 18px;        /* ขยับลงมาในพื้นที่ว่าง */
+    right: 12px;
     padding: 6px 12px;
     font-size: 11px;
-    right: 10px;
-    top: 10px;
+    line-height: 1.2;
   }
 }
+
