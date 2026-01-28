@@ -66,3 +66,7 @@
 .ebookPage .productHero .heroGrid{
   margin-bottom: 0;
 }
+
+.ebookPage .panel.hero{
+  padding-bottom: 12px;
+}
