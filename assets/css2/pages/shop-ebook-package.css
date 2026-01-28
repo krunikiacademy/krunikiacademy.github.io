@@ -59,3 +59,21 @@
     max-width: 560px;
   }
 }
+
+1️⃣ ขยายรูปภาพ +1 (ใหญ่ขึ้นชัดเจน แต่ไม่แตก)
+
+/* === Enlarge product image +1 === */
+.productHero .heroMedia .hero__img{
+  width: min(600px, 100%);   /* เดิม ~520 → เพิ่มเป็น 600 */
+  max-width: 600px;
+  height: auto;
+}
+
+📱 Responsive (มือถือ / iPad)
+
+@media (max-width: 980px){
+  .productHero .heroMedia .hero__img{
+    width: min(640px, 100%);
+    max-width: 640px;
+  }
+}
