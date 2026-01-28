@@ -1,80 +1,43 @@
 /* ================================
-   Product Hero Card (eBook Package)
+   shop-ebook-package: HERO scale 0.5
+   (half size card + half size image)
    ================================ */
 
-.productHero{
-  padding: 56px 0;              /* ลดความสูง Hero */
+.ebookPage .productHero{
+  padding: 28px 0; /* เดิม 56px -> ครึ่ง */
 }
 
-/* กล่อง Card หลัก */
-.productHero .container{
-  max-width: 1100px;
-}
-
-/* Card look */
-.productHero .heroGrid{
-  display: grid;
+.ebookPage .productHero .heroGrid{
   grid-template-columns: 1.1fr .9fr;
-  gap: 32px;
-  align-items: center;
-
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 36px;
-
-  box-shadow: 0 20px 40px rgba(0,0,0,.25);
+  gap: 16px;          /* เดิม 32 -> ครึ่ง */
+  padding: 18px;      /* เดิม 36 -> ครึ่ง */
+  border-radius: 10px;/* เดิม 20 -> ครึ่ง */
 }
 
-/* ================================
-   TEXT SIDE
-   ================================ */
-
-.productHero .heroText h1{
-  font-size: clamp(28px, 4vw, 40px);
-  margin-bottom: 14px;
+/* Typography: ลดลงแบบสมเหตุสมผล (ไม่ต้องครึ่งเป๊ะเพื่อให้อ่านได้) */
+.ebookPage .productHero .heroText h1{
+  font-size: clamp(22px, 3.2vw, 30px);
+  margin-bottom: 8px;
+}
+.ebookPage .productHero .heroText .lead{
+  font-size: .98rem;
 }
 
-.productHero .heroText .lead{
-  font-size: 1.05rem;
-  opacity: .92;
+/* Image: ลดลงครึ่งจริง */
+.ebookPage .productHero .hero__img{
+  max-width: 130px;    /* เดิม 260 -> ครึ่ง */
+  border-radius: 7px;  /* เดิม 14 -> ครึ่ง */
 }
 
-/* ================================
-   IMAGE SIDE
-   ================================ */
-
-.productHero .heroMedia{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* รูปไม่เกิน Card */
-.productHero .hero__img{
-  max-width: 260px;          /* 🔑 คุมขนาดให้เหมือน card */
-  width: 100%;
-  height: auto;
-
-  border-radius: 14px;
-  box-shadow: 0 14px 28px rgba(0,0,0,.35);
-
-  object-fit: contain;
-}
-
-/* ================================
-   Responsive
-   ================================ */
-
+/* Responsive */
 @media (max-width: 900px){
-  .productHero .heroGrid{
+  .ebookPage .productHero .heroGrid{
     grid-template-columns: 1fr;
-    padding: 28px;
+    padding: 16px;
     text-align: center;
   }
-
-  .productHero .hero__img{
-    max-width: 220px;
+  .ebookPage .productHero .hero__img{
+    max-width: 120px;
     margin: 0 auto;
   }
 }
