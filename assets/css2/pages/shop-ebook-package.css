@@ -41,3 +41,28 @@
     margin: 0 auto;
   }
 }
+
+/* ================================
+   Reduce bottom spacing of HERO CARD
+   (shop-ebook-package only)
+   ================================ */
+
+/* ลด padding ล่างของการ์ด */
+.ebookPage .productHero{
+  padding-bottom: 14px; /* เดิมมักจะ ~32–48px */
+}
+
+/* ถ้า panel มี padding ใหญ่ */
+.ebookPage .productHero .container{
+  padding-bottom: 0;
+}
+
+/* ลด margin ของข้อความตัวสุดท้าย */
+.ebookPage .productHero .heroText p:last-child{
+  margin-bottom: 0;
+}
+
+/* กัน heroGrid ดันล่างเกิน */
+.ebookPage .productHero .heroGrid{
+  margin-bottom: 0;
+}
