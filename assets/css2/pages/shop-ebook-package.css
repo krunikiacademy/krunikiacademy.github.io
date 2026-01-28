@@ -739,3 +739,62 @@ assets/css2/fixes/98_final_polish.css (ถูกที่แล้ว 👍)
   }
 }
 
+/* =========================================
+   BEST SELLER BADGE — deterministic fix
+   Scope: only package card #4
+   ========================================= */
+
+/* 1) Anchor card */
+#packages .bestSellerCard{
+  position: relative;
+}
+
+/* 2) Desktop/tablet: badge on top-right (premium look) */
+#packages .bestSellerCard .badge.bestSeller{
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 12px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: .04em;
+  font-weight: 700;
+
+  background: rgba(201,168,106,.16);
+  border: 1px solid rgba(201,168,106,.55);
+  color: rgba(245,246,248,.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* 3) กันหัวข้อโดนป้ายทับในทุกกรณี (reserve space) */
+#packages .bestSellerCard h3{
+  padding-top: 30px; /* กันป้ายทับหัวข้อ */
+}
+
+/* 4) Small phones (SE / 6S): move badge into normal flow */
+@media (max-width: 390px){
+  #packages .bestSellerCard .badge.bestSeller{
+    position: static !important;  /* kill absolute */
+    margin: 0 0 10px 0;
+  }
+
+  #packages .bestSellerCard h3{
+    padding-top: 0; /* เพราะ badge ไม่ลอยแล้ว */
+  }
+}
+
+/* 5) iPhone 6S specific safety (บางที viewport=375 แต่ scale เพี้ยน) */
+@media (max-width: 375px){
+  #packages .bestSellerCard .badge.bestSeller{
+    margin-bottom: 12px;
+  }
+}
