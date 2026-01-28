@@ -105,3 +105,103 @@
 .productHero h1{ margin: 6px 0 10px; line-height: 1.05; }
 .productHero .lead{ margin: 0 0 10px; }
 
+/* =========================================
+   PAGE SPACING OVERRIDE (shop-ebook-package)
+   Goal:
+   - more breathing room everywhere
+   - hero text move down (avoid touching card edge)
+   - sections less dense
+   ========================================= */
+
+/* 1) เพิ่มช่องไฟรวมทั้งหน้า (ไม่แตะไฟล์หลัก) */
+:root{
+  --page-gap: 28px;     /* ระยะห่างระหว่าง section */
+  --text-gap: 12px;     /* ระยะห่างระหว่างหัวข้อ/ย่อหน้า */
+  --para-gap: 14px;     /* ระยะห่างระหว่างย่อหน้า */
+}
+
+/* 2) ทุก section ให้หายใจมากขึ้น */
+.section{
+  padding-top: var(--page-gap);
+  padding-bottom: var(--page-gap);
+}
+
+/* ถ้า section ไหนเป็นการ์ด/panel อยู่แล้ว ให้ไม่แน่น */
+.panel{
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+/* 3) จัด vertical rhythm ของหัวข้อ/ข้อความ */
+.sectionTitle{
+  margin-top: 0;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.sectionLead{
+  margin: 0 0 16px;
+  line-height: 1.7;
+}
+
+.section p{
+  margin: 0 0 var(--para-gap);
+  line-height: 1.85; /* อ่านสบายขึ้น */
+}
+
+/* 4) HERO: ขยับตัวอักษรลงมา + เพิ่มช่องไฟในกล่อง */
+.productHero .container{
+  padding-top: 30px !important;   /* ขยับลงมา (กันชนขอบบน) */
+  padding-bottom: 20px !important;
+}
+
+/* ขยับ block ข้อความทั้งก้อนลงเล็กน้อย */
+.productHero .heroText{
+  padding-top: 10px;
+}
+
+/* spacing ใน hero */
+.productHero .goldline{
+  margin-bottom: 10px;
+}
+
+.productHero h1{
+  margin: 8px 0 16px;
+  line-height: 1.05;
+}
+
+.productHero .lead{
+  margin: 0 0 14px;
+  line-height: 1.75;
+}
+
+.productHero p{
+  margin: 0 0 12px;
+  line-height: 1.85;
+}
+
+/* 5) เพิ่มช่องไฟระหว่าง hero กับ section ถัดไป */
+.productHero + .section{
+  padding-top: 34px;
+}
+
+/* 6) การ์ดเนื้อหา (เช่น 4 ส่วน) ให้หายใจ */
+.section .card,
+.section .box,
+.section .infoCard,
+.section .contentCard{
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* 7) มือถือ: เพิ่มช่องไฟอีกนิด (เพราะแน่นง่าย) */
+@media (max-width: 680px){
+  :root{
+    --page-gap: 24px;
+    --para-gap: 16px;
+  }
+  .productHero .container{
+    padding-top: 26px !important;
+    padding-bottom: 18px !important;
+  }
+}
