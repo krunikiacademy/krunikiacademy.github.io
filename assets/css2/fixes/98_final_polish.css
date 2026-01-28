@@ -425,4 +425,101 @@ footer .gold{
   }
 }
 
+/* =========================================
+   SYSTEM LOCK: Badge should never stretch
+   ========================================= */
 
+/* ล็อคพฤติกรรม badge ทุกแบบ: ไม่ให้กว้างเต็ม */
+.badge{
+  width: auto !important;
+  max-width: max-content !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap !important;
+}
+
+/* เฉพาะ best seller ใน packages */
+#packages .bestSellerCard{
+  position: relative;
+}
+
+#packages .bestSellerCard .badge.bestSeller{
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+
+  padding: 7px 12px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: .04em;
+  font-weight: 700;
+
+  background: rgba(201,168,106,.16);
+  border: 1px solid rgba(201,168,106,.55);
+  color: rgba(245,246,248,.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* กันหัวข้อโดนทับบน desktop */
+#packages .bestSellerCard h3{
+  padding-top: 30px;
+}
+
+/* มือถือ: badge ลงมาอยู่ใน flow (กันทับข้อความบน SE/6S) */
+@media (max-width: 390px){
+  #packages .bestSellerCard .badge.bestSeller{
+    position: static !important;
+    margin: 0 0 10px 0;
+  }
+  #packages .bestSellerCard h3{
+    padding-top: 0;
+  }
+}
+
+/* =========================================
+   SYSTEM LOCK: CTA Row should never overlap
+   ========================================= */
+
+/* ใช้ได้ทั้ง shop.html / product pages */
+.ctaRow{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ctaRow .btn,
+.ctaRow a.btn,
+.ctaRow .btnPrimary,
+.ctaRow .btnGhost{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  white-space: normal;
+  line-height: 1.15;
+
+  min-height: 44px;      /* tap target iOS */
+  padding: 12px 14px;
+}
+
+/* Small phones: stack vertically 100% */
+@media (max-width: 390px){
+  .ctaRow{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaRow .btn,
+  .ctaRow a.btn,
+  .ctaRow .btnPrimary,
+  .ctaRow .btnGhost{
+    width: 100%;
+  }
+}
