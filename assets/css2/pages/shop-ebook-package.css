@@ -60,9 +60,9 @@
   }
 }
 
-1️⃣ ขยายรูปภาพ +1 (ใหญ่ขึ้นชัดเจน แต่ไม่แตก)
+1️⃣ ขยายรูปภาพ +1.5 (ใหญ่ขึ้นชัดเจน แต่ไม่แตก)
 
-/* === Enlarge product image +1 === */
+/* === Enlarge product image +1.5 === */
 .productHero .heroMedia .hero__img{
   width: min(600px, 100%);   /* เดิม ~520 → เพิ่มเป็น 600 */
   max-width: 600px;
@@ -76,4 +76,16 @@
     width: min(640px, 100%);
     max-width: 640px;
   }
+}
+
+/* === Reduce bottom padding of hero card === */
+.productHero{
+  padding-bottom: 10px;   /* เดิม ~18–24 → ลดลง */
+}
+
+ถ้ายังรู้สึกมีช่องว่างจาก การ์ดถัดไป
+ให้เสริมอันนี้:
+
+.productHero + section{
+  margin-top: 10px;
 }
