@@ -205,3 +205,89 @@
     padding-bottom: 18px !important;
   }
 }
+
+/* =========================================
+   shop-ebook-package.css (page override)
+   Goal:
+   - card border soft gold
+   - image bigger (right)
+   - reduce bottom padding of hero card
+   ========================================= */
+
+.productHero{
+  position: relative;
+  border: 1px solid rgba(255, 220, 170, 0.32);   /* soft gold (lighter than buttons) */
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+  box-shadow:
+    0 0 0 1px rgba(255, 220, 170, 0.10),
+    0 12px 32px rgba(0,0,0,0.45);
+  overflow: hidden; /* กันมุมโค้งหลุด */
+}
+
+/* glow เบามากแบบหรู */
+.productHero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:18px;
+  pointer-events:none;
+  box-shadow: inset 0 0 22px rgba(255, 220, 170, 0.08);
+}
+
+/* ลด “ขอบล่าง” การ์ดหัวเว็บ */
+.productHero .container{
+  padding-top: 18px;   /* ลดได้ */
+  padding-bottom: 14px;/* ลดขอบล่าง -1 */
+}
+
+/* ===== HERO GRID: บังคับสัดส่วนให้รูปใหญ่ขึ้นจริง ===== */
+.productHero .heroGrid{
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr; /* ให้ขวา “กินพื้นที่มากขึ้น” */
+  align-items: center;
+  gap: 18px; /* ลด gap เพื่อให้ media ดูใหญ่ขึ้น */
+}
+
+/* ถ้าเดิมมีข้อจำกัดจาก css อื่น (min/max width) ให้ปลด */
+.productHero .heroText,
+.productHero .heroMedia{
+  min-width: 0;
+}
+
+/* ===== RIGHT MEDIA: ขยายรูป ===== */
+.productHero .heroMedia{
+  display: flex;
+  justify-content: flex-end;  /* ชิดขวาแบบสวย */
+  align-items: center;
+}
+
+.productHero .hero__img{
+  width: min(520px, 100%); /* “ใหญ่ขึ้นจริง” บนเดสก์ท็อป */
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  transform: scale(1.05);     /* +1 แบบเห็นผล */
+  transform-origin: right center;
+}
+
+/* ===== Responsive: tablet/phone ===== */
+@media (max-width: 980px){
+  .productHero .heroGrid{
+    grid-template-columns: 1fr;
+  }
+  .productHero .heroMedia{
+    justify-content: center;
+  }
+  .productHero .hero__img{
+    width: min(560px, 100%);
+    transform: scale(1.02);
+    transform-origin: center;
+  }
+}
+
+/* ปรับ spacing ของข้อความไม่ให้ชนกัน */
+.productHero .goldline{ margin-bottom: 6px; }
+.productHero h1{ margin: 6px 0 10px; line-height: 1.05; }
+.productHero .lead{ margin: 0 0 10px; }
