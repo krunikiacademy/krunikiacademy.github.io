@@ -110,3 +110,12 @@
   max-width: 720px;   /* เพิ่มจากเดิมแบบรู้สึกได้ */
   height: auto;
 }
+.productHero{
+  padding-bottom: 6px;
+}
+
+และกันชนกับ section ถัดไป:
+
+.productHero + section{
+  margin-top: 8px;
+}
