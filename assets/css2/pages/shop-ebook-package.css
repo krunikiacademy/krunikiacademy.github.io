@@ -405,3 +405,215 @@
   box-shadow: 0 6px 18px rgba(0,0,0,.35) !important;
   z-index: 2 !important;
 }
+
+/* =========================================================
+   KRUNIKI — shop-ebook-package.css (PAGE-SCOPED ONLY)
+   Page class: body.page--shop-ebook
+   ========================================================= */
+
+.page--shop-ebook main{
+  padding-top: 72px; /* กัน header fixed ทับ */
+}
+
+/* ---------- Global spacing tune (ทั้งหน้า) ---------- */
+.page--shop-ebook .section{
+  padding: 34px 0; /* ลดความแน่นของแต่ละบล็อก */
+}
+
+.page--shop-ebook .sectionTitle{
+  margin: 0 0 14px;
+  line-height: 1.15;
+}
+
+.page--shop-ebook .sectionLead{
+  margin: 0 0 14px;
+  line-height: 1.7;
+  max-width: 72ch;
+}
+
+.page--shop-ebook p{
+  line-height: 1.75;
+}
+
+.page--shop-ebook .softBg{
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+/* ---------- HERO: ลดความแน่น + ไม่ชนขอบ card ---------- */
+.page--shop-ebook .productHero{
+  padding-top: 18px;   /* เพิ่มช่องบนให้หัวไม่ชน */
+  padding-bottom: 10px; /* ลดขอบล่างการ์ด -1 */
+}
+
+.page--shop-ebook .productHero .heroGrid{
+  display: grid;
+  grid-template-columns: 1.15fr .85fr; /* ✅ ให้ข้อความฝั่งซ้ายใหญ่กว่าเล็กน้อย */
+  gap: 26px;
+  align-items: center;
+}
+
+/* มือถือ: 1 คอลัมน์ */
+@media (max-width: 900px){
+  .page--shop-ebook .productHero .heroGrid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ขยับตัวอักษรใน hero ลง + จัดระยะให้หายอึดอัด */
+.page--shop-ebook .productHero .heroText{
+  padding-top: 10px;
+}
+
+.page--shop-ebook .productHero .goldline{
+  margin-bottom: 10px;
+}
+
+.page--shop-ebook .productHero h1{
+  margin: 0 0 14px;
+  line-height: 1.05;
+}
+
+.page--shop-ebook .productHero .lead{
+  margin: 0 0 12px;
+  max-width: 60ch;
+}
+
+/* ---------- HERO IMAGE: ทำให้ “ใหญ่ขึ้นจริง” ---------- */
+.page--shop-ebook .productHero .heroMedia{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.page--shop-ebook .productHero .hero__img{
+  width: min(520px, 100%); /* ✅ เพิ่มขนาด +1 แบบเห็นผล */
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.55);
+}
+
+/* จอแคบ ให้ภาพเต็มและอยู่กลาง */
+@media (max-width: 900px){
+  .page--shop-ebook .productHero .heroMedia{
+    justify-content: center;
+  }
+  .page--shop-ebook .productHero .hero__img{
+    width: min(560px, 100%);
+  }
+}
+
+/* ---------- CARD: ขอบทองอ่อน Lux ---------- */
+.page--shop-ebook .cardGold{
+  background: rgba(18,20,24,.55);
+  border: 1px solid rgba(201,168,106,.26); /* ✅ gold soft */
+  box-shadow: 0 18px 50px rgba(0,0,0,.55);
+  border-radius: 22px;
+}
+
+/* ---------- GRID 2x2: “ชิดแบบหน้าอื่น” แต่ยังสวย ---------- */
+/* ใช้กับ: .cardGrid.grid-2x2 และ .productGrid.grid-2x2 */
+.page--shop-ebook .grid-2x2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0; /* ✅ การ์ดชนกันเหมือนหน้าอื่น */
+  align-items: stretch;
+}
+
+/* ทำให้เส้นทองเป็นเส้นแบ่งแทนช่องว่าง */
+.page--shop-ebook .grid-2x2 > .cardGold{
+  border-radius: 0;
+}
+
+/* คืนความโค้งเฉพาะมุมรอบนอกของกริด (พรีเมียมมาก) */
+.page--shop-ebook .grid-2x2 > .cardGold:nth-child(1){ border-top-left-radius: 22px; }
+.page--shop-ebook .grid-2x2 > .cardGold:nth-child(2){ border-top-right-radius: 22px; }
+.page--shop-ebook .grid-2x2 > .cardGold:nth-child(3){ border-bottom-left-radius: 22px; }
+.page--shop-ebook .grid-2x2 > .cardGold:nth-child(4){ border-bottom-right-radius: 22px; }
+
+/* ให้เส้นไม่หนาซ้อนกันตรงกลาง */
+.page--shop-ebook .grid-2x2 > .cardGold{
+  border-color: rgba(201,168,106,.22);
+}
+
+/* มือถือ: ต้องมีช่องไฟเพื่ออ่านง่าย */
+@media (max-width: 820px){
+  .page--shop-ebook .grid-2x2{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .page--shop-ebook .grid-2x2 > .cardGold{
+    border-radius: 22px;
+  }
+}
+
+/* ---------- Card typography spacing ---------- */
+.page--shop-ebook .cardGold h3{
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.page--shop-ebook .cardGold p{
+  margin: 0;
+  color: rgba(245,246,248,.86);
+}
+
+.page--shop-ebook .cardGold ul{
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.page--shop-ebook .price{
+  margin: 10px 0 12px;
+  font-weight: 700;
+}
+
+/* ---------- Recommended badge: ไม่ล้น ไม่ชน ---------- */
+.page--shop-ebook .card.recommended{
+  position: relative;
+  overflow: hidden;
+}
+
+.page--shop-ebook .card.recommended .badge{
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(201,168,106,.22);
+  border: 1px solid rgba(201,168,106,.35);
+  color: rgba(245,246,248,.92);
+  font-weight: 700;
+  font-size: 13px;
+  backdrop-filter: blur(6px);
+}
+
+/* ---------- Button: ให้เข้ากับ Lux card ---------- */
+.page--shop-ebook .cardGold .btn.primary{
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(201,168,106,.38);
+  background: rgba(201,168,106,.10);
+  color: rgba(245,246,248,.92);
+  text-decoration: none;
+}
+
+.page--shop-ebook .cardGold .btn.primary:hover{
+  background: rgba(201,168,106,.16);
+  border-color: rgba(201,168,106,.55);
+}
+
+/* ---------- ลดความแน่นระหว่างหัวข้อกับกริด ---------- */
+.page--shop-ebook #packages .sectionTitle{
+  margin-bottom: 10px;
+}
+
+.page--shop-ebook #packages .sectionLead{
+  margin-bottom: 18px;
+}
