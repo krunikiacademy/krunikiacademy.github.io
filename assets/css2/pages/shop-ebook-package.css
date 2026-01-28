@@ -799,47 +799,59 @@ assets/css2/fixes/98_final_polish.css (ถูกที่แล้ว 👍)
   }
 }
 
-✅ FIX เฉพาะ iPhone 6S (375×667) เท่านั้น
+✅ FIX iPhone 6S (375×667) — ทำให้การ์ดกว้างขึ้น + ปุ่มไม่ล้น/ไม่ซ้อน
 
 /* =========================================
-   SHOP: iPhone 6S only fix
-   - widen cards
-   - prevent CTA button overlap
+   SHOP: iPhone 6S only
+   - widen usable space (reduce side padding)
+   - force cards to full width
+   - make button wrap + never overflow
    ========================================= */
 
-/* iPhone 6/6S/7/8 portrait = 375px x 667px */
 @media (width: 375px) and (height: 667px) and (orientation: portrait){
 
-  /* 1) grid ให้เป็น 1 คอลัมน์เต็มจอ = การ์ดไม่แคบ */
+  /* 0) ลดขอบซ้ายขวาที่ "กินพื้นที่" (นี่คือสาเหตุหลักที่การ์ดแคบ) */
+  .section .container{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    max-width: 100% !important;
+  }
+
+  /* 1) ให้กริดเป็น 1 คอลัมน์เต็มพื้นที่ */
   .productGrid{
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 14px !important;
   }
 
-  /* 2) การ์ดให้เต็มความกว้าง + กันโดน max-width กดทับ */
+  /* 2) ปลดล็อคความแคบของการ์ด (ถ้ามี max-width เดิมซ่อนอยู่) */
   .productGrid .pCard{
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 0 !important;
     margin: 0 !important;
   }
 
-  /* 3) รูปไม่เล็กเกิน/ไม่ดัน layout */
-  .productGrid .pImg{
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
+  /* 3) กันข้อความ/ปุ่มดันล้น */
+  .productGrid .pBody{
+    min-width: 0 !important;
   }
 
-  /* 4) ปุ่ม CTA ไม่ให้ซ้อน: ให้เป็น block เต็มกว้าง */
+  /* 4) ปุ่ม: ให้ "ห่อบรรทัด" ได้ + ไม่ล้นการ์ดแน่นอน */
   .productGrid .pBtn{
-    display: flex !important;
+    display: block !important;
     width: 100% !important;
-    justify-content: center !important;
+    max-width: 100% !important;
+
+    white-space: normal !important;     /* ห่อบรรทัด */
+    overflow-wrap: anywhere !important; /* กันคำยาว */
+    word-break: break-word !important;
+
     text-align: center !important;
-    white-space: normal !important;
-    line-height: 1.2 !important;
-    padding: 12px 14px !important;
-    min-height: 44px !important; /* tap target iOS */
+    line-height: 1.25 !important;
+    padding: 12px 12px !important;
+    min-height: 44px !important;        /* แตะง่าย */
+    box-sizing: border-box !important;
   }
 }
+
