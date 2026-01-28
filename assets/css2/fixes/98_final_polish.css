@@ -523,3 +523,59 @@ footer .gold{
     width: 100%;
   }
 }
+
+/* =========================================
+   LOCK FIX: shop.html product cards
+   - fix narrow cards + CTA overlap on small iPhones (incl. iPhone 6/6S)
+   - MUST be at the very end of 98_final_polish.css
+   ========================================= */
+
+@media (max-width: 420px){
+
+  /* 1) reclaim width (side padding is eating space) */
+  body .section .container,
+  body main .container{
+    max-width: 100% !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  /* 2) force product grid to 1 column full width */
+  body .productGrid{
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+
+  /* 3) force each card to full width (kill hidden max-width/margins) */
+  body .productGrid > .pCard{
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 4) prevent content from pushing layout */
+  body .productGrid .pBody{
+    min-width: 0 !important;
+  }
+
+  /* 5) CTA button: never overflow, never overlap */
+  body .productGrid .pBtn{
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+
+    white-space: normal !important;       /* allow wrap */
+    overflow-wrap: anywhere !important;   /* break long strings */
+    word-break: break-word !important;
+
+    text-align: center !important;
+    line-height: 1.25 !important;
+    padding: 12px 12px !important;
+    min-height: 44px !important;          /* tap target */
+  }
+}
