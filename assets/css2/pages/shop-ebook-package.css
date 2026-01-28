@@ -89,3 +89,24 @@
 .productHero + section{
   margin-top: 10px;
 }
+
+/* === Fix Hero Layout Ratio === */
+.productHero .heroGrid{
+  display: grid;
+  grid-template-columns: 1fr 1.3fr; 
+  /* เดิมน่าจะ ~1.2fr 0.8fr หรือ auto */
+  align-items: center;
+  gap: 48px;
+}
+
+.productHero .heroMedia{
+  max-width: none;
+  display: flex;
+  justify-content: center;
+}
+
+.productHero .heroMedia .hero__img{
+  width: 100%;
+  max-width: 720px;   /* เพิ่มจากเดิมแบบรู้สึกได้ */
+  height: auto;
+}
