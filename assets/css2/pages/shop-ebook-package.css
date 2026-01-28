@@ -60,12 +60,12 @@
   }
 }
 
-1️⃣ ขยายรูปภาพ +1.5 (ใหญ่ขึ้นชัดเจน แต่ไม่แตก)
+1️⃣ ขยายรูปภาพ +2 (ใหญ่ขึ้นชัดเจน แต่ไม่แตก)
 
-/* === Enlarge product image +1.5 === */
+/* === Enlarge product image +2 === */
 .productHero .heroMedia .hero__img{
-  width: min(600px, 100%);   /* เดิม ~520 → เพิ่มเป็น 600 */
-  max-width: 600px;
+  width: min(700px, 100%);   /* เดิม ~520 → เพิ่มเป็น 700 */
+  max-width: 700px;
   height: auto;
 }
 
