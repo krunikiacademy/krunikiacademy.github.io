@@ -871,3 +871,36 @@ assets/css2/fixes/98_final_polish.css (ถูกที่แล้ว 👍)
   text-align: center;
   box-sizing: border-box;
 }
+
+/* =====================================
+   FOOTER — TRUE CENTER FIX (FINAL)
+   ===================================== */
+
+body.page--shop-ebook .siteFooter {
+  /* ตัดอิทธิพล parent ทั้งหมด */
+  all: unset;
+
+  /* สร้าง footer ใหม่ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  padding: 18px 12px;
+  margin-top: 32px;
+
+  font-size: 14px;
+  color: rgba(255,255,255,.75);
+  text-align: center;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  box-sizing: border-box;
+}
+
+body.page--shop-ebook .siteFooter span,
+body.page--shop-ebook .siteFooter {
+  line-height: 1.4;
+}
