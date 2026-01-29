@@ -22,3 +22,7 @@ footer .footer-bottom > * {
   margin-left: 0;
   margin-right: 0;
 }
+
+footer .container {
+  text-align: center;
+}
