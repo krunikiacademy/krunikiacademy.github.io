@@ -275,3 +275,43 @@
   top: 12px;
   right: 12px;
 }
+
+/* =========================================
+   Brainwaves: Hero banner responsive lock
+   ========================================= */
+
+/* กัน hero รูปใหญ่เกิน/ดัน layout */
+.page--shop-brainwaves .productHero .heroMedia{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* ล็อกภาพให้ “เต็มกรอบแบบสวย” */
+.page--shop-brainwaves .productHero .hero__img{
+  width: 100%;
+  max-width: 520px;     /* ปรับได้ แต่ห้ามใหญ่จนชนกริด */
+  height: auto;
+  display: block;
+
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+/* บนจอเล็ก: ให้รูปไม่ใหญ่เกินและอยู่กลาง */
+@media (max-width: 900px){
+  .page--shop-brainwaves .productHero .heroMedia{
+    justify-content: center;
+    margin-top: 14px;
+  }
+
+  .page--shop-brainwaves .productHero .hero__img{
+    max-width: 560px;
+  }
+}
+
+/* กันข้อความยาว ๆ ทำให้ hero ดูอึดอัด */
+.page--shop-brainwaves .productHero .heroText .lead{
+  max-width: 52ch;
+}
+
