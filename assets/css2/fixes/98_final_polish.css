@@ -592,3 +592,30 @@ footer .footer__copyright {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ===============================
+   FOOTER HARD CENTER FIX
+   =============================== */
+
+/* ตัดผลจาก section / main ที่เป็น flex */
+main > footer,
+section > footer,
+footer {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  padding: 24px 16px;
+}
+
+/* กันกรณี parent เป็น flex */
+section,
+main {
+  align-items: stretch;
+}
+
+/* เผื่อ span สีทอง */
+footer .gold {
+  display: inline;
+  text-align: center;
+}
