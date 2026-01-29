@@ -855,3 +855,19 @@ assets/css2/fixes/98_final_polish.css (ถูกที่แล้ว 👍)
   }
 }
 
+/* ================================
+   SITE FOOTER – HARD CENTER LOCK
+   ================================ */
+
+.siteFooter{
+  width: 100%;
+  margin: 40px auto 0;
+  padding: 24px 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  box-sizing: border-box;
+}
