@@ -1,0 +1,53 @@
+/* ================================
+   KRUNIKI Gold CTA Button
+   ================================ */
+
+.btnGold{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 14px 28px;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #f6e6b3 0%,
+    #e9c97a 35%,
+    #caa24d 65%,
+    #f3e0a3 100%
+  );
+
+  color: #3b2a10;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-decoration: none;
+
+  border: none;
+  box-shadow:
+    0 6px 18px rgba(202,162,77,.35),
+    inset 0 1px 0 rgba(255,255,255,.6);
+
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.btnGold:hover{
+  transform: translateY(-1px);
+  box-shadow:
+    0 10px 26px rgba(202,162,77,.45),
+    inset 0 1px 0 rgba(255,255,255,.7);
+  filter: brightness(1.03);
+}
+
+.btnGold:active{
+  transform: translateY(0);
+  box-shadow:
+    0 6px 16px rgba(202,162,77,.35),
+    inset 0 2px 4px rgba(0,0,0,.15);
+}
+
+/* ระยะห่างปุ่มใน Hero */
+.heroCta{
+  margin-top: 24px;
+}
