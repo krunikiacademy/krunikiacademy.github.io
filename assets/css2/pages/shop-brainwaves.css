@@ -226,3 +226,52 @@
   text-align: center;
 }
 */
+
+/* =========================================
+   Brainwaves: Product images in cards
+   - consistent size
+   - soft radius
+   - safe crop
+   ========================================= */
+
+.page--shop-brainwaves .productCard__media{
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 14px;
+
+  /* ถ้าการ์ดมีขอบทองอ่อนอยู่แล้ว รูปไม่ควรชนขอบ */
+  /* padding: 0;  <-- ไม่ต้องใส่ เพื่อให้รูปเต็มกรอบสวย */
+}
+
+/* ล็อกให้รูปทุกใบหน้าตาเท่ากัน */
+.page--shop-brainwaves .productCard__img{
+  width: 100%;
+  display: block;
+
+  /* คุมความสูงให้เท่ากันทุกการ์ด */
+  aspect-ratio: 1 / 1;     /* ถ้ารูปเป็นสี่เหลี่ยมจัตุรัส */
+  object-fit: cover;
+
+  /* กันภาพเบลอจากการยืดผิดสัดส่วน */
+  height: auto;
+}
+
+/* ถ้ารูปของคุณไม่ใช่จัตุรัส (เช่น 4:3) ให้ใช้ชุดนี้แทน (เลือกอย่างเดียว) */
+/*
+.page--shop-brainwaves .productCard__img{
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+*/
+
+/* Badge ไม่ให้ทับรูปแบบเกะกะ */
+.page--shop-brainwaves .productCard .badge{
+  z-index: 3;
+}
+
+/* ถ้า badge ไปทับรูปเพราะตำแหน่ง absolute ในไฟล์หลัก ให้ดัน badge ลงนิด */
+.page--shop-brainwaves .productCard.recommended .badge,
+.page--shop-brainwaves .productCard.bestSellerCard .badge{
+  top: 12px;
+  right: 12px;
+}
