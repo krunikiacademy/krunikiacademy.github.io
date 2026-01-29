@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KRUNIKI Academy</title>
+  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
+
+  <style>
+    :root{
+      --font-brand: "Times New Roman", Times, serif;
+      --font-head:  "Times New Roman", Times, serif;
+    }
+  </style>
+
+  <!-- Core -->
+  <link rel="stylesheet" href="assets/css2/app.css">
+  <link rel="stylesheet" href="assets/css2/core/02_base.css">
+  <link rel="stylesheet" href="assets/hamburger.css">
+
+  <!-- Shop global -->
+  <link rel="stylesheet" href="assets/css2/pages/shop.css">
+
+  <!-- Final overrides (ต้องท้ายสุด) -->
+  <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
+
+  <!-- Product page specific -->
+  <link rel="stylesheet" href="assets/css2/pages/shop-brainwaves.css">
+
+  <script src="assets/main.js" defer></script>
+</head>
+
+<body class="page--shop-brainwaves">
+
+  <!-- HEADER (คงโครงเดียวกับหน้า eBook Package) -->
+  <header class="siteHeader">
+    <div class="navInner">
+
+      <!-- Brand + Social (LEFT) -->
+      <div class="brandBlock">
+        <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="brandText">KRUNIKI</span>
+        </a>
+
+        <!-- Social row under brand -->
+        <div class="topbar">
+          <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+            <!-- LINE OA -->
+            <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+              </svg>
+            </a>
+
+            <!-- LINE SHOP -->
+            <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+                <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+                <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+              </svg>
+            </a>
+
+            <!-- FACEBOOK -->
+            <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+              </svg>
+            </a>
+
+            <!-- YOUTUBE -->
+            <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+              </svg>
+            </a>
+
+            <!-- TIKTOK -->
+            <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+              </svg>
+            </a>
+
+            <!-- INSTAGRAM -->
+            <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+                <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+                <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div><!-- ✅ ปิด brandBlock ให้ครบ -->
+
+      <!-- Desktop Menu (CENTER) -->
+      <nav class="navLinks" aria-label="Primary navigation">
+        <a href="shop.html">ร้านค้า</a>
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">เกี่ยวกับ</a>
+        <a href="services.html">บริการ</a>
+        <a href="resources.html">คลังความรู้</a>
+        <a href="contact.html">ติดต่อ</a>
+      </nav>
+
+      <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+      <div class="krActions">
+        <button class="krHam" id="krHam" type="button"
+          aria-label="เปิดเมนู"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div><!-- close .navInner -->
+
+    <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+    <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
+      <a href="about.html">เกี่ยวกับ</a>
+      <a href="services.html">บริการ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+  </header>
+
+  <!-- MAIN (โครงเดียวกับหน้า eBook Package แต่เปลี่ยนเนื้อหาเป็น Brainwaves) -->
+  <main class="pageMain ebookPage">
+
+    <!-- ================================
+         HERO PRODUCT
+         ================================ -->
+    <section class="panel hero productHero productHero--compact">
+      <div class="container">
+        <div class="heroGrid heroGrid--compact">
+
+          <!-- LEFT: TEXT -->
+          <div class="heroText heroText--compact">
+            <div class="goldline">Brainwaves • KRUNIKI SoulSync System™</div>
+            <h1>โซลซิงค์ อัลฟา / โซลซิงค์ ธีตา</h1>
+
+            <p class="lead">
+              ไม่ใช่แค่ “ไฟล์เสียง” —  
+              แต่คือพื้นที่ให้ระบบประสาทได้พัก  
+              ให้หัวใจได้กลับบ้าน และให้ความนิ่งค่อย ๆ เปิดออกอย่างปลอดภัย
+            </p>
+
+            <p>
+              ส่งไฟล์เสียงทาง LINE / Email / Google Drive  
+              เปิดฟังได้ทันทีบนมือถือ iPad และคอมพิวเตอร์
+            </p>
+          </div>
+
+          <!-- RIGHT: IMAGE -->
+          <div class="heroMedia heroMedia--compact">
+            <img
+              src="assets/images/banners/brainwaves-banner.webp"
+              alt="KRUNIKI Brainwaves"
+              class="hero__img hero__img--compact"
+              loading="lazy"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+         PRODUCT STORY
+         ================================ -->
+    <section class="section">
+      <div class="container">
+
+        <h2 class="sectionTitle">นี่คือ “เสียงบ้าน” สำหรับสมองที่เหนื่อย และหัวใจที่อ่อนล้า</h2>
+
+        <p class="sectionLead">
+          หากคุณรู้สึกว่าใจไม่ยอมพักง่าย ๆ • นอนหลับยาก • คิดวน • เหนื่อยจากคน/งาน  
+          Brainwaves ของ KRUNIKI ถูกออกแบบเพื่อช่วยให้คุณ “กลับสู่ความนิ่ง” อย่างอ่อนโยน
+        </p>
+
+        <p>
+          Alpha ช่วยให้สมองนุ่มลงและกลับมาจัดระเบียบ  
+          Theta ช่วยให้ใจลงลึก สงบ และพร้อมสำหรับงานภายใน  
+          <strong>คุณไม่จำเป็นต้องเก่งสมาธิ — แค่ให้ตัวเองได้เริ่มพัก</strong>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ================================
+         WHAT YOU WILL GET
+         ================================ -->
+    <section class="section softBg">
+      <div class="container">
+
+        <h2 class="sectionTitle">ภายในชุดนี้คุณจะได้รับ</h2>
+
+        <ul class="featureList">
+          <li>🎧 ไฟล์เสียง Brainwave (Alpha / Theta) ตามเวอร์ชันที่เลือก</li>
+          <li>⏱️ ความยาว 30 นาที หรือ 60 นาที</li>
+          <li>🧘‍♀️ แนวทางการฟังแบบ KRUNIKI (สั้น กระชับ ใช้ได้จริง)</li>
+          <li>🫀 เหมาะสำหรับ Daily Practice เพื่อรักษาสนามพลังและความนิ่งในใจ</li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ================================
+         HOW TO USE (KRUNIKI WAY)
+         ================================ -->
+    <section class="section">
+      <div class="container">
+
+        <h2 class="sectionTitle">วิธีใช้แบบ KRUNIKI (แนะนำ)</h2>
+
+        <div class="cardGrid grid-2x2">
+
+          <div class="card cardGold">
+            <h3>Step 1 — ตั้งเจตนา (10 วินาที)</h3>
+            <p>
+              วางมือที่หัวใจ แล้วพูดเบา ๆ ว่า  
+              <strong>“ฉันปลอดภัย และฉันกำลังกลับบ้าน”</strong>
+            </p>
+          </div>
+
+          <div class="card cardGold">
+            <h3>Step 2 — ฟังด้วยเสียงพอดี</h3>
+            <p>
+              ไม่ต้องดัง • ไม่ต้องเร่ง  
+              ถ้าไวต่อคลื่น แนะนำเริ่มที่ 10–15 นาทีแรกก่อน
+            </p>
+          </div>
+
+          <div class="card cardGold">
+            <h3>Step 3 — เลือกช่วงเวลาที่เหมาะ</h3>
+            <p>
+              <strong>Alpha:</strong> ระหว่างวัน / ก่อนทำงาน / หลังงานหนัก  
+              <br>
+              <strong>Theta:</strong> ก่อนนอน / งานภายใน / journaling
+            </p>
+          </div>
+
+          <div class="card cardGold">
+            <h3>Step 4 — ปิดท้ายด้วยการกลับสู่กาย</h3>
+            <p>
+              จิบน้ำ • ขยับไหล่เบา ๆ  
+              แล้ววางมือที่หัวใจอีก 30 วินาที เพื่อ “ลงหลัก” ความนิ่งให้มั่นคง
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================
+         PRODUCTS (4 TRACKS)
+         ================================ -->
+    <section id="products" class="section softBg">
+      <div class="container">
+
+        <h2 class="sectionTitle">เลือกคลื่นที่ตรงกับหัวใจของคุณ</h2>
+        <p class="sectionLead">
+          เลือกตาม “จังหวะชีวิต” ไม่ต้องเลือกตามความเก่ง  
+          เพราะเป้าหมายของเรา คือให้คุณได้พักอย่างปลอดภัย
+        </p>
+
+        <div class="productGrid grid-2x2">
+
+          <div class="card cardGold">
+            <h3>โซลซิงค์ อัลฟา 30 นาที</h3>
+            <p class="price">___ บาท</p>
+            <ul>
+              <li>พักใจระหว่างวัน</li>
+              <li>คลายล้า • ปรับโหมดสมองให้นุ่ม</li>
+              <li>เหมาะก่อนทำงาน/อ่านหนังสือ</li>
+            </ul>
+            <p class="small">
+              เหมาะสำหรับคนที่อยากเริ่ม “ฝึกพัก” แบบง่าย ๆ  
+              โดยไม่ต้องใช้พลังเยอะ
+            </p>
+            <a class="btn primary" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+              สั่งซื้อ
+            </a>
+          </div>
+
+          <div class="card cardGold">
+            <h3>โซลซิงค์ อัลฟา 60 นาที</h3>
+            <p class="price">___ บาท</p>
+            <ul>
+              <li>Deep Rest • รีเซ็ตระบบประสาท</li>
+              <li>เหมาะช่วงเย็น–ก่อนนอน</li>
+              <li>เหมาะวันทำงานหนัก/เครียดสะสม</li>
+            </ul>
+            <p class="small">
+              เหมาะสำหรับวันที่คุณ “ล้าเกินกว่าจะคิด”  
+              แต่อยากให้ใจได้พักลึกแบบอ่อนโยน
+            </p>
+            <a class="btn primary" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+              สั่งซื้อ
+            </a>
+          </div>
+
+          <div class="card cardGold recommended">
+            <div class="badge">แนะนำ</div>
+            <h3>โซลซิงค์ ธีตา 30 นาที</h3>
+            <p class="price">___ บาท</p>
+            <ul>
+              <li>ภาวนา • งานภายใน • นุ่มลึก</li>
+              <li>เหมาะ journaling + affirmation</li>
+              <li>เหมาะคืนที่ใจต้องการปลอบโยน</li>
+            </ul>
+            <p class="small">
+              เหมาะสำหรับผู้ที่อยากกลับเข้าหาหัวใจ  
+              และปล่อยให้ความสงบ “พาไปเอง”
+            </p>
+            <a class="btn primary" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+              สั่งซื้อ
+            </a>
+          </div>
+
+          <div class="card cardGold bestSellerCard">
+            <div class="badge bestSeller">Best Seller</div>
+            <h3>โซลซิงค์ ธีตา 60 นาที</h3>
+            <p class="price">___ บาท</p>
+            <ul>
+              <li>พักลึกระดับสนามพลัง</li>
+              <li>เหมาะก่อนนอน/วันอารมณ์หน่วง</li>
+              <li>เหมาะทำเป็นพิธีส่วนตัว (ritual)</li>
+            </ul>
+            <p class="small">
+              เหมาะสำหรับผู้ที่ต้องการ “พักลึกจริง”  
+              ให้ใจวางลงอย่างสมบูรณ์ในค่ำคืน
+            </p>
+            <a class="btn primary" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">
+              สั่งซื้อ
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================
+         FINAL CTA (footer ต้องอยู่ใน section นี้)
+         ================================ -->
+    <section class="section closingCtaSection">
+      <div class="container">
+
+        <div class="ctaBox">
+          <h2 class="sectionTitle">พร้อมให้สมองได้พัก และให้หัวใจได้กลับบ้านแล้วหรือยัง?</h2>
+          <p class="sectionLead">
+            เลือกคลื่นที่ตรงกับจังหวะชีวิตของคุณ  
+            แล้วปล่อยให้ความนิ่งเริ่มต้นอย่างอ่อนโยนตั้งแต่วันนี้
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="#products">
+              เลือกคลื่น
+            </a>
+            <a class="btn" href="shop.html">
+              กลับไปหน้าร้านค้า
+            </a>
+          </div>
+        </div>
+
+        <footer>
+          © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
+
+/* assets/css2/pages/shop-brainwaves.css */
+/* วางไฟล์นี้ไว้เพื่อปรับเฉพาะหน้า Brainwaves แบบไม่กระทบหน้า eBook */
+
+.page--shop-brainwaves .goldline{
+  letter-spacing: .08em;
+}
+
+.page--shop-brainwaves .productHero .hero__img{
+  border-radius: 18px;
+}
+
+/* ถ้าอยากให้ CTA footer เว้นระยะสวยขึ้น */
+.page--shop-brainwaves .closingCtaSection footer{
+  margin-top: 28px;
+}
