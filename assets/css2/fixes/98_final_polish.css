@@ -604,3 +604,39 @@ footer .gold{
   color: var(--gold);
   font-weight: 500;
 }
+
+/* =========================================
+   FOOTER — FORCE CENTER (DESKTOP FIX)
+   file: asset/css2/98_final_polish.css
+========================================= */
+
+footer.siteFooter{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 26px 16px;
+  margin-top: 40px;
+
+  color: rgba(255,255,255,.75);
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* ถ้า container เดิมมี max-width ให้จัดกลางอยู่แล้ว แต่กันพลาด */
+footer.siteFooter .container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* กัน “โดน section/ctaBox ดูด” ถ้าใครเผลอวาง footer ไว้ใน section */
+.section footer,
+.closingCtaSection footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
