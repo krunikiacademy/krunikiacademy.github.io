@@ -174,3 +174,55 @@
 .page--shop-brainwaves .productCard{
   position: relative;
 }
+
+/* =========================================
+   Brainwaves: Product Grid (2x2) lock
+   - desktop: 2 columns
+   - tablet/phone: 1 column
+   - cards height balanced
+   ========================================= */
+
+.page--shop-brainwaves .productGrid.grid-2x2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* iPad / mobile */
+@media (max-width: 900px){
+  .page--shop-brainwaves .productGrid.grid-2x2{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Make each card a flex column so CTA sticks nicely */
+.page--shop-brainwaves .productGrid .productCard{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Keep list + text from pushing button off-screen unevenly */
+.page--shop-brainwaves .productGrid .productCard ul{
+  margin: 10px 0 12px;
+  padding-left: 18px;
+}
+
+.page--shop-brainwaves .productGrid .productCard .small{
+  margin-top: 6px;
+}
+
+/* Ensure CTA sits at bottom, consistent */
+.page--shop-brainwaves .productGrid .productCard .btn{
+  margin-top: auto;   /* key */
+  align-self: flex-start;
+}
+
+/* Optional: make primary button full width (ถ้า shop.html ใช้ full width ให้เปิดบรรทัดนี้) */
+/*
+.page--shop-brainwaves .productGrid .productCard .btn.primary{
+  width: 100%;
+  text-align: center;
+}
+*/
