@@ -579,3 +579,16 @@ footer .gold{
     min-height: 44px !important;          /* tap target */
   }
 }
+
+/* ================================
+   FOOTER COPYRIGHT CENTER FIX
+   ================================ */
+
+footer .copyright,
+footer .footerCopyright,
+footer .footer__copyright {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
