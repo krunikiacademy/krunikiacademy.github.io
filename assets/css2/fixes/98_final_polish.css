@@ -640,3 +640,37 @@ footer.siteFooter .container{
   justify-content: center;
   text-align: center;
 }
+
+/* =========================================
+   SHOP EBOOK: CTA -> FOOTER POSITION FIX
+   file: asset/css2/98_final_polish.css
+========================================= */
+
+/* A) ลดพื้นที่ท้าย CTA เพื่อไม่ให้ footer หล่นลงไป */
+body.page--shop-ebook .closingCtaSection{
+  padding-bottom: 16px !important;  /* ดัน footer ขึ้น */
+  margin-bottom: 0 !important;
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* กัน element สุดท้ายของ CTA สร้างช่องว่างล่าง */
+body.page--shop-ebook .closingCtaSection *:last-child{
+  margin-bottom: 0 !important;
+}
+
+/* B) บังคับ footer ให้อยู่ "กึ่งกลาง" และกระชับเหมือน shop.html */
+body.page--shop-ebook footer.siteFooter{
+  width: 100%;
+  margin: 10px 0 0 !important;     /* ดันขึ้นมาใกล้ CTA */
+  padding: 18px 16px !important;
+  display: flex;                   /* เห็นในรูปว่ามันเป็น flex อยู่แล้ว */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* กันกรณีมี container ใน footer (บางหน้าใช้) */
+body.page--shop-ebook footer.siteFooter > *{
+  margin: 0 !important;
+}
