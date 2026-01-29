@@ -955,3 +955,47 @@ assets/css2/fixes/98_final_polish.css (ถูกที่แล้ว 👍)
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.45);
 }
+
+/* ================================
+   HERO PRODUCT – DESKTOP FIX
+   ================================ */
+@media (min-width: 1100px){
+
+  /* ขยายสัดส่วนซ้าย-ขวา */
+  .heroGrid--compact{
+    grid-template-columns: 1.4fr 1.2fr; /* เดิม ~1.15 / 0.85 */
+    gap: 48px;
+  }
+
+  /* ฝั่งข้อความ → กินพื้นที่มากขึ้น */
+  .heroText--compact{
+    max-width: 760px;
+  }
+
+  .heroText--compact h1{
+    font-size: clamp(40px, 3.5vw, 56px);
+  }
+
+  .heroText--compact .lead{
+    font-size: 18px;
+    line-height: 1.65;
+    max-width: 680px;
+  }
+
+  /* ปุ่ม CTA ชิดซ้ายชัด */
+  .heroText--compact .ctaRow{
+    margin-top: 26px;
+    justify-content: flex-start;
+  }
+
+  /* ฝั่งรูป → ขยาย “แรง” */
+  .heroMedia--compact{
+    max-width: 680px;   /* เดิม ~520 */
+  }
+
+  .hero__img--compact{
+    width: 100%;
+    transform: scale(1.18); /* ขยายสายตา ~2+ feeling */
+    transform-origin: center right;
+  }
+}
