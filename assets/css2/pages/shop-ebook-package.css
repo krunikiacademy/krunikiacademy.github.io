@@ -872,3 +872,86 @@ assets/css2/fixes/98_final_polish.css (ถูกที่แล้ว 👍)
   box-sizing: border-box;
 }
 
+🔒 ล็อก layout HERO ซ้าย–ขวา
+
+.productHero .heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .productHero .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+🔒 ฝั่งซ้าย: ข้อความ + CTA
+
+.heroText {
+  max-width: 560px;
+}
+
+.heroText h1 {
+  margin-bottom: 16px;
+}
+
+.heroText .lead {
+  margin-bottom: 16px;
+}
+
+.heroText p {
+  margin-bottom: 20px;
+}
+
+🔒 CTA ให้อยู่ใต้ข้อความ และชัด
+
+.ctaRow--hero {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.ctaRow--hero .btn {
+  padding: 14px 28px;
+  font-size: 15px;
+  border-radius: 999px;
+}
+
+ปุ่มทอง (ถ้ายังไม่มี)
+
+.btnGold,
+.btn.primary {
+  background: linear-gradient(135deg, #f3d27a, #caa24a);
+  color: #111;
+  border: none;
+}
+
+.btnGold:hover {
+  filter: brightness(1.05);
+}
+
+🔒 ปุ่มรอง
+
+.btnGhost {
+  border: 1px solid rgba(255, 215, 140, 0.5);
+  color: #f5e6c8;
+  background: transparent;
+}
+
+.heroMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
