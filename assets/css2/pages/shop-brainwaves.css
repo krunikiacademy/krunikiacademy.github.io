@@ -51,3 +51,81 @@
 .heroCta{
   margin-top: 24px;
 }
+
+/* ================================
+   Hero text vertical offset
+   ================================ */
+
+.productHero--compact .heroText--compact{
+  padding-top: 32px; /* ปรับได้ 24–48px ตามใจ */
+}
+
+💡 เหตุผล
+	•	ไม่ดันทั้ง section
+	•	ไม่กระทบภาพด้านขวา
+	•	แก้ตรงจุดเฉพาะ text → kicker จะลอยหายใจได้
+
+ถ้าอยากให้ “รู้สึกหรูขึ้นอีกนิด”:
+
+.productHero--compact .goldline{
+  margin-bottom: 14px;
+}
+
+/* ================================
+   KRUNIKI Gold Coated CTA
+   ================================ */
+
+.btnGold{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 30px;
+  border-radius: 999px;
+
+  /* Gold coating */
+  background:
+    linear-gradient(
+      135deg,
+      #fff3c4 0%,
+      #f1d98a 22%,
+      #caa24d 50%,
+      #f6e3a1 72%,
+      #fff7d6 100%
+    );
+
+  color: #2f210c;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-decoration: none;
+
+  border: 1px solid rgba(202,162,77,.65);
+
+  box-shadow:
+    0 10px 28px rgba(202,162,77,.45),
+    inset 0 1px 1px rgba(255,255,255,.85),
+    inset 0 -1px 2px rgba(0,0,0,.12);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    filter .25s ease;
+}
+
+.btnGold:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+
+  box-shadow:
+    0 14px 36px rgba(202,162,77,.55),
+    inset 0 1px 1px rgba(255,255,255,.9),
+    inset 0 -1px 2px rgba(0,0,0,.18);
+}
+
+.btnGold:active{
+  transform: translateY(0);
+  box-shadow:
+    0 8px 20px rgba(202,162,77,.45),
+    inset 0 2px 4px rgba(0,0,0,.2);
+}
