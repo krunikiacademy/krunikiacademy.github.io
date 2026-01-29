@@ -315,3 +315,52 @@
   max-width: 52ch;
 }
 
+/* =========================================
+   Brainwaves: Closing CTA + Footer centering
+   ========================================= */
+
+.page--shop-brainwaves .closingCtaSection{
+  text-align: center;
+}
+
+/* กล่อง CTA ให้อยู่กลาง + ไม่ล้น */
+.page--shop-brainwaves .closingCtaSection .ctaBox{
+  margin: 0 auto;
+  max-width: 920px;
+}
+
+/* ปุ่มใน CTA ให้อยู่กลางเรียงสวย */
+.page--shop-brainwaves .closingCtaSection .ctaRow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* Footer: fix “ไปกองขวา” แบบเด็ดขาด */
+.page--shop-brainwaves .closingCtaSection footer{
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 28px;
+
+  /* กันกรณีโดน style อื่นบังคับ float/position */
+  float: none !important;
+  right: auto !important;
+  left: auto !important;
+}
+
+/* ถ้ามี style จากไฟล์อื่นทำให้ footer เป็น flex item แปลกๆ */
+.page--shop-brainwaves .closingCtaSection footer *{
+  text-align: inherit;
+}
+
+/* มือถือ: เพิ่มช่องไฟนิด */
+@media (max-width: 520px){
+  .page--shop-brainwaves .closingCtaSection .ctaRow .btn{
+    width: 100%;
+    text-align: center;
+  }
+}
