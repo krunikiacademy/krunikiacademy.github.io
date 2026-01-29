@@ -999,3 +999,43 @@ assets/css2/fixes/98_final_polish.css (ถูกที่แล้ว 👍)
     transform-origin: center right;
   }
 }
+
+/* =========================================================
+   shop-ebook-package ONLY (safe override)
+   ========================================================= */
+body.page--shop-ebook {
+  /* กัน layout เพี้ยนจาก flex/global */
+  min-height: 100vh;
+  display: block !important;
+}
+
+/* main ไม่ไปดัน footer หล่นยาวผิดปกติ */
+body.page--shop-ebook main.pageMain {
+  display: block;
+}
+
+/* Footer: ต้องอยู่ "ใต้ CTA" และ "ตรงกลาง" */
+body.page--shop-ebook footer,
+body.page--shop-ebook .siteFooter {
+  width: 100%;
+  max-width: 100%;
+  margin: 28px auto 0 !important;
+  padding: 18px 12px 28px;
+  text-align: center !important;
+
+  /* กันถูก flex ดันไปขวา/มี alignment แปลก */
+  display: block !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* ถ้า footer อยู่ใน section เดียวกับ CTA แล้วโดน flex/align */
+body.page--shop-ebook .closingCtaSection,
+body.page--shop-ebook .closingCtaSection .container {
+  display: block;
+}
+
+/* กันมี extra space แปลก ๆ ใต้สุด (ถ้ามี margin/padding จาก section) */
+body.page--shop-ebook .closingCtaSection {
+  padding-bottom: 0;
+}
