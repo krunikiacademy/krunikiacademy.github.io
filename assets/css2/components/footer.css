@@ -9,3 +9,16 @@
 .siteFooter .gold{
   color: var(--gold);
 }
+
+footer .footerBottom,
+footer .footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footerBottom > *,
+footer .footer-bottom > * {
+  margin-left: 0;
+  margin-right: 0;
+}
