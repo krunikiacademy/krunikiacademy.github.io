@@ -679,3 +679,25 @@
   box-shadow: 0 0 0 1px rgba(212,175,55,0.35),
               0 16px 40px rgba(0,0,0,0.55);
 }
+
+/* =================================================
+   PRODUCT CARD – Softer Gold Border (-1 Level)
+   KRUNIKI Locked Standard
+   ================================================= */
+
+#products .card.cardGold.productCard{
+  border: 1px solid rgba(212, 175, 55, 0.38) !important; /* softer than button */
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.58);
+  box-shadow:
+    0 0 0 1px rgba(212,175,55,0.10),
+    0 14px 34px rgba(0,0,0,0.45);
+}
+
+/* Hover: สุภาพ ไม่แย่งปุ่ม */
+#products .card.cardGold.productCard:hover{
+  border-color: rgba(212, 175, 55, 0.52) !important;
+  box-shadow:
+    0 0 0 1px rgba(212,175,55,0.18),
+    0 18px 42px rgba(0,0,0,0.55);
+}
