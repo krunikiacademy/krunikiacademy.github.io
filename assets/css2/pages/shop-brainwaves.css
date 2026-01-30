@@ -726,3 +726,44 @@
 #products .productCard p strong{
   color: var(--gold) !important;
 }
+
+/* =========================================
+   HOW TO USE : KRUNIKI WAY (2x2 GRID)
+   ========================================= */
+
+.section .cardGrid.grid-2x2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Mobile / Tablet */
+@media (max-width: 980px){
+  .section .cardGrid.grid-2x2{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* =========================================
+   HOW TO USE : Card Style (Soft Gold)
+   ========================================= */
+
+.section .cardGrid.grid-2x2 .card{
+  border: 1px solid rgba(214, 179, 106, 0.40); /* ทองอ่อน */
+  border-radius: 18px;
+  background: rgba(0,0,0,.30);
+  box-shadow: 0 10px 26px rgba(0,0,0,.22);
+  padding: 18px 18px 20px;
+}
+
+.section .cardGrid.grid-2x2 .card h3{
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.section .cardGrid.grid-2x2 .card p{
+  margin: 0;
+  line-height: 1.6;
+  opacity: .95;
+}
