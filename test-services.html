@@ -2,11 +2,21 @@
 <html lang="th">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KRUNIKI — Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KRUNIKI Academy — Services</title>
   <meta name="description" content="KRUNIKI — Services • Heart Awakening • Private Guidance • Programs" />
 
-  <!-- ✅ ใช้ชุด CSS เดียวกับ shop.html -->
+  <style>
+    :root{
+      --font-brand: "Times New Roman", Times, serif;
+      --font-head:  "Times New Roman", Times, serif;
+    }
+    /* กันฟิล์มดำค้าง (backdrop/menu) */
+    .menuBackdrop[hidden]{ display:none !important; }
+    .mobileMenu[hidden]{ display:none !important; }
+  </style>
+
+  <!-- 🔗 CSS เดิมของนิกี้ (ชุดเดียวกับ shop.html) -->
   <link rel="stylesheet" href="assets/css2/app.css">
   <link rel="stylesheet" href="assets/css2/core/02_base.css">
   <link rel="stylesheet" href="assets/hamburger.css">
@@ -14,137 +24,108 @@
   <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css">
   <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
 
+  <!-- ✅ ใช้ shop.css เพื่อให้ได้ 2x2 + kickerทอง + ปุ่มทองเหมือน shop -->
+  <link rel="stylesheet" href="assets/css2/pages/shop.css">
+
   <script src="assets/main.js" defer></script>
-
-  <!-- ✅ Hotfix เฉพาะหน้า: ขอบทองการ์ด/ปุ่ม + กัน overlay ดำ -->
-  <style>
-    /* กันฟิล์มดำ/overlay ที่หลุดมาจากหน้าอื่น */
-    body::before, body::after { content: none !important; }
-
-    /* Hero banner โทนเดียวกับ shop */
-    .heroBanner{
-      border:1px solid rgba(212,175,55,.55);
-      border-radius:18px;
-      overflow:hidden;
-      background: linear-gradient(180deg, rgba(212,175,55,.10), rgba(255,255,255,.02));
-    }
-    .heroBanner .bannerMedia{
-      min-height:240px;
-      background:
-        radial-gradient(circle at 20% 30%, rgba(212,175,55,.20), transparent 55%),
-        radial-gradient(circle at 80% 40%, rgba(255,255,255,.10), transparent 60%),
-        linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.35));
-    }
-    .heroBanner .bannerInner{ padding:18px 18px; }
-    @media (min-width: 900px){
-      .heroBanner{ display:grid; grid-template-columns:1.25fr .75fr; }
-      .heroBanner .bannerInner{ padding:26px 26px; }
-      .heroBanner .bannerMedia{ min-height:320px; }
-    }
-
-    /* ✅ ขอบทองการ์ด (ให้เหมือน shop) */
-    .goldCard{
-      border:1px solid rgba(212,175,55,.55) !important;
-      border-radius:18px;
-      background: rgba(0,0,0,.18);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
-    }
-
-    /* ✅ ปุ่มขอบทอง */
-    .btn.goldOutline{ border:1px solid rgba(212,175,55,.85) !important; }
-    .btn.goldOutline:hover{ filter: brightness(1.06); transform: translateY(-1px); }
-
-    /* การ์ดลิงก์ให้ดูคลิกได้ */
-    .cardLink{ text-decoration:none; color:inherit; display:block; }
-    .cardBtn{
-      display:inline-block;
-      margin-top:12px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(212,175,55,.85);
-      opacity:.95;
-    }
-
-    /* กันรูปการ์ดหลุด */
-    .cardImg{
-      width:100%;
-      height:auto;
-      display:block;
-      border-top-left-radius:18px;
-      border-top-right-radius:18px;
-    }
-  </style>
 </head>
 
-<body>
+<body class="page--services servicesPage">
 
-  <!-- ✅ HEADER (โครงเดียวกับ shop.html) -->
+  <!-- HEADER (ยกมาจาก shop.html ล่าสุด) -->
   <header class="siteHeader">
     <div class="navInner">
 
-      <!-- Brand -->
-      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
-        <span class="dot" aria-hidden="true"></span>
-        <span class="brandText">KRUNIKI</span>
-      </a>
+      <!-- Brand + Social (LEFT) -->
+      <div class="brandBlock">
+        <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="brandText">KRUNIKI</span>
+        </a>
 
-      <!-- Desktop Nav -->
+        <!-- Social row under brand -->
+        <div class="topbar">
+          <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+            <!-- LINE OA -->
+            <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+              </svg>
+            </a>
+
+            <!-- LINE SHOP -->
+            <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+                <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+                <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+              </svg>
+            </a>
+
+            <!-- FACEBOOK -->
+            <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+              </svg>
+            </a>
+
+            <!-- YOUTUBE -->
+            <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+              </svg>
+            </a>
+
+            <!-- TIKTOK -->
+            <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+              </svg>
+            </a>
+
+            <!-- INSTAGRAM -->
+            <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+                <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+                <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div><!-- /brandBlock -->
+
+      <!-- Desktop Menu (CENTER) -->
       <nav class="navLinks" aria-label="Primary navigation">
+        <a href="shop.html">ร้านค้า</a>
         <a href="index.html">หน้าแรก</a>
         <a href="about.html">เกี่ยวกับ</a>
-        <a href="service.html" aria-current="page">บริการ</a>
+        <a href="services.html" aria-current="page">บริการ</a>
         <a href="resources.html">คลังความรู้</a>
         <a href="contact.html">ติดต่อ</a>
       </nav>
 
-      <!-- Social (แบบของนิกี้) -->
-      <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
-        <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3z"/>
+      <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+      <div class="krActions">
+        <button class="krHam" id="krHam" type="button"
+          aria-label="เปิดเมนู"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
           </svg>
-        </a>
-
-        <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
-          </svg>
-        </a>
-
-        <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
-          </svg>
-        </a>
-
-        <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
-          </svg>
-        </a>
-
-        <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
-            <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
-            <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
-          </svg>
-        </a>
+        </button>
       </div>
 
-      <!-- Mobile Hamburger -->
-      <button class="hamburger" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    </div><!-- /.navInner -->
 
-    </div>
+    <div id="menuBackdrop" class="menuBackdrop" hidden></div>
 
-    <!-- Mobile Menu -->
-    <nav id="mobileMenu" class="mobileMenu" aria-label="Mobile navigation">
+    <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+      <a href="shop.html">ร้านค้า</a>
       <a href="index.html">หน้าแรก</a>
       <a href="about.html">เกี่ยวกับ</a>
-      <a href="service.html" aria-current="page">บริการ</a>
+      <a href="services.html" aria-current="page">บริการ</a>
       <a href="resources.html">คลังความรู้</a>
       <a href="contact.html">ติดต่อ</a>
     </nav>
@@ -152,132 +133,144 @@
 
   <main class="pageMain">
 
-    <!-- ✅ HERO / BANNER แบบ shop.html -->
-    <section class="panel hero">
-      <div class="container">
-        <div class="heroBanner">
+    <!-- Hero (ล็อกตามที่คุณให้) -->
+    <section class="panel">
+      <section class="services-hero" style="text-align:center;">
+        <h1 class="servicesHeroTitle">
+          <span class="goldMain">KRUNIKI Healing System™</span><br>
+          <span class="goldSub">ภายใต้ KRUNIKI SoulSync System™</span>
+        </h1>
 
-          <div class="bannerInner">
-            <div class="goldline">Connect gently • บริการ <strong>KRUNIKI</strong></div>
+        <p class="heroQuote">
+          ระบบเยียวยาหัวใจที่ไม่เร่ง ไม่ฝืน และพาคุณกลับสู่ความมั่นคงจากภายใน
+        </p>
 
-            <h1>
-              <span class="goldMain">KRUNIKI Healing System™</span><br>
-              <span class="goldSub">ภายใต้ KRUNIKI SoulSync System™</span>
-            </h1>
-
-            <p class="lead">
-              ระบบเยียวยาหัวใจที่ไม่เร่ง ไม่ฝืน และพาคุณกลับสู่ความมั่นคงจากภายใน
-            </p>
-
-            <p class="small" style="opacity:.9; margin-top:10px;">
-              เส้นทางฟื้นคืนพลังรักแท้จากภายใน<br>
-              ผ่านการรับฟัง การฝึก และการบูรณาการอย่างเป็นระบบ<br>
-              โดยไม่เร่ง ไม่ตัดสิน และไม่บังคับให้คุณ “ต้องดีขึ้น”
-            </p>
-
-            <blockquote class="small" style="margin-top:12px; opacity:.85;">
-              “ฉันไม่ซ่อมคุณ — ฉันพาคุณกลับมารู้จักตัวเองอีกครั้ง”
-            </blockquote>
-
-            <div class="ctaRow" style="margin-top:14px;">
-              <a class="btn primary" href="certification.html">ดูรายละเอียดระบบ KRUNIKI Healing System™</a>
-              <a class="btn goldOutline" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">เริ่มคุยกับครูนิกี้ (LINE)</a>
-            </div>
-          </div>
-
-          <div class="bannerMedia" aria-hidden="true"></div>
+        <div class="heroActions">
+          <a class="btn primary" href="certification.html">
+            ดูรายละเอียดระบบ KRUNIKI Healing System™
+          </a>
         </div>
-      </div>
+
+        <p class="services-sub">
+          เส้นทางฟื้นคืนพลังรักแท้จากภายใน<br>
+          ผ่านการรับฟัง การฝึก และการบูรณาการอย่างเป็นระบบ<br>
+          โดยไม่เร่ง ไม่ตัดสิน และไม่บังคับให้คุณ “ต้องดีขึ้น”
+        </p>
+
+        <blockquote class="services-signature">
+          “ฉันไม่ซ่อมคุณ — ฉันพาคุณกลับมารู้จักตัวเองอีกครั้ง”
+        </blockquote>
+
+        <div class="ctaRow" style="justify-content:center; margin-top:18px;">
+          <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">เริ่มคุยกับครูนิกี้ (LINE)</a>
+          <a class="btn" href="index.html#contact">นัดหมาย</a>
+        </div>
+      </section>
     </section>
 
-    <!-- ✅ Services list -->
-    <section class="panel" style="margin-top:16px;">
+    <!-- Banner (ชื่อไฟล์ให้เซฟตามนี้) -->
+    <div class="container hero__bannerWrap">
+      <img
+        class="hero__banner"
+        src="assets/images/banners/services-banner.webp"
+        alt="KRUNIKI — Services"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Cards 2x2 (สไตล์เดียวกับ shop.html) -->
+    <section id="services-cards" class="panel recommended">
       <div class="container">
 
-        <div class="resHead">
-          <h2>3 บริการหลัก (เลือกให้ตรงหัวใจตอนนี้)</h2>
-          <div class="resTag">Start • Continue • Deepen</div>
-        </div>
+        <header class="sectionHead">
+          <div class="goldline">บริการ • Services</div>
+          <h2 class="sectionTitle">3 บริการหลัก (เลือกให้ตรงหัวใจตอนนี้)</h2>
+          <p class="sectionLead">Start • Continue • Deepen</p>
+        </header>
 
-        <div class="grid2" style="margin-top:14px;">
+        <div class="productGrid">
 
-          <!-- 1) 20 Min -->
-          <a class="cardLink goldCard" href="service-20min.html"
-             aria-label="เปิดรายละเอียดบริการ: KRUNIKI Heart Awakening — การปลุกหัวใจ 20 นาที">
-            <img class="cardImg" src="card-heart.webp" alt="KRUNIKI Heart Awakening — ปลุกหัวใจ 20 นาที" loading="lazy">
-            <div class="cardBody">
-              <div class="kicker">1) 20-Minute Session • Nervous System Reset</div>
-              <h3>KRUNIKI Heart Awakening — ปลุกหัวใจ 20 นาที</h3>
-              <p>
-                เซสชันสั้นแบบมีโครงสร้าง เพื่อช่วยให้คุณ
-                <strong>กลับสู่ baseline ของระบบประสาท</strong>
+          <!-- 1) 20-Minute Session -->
+          <article class="pCard">
+            <img class="pImg" src="card-heart.webp" alt="KRUNIKI Heart Awakening — ปลุกหัวใจ 20 นาที" loading="lazy">
+            <div class="pBody">
+              <p class="pKicker">1) 20-Minute Session • Nervous System Reset</p>
+              <h3 class="pTitle">KRUNIKI Heart Awakening — ปลุกหัวใจ 20 นาที</h3>
+              <p class="pDesc">
+                เซสชันสั้นแบบมีโครงสร้าง เพื่อช่วยให้คุณ <strong>กลับสู่ baseline ของระบบประสาท</strong>
                 และมีพื้นที่ของหัวใจได้หายใจ โดยไม่เร่ง ไม่ฝืน
               </p>
-              <p class="small" style="opacity:.85;">
-                หลังจบ 20 นาที คนมักสังเกตได้ว่า “ใจนิ่งขึ้นเล็กน้อย” • “หายใจเต็มขึ้น” • “คิดชัดขึ้นหนึ่งระดับ”
+              <p class="pDesc">
+                เราใช้หลัก <strong>self-regulation</strong> (สติ • ความนิ่ง • ลมหายใจ)
+                เพื่อช่วยให้ความตึงค่อย ๆ คลาย และพยุงระบบประสาทให้กลับสู่ความสงบ ในแบบที่เป็นไปได้จริง
               </p>
-              <span class="cardBtn">อ่านรายละเอียด</span>
+              <p class="pQuote">
+                หลังจบ 20 นาที คนมักสังเกตได้ว่า “ใจนิ่งขึ้นเล็กน้อย” • “หายใจได้เต็มขึ้น” • “คิดชัดขึ้นหนึ่งระดับ”
+                <span style="opacity:.7;"><br>(ผลลัพธ์อาจต่างกันในแต่ละคน แต่เราจะไม่เร่ง และเคารพจังหวะของคุณเสมอ)</span>
+              </p>
+              <a class="btn btnSoftGold pBtn" href="service-20min.html">อ่านรายละเอียด</a>
             </div>
-          </a>
+          </article>
 
-          <!-- 2) Private -->
-          <a class="cardLink goldCard" href="service-private.html" aria-label="KRUNIKI Private Guidance">
-            <img class="cardImg" src="card-guidance.webp" alt="KRUNIKI Private Guidance — การดูแลต่อเนื่องแบบส่วนตัว" loading="lazy">
-            <div class="cardBody">
-              <div class="kicker">2) Private Guidance</div>
-              <h3>KRUNIKI Private Guidance — การดูแลต่อเนื่องแบบส่วนตัว</h3>
-              <p>
-                การดูแลต่อเนื่องแบบส่วนตัว สำหรับคนที่อยาก “จัดระบบชีวิต–หัวใจ”
-                ให้ค่อย ๆ มั่นคงขึ้นอย่างเป็นลำดับ<br>
-                โครงสร้างชัด แต่ยังคงความอ่อนโยน และเคารพจังหวะของคุณเสมอ
+          <!-- 2) Private Guidance -->
+          <article class="pCard">
+            <img class="pImg" src="card-guidance.webp" alt="KRUNIKI Private Guidance — การดูแลต่อเนื่องแบบส่วนตัว" loading="lazy">
+            <div class="pBody">
+              <p class="pKicker">2) Private Guidance</p>
+              <h3 class="pTitle">KRUNIKI Private Guidance — การดูแลต่อเนื่องแบบส่วนตัว</h3>
+              <p class="pDesc">
+                การดูแลต่อเนื่องแบบส่วนตัว สำหรับคนที่อยาก “จัดระบบชีวิต–หัวใจ” ให้ค่อย ๆ มั่นคงขึ้นอย่างเป็นลำดับ
+                เราทำงานแบบมีโครงสร้าง แต่ยังคงความอ่อนโยน:
+                <strong>สำรวจจังหวะและ baseline</strong> → วางแผนการฝึกที่ทำได้จริง → ติดตามผลและปรับให้เข้ากับชีวิตประจำวัน
               </p>
-              <span class="cardBtn">อ่านรายละเอียด</span>
+              <p class="pDesc">
+                เหมาะกับผู้ที่ต้องการความต่อเนื่องระยะยาว โดยยืนบน <strong>self-regulation</strong>
+                (สติ • ความนิ่ง • ลมหายใจ) และขอบเขตที่ปลอดภัย
+              </p>
+              <p class="pQuote">
+                สิ่งที่คนมักสังเกตได้เมื่อทำต่อเนื่อง: “กลับมารู้ตัวได้เร็วขึ้น” • “อารมณ์นิ่งขึ้นทีละน้อย” • “ตัดสินใจชัดขึ้น”
+              </p>
+              <a class="btn btnSoftGold pBtn" href="service-private.html">อ่านรายละเอียด</a>
             </div>
-          </a>
+          </article>
 
           <!-- 3) Programs -->
-          <a class="cardLink goldCard" href="service-programs.html" aria-label="Programs ภายใต้ KRUNIKI SoulSync System">
-            <img class="cardImg" src="card-system.webp" alt="Programs — เส้นทางเรียนรู้และ Self-Healing" loading="lazy">
-            <div class="cardBody">
-              <div class="kicker">3) Programs</div>
-              <h3>Programs — เส้นทางเรียนรู้ &amp; Self-Healing</h3>
-              <p>
-                เส้นทางหลักของ KRUNIKI สำหรับคนที่อยากเปลี่ยนแปลงแบบ “ค่อย ๆ ลึกขึ้น”
-                และอยู่ได้จริงในชีวิตประจำวัน (ไม่ใช่ดีขึ้นชั่วคราวแล้วหายไป)
+          <article class="pCard">
+            <img class="pImg" src="card-system.webp" alt="Programs — เส้นทางเรียนรู้และ Self-Healing" loading="lazy">
+            <div class="pBody">
+              <p class="pKicker">3) Programs</p>
+              <h3 class="pTitle">Programs — เส้นทางเรียนรู้ &amp; Self-Healing</h3>
+              <p class="pDesc">
+                <strong>เส้นทางหลัก (Main Path)</strong> ของ KRUNIKI สำหรับคนที่อยากเปลี่ยนแปลงแบบ “ค่อย ๆ ลึกขึ้น” และอยู่ได้จริง
+                Programs ถูกออกแบบเป็น <strong>Learning &amp; Practice</strong> ที่ไล่ระดับตามลำดับ
+                เพื่อให้ความนิ่งและความชัด “อยู่กับคุณ” ในชีวิตประจำวัน (ไม่ใช่แค่ดีขึ้นชั่วคราวแล้วหายไป)
               </p>
-              <span class="cardBtn">อ่านรายละเอียด</span>
+              <p class="pDesc">
+                เหมาะกับผู้ที่พร้อมฝึกต่อเนื่อง และอยากมีกรอบที่ <strong>ชัด ทำตามได้ และทำซ้ำได้</strong>
+              </p>
+              <p class="pQuote">
+                คนที่เหมาะกับเส้นทางนี้มักกำลังมองหา: “ระบบที่ไม่ลอย” • “ความต่อเนื่อง” • “ความมั่นคงภายในที่ทำซ้ำได้”
+              </p>
+              <a class="btn btnSoftGold pBtn" href="service-programs.html">อ่านรายละเอียด</a>
             </div>
-          </a>
+          </article>
 
-          <!-- Bonus -->
-          <a class="cardLink goldCard" href="service-tools.html" aria-label="Tools & Practices">
-            <img class="cardImg" src="card-learning.webp" alt="Tools & Practices — เครื่องมือดูแลหัวใจ" loading="lazy">
-            <div class="cardBody">
-              <div class="kicker">Bonus</div>
-              <h3>Tools &amp; Practices — เครื่องมือดูแลหัวใจ</h3>
-              <p>สำหรับคนที่อยากฝึกเองที่บ้าน: ชุดฝึกเบา-ลึก-ต่อเนื่อง เพื่อช่วยพยุงความนิ่งและความมั่นคงภายใน</p>
-              <span class="cardBtn">อ่านรายละเอียด</span>
+          <!-- 4) Tools & Practices (Bonus) -->
+          <article class="pCard pCard--lite">
+            <img class="pImg" src="card-learning.webp" alt="Tools & Practices — เครื่องมือดูแลหัวใจ" loading="lazy">
+            <div class="pBody">
+              <p class="pKicker">Bonus</p>
+              <h3 class="pTitle">Tools &amp; Practices — เครื่องมือดูแลหัวใจ</h3>
+              <p class="pDesc">
+                สำหรับคนที่อยากฝึกเองที่บ้าน: ชุดฝึกเบา-ลึก-ต่อเนื่อง
+                เพื่อช่วยพยุงความนิ่ง และความมั่นคงภายในในจังหวะของคุณ
+              </p>
+              <a class="btn btnSoftGold pBtn" href="service-tools.html">อ่านรายละเอียด</a>
             </div>
-          </a>
+          </article>
 
-        </div>
-      </div>
-    </section>
+        </div><!-- /productGrid -->
 
-    <!-- Bottom CTA -->
-    <section class="panel">
-      <div class="container">
-        <div class="goldCard" style="padding:18px;">
-          <div class="kicker">Ready when you are</div>
-          <h2 style="margin:8px 0 10px;">ถ้าคุณรู้สึกว่า “อยากเริ่ม” — เริ่มจากก้าวที่เบาและปลอดภัยได้เลย</h2>
-          <p class="small" style="opacity:.85;">
-            คุณไม่ต้องพร้อมทุกอย่างในวันนี้ แค่เริ่มคุยก่อนก็พอ — แล้วเราค่อยเลือกบริการที่เหมาะกับหัวใจของคุณ
-          </p>
-          <div class="ctaRow" style="margin-top:12px;">
-            <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">เริ่มคุยใน LINE</a>
-            <a class="btn goldOutline" href="contact.html">นัดหมาย / Contact</a>
-          </div>
-        </div>
       </div>
     </section>
 
