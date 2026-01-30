@@ -674,3 +674,45 @@ body.page--shop-ebook footer.siteFooter{
 body.page--shop-ebook footer.siteFooter > *{
   margin: 0 !important;
 }
+
+/* ===== FIX hamburger for .siteHeader (iPhone SE/6S/iPad) ===== */
+
+.siteHeader{
+  position: relative;
+  min-height: 56px;
+  padding-right: 64px; /* กันโลโก้/ข้อความดันปุ่มไปชนขอบ */
+  z-index: 20;
+}
+
+/* ปรับตาม class ปุ่มจริงของนิกี้: ถ้าปุ่มใช้ .hamburger อยู่แล้ว โค้ดนี้จะติดทันที */
+.siteHeader .hamburger{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  right: calc(12px + env(safe-area-inset-right, 0px));
+  z-index: 9999;
+
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+
+  background: transparent;
+  border: 0;
+  padding: 0;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  pointer-events: auto;
+}
+
+/* iPhone SE: ดันเข้ามาอีกนิด ไม่ให้ชนขอบ + กันทับ */
+@media (max-width: 360px){
+  .siteHeader{ padding-right: 56px; }
+  .siteHeader .hamburger{
+    top: 8px;
+    right: 10px;
+    right: calc(10px + env(safe-area-inset-right, 0px));
+  }
+}
