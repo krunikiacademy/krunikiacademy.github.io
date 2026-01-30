@@ -536,3 +536,71 @@
 .page--shop-brainwaves .productCard .btn{
   margin-top: 12px;
 }
+
+/* =================================================
+   HERO GOLD CARD (Brainwaves)
+   ================================================= */
+
+.page--shop-brainwaves .heroGoldCard{
+  border: 1px solid rgba(214, 179, 106, 0.45); /* ทองอ่อน */
+  border-radius: 22px;
+  padding: 32px 34px;
+  background: rgba(0,0,0,0.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+}
+
+@media (max-width: 900px){
+  .page--shop-brainwaves .heroGoldCard{
+    padding: 26px 22px;
+  }
+}
+
+/* =================================================
+   CTA ROW
+   ================================================= */
+
+.page--shop-brainwaves .heroCtaRow{
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Primary button: Gold */
+.page--shop-brainwaves .btnGold{
+  background: linear-gradient(135deg, #e7c77a, #caa85e);
+  color: #1b1b1b;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(214,179,106,.35);
+}
+
+.page--shop-brainwaves .btnGold:hover{
+  filter: brightness(1.05);
+}
+
+/* Secondary button: Black standard (locked style) */
+.page--shop-brainwaves .btnBlack{
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.page--shop-brainwaves .btnBlack:hover{
+  background: #111;
+  border-color: #111;
+}
+
+/* =================================================
+   IMAGE SAFETY: do not shrink
+   ================================================= */
+
+.page--shop-brainwaves .heroMedia .hero__img{
+  max-width: none; /* ยืนยันว่าไม่บีบ/ไม่ลด */
+}
