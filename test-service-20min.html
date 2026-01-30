@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KRUNIKI • Heart Awakening 20 Minutes</title>
+  <meta name="description" content="KRUNIKI Heart Awakening — การปลุกหัวใจ 20 นาที • Session แบบอ่อนโยน ชัดเจน และเป็นลำดับ" />
+
+  <style>
+    :root{
+      --font-brand: "Times New Roman", Times, serif;
+      --font-head:  "Times New Roman", Times, serif;
+    }
+  </style>
+
+  <!-- 🔗 CSS เดิม (ชุดเดียวกับ shop.html) -->
+  <link rel="stylesheet" href="assets/css2/app.css">
+  <link rel="stylesheet" href="assets/css2/core/02_base.css">
+  <link rel="stylesheet" href="assets/hamburger.css">
+  <link rel="stylesheet" href="assets/css2/pages/index2.css">
+  <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css">
+  <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
+
+  <!-- ใช้ shop.css ได้เพราะเราก็อปโครงเดียวกัน (คุมหน้าตาให้เหมือน) -->
+  <link rel="stylesheet" href="assets/css2/pages/shop.css">
+
+  <!-- ✅ เพิ่ม CSS เฉพาะหน้า service-20min -->
+  <style>
+    /* ใช้กริดแบบเดียวกับ recommended product แต่ให้เป็น 2x2 ชัดๆ */
+    .serviceGrid{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    @media (max-width: 780px){
+      .serviceGrid{ grid-template-columns: 1fr; }
+    }
+
+    /* kicker บนหัวการ์ด */
+    .sKicker{
+      margin: 0 0 6px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .85;
+    }
+
+    /* กัน “ฟิล์มดำคลุม” แบบ failsafe:
+       ถ้า backdrop ถูกปล่อยค้างไว้จาก JS/คลิกหลุด ให้ซ่อนตอนโหลดหน้า */
+    #menuBackdrop[hidden]{ display:none !important; }
+    body:not(.menuOpen) #menuBackdrop{ display:none !important; }
+  </style>
+
+  <script src="assets/main.js" defer></script>
+</head>
+
+<body class="page--shop shopPage">
+
+  <!-- HEADER (ก็อปจาก shop.html ทั้งชุด) -->
+  <header class="siteHeader">
+    <div class="navInner">
+
+      <!-- Brand + Social (LEFT) -->
+      <div class="brandBlock">
+        <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="brandText">KRUNIKI</span>
+        </a>
+
+        <!-- Social row under brand -->
+        <div class="topbar">
+          <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+
+            <!-- LINE OA -->
+            <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+              </svg>
+            </a>
+
+            <!-- LINE SHOP -->
+            <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+                <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+                <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+              </svg>
+            </a>
+
+            <!-- FACEBOOK -->
+            <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+              </svg>
+            </a>
+
+            <!-- YOUTUBE -->
+            <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+              </svg>
+            </a>
+
+            <!-- TIKTOK -->
+            <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+              </svg>
+            </a>
+
+            <!-- INSTAGRAM -->
+            <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+                <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+                <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+      </div><!-- /brandBlock -->
+
+      <!-- Desktop Menu (CENTER) -->
+      <nav class="navLinks" aria-label="Primary navigation">
+        <a href="shop.html">ร้านค้า</a>
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">เกี่ยวกับ</a>
+        <a href="services.html" aria-current="page">บริการ</a>
+        <a href="resources.html">คลังความรู้</a>
+        <a href="contact.html">ติดต่อ</a>
+      </nav>
+
+      <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+      <div class="krActions">
+        <button class="krHam" id="krHam" type="button"
+          aria-label="เปิดเมนู"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div><!-- /navInner -->
+
+    <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+    <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
+      <a href="about.html">เกี่ยวกับ</a>
+      <a href="services.html" aria-current="page">บริการ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+  </header>
+
+
+  <main class="pageMain shopPage">
+
+    <!-- HERO (โครงเหมือน shop.html แต่เปลี่ยนเนื้อหา) -->
+    <section class="panel hero">
+      <div class="container">
+        <div class="heroGrid">
+
+          <!-- LEFT -->
+          <div class="heroText">
+            <div class="goldline">Service • รายละเอียดบริการ <strong>KRUNIKI</strong></div>
+            <h1>Heart Awakening 20 Minutes — การปลุกหัวใจ 20 นาที</h1>
+
+            <p class="lead">
+              Session สั้นที่ “ชัดและตรง” สำหรับวันที่อยากกลับมารับรู้ตัวเองอีกครั้ง
+              ด้วยสติ ความนิ่ง และการใช้ลมหายใจเป็นแกนหลักในการกลับมารับรู้และปรับสมดุล
+              แบบเป็นลำดับที่ทำได้จริง
+            </p>
+
+            <div class="ctaRow">
+              <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">จอง / ติดต่อผ่าน LINE</a>
+              <a class="btn" href="#details">ดูรายละเอียด</a>
+            </div>
+          </div>
+
+          <!-- RIGHT (CARD) -->
+          <aside class="hero__card" aria-label="Service Snapshot">
+            <p class="hero__cardTitle">Session Snapshot</p>
+            <div class="hero__cardBody">
+              <p>
+                เหมาะสำหรับคนที่อยาก “กลับมานิ่งและชัด” ภายในเวลาสั้น ๆ
+                โดยมีโครงสร้างนำทางที่ปลอดภัย ไม่เร่ง และไม่กดดัน
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Duration:</strong> 20 minutes<br/>
+                <strong>Format:</strong> Online (ตามที่นัดหมาย)
+              </p>
+            </div>
+          </aside>
+
+        </div><!-- /heroGrid -->
+      </div>
+    </section>
+
+    <!-- BANNER (ถ้ามีไฟล์ภาพบริการค่อยเปลี่ยน) -->
+    <div class="container hero__bannerWrap">
+      <img
+        class="hero__banner"
+        src="assets/images/banners/shop-banner.webp"
+        alt="KRUNIKI — Heart Awakening 20 Minutes"
+        loading="lazy"
+      />
+    </div>
+
+
+    <!-- 2x2 CARDS (ตามที่นิกี้ต้องการ: ข้อความแบบ 2x2 + kicker บนหัวการ์ด) -->
+    <section id="details" class="panel recommended">
+      <div class="container">
+
+        <header class="sectionHead">
+          <div class="goldline">✨ What this service holds • ภาพรวมบริการ</div>
+          <h2 class="sectionTitle">รายละเอียดแบบชัด ๆ (2x2)</h2>
+          <p class="sectionLead">
+            อ่านง่าย ตัดสินใจง่าย — เขียน “พอให้ตัดสินใจได้” โดยไม่เปิดเผยขั้นตอนภายในลึกเกินไป
+          </p>
+        </header>
+
+        <div class="serviceGrid">
+
+          <!-- Card 1 -->
+          <article class="pCard">
+            <div class="pBody">
+              <p class="sKicker">KICKER • Who it’s for</p>
+              <h3 class="pTitle">เหมาะกับใคร</h3>
+              <p class="pDesc">
+                สำหรับคนที่อยากกลับมานิ่งและชัดขึ้นในช่วงเวลาสั้น ๆ
+                เพื่อ “ตั้งหลัก” กับความรู้สึก และกลับมารับรู้ศูนย์กลางภายใน
+              </p>
+              <ul class="list" style="margin-top:10px;">
+                <li>ใจแน่น วุ่นวาย เหนื่อยล้าทางอารมณ์</li>
+                <li>อยากมีพื้นที่สั้น ๆ เพื่อจัดระเบียบหัวใจ</li>
+                <li>อยากเริ่มแบบยืนพื้น ไม่ซับซ้อน</li>
+                <li>อยากได้โครงสร้างนำทางที่ปลอดภัย</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="pCard">
+            <div class="pBody">
+              <p class="sKicker">KICKER • Safety first</p>
+              <h3 class="pTitle">ยังไม่เหมาะในตอนนี้</h3>
+              <p class="pDesc">
+                เพื่อความปลอดภัยของคุณ — ถ้าอยู่ในภาวะฉุกเฉินหรือจำเป็นต้องได้รับการดูแลทางการแพทย์
+                แนะนำให้รับความช่วยเหลือจากผู้เชี่ยวชาญก่อน
+              </p>
+              <ul class="list" style="margin-top:10px;">
+                <li>ภาวะฉุกเฉินด้านสุขภาพกาย/จิต</li>
+                <li>ต้องการการวินิจฉัย/รักษาทางการแพทย์โดยตรง</li>
+                <li>ไม่สะดวกอยู่ในพื้นที่ส่วนตัวระหว่างรับบริการ</li>
+                <li>ต้องการคำตอบสำเร็จรูปมากกว่าการรับรู้ภายใน</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="pCard">
+            <div class="pBody">
+              <p class="sKicker">KICKER • Gentle flow</p>
+              <h3 class="pTitle">โครงสร้าง 20 นาที (แบบปลอดภัย)</h3>
+              <p class="pDesc">
+                เราบอก “ทิศทางการทำงาน” ให้เห็นภาพรวม โดยไม่ลงรายละเอียดเชิงเทคนิคบนหน้าเว็บ
+              </p>
+              <ul class="list" style="margin-top:10px;">
+                <li>ตั้งหลักและกลับมารับรู้</li>
+                <li>ฟังหัวใจอย่างตรงไปตรงมา</li>
+                <li>กลับสู่ความนิ่งและปรับสมดุล</li>
+                <li>สรุปสิ่งที่ “พากลับไปใช้ได้จริง”</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="pCard">
+            <div class="pBody">
+              <p class="sKicker">KICKER • What you take back</p>
+              <h3 class="pTitle">สิ่งที่คุณจะได้กลับไป</h3>
+              <p class="pDesc">
+                เป้าหมายไม่ใช่ “เปลี่ยนทันที” แต่คือได้กลับมารู้สึกว่า
+                <strong>ฉันกลับมาหาตัวเองได้</strong> อย่างพอดี
+              </p>
+              <ul class="list" style="margin-top:10px;">
+                <li>ความนิ่งและความชัดที่มากขึ้น</li>
+                <li>จุดยึดกลับมารับรู้ศูนย์กลางภายในได้ง่ายขึ้น</li>
+                <li>แนวทางดูแลตัวเองแบบยืนพื้น ทำต่อได้</li>
+                <li>ความเบาใจแบบไม่ฝืน ไม่เร่ง</li>
+              </ul>
+
+              <div class="ctaRow" style="margin-top:12px;">
+                <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">จอง / ติดต่อ</a>
+                <a class="btn" href="services.html">กลับหน้า Services</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /serviceGrid -->
+
+      </div>
+    </section>
+
+
+    <!-- CLOSING CTA (โครงเดียวกับ shop.html) -->
+    <section class="panel closingCtaSection" aria-label="Closing Call to Action">
+      <div class="container">
+        <div class="card cardGold">
+          <div class="cardInner">
+            <div class="closingCta">
+              <div class="goldline">Connect gently • เริ่มต้นอย่างอ่อนโยน</div>
+              <h2 class="sectionTitle">พร้อมเริ่ม “ปลุกหัวใจ” แล้วใช่ไหม</h2>
+              <p class="sectionLead">
+                ส่งข้อความคำว่า: <strong>“ปลุกหัวใจ 20 นาที”</strong> แล้วนิกี้จะดูแลการนัดหมายให้แบบเป็นส่วนตัว
+              </p>
+              <div class="ctaRow">
+                <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">เปิด LINE OA</a>
+                <a class="btn" href="index.html">กลับหน้าแรก</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ FOOTER (ย้ายออกจาก section/panel ให้ถูกชั้น ป้องกัน layout เพี้ยน) -->
+    <footer>
+      © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+    </footer>
+
+  </main>
+
+  <!-- ✅ กันฟิล์มดำ: ถ้า backdrop หลุดค้าง ให้บังคับปิดตอนโหลดหน้า -->
+  <script>
+    (function(){
+      const bd = document.getElementById('menuBackdrop');
+      const mm = document.getElementById('mobileMenu');
+      const ham = document.getElementById('krHam');
+      if (bd) bd.hidden = true;
+      if (mm) mm.hidden = true;
+      if (ham) ham.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menuOpen');
+    })();
+  </script>
+
+</body>
+</html>
