@@ -857,3 +857,56 @@ footer,
 .footer{
   text-align: center;
 }
+
+/* =========================================
+   iPad ONLY — Typography boost (Body text)
+   Page: shop-brainwaves
+   ========================================= */
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+  /* Scope เฉพาะหน้า */
+  .page--shop-brainwaves{
+
+    /* ---------- เนื้อหาทั่วไป ---------- */
+    font-size: 17px;           /* base body size (iPad standard) */
+    line-height: 1.7;
+  }
+
+  /* Paragraph / text content */
+  .page--shop-brainwaves p,
+  .page--shop-brainwaves li,
+  .page--shop-brainwaves .sectionLead,
+  .page--shop-brainwaves .lead{
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  /* ---------- เนื้อหาในการ์ด ---------- */
+  .page--shop-brainwaves .card p,
+  .page--shop-brainwaves .productCard p,
+  .page--shop-brainwaves .pDesc,
+  .page--shop-brainwaves .pQuote{
+    font-size: 16.5px;         /* ใหญ่ขึ้น แต่ไม่แย่งหัวข้อ */
+    line-height: 1.65;
+  }
+
+  /* ---------- Meta / รายละเอียดรอง ---------- */
+  .page--shop-brainwaves .pKicker,
+  .page--shop-brainwaves .meta,
+  .page--shop-brainwaves small{
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  /* ---------- ป้องกัน heading ถูกกระทบ ---------- */
+  .page--shop-brainwaves h1,
+  .page--shop-brainwaves h2,
+  .page--shop-brainwaves h3,
+  .page--shop-brainwaves h4,
+  .page--shop-brainwaves h5,
+  .page--shop-brainwaves h6{
+    font-size: revert;
+    line-height: revert;
+  }
+}
