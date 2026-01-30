@@ -836,3 +836,24 @@
 #products .productGrid .productCard:nth-child(4) .badge{
   display: none !important;
 }
+
+/* =========================================
+   FINAL CTA : Align Left
+   ========================================= */
+
+.ctaBox{
+  margin-left: 0;
+  margin-right: auto;   /* ดันการ์ดไปฝั่งซ้าย */
+  text-align: left;     /* ตัวอักษรชิดซ้าย */
+  max-width: 640px;     /* คุมความกว้าง (ถ้ามีอยู่แล้วไม่ต้องซ้ำ) */
+}
+
+/* =========================================
+   FOOTER : Center (locked standard)
+   ========================================= */
+
+footer,
+.siteFooter,
+.footer{
+  text-align: center;
+}
