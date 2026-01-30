@@ -1,0 +1,13 @@
+<style>
+  /* ...ของเดิม... */
+
+  /* kicker บนหัวการ์ด = สีทอง */
+  .sKicker{
+    margin: 0 0 6px;
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--gold) !important; /* ✅ ทอง */
+    opacity: 1 !important;
+  }
+</style>
