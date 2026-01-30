@@ -111,31 +111,3 @@
     0 6px 18px rgba(214,179,106,.45) !important;
 }
 
-/* =========================================
-   HARD FIX: Force KRUNIKI brand back LEFT
-   Align with first social icon
-   Scope: shop-brainwaves ONLY
-   ========================================= */
-
-/* ล็อกตำแหน่ง brandBlock ใหม่ */
-.page--shop-brainwaves .siteHeader .brandBlock{
-  position: relative;
-  left: -14px;          /* <<< จุดแก้หลัก (ขยับซ้ายจริง) */
-}
-
-/* ป้องกัน padding / gap ซ้อน */
-.page--shop-brainwaves .siteHeader .brandBlock,
-.page--shop-brainwaves .siteHeader a.brand{
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-
-/* ปิดผลจาก transform / flex offset */
-.page--shop-brainwaves .siteHeader a.brand{
-  transform: none !important;
-}
-
-/* กัน dot ดันตำแหน่ง */
-.page--shop-brainwaves .siteHeader .brand .dot{
-  margin-right: 6px;    /* เว้นเท่าที่จำเป็น ไม่ดันทั้ง block */
-}
