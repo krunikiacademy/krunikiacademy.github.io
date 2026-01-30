@@ -58,3 +58,55 @@
     display: none !important;
   }
 }
+
+/* =================================================
+   FORCE GOLD BUTTON – FINAL OVERRIDE (KRUNIKI)
+   ================================================= */
+
+/* เจาะตรง hero ของ brainwaves เท่านั้น */
+.page--shop-brainwaves .heroGoldCard .btn.btnGold{
+  /* บังคับพื้นหลังทองเต็ม */
+  background: linear-gradient(
+    135deg,
+    #f6df95 0%,
+    #e9c86f 35%,
+    #d1ae5c 65%,
+    #b89447 100%
+  ) !important;
+
+  background-color: #e9c86f !important; /* กัน fallback */
+  color: #1a1a1a !important;
+
+  /* ล็อกเส้นขอบทอง */
+  border: 1px solid rgba(255, 224, 150, 0.95) !important;
+
+  /* ทรง + น้ำหนัก */
+  padding: 13px 24px !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  letter-spacing: .01em;
+
+  /* มิติแบบเคลือบทอง */
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.55),
+    inset 0 -1px 0 rgba(0,0,0,.12),
+    0 10px 26px rgba(214,179,106,.55) !important;
+
+  text-decoration: none;
+}
+
+/* Hover */
+.page--shop-brainwaves .heroGoldCard .btn.btnGold:hover{
+  filter: brightness(1.06) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.65),
+    0 12px 30px rgba(214,179,106,.65) !important;
+}
+
+/* Active */
+.page--shop-brainwaves .heroGoldCard .btn.btnGold:active{
+  transform: translateY(0);
+  box-shadow:
+    inset 0 2px 6px rgba(0,0,0,.25),
+    0 6px 18px rgba(214,179,106,.45) !important;
+}
