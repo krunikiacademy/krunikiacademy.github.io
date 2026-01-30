@@ -43,3 +43,44 @@ body.page--shop-brainwaves .siteHeader .hamburger{
     right: calc(10px + env(safe-area-inset-right, 0px));
   }
 }
+/* ===== FIX hamburger vertical alignment (shop-brainwaves only) ===== */
+
+body.page--shop-brainwaves .siteHeader{
+  position: relative;
+  min-height: 56px;
+  padding-right: 64px; /* เผื่อพื้นที่ปุ่ม */
+}
+
+/* ปุ่ม hamburger: จับกลางแนวตั้งของ header */
+body.page--shop-brainwaves .siteHeader .hamburger{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  right: 12px;
+  right: calc(12px + env(safe-area-inset-right, 0px));
+
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+
+  background: transparent;
+  border: 0;
+  padding: 0;
+
+  z-index: 1000;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* iPhone SE: ขยับห่างขอบเพิ่มนิด ไม่ให้ชน */
+@media (max-width: 360px){
+  body.page--shop-brainwaves .siteHeader{ padding-right: 56px; }
+
+  body.page--shop-brainwaves .siteHeader .hamburger{
+    right: 10px;
+    right: calc(10px + env(safe-area-inset-right, 0px));
+  }
+}
