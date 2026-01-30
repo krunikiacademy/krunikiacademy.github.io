@@ -910,3 +910,31 @@ footer,
     line-height: revert;
   }
 }
+
+/* =========================================
+   FIX: Brand "KRUNIKI" shifted RIGHT
+   Align brandText with first social icon
+   Scope: shop-brainwaves ONLY
+   ========================================= */
+
+/* ดึง brandBlock กลับเข้าซ้าย */
+.page--shop-brainwaves .siteHeader .brandBlock{
+  align-items: flex-start;
+  padding-left: 0 !important;
+}
+
+/* ดึงตัวอักษร KRUNIKI เข้าซ้ายโดยตรง */
+.page--shop-brainwaves .siteHeader a.brand{
+  margin-left: -6px !important;   /* <<< จุดแก้หลัก */
+  padding-left: 0 !important;
+  transform: none !important;
+}
+
+/* ป้องกัน dot หรือองค์ประกอบย่อยดันขวา */
+.page--shop-brainwaves .siteHeader .brand .dot{
+  margin-left: 0 !important;
+}
+
+.page--shop-brainwaves .siteHeader .brand .brandText{
+  margin-left: 0 !important;
+}
