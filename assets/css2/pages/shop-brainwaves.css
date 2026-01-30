@@ -655,3 +655,27 @@
     inset 0 2px 4px rgba(0,0,0,.25),
     0 6px 16px rgba(214,179,106,.35);
 }
+
+/* =================================================
+   PRODUCTS – Soft Gold Card Border (KRUNIKI Standard)
+   Scope: #products only
+   ================================================= */
+
+#products .productCard,
+#products .card,
+#products .product-item {
+  border: 1px solid rgba(212, 175, 55, 0.45); /* Soft Gold */
+  border-radius: 18px;
+  background: rgba(0,0,0,0.55); /* ดำโปร่งตามธีม */
+  box-shadow: 0 0 0 1px rgba(212,175,55,0.15),
+              0 12px 30px rgba(0,0,0,0.45);
+}
+
+/* hover สุภาพ ไม่แรง */
+#products .productCard:hover,
+#products .card:hover,
+#products .product-item:hover {
+  border-color: rgba(212, 175, 55, 0.75);
+  box-shadow: 0 0 0 1px rgba(212,175,55,0.35),
+              0 16px 40px rgba(0,0,0,0.55);
+}
