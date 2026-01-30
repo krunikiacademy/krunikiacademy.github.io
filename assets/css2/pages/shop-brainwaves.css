@@ -701,3 +701,28 @@
     0 0 0 1px rgba(212,175,55,0.18),
     0 18px 42px rgba(0,0,0,0.55);
 }
+
+/* =================================================
+   PRODUCT PRICE – Gold Text (KRUNIKI Standard)
+   ================================================= */
+
+/* กรณีใช้ class ราคาโดยตรง */
+#products .productCard .price,
+#products .productCard .productPrice,
+#products .productCard .amount{
+  color: var(--gold) !important;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+/* กรณีราคาเป็น <strong> หรือ <span> ใน body การ์ด */
+#products .productCard .productCard__body strong,
+#products .productCard .productCard__body .priceValue{
+  color: var(--gold) !important;
+  font-weight: 600;
+}
+
+/* fallback สุดท้าย: ตัวเลขราคา (ไม่กระทบหัวข้อ) */
+#products .productCard p strong{
+  color: var(--gold) !important;
+}
