@@ -1,102 +1,60 @@
-/* =========================================================
-   shop-brainwaves.fix.css
-   RULES: NO HTML / NO main.js / NO hamburger.css edits
-   GOAL: Restore DESKTOP menu to original top-right position
-   SCOPE: ONLY /shop-brainwaves.html
-========================================================= */
-
-@media (min-width: 1025px){
-
-  /* 1) รีเซ็ตสิ่งที่มักทำให้เมนู "หล่นกลางหน้า" */
-  body.page--shop-brainwaves .siteHeader,
-  body.page--shop-brainwaves .navInner,
-  body.page--shop-brainwaves nav,
-  body.page--shop-brainwaves .nav,
-  body.page--shop-brainwaves .menu,
-  body.page--shop-brainwaves .menuWrap,
-  body.page--shop-brainwaves .navLinks,
-  body.page--shop-brainwaves .links{
-    transform: none !important;
-    top: auto !important;
-    bottom: auto !important;
-  }
-
-  /* 2) บังคับให้แถบหัวไม่ใช้ absolute/fixed ที่ดึงทุกอย่างลงกลางหน้า */
-  body.page--shop-brainwaves .siteHeader,
-  body.page--shop-brainwaves .navInner{
-    position: relative !important;
-  }
-
-  /* 3) คืนค่าเมนู Desktop ให้เป็น layout ปกติ (อยู่ใน flow) */
-  body.page--shop-brainwaves nav{
-    position: static !important;
-    left: auto !important;
-    right: auto !important;
-    margin: 0 !important;
-  }
-
-  /* 4) ถ้าเมนูเป็นรายการ ul ให้จัดชิดขวา “เหมือนเดิม” */
-  body.page--shop-brainwaves nav ul{
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-    gap: 18px !important;
-  }
-
-  /* 5) กัน hamburger ไปป่วน desktop layout (เดสก์ท็อปไม่ควรจัดตำแหน่งด้วย absolute) */
-  body.page--shop-brainwaves .hamburger{
-    position: static !important;
-    transform: none !important;
-    top: auto !important;
-    right: auto !important;
-  }
-}
-
 /* =====================================================
-   Desktop NAV — match shop.html behavior
-   Page: shop-brainwaves.html ONLY
+   FIX DESKTOP NAV (REAL FIX)
+   Only: /shop-brainwaves.html
+   Rules: NO HTML / NO main.js / NO hamburger.css edits
 ===================================================== */
 
 @media (min-width: 1025px){
 
-  /* 1) บังคับให้ header เป็นแถวเดียว */
+  /* 0) กัน header สูงผิดปกติเพราะ nav หล่นบรรทัด */
+  body.page--shop-brainwaves .siteHeader{
+    padding-bottom: 0 !important;
+  }
+
+  /* 1) บังคับ navInner ให้เป็น "แถวเดียว" (สำคัญมาก) */
   body.page--shop-brainwaves .siteHeader .navInner{
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
+    display: flex !important;
+    flex-direction: row !important;     /* ✅ บังคับเป็นแถว */
+    align-items: center !important;
+    flex-wrap: nowrap !important;       /* ✅ ห้ามตกบรรทัด */
+    justify-content: flex-start !important;
   }
 
-  /* 2) ฝั่งซ้าย: brand + social */
+  /* 2) ฝั่งซ้าย: brand/social ไม่ให้ยืด */
   body.page--shop-brainwaves .siteHeader .brandBlock{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex: 0 0 auto;
+    display: flex !important;
+    align-items: center !important;
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
   }
 
-  /* 3) เมนู Desktop: อยู่แถวเดียว เยื้องขวา (เหมือน shop.html) */
-  body.page--shop-brainwaves .siteHeader .navLinks{
-    display: flex;
-    align-items: center;
-    gap: 22px;
+  /* 3) เมนู Desktop: กลับเข้าบรรทัดเดียว + เยื้องขวา (ไม่ชิดขวา) */
+  body.page--shop-brainwaves .siteHeader nav.navLinks{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;       /* ✅ ห้ามแตกบรรทัด */
 
-    /* 🔑 จุดสำคัญ: เยื้องจากฝั่งซ้าย แต่ไม่ชิดขวา */
-    margin-left: 96px;
+    /* ✅ “เยื้องขวา” แต่ไม่ชิดขวา */
+    margin-left: 96px !important;
 
-    /* กัน rule ที่ทำให้แตกบรรทัด */
-    width: auto;
-    flex: 0 0 auto;
-    white-space: nowrap;
+    /* ✅ ล้างค่าที่ทำให้ nav หล่นเป็นบรรทัดใหม่ */
+    width: auto !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+    align-self: center !important;
 
-    position: static;
-    transform: none;
+    /* ✅ กันโดน transform/top จากที่อื่น */
+    position: static !important;
+    top: auto !important;
+    transform: none !important;
+
+    white-space: nowrap !important;
+    gap: 22px !important;
   }
 
   /* 4) Desktop ไม่ใช้ hamburger */
   body.page--shop-brainwaves .siteHeader .krActions{
-    display: none;
+    display: none !important;
   }
 }
