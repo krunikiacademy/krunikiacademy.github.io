@@ -55,3 +55,48 @@
   }
 }
 
+/* =====================================================
+   Desktop NAV — match shop.html behavior
+   Page: shop-brainwaves.html ONLY
+===================================================== */
+
+@media (min-width: 1025px){
+
+  /* 1) บังคับให้ header เป็นแถวเดียว */
+  body.page--shop-brainwaves .siteHeader .navInner{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  /* 2) ฝั่งซ้าย: brand + social */
+  body.page--shop-brainwaves .siteHeader .brandBlock{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 0 0 auto;
+  }
+
+  /* 3) เมนู Desktop: อยู่แถวเดียว เยื้องขวา (เหมือน shop.html) */
+  body.page--shop-brainwaves .siteHeader .navLinks{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    /* 🔑 จุดสำคัญ: เยื้องจากฝั่งซ้าย แต่ไม่ชิดขวา */
+    margin-left: 96px;
+
+    /* กัน rule ที่ทำให้แตกบรรทัด */
+    width: auto;
+    flex: 0 0 auto;
+    white-space: nowrap;
+
+    position: static;
+    transform: none;
+  }
+
+  /* 4) Desktop ไม่ใช้ hamburger */
+  body.page--shop-brainwaves .siteHeader .krActions{
+    display: none;
+  }
+}
