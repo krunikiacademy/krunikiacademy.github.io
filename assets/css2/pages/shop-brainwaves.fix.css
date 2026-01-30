@@ -111,3 +111,52 @@
     0 6px 18px rgba(214,179,106,.45) !important;
 }
 
+/* =================================================
+   HEADER HARD FIX (Shop Brainwaves)
+   Fix: header too tall, social block expanding,
+        hamburger dropping
+   ================================================= */
+
+/* 1) บังคับ header ให้สูงคงที่ */
+.page--shop-brainwaves header.siteHeader{
+  height: 84px !important;          /* ความสูงมาตรฐาน */
+  min-height: 84px !important;
+}
+
+/* 2) จัด navInner เป็นแถวเดียว ไม่ให้แตก */
+.page--shop-brainwaves .siteHeader .navInner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;                /* ❗ ห้ามแตกแถว */
+  height: 100%;
+}
+
+/* 3) แบรนด์ + โซเชียล อยู่ในแนวเดียว */
+.page--shop-brainwaves .siteHeader .brandBlock{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;                          /* ระยะห่างแบรนด์-โซเชียล */
+}
+
+/* 4) ป้องกันกล่องโซเชียลดันความสูง */
+.page--shop-brainwaves .siteHeader .topbar{
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1;
+}
+
+/* 5) social icon ไม่เพิ่มความสูง header */
+.page--shop-brainwaves .siteHeader .social{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 6) hamburger อยู่กึ่งกลางแนวตั้งเสมอ */
+.page--shop-brainwaves .siteHeader .krActions{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
