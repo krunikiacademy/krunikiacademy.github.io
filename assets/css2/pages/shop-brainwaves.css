@@ -767,3 +767,62 @@
   line-height: 1.6;
   opacity: .95;
 }
+
+/* =========================================
+   PRODUCT CARD BADGE : GOLD (Card 3, 4)
+   ========================================= */
+
+/* เตรียม position ให้การ์ด */
+.productGrid .productCard{
+  position: relative;
+}
+
+/* ---------- Card 3 : แนะนำ ---------- */
+.productGrid .productCard:nth-child(3)::before{
+  content: "แนะนำ";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #f5e7b8,
+    #d6b36a
+  );
+  color: #2b1f00;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  z-index: 2;
+}
+
+/* ---------- Card 4 : Best Seller ---------- */
+.productGrid .productCard:nth-child(4)::before{
+  content: "Best Seller";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #f7edc9,
+    #d6b36a
+  );
+  color: #2b1f00;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  z-index: 2;
+}
