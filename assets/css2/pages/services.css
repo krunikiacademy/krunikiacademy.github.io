@@ -276,3 +276,45 @@
     gap: 18px !important;
   }
 }
+
+/* =========================
+   SERVICES — Button width (Desktop + iPhone SE/6S)
+   Scope: services.html only
+   ========================= */
+
+/* ✅ Desktop / iPad / ทั่วไป: ปุ่มไม่เป็นแถบยาวชนขอบ */
+.page--services .productGrid .pBtn,
+.page--services .productGrid .btn{
+  display: inline-flex !important;
+  width: auto !important;
+  max-width: 100%;
+  align-self: flex-start;         /* pill premium */
+  white-space: normal;            /* ขึ้นบรรทัดได้ */
+  line-height: 1.2;
+  padding: 10px 16px;
+}
+
+/* กันปุ่มชนกรอบการ์ด (เผื่อ body padding เดิมน้อยไป) */
+.page--services .productGrid .pBody{
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+}
+
+/* ✅ iPhone SE/6S: ปุ่มเต็มการ์ดได้ แต่ต้องไม่ชนขอบ */
+@media (max-width: 375px){
+  .page--services .productGrid .pBtn,
+  .page--services .productGrid .btn{
+    display: flex !important;
+    width: 100% !important;       /* ให้เต็มการ์ด */
+    justify-content: center;
+    text-align: center;
+    padding: 12px 14px;           /* กันข้อความชนขอบ */
+    border-radius: 14px;          /* ยังดูพรีเมียม */
+  }
+
+  /* เพิ่มช่องไฟการ์ดเล็กน้อย กันแน่นเกินบน SE */
+  .page--services .productGrid{
+    gap: 18px !important;
+  }
+}
