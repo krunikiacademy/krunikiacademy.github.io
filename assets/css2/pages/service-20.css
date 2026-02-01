@@ -7,7 +7,7 @@
     font-size: 12px;
     letter-spacing: .08em;
     text-transform: uppercase;
-    color: var(--gold) !important; /* ✅ ทอง */
+   color: var(--softGold, #d6b56c) !important;
     opacity: 1 !important;
   }
 </style>
