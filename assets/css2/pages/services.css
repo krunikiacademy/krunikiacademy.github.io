@@ -211,3 +211,26 @@
   margin-top: 14px !important;
   gap: 12px !important;
 }
+
+/* =========================
+   SERVICES PAGE — GOLD CARD BORDER STANDARD
+   Scope: services.html only
+   ========================= */
+
+.page--services .card,
+.page--services .hero__card,
+.page--services .pCard,
+.page--services .panel .card,
+.page--services .panel .pCard {
+  border: 1px solid rgba(212, 175, 95, 0.55); /* Soft Gold */
+  box-shadow:
+    0 0 0 1px rgba(212, 175, 95, 0.15) inset,
+    0 12px 28px rgba(0, 0, 0, 0.55);
+  border-radius: 16px;
+}
+
+/* กันกรณีการ์ดบางใบมี border เดิมแรงเกิน */
+.page--services .card::before,
+.page--services .pCard::before{
+  border-color: rgba(212, 175, 95, 0.45);
+}
