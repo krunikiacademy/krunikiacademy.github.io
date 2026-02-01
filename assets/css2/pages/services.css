@@ -322,3 +322,35 @@
     overflow: visible;
   }
 }
+
+/* =========================
+   REAL FIX — iPad grid overlap (image blocks button)
+   ========================= */
+
+.page--services .productGrid{
+  align-items: stretch; /* สำคัญมาก */
+}
+
+.page--services .pCard{
+  display: flex;
+  flex-direction: column;
+  height: 100%;          /* บังคับความสูงการ์ด */
+}
+
+.page--services .pImg{
+  display: block;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;        /* รูปห้ามยุบ/ลอย */
+}
+
+.page--services .pBody{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;        /* เนื้อหากินพื้นที่ที่เหลือ */
+}
+
+.page--services .pBtn,
+.page--services .btn{
+  margin-top: auto;      /* ดันปุ่มลงล่างอย่างปลอดภัย */
+}
