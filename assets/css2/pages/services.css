@@ -1,1 +1,30 @@
+/* ===== Services: force 2x2 card layout ===== */
 
+.servicesPanel .servicesGrid{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* ให้การ์ดสูงเท่ากัน (อ่านแล้วไม่เบี้ยว) */
+.servicesPanel .servicesGrid .pCard{
+  height: 100%;
+}
+
+/* Mobile -> 1 column */
+@media (max-width: 720px){
+  .servicesPanel .servicesGrid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ===== Kicker: soft-gold, sharp, premium ===== */
+.servicesPanel .pKicker.kickerGold{
+  color: #d6b36a;         /* soft gold */
+  font-weight: 700;
+  letter-spacing: .35px;
+  text-transform: none;
+  margin-bottom: 8px;
+}
