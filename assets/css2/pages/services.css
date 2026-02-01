@@ -284,73 +284,33 @@
 }
 
 /* =========================
-   iPad fix — card border must stay behind buttons
-   Scope: services.html only
+   SERVICES — Card border overlaps button (FINAL FIX)
    ========================= */
 
-@media (min-width: 768px) and (max-width: 1024px){
-
-  /* ทำให้การ์ดเป็นเลเยอร์หลัก */
-  .page--services .productGrid .pCard{
-    position: relative;
-    overflow: visible; /* กันกรอบ/เงาทับปุ่ม */
-  }
-
-  /* ถ้าการ์ดใช้ ::before เป็นเส้นขอบ/กรอบ → ส่งไปไว้หลัง */
-  .page--services .productGrid .pCard::before{
-    z-index: 0 !important;
-    pointer-events: none; /* สำคัญ: ไม่ให้ทับคลิกปุ่ม */
-  }
-
-  /* เนื้อหาการ์ดขึ้นมาด้านหน้า */
-  .page--services .productGrid .pCard .pBody{
-    position: relative;
-    z-index: 2;
-  }
-
-  /* ปุ่มต้องอยู่หน้าสุด */
-  .page--services .productGrid .pCard .pBtn,
-  .page--services .productGrid .pCard .btn{
-    position: relative;
-    z-index: 3;
-  }
+/* 1) การ์ดต้องเป็น container ที่คุมทุก layer */
+.page--services .productGrid .pCard{
+  position: relative;
+  isolation: isolate;
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-  .page--services .productGrid .pCard:nth-child(2),
-  .page--services .productGrid .pCard:nth-child(3){
-    overflow: visible;
-  }
+/* 2) กรอบทอง (pseudo-element) ให้อยู่ "นอก" content */
+.page--services .productGrid .pCard::before{
+  inset: -1px;                 /* ดันกรอบออกไปนอก */
+  pointer-events: none;        /* ❗ ห้ามบังคลิก */
+  z-index: 0;
 }
 
-/* =========================
-   REAL FIX — iPad grid overlap (image blocks button)
-   ========================= */
-
-.page--services .productGrid{
-  align-items: stretch; /* สำคัญมาก */
+/* 3) เนื้อหาการ์ด ต้องอยู่ใน layer หน้า + มี safe space */
+.page--services .productGrid .pBody{
+  position: relative;
+  z-index: 2;
+  padding-bottom: 26px;        /* ❗ กันปุ่มชนกรอบ */
 }
 
-.page--services .pCard{
-  display: flex;
-  flex-direction: column;
-  height: 100%;          /* บังคับความสูงการ์ด */
+/* 4) ปุ่มอยู่หน้าสุด + safe hit-area */
+.page--services .productGrid .pBtn,
+.page--services .productGrid .btn{
+  position: relative;
+  z-index: 3;
 }
 
-.page--services .pImg{
-  display: block;
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;        /* รูปห้ามยุบ/ลอย */
-}
-
-.page--services .pBody{
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;        /* เนื้อหากินพื้นที่ที่เหลือ */
-}
-
-.page--services .pBtn,
-.page--services .btn{
-  margin-top: auto;      /* ดันปุ่มลงล่างอย่างปลอดภัย */
-}
