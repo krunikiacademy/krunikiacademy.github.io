@@ -162,3 +162,52 @@
     0 20px 44px rgba(216,180,96,.55),
     0 2px 0 rgba(255,255,255,.18) inset !important;
 }
+
+/* =========================
+   SERVICES HERO — BALANCED SPACING (final)
+   ========================= */
+
+.page--services .services-hero{
+  /* ทำให้บล็อกหายใจสมดุล */
+  padding: 28px 0 34px !important;
+}
+
+/* Title block */
+.page--services .servicesHeroTitle{
+  margin: 0 0 14px !important;
+}
+
+/* ดัน subtitle ให้ชิดหัวเรื่อง + ไม่ลอย */
+.page--services .servicesHeroTitle .goldSub{
+  margin-top: -4px !important;   /* ขยับขึ้นนิดนึง (สมดุลกว่า -6) */
+}
+
+/* Quote ใต้หัวเรื่อง */
+.page--services .services-hero .heroQuote{
+  margin: 10px auto 16px !important;
+  max-width: 760px;
+}
+
+/* ปุ่มทอง: เว้นก่อน/หลังให้พอดี */
+.page--services .services-hero .heroActions{
+  margin: 10px 0 18px !important;
+}
+
+/* บล็อกข้อความกลาง (services-sub) */
+.page--services .services-hero .services-sub{
+  margin: 8px auto 14px !important;
+  max-width: 760px;
+  line-height: 1.65 !important;
+}
+
+/* ประโยค signature */
+.page--services .services-hero .services-signature{
+  margin: 10px auto 18px !important;
+  max-width: 760px;
+}
+
+/* CTA Row ล่าง: ระยะห่างกำลังดี */
+.page--services .services-hero .ctaRow{
+  margin-top: 14px !important;
+  gap: 12px !important;
+}
