@@ -282,3 +282,43 @@
     padding: 11px 12px;
   }
 }
+
+/* =========================
+   iPad fix — card border must stay behind buttons
+   Scope: services.html only
+   ========================= */
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+  /* ทำให้การ์ดเป็นเลเยอร์หลัก */
+  .page--services .productGrid .pCard{
+    position: relative;
+    overflow: visible; /* กันกรอบ/เงาทับปุ่ม */
+  }
+
+  /* ถ้าการ์ดใช้ ::before เป็นเส้นขอบ/กรอบ → ส่งไปไว้หลัง */
+  .page--services .productGrid .pCard::before{
+    z-index: 0 !important;
+    pointer-events: none; /* สำคัญ: ไม่ให้ทับคลิกปุ่ม */
+  }
+
+  /* เนื้อหาการ์ดขึ้นมาด้านหน้า */
+  .page--services .productGrid .pCard .pBody{
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ปุ่มต้องอยู่หน้าสุด */
+  .page--services .productGrid .pCard .pBtn,
+  .page--services .productGrid .pCard .btn{
+    position: relative;
+    z-index: 3;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .page--services .productGrid .pCard:nth-child(2),
+  .page--services .productGrid .pCard:nth-child(3){
+    overflow: visible;
+  }
+}
