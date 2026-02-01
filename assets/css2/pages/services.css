@@ -28,3 +28,48 @@
   text-transform: none;
   margin-bottom: 8px;
 }
+
+/* HERO TITLE */
+.servicesHeroTitle{
+  text-align: center;
+}
+
+/* บรรทัดหลัก */
+.servicesHeroTitle .goldMain{
+  display: block;
+  font-size: clamp(36px, 4.5vw, 54px);
+  font-weight: 700;
+  color: #d6b36a; /* gold */
+  letter-spacing: .5px;
+}
+
+/* บรรทัดรอง — ทำให้เล็กลง */
+.servicesHeroTitle .goldSub{
+  display: block;
+  margin-top: 6px;
+  font-size: clamp(18px, 2.2vw, 26px); /* 👈 เล็กลงชัดเจน */
+  font-weight: 500;
+  color: rgba(214,179,106,.75);       /* 👈 gold อ่อน */
+  letter-spacing: .3px;
+}
+
+/* HERO GOLD BUTTON */
+.btnHeroGold{
+  background: linear-gradient(135deg,#e7c77b,#caa24d);
+  color: #111;
+  border: none;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 999px;
+  box-shadow:
+    0 10px 24px rgba(214,179,106,.35),
+    inset 0 1px 0 rgba(255,255,255,.35);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btnHeroGold:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 32px rgba(214,179,106,.45),
+    inset 0 1px 0 rgba(255,255,255,.4);
+}
