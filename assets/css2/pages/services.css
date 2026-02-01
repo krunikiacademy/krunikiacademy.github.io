@@ -236,81 +236,43 @@
 }
 
 /* =========================
-   SERVICES HERO CTA — iPhone SE/6S overlap fix
+   SERVICES — Button width (Desktop + iPhone SE/6S)
    Scope: services.html only
    ========================= */
 
-/* บังคับให้ container จัดวางเป็นแถวเดียวและไม่ดัน/ซ้อน */
-.page--services .services-hero .heroActions{
-  display: flex;
-  justify-content: center;
-  padding: 0 16px;            /* กันชนขอบจอ */
-}
-
-/* ปุ่มยาว: ให้ตัดบรรทัดได้ + ไม่ล้น */
-.page--services .services-hero .heroActions .btn.primary{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  max-width: 100%;
-  white-space: normal;         /* ✅ allow wrap */
-  overflow-wrap: anywhere;      /* ✅ กันคำยาวล้น */
-  line-height: 1.2;
-
-  padding: 12px 18px;          /* ปรับให้สมดุลกับจอเล็ก */
-}
-
-/* iPhone SE / 6S และจอเล็ก */
-@media (max-width: 375px){
-  .page--services .services-hero .heroActions{
-    padding: 0 14px;
-  }
-
-  .page--services .services-hero .heroActions .btn.primary{
-    width: 100%;               /* ✅ เต็มแถว = ไม่มีทางซ้อน */
-    padding: 12px 14px;
-    font-size: 14px;
-  }
-}
-
-/* กันเคสจอเล็กมาก / ซูม */
-@media (max-width: 340px){
-  .page--services .services-hero .heroActions .btn.primary{
-    font-size: 13px;
-    padding: 11px 12px;
-  }
-}
-
-/* =========================
-   SERVICES — Card border overlaps button (FINAL FIX)
-   ========================= */
-
-/* 1) การ์ดต้องเป็น container ที่คุมทุก layer */
-.page--services .productGrid .pCard{
-  position: relative;
-  isolation: isolate;
-}
-
-/* 2) กรอบทอง (pseudo-element) ให้อยู่ "นอก" content */
-.page--services .productGrid .pCard::before{
-  inset: -1px;                 /* ดันกรอบออกไปนอก */
-  pointer-events: none;        /* ❗ ห้ามบังคลิก */
-  z-index: 0;
-}
-
-/* 3) เนื้อหาการ์ด ต้องอยู่ใน layer หน้า + มี safe space */
-.page--services .productGrid .pBody{
-  position: relative;
-  z-index: 2;
-  padding-bottom: 26px;        /* ❗ กันปุ่มชนกรอบ */
-}
-
-/* 4) ปุ่มอยู่หน้าสุด + safe hit-area */
+/* ✅ Desktop / iPad / ทั่วไป: ปุ่มไม่เป็นแถบยาวชนขอบ */
 .page--services .productGrid .pBtn,
 .page--services .productGrid .btn{
-  position: relative;
-  z-index: 3;
+  display: inline-flex !important;
+  width: auto !important;
+  max-width: 100%;
+  align-self: flex-start;         /* pill premium */
+  white-space: normal;            /* ขึ้นบรรทัดได้ */
+  line-height: 1.2;
+  padding: 10px 16px;
 }
 
+/* กันปุ่มชนกรอบการ์ด (เผื่อ body padding เดิมน้อยไป) */
+.page--services .productGrid .pBody{
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+}
+
+/* ✅ iPhone SE/6S: ปุ่มเต็มการ์ดได้ แต่ต้องไม่ชนขอบ */
+@media (max-width: 375px){
+  .page--services .productGrid .pBtn,
+  .page--services .productGrid .btn{
+    display: flex !important;
+    width: 100% !important;       /* ให้เต็มการ์ด */
+    justify-content: center;
+    text-align: center;
+    padding: 12px 14px;           /* กันข้อความชนขอบ */
+    border-radius: 14px;          /* ยังดูพรีเมียม */
+  }
+
+  /* เพิ่มช่องไฟการ์ดเล็กน้อย กันแน่นเกินบน SE */
+  .page--services .productGrid{
+    gap: 18px !important;
+  }
+}
