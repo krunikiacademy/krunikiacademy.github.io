@@ -1,0 +1,178 @@
+Scoped ด้วย .aboutPage ไม่ชนหน้าอื่น
+Morning Light: โปร่ง สว่าง premium + divider เบา ๆ + responsive founder grid
+
+/* assets/css2/pages/about.css */
+/* Scope: about.html only via .aboutPage */
+
+.aboutPage{
+  --about-max: 980px;
+  --about-wide: 1100px;
+
+  --about-text: rgba(18, 22, 28, 0.92);
+  --about-muted: rgba(18, 22, 28, 0.62);
+
+  --about-line: rgba(18, 22, 28, 0.10);
+  --about-line2: rgba(18, 22, 28, 0.06);
+
+  --about-card: rgba(255, 255, 255, 0.72);
+  --about-shadow: 0 12px 40px rgba(0,0,0,.06);
+
+  color: var(--about-text);
+}
+
+/* Container widths (ไม่ยุ่งกับ global) */
+.aboutPage .container{
+  max-width: var(--about-wide);
+}
+.aboutPage .container.narrow{
+  max-width: var(--about-max);
+}
+
+/* HERO */
+.aboutPage .aboutHero{
+  padding-top: clamp(36px, 5vw, 72px);
+  padding-bottom: clamp(24px, 4vw, 56px);
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,.95), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(255,255,255,.75), transparent 55%);
+}
+
+.aboutPage .aboutHeroInner{
+  max-width: var(--about-max);
+}
+
+.aboutPage .th,
+.aboutPage .en{
+  line-height: 1.75;
+}
+
+.aboutPage .th{
+  margin: 0 0 10px 0;
+}
+
+.aboutPage .en{
+  margin: 0 0 18px 0;
+  color: var(--about-muted);
+}
+
+/* Sections */
+.aboutPage .aboutSection{
+  padding-top: clamp(28px, 4vw, 56px);
+  padding-bottom: clamp(28px, 4vw, 56px);
+}
+
+.aboutPage .aboutH3{
+  margin: 18px 0 10px 0;
+  line-height: 1.2;
+}
+
+/* Divider between sections */
+.aboutPage .aboutDivider{
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--about-line), transparent);
+}
+
+.aboutPage .aboutMiniDivider{
+  height: 1px;
+  margin: 18px 0;
+  background: linear-gradient(90deg, transparent, var(--about-line2), transparent);
+}
+
+/* Quote block */
+.aboutPage .aboutQuote{
+  margin: 18px 0 0 0;
+  padding: 18px;
+  border: 1px solid var(--about-line);
+  border-radius: 16px;
+  background: var(--about-card);
+  box-shadow: var(--about-shadow);
+}
+
+.aboutPage .aboutQuote .th,
+.aboutPage .aboutQuote .en{
+  margin: 0;
+}
+
+.aboutPage .aboutQuote .en{
+  margin-top: 8px;
+}
+
+/* List */
+.aboutPage .aboutList{
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 18px 0;
+  display: grid;
+  gap: 10px;
+}
+
+.aboutPage .aboutList li{
+  padding: 12px 14px;
+  border: 1px solid var(--about-line);
+  border-radius: 14px;
+  background: rgba(255,255,255,.6);
+}
+
+.aboutPage .aboutList .th{
+  margin: 0;
+  font-weight: 600;
+}
+
+.aboutPage .aboutList .en{
+  margin: 6px 0 0 0;
+}
+
+/* Founder grid: 2 columns -> 1 column on mobile */
+.aboutPage .founderGrid{
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(16px, 3vw, 28px);
+  align-items: start;
+  margin-top: 10px;
+}
+
+.aboutPage .founderMedia{
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--about-line);
+  background: rgba(255,255,255,.7);
+  box-shadow: var(--about-shadow);
+}
+
+.aboutPage .founderMedia img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* ไม่ crop หน้า */
+}
+
+.aboutPage .founderName{
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Closing line */
+.aboutPage .closingLine{
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--about-line);
+}
+
+.aboutPage .aboutClosing{
+  padding-bottom: clamp(28px, 4vw, 56px);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .aboutPage .founderGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px){
+  .aboutPage .aboutQuote{
+    border-radius: 14px;
+    padding: 16px;
+  }
+}
