@@ -126,3 +126,39 @@
 .services-hero .services-signature{
   margin-top: 14px;
 }
+
+/* =========================
+   HERO GOLD CTA — services.html ONLY
+   ========================= */
+
+.page--services .services-hero .heroActions .btn.primary{
+  background: linear-gradient(
+    135deg,
+    #f6e1a4 0%,
+    #e7c777 38%,
+    #c89a38 100%
+  ) !important;
+
+  color: #1a1a1a !important;
+  border: 1px solid rgba(255,255,255,.2) !important;
+
+  font-weight: 800 !important;
+  letter-spacing: .25px !important;
+
+  padding: 14px 34px !important;
+  border-radius: 999px !important;
+
+  box-shadow:
+    0 16px 34px rgba(216,180,96,.42),
+    0 2px 0 rgba(255,255,255,.14) inset !important;
+
+  transition: all .25s ease !important;
+}
+
+/* Hover */
+.page--services .services-hero .heroActions .btn.primary:hover{
+  transform: translateY(-1px) !important;
+  box-shadow:
+    0 20px 44px rgba(216,180,96,.55),
+    0 2px 0 rgba(255,255,255,.18) inset !important;
+}
