@@ -32,9 +32,7 @@ Morning Light: โปร่ง สว่าง premium + divider เบา ๆ +
 .aboutPage .aboutHero{
   padding-top: clamp(36px, 5vw, 72px);
   padding-bottom: clamp(24px, 4vw, 56px);
-  background:
-    radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,.95), transparent 60%),
-    radial-gradient(900px 500px at 90% 0%, rgba(255,255,255,.75), transparent 55%);
+  background: transparent !important; /* ✅ ตัดแสงขาวออก */
 }
 
 .aboutPage .aboutHeroInner{
@@ -108,9 +106,10 @@ Morning Light: โปร่ง สว่าง premium + divider เบา ๆ +
 
 .aboutPage .aboutList li{
   padding: 12px 14px;
-  border: 1px solid var(--about-line);
+  border: 1px solid rgba(255,255,255,.12);
   border-radius: 14px;
-  background: rgba(255,255,255,.6);
+  background: rgba(0,0,0,.22);          /* ✅ ไม่เทาสว่างแล้ว */
+  box-shadow: 0 10px 26px rgba(0,0,0,.18);
 }
 
 .aboutPage .aboutList .th{
