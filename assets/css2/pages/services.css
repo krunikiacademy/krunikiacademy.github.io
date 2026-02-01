@@ -73,3 +73,56 @@
     0 14px 32px rgba(214,179,106,.45),
     inset 0 1px 0 rgba(255,255,255,.4);
 }
+
+/* ===== HERO TITLE SPACING ===== */
+
+.servicesHeroTitle{
+  text-align: center;
+  margin-bottom: 14px; /* ลดช่องว่างใต้หัวข้อ */
+}
+
+/* บรรทัดหลัก */
+.servicesHeroTitle .goldMain{
+  display: block;
+  font-size: clamp(36px, 4.5vw, 54px);
+  font-weight: 700;
+  color: #d6b36a;
+  letter-spacing: .5px;
+  line-height: 1.1;
+}
+
+/* บรรทัดรอง — ขยับขึ้น */
+.servicesHeroTitle .goldSub{
+  display: block;
+  margin-top: 2px;          /* 👈 จากเดิมที่ห่าง ให้ชิดขึ้น */
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-weight: 500;
+  color: rgba(214,179,106,.75);
+  letter-spacing: .3px;
+  line-height: 1.2;
+}
+
+/* ===== HERO BLOCK SPACING ===== */
+
+.services-hero{
+  padding-top: 32px;
+  padding-bottom: 36px;
+}
+
+.services-hero .heroQuote{
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.services-hero .heroActions{
+  margin: 14px 0 16px; /* ลดช่องไฟบน-ล่างของปุ่ม */
+}
+
+.services-hero .services-sub{
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.services-hero .services-signature{
+  margin-top: 14px;
+}
