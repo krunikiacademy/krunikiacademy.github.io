@@ -11,3 +11,11 @@
     opacity: 1 !important;
   }
 </style>
+
+#details .sKicker{
+  color: var(--gold, #d6b56c) !important;
+  opacity: 1 !important;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
