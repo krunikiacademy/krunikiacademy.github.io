@@ -313,3 +313,37 @@
     padding: 11px 12px;
   }
 }
+
+/* =========================================
+   SERVICES: Card button iPhone safe (COPY SHOP)
+   - Fix: card buttons touch edges on iPhone SE / 6S
+   Scope: services.html only
+   ========================================= */
+
+/* ให้ padding body ของการ์ดเท่ากับ shop */
+.page--services .productGrid .pBody{
+  padding: 16px 16px 18px;
+}
+
+/* กันกรณี CSS ตัวอื่นทำให้ปุ่มเพี้ยน (เหมือน shop) */
+.page--services .productGrid .pCard .btn,
+.page--services .productGrid .pCard .pBtn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+  white-space: normal;
+  max-width: 100%;
+}
+
+/* Small phones: force full width inside card (SE/6S) — copy shop */
+@media (max-width: 390px){
+  .page--services .productGrid .pCard .btn,
+  .page--services .productGrid .pCard .pBtn{
+    width: 100%;
+    min-height: 44px;
+    padding: 12px 14px;
+    box-sizing: border-box;
+  }
+}
