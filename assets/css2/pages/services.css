@@ -235,5 +235,34 @@
   border-color: rgba(212, 175, 95, 0.45);
 }
 
+/* =========================
+   SERVICES — Card border overlaps button (FINAL FIX)
+   ========================= */
 
+/* 1) การ์ดต้องเป็น container ที่คุมทุก layer */
+.page--services .productGrid .pCard{
+  position: relative;
+  isolation: isolate;
+}
+
+/* 2) กรอบทอง (pseudo-element) ให้อยู่ "นอก" content */
+.page--services .productGrid .pCard::before{
+  inset: -1px;                 /* ดันกรอบออกไปนอก */
+  pointer-events: none;        /* ❗ ห้ามบังคลิก */
+  z-index: 0;
+}
+
+/* 3) เนื้อหาการ์ด ต้องอยู่ใน layer หน้า + มี safe space */
+.page--services .productGrid .pBody{
+  position: relative;
+  z-index: 2;
+  padding-bottom: 26px;        /* ❗ กันปุ่มชนกรอบ */
+}
+
+/* 4) ปุ่มอยู่หน้าสุด + safe hit-area */
+.page--services .productGrid .pBtn,
+.page--services .productGrid .btn{
+  position: relative;
+  z-index: 3;
+}
 
