@@ -121,3 +121,10 @@ body.page--shop-brainwaves .siteHeader .brandBlock .brand{
   margin-left: 0 !important;
   padding-left: 14px !important; /* ปรับได้: 12/14/16 ตามที่ตรงกับไอคอน */
 }
+
+/* FINAL CTA — align buttons to LEFT (shop-brainwaves only) */
+body.page--shop-brainwaves .closingCtaSection .ctaRow{
+  justify-content: flex-start !important;
+  align-items: center;
+  gap: 14px; /* ระยะห่างปุ่ม */
+}
