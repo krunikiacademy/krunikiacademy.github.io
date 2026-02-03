@@ -56,3 +56,56 @@
   stroke: var(--gold, #c9a45c);
   fill: none;
 }
+
+/* =========================================================
+   service-20min — Hamburger FIX (CSS only)
+   Goal:
+   1) hidden ต้องซ่อนจริง 100%
+   2) z-index layer: header/button อยู่บนสุด
+   3) menu/backdrop ไม่ทับปุ่ม
+   ========================================================= */
+
+/* 1) บังคับ [hidden] ให้ซ่อนจริงเสมอ (กันเคสโดน override) */
+#mobileMenu[hidden],
+#menuBackdrop[hidden]{
+  display: none !important;
+}
+
+/* 2) จัด layer: header และปุ่มแฮมอยู่บนสุด */
+.siteHeader{
+  position: sticky;
+  top: 0;
+  z-index: 9999 !important;
+}
+
+.navInner,
+.krActions,
+#krHam{
+  position: relative;
+  z-index: 10000 !important;
+  pointer-events: auto !important;
+}
+
+/* 3) backdrop อยู่ "ใต้ header" เพื่อไม่ทับปุ่ม */
+#menuBackdrop{
+  position: fixed;
+  inset: 0;
+  z-index: 9000 !important;
+}
+
+/* 4) เมนูมือถืออยู่เหนือ backdrop แต่ยังใต้ header ได้ */
+#mobileMenu{
+  position: fixed;
+  z-index: 9500 !important;
+}
+
+/* 5) กดแล้วต้องเห็นสีทอง (press feedback) */
+#krHam:active .krHamIcon path,
+#krHam:focus-visible .krHamIcon path{
+  stroke: #d6b56c !important;
+}
+
+#krHam:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(214,181,108,.25);
+}
