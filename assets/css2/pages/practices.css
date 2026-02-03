@@ -40,44 +40,38 @@
   opacity: 1;
 }
 
-/* ================================
-   Gold Button — Certification (Practices page only)
-   ================================ */
+/* =========================================
+   ONLY this button: Certification Program
+   Scope: practices.html only
+   ========================================= */
 
 .practicesPage a.btn[href="certification.html"]{
   background: linear-gradient(
     180deg,
     #e6c88a 0%,
-    #c9a86a 45%,
+    #c9a86a 50%,
     #b8944f 100%
-  );
-  color: #1a1a1a; /* อ่านคม หรู */
-  border: 1px solid rgba(201,168,106,.9);
-  font-weight: 700;
+  ) !important;
+  color: #1a1a1a !important;
+  border: 1px solid #c9a86a !important;
+  font-weight: 800;
   letter-spacing: .02em;
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.35),
-    0 6px 18px rgba(201,168,106,.28);
+    inset 0 1px 0 rgba(255,255,255,.4),
+    0 10px 24px rgba(201,168,106,.35);
 }
 
-/* Hover / Focus — เหมือนหัวเว็บ */
+/* Hover เฉพาะปุ่มนี้เท่านั้น */
 .practicesPage a.btn[href="certification.html"]:hover,
 .practicesPage a.btn[href="certification.html"]:focus-visible{
   background: linear-gradient(
     180deg,
     #f1d9a6 0%,
-    #d8b877 45%,
+    #d8b877 50%,
     #c19a52 100%
-  );
+  ) !important;
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.45),
-    0 10px 26px rgba(201,168,106,.38);
+    inset 0 1px 0 rgba(255,255,255,.5),
+    0 14px 34px rgba(201,168,106,.45);
   transform: translateY(-1px);
-}
-
-/* Active */
-.practicesPage a.btn[href="certification.html"]:active{
-  transform: translateY(0);
-  box-shadow:
-    inset 0 2px 6px rgba(0,0,0,.18);
 }
