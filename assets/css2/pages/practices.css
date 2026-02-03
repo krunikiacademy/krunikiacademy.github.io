@@ -13,3 +13,29 @@
   height: auto;
   display: block;
 }
+
+/* ================================
+   Kicker Gold (Practices page only)
+   ================================ */
+
+/* ครอบคลุม kicker ที่ใช้จริงใน practices.html */
+.practicesPage .kicker,
+.practicesPage .card .kicker,
+.practicesPage .pKicker,
+.practicesPage .kickerGold{
+  color: var(--soft-gold, var(--gold, #c9a86a)) !important;
+  font-weight: 800;
+  letter-spacing: .02em;
+  text-transform: none;
+  opacity: 1 !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.22);
+}
+
+/* ถ้าระบบมีเส้น/จุดตกแต่งของ kicker (บางธีมใช้ pseudo-elements) */
+.practicesPage .kicker::before,
+.practicesPage .kicker::after,
+.practicesPage .pKicker::before,
+.practicesPage .pKicker::after{
+  background: var(--soft-gold, var(--gold, #c9a86a));
+  opacity: 1;
+}
