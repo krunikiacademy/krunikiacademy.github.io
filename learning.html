@@ -4,286 +4,503 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Learning | KRUNIKI</title>
-  <meta name="description" content="KRUNIKI Learning — Foundations • Nervous System • Heart Awakening (Public Version)" />
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="description" content="KRUNIKI Learning — Foundations • Heart Awakening (Public Version)" />
+<style>
+  :root{
+    --font-brand: "Times New Roman", Times, serif;
+    --font-head:  "Times New Roman", Times, serif;
+  }
+</style>
+
+  <!-- 🔗 CSS เดิมของนิกี้ -->
+  <link rel="stylesheet" href="assets/css2/app.css">
+  <link rel="stylesheet" href="assets/css2/core/02_base.css">
+  <link rel="stylesheet" href="assets/hamburger.css">
+  <link rel="stylesheet" href="assets/css2/pages/index2.css">
+
+  <!-- ✅ CSS เฉพาะหน้า practices (scoped) -->
+  <link rel="stylesheet" href="assets/css2/pages/practices.css">
+
+  <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css">
+  <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
   <script src="assets/main.js" defer></script>
 </head>
 
-<body>
+<body class="page--index2 practicesPage">
 
+ <!-- HEADER -->
 <header class="siteHeader">
   <div class="navInner">
-    <a class="brand" href="index.html" aria-label="KRUNIKI Home">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="brandText">KRUNIKI</span>
-    </a>
 
+    <!-- Brand + Social (LEFT) -->
+    <div class="brandBlock">
+      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="brandText">KRUNIKI</span>
+      </a>
+
+      <!-- Social row under brand -->
+      <div class="topbar">
+        <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+          <!-- LINE OA -->
+          <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+            </svg>
+          </a>
+
+          <!-- LINE SHOP -->
+          <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+              <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+              <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+            </svg>
+          </a>
+
+          <!-- FACEBOOK -->
+          <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+            </svg>
+          </a>
+
+          <!-- YOUTUBE -->
+          <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+            </svg>
+          </a>
+
+          <!-- TIKTOK -->
+          <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+            </svg>
+          </a>
+
+          <!-- INSTAGRAM -->
+          <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+              <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+              <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div><!-- ✅ ปิด brandBlock ให้ครบ -->
+
+    <!-- Desktop Menu (CENTER) -->
     <nav class="navLinks" aria-label="Primary navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
       <a href="about.html">เกี่ยวกับ</a>
       <a href="services.html">บริการ</a>
-      <a href="resources.html">Resources</a>
-      <a href="#contact">ติดต่อ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
     </nav>
 
-    <button class="navToggle"
-      type="button"
-      aria-label="เปิดเมนู"
-      aria-expanded="false"
-      aria-controls="mobileMenu">☰</button>
-  </div>
+    <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+    <div class="krActions">
+      <button class="krHam" id="krHam" type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+        </svg>
+      </button>
+    </div>
 
-  <nav id="mobileMenu" class="navDrawer" aria-label="Mobile navigation" hidden>
+  </div><!-- close .navInner -->
+
+  <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <a href="shop.html">ร้านค้า</a>
+    <a href="index.html">หน้าแรก</a>
     <a href="about.html">เกี่ยวกับ</a>
     <a href="services.html">บริการ</a>
-    <a href="resources.html">Resources</a>
-    <a href="#contact">ติดต่อ</a>
+    <a href="resources.html">คลังความรู้</a>
+    <a href="contact.html">ติดต่อ</a>
   </nav>
 </header>
 
-<main class="wrap">
+  <!-- ✅ MAIN -->
+  <main class="wrap">
 
-  <!-- HERO -->
-  <section class="panel hero" style="padding:26px;">
-    <div class="goldline">Learning • พื้นที่เรียนรู้ (เวอร์ชันสาธารณะ) <strong>KRUNIKI</strong></div>
-    <h1 style="margin-top:10px;">Foundations of Heart Awakening</h1>
-
-    <p class="lead" style="max-width:72ch;">
-      หน้านี้รวม “ฐานความเข้าใจ” ของ KRUNIKI เพื่อให้คุณเริ่มดูแลหัวใจและระบบประสาทได้อย่างอ่อนโยน
-      เป็นเนื้อหาเชิงการศึกษา (Public) ไม่ใช่เนื้อหาคอร์ส และไม่เปิดเทคนิคเฉพาะในระบบเรียน
-      — แต่ให้คุณค่าได้จริงในชีวิตประจำวัน
-    </p>
-
-    <div class="ctaRow">
-      <a class="btn primary" href="practices.html">ไปหน้า Practices</a>
-      <a class="btn" href="services.html">ดูบริการ</a>
-      <a class="btn" href="index.html">← กลับหน้า Home</a>
-    </div>
-
-    <!-- BANNER (use your generated file name here) -->
-    <div class="banner" aria-label="KRUNIKI Learning Banner" style="margin-top:16px;">
+    <!-- ✅ Banner must be FIRST element in main -->
+    <div class="banner banner--practices" aria-label="KRUNIKI Learning Banner">
       <img
-        src="learning-banner.webp"
+        src="assets/images/banners/learning-banner.webp"
         alt="KRUNIKI Learning — Foundations Banner"
         loading="lazy"
         decoding="async">
     </div>
 
-    <div style="margin-top:14px;color:var(--muted2);font-size:13px;line-height:1.8;">
-      หมายเหตุ: ถ้าคุณอยู่ในภาวะเครียดรุนแรง, แพนิค, หรือมีอาการเวียนหัวง่าย
-      ให้เริ่มจากการฝึกแบบ “เบามาก” และหยุดทันทีเมื่อร่างกายไม่สบาย
-    </div>
-  </section>
+    <!-- HERO -->
+    <section id="top" class="panel hero">
+      <div class="heroGrid">
+        <div class="heroText">
 
-  <!-- FOUNDATION BLOCKS -->
-  <section>
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
-      <div>
-        <div class="kicker">ฐานความเข้าใจ</div>
-        <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">Core Foundations</div>
-      </div>
-      <div style="color:var(--muted2);font-size:13px;">Public-friendly • Clear • Practical</div>
-    </div>
+          <div class="goldline">
+            Learning • พื้นที่เรียนรู้เชิงระบบ (เวอร์ชันสาธารณะ) KRUNIKI<br>
+            Learning • Systems-Based Learning Space (Public Version) KRUNIKI
+          </div>
 
-    <div class="grid2">
-      <div class="card">
-        <div class="kicker">Foundation 01</div>
-        <h3>Heart Awakening คืออะไร (แบบไม่ลอย)</h3>
-        <p>
-          คือการ “กลับมารับรู้ความจริงในใจ” แบบไม่ตัดสิน และค่อย ๆ คืนความสัมพันธ์ที่อ่อนโยนกับตัวเอง
-          ไม่ใช่การบังคับให้คิดบวก หรือเร่งให้หายไว
-        </p>
-      </div>
+          <h1>
+            Foundations of Heart Awakening<br>
+            Foundations of Heart Awakening
+          </h1>
 
-      <div class="card">
-        <div class="kicker">Foundation 02</div>
-        <h3>ระบบประสาทเกี่ยวอะไรกับหัวใจ?</h3>
-        <p>
-          เมื่อระบบประสาทตึง เราจะหด–ปิด–ระวังตัวโดยอัตโนมัติ
-          การฝึกแบบ KRUNIKI เริ่มจาก “ทำให้ระบบปลอดภัย” ก่อน
-          แล้วหัวใจจึงค่อยกลับมาเปิดได้อย่างเป็นธรรมชาติ
-        </p>
-      </div>
+          <p class="lead">
+            หน้านี้จัดทำขึ้นเพื่ออธิบายฐานความเข้าใจเชิงระบบ (Foundational Understanding) ของ KRUNIKI สำหรับผู้ที่ต้องการเริ่มดูแลหัวใจและระบบประสาทอย่างเป็นลำดับ ปลอดภัย และสอดคล้องกับชีวิตประจำวัน<br>
+            This page presents KRUNIKI’s foundational understanding for those who wish to begin caring for the heart and nervous system in a safe, step-by-step way that fits real life.
+          </p>
 
-      <div class="card">
-        <div class="kicker">Foundation 03</div>
-        <h3>Stillness ไม่ได้แปลว่า “ว่างเปล่า”</h3>
-        <p>
-          Stillness คือพื้นที่ที่เราหยุดไหลไปกับความคิดชั่วคราว
-          แล้วกลับมารับรู้ร่างกาย–ลมหายใจ–ความรู้สึก
-          เพื่อให้ใจมี “ที่พัก” ที่ไม่ต้องพิสูจน์อะไร
-        </p>
-      </div>
+          <p class="lead">
+            เนื้อหานี้เป็นเนื้อหาเชิงการศึกษา (Public Learning Content) ไม่ใช่เนื้อหาหลักสูตร ไม่เปิดเผยเทคนิคเฉพาะของระบบการเรียนรู้ภายใน และไม่ทดแทนการดูแลทางการแพทย์หรือจิตบำบัด<br>
+            This is public educational content. It is not a course curriculum, does not disclose internal proprietary techniques, and does not replace medical or psychological care.
+          </p>
 
-      <div class="card">
-        <div class="kicker">Foundation 04</div>
-        <h3>Breathwork แบบสาธารณะควรเป็นยังไง?</h3>
-        <p>
-          “ปลอดภัย–เบา–ทำได้จริง” คือหัวใจสำคัญ
-          เริ่มจากหายใจออกยาวกว่าเข้า และไม่ฝืนลมหายใจ
-          ถ้าเวียนหัว = ลมหายใจแรงเกินไป
-        </p>
-      </div>
-    </div>
-  </section>
+          <div class="ctaRow">
+            <a class="btn primary" href="practices.html">
+              เริ่มต้นจากการฝึกพื้นฐาน (Practices)<br>
+              Start with foundational practice (Practices)
+            </a>
+            <a class="btn" href="services.html">
+              Guided Support &amp; Services<br>
+              Guided Support &amp; Services
+            </a>
+            <a class="btn" href="certification.html">
+              Certification Framework (Academic Reference)<br>
+              Certification Framework (Academic Reference)
+            </a>
+          </div>
+        </div>
 
-  <!-- LEARNING LIBRARY -->
-  <section>
-    <div class="panel" style="padding:18px;">
-      <div class="resHead" style="padding:0;">
-        <h2 style="margin:0;">Learning Library</h2>
-        <div class="resTag">บล็อกความรู้สั้น ๆ (ทยอยเพิ่ม)</div>
-      </div>
-
-      <div class="resBody" style="padding:14px 0 0;">
-        <div class="grid2">
-          <a href="practices.html" class="card cardLink" aria-label="ไปหน้า Practices">
-            <div class="kicker">Guide</div>
-            <h3>เริ่มฝึกแบบไม่กดดัน: 3–5 นาที</h3>
-            <p>
-              สำหรับวันที่ยุ่งมากหรือใจล้า — วิธีเริ่มต้นให้ “ทำได้จริง”
-              และปิดการฝึกให้ระบบประสาทปลอดภัย
-            </p>
-            <div class="cardAction">
-              <span class="btnGhost">ไปหน้า Practices →</span>
+        <div class="quoteCard" aria-label="Learning principle quote">
+          <div class="quoteTop">
+            <div class="leftTitle">
+              Learning • พื้นที่เรียนรู้<br>
+              Learning • Learning Space
             </div>
-          </a>
-
-          <div class="card">
-            <div class="kicker">Concept</div>
-            <h3>3 สัญญาณว่า “ระบบประสาทตึง”</h3>
-            <p>
-              ใจเร่ง, หายใจสั้น, และอยู่ในโหมดเฝ้าระวังตลอด
-              แนวทางของ KRUNIKI คือ “ลดแรงตึง” ก่อน แล้วค่อยกลับมาคุยกับใจ
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="kicker">Concept</div>
-            <h3>ความนิ่ง = เครื่องมือกลับบ้าน</h3>
-            <p>
-              ความนิ่งไม่ได้เอาไว้หนีโลก
-              แต่เอาไว้ “กลับมามีพื้นที่ภายใน” เพื่ออยู่กับโลกโดยไม่ถูกดูดพลัง
-            </p>
-          </div>
-
-          <a href="services.html" class="card cardLink" aria-label="ดูบริการ KRUNIKI">
-            <div class="kicker">Service</div>
-            <h3>อยากให้มีคนพาเริ่มฝึก?</h3>
-            <p>
-              ถ้าคุณอยากเริ่มแบบมีโครงสร้างและปลอดภัย
-              KRUNIKI มีบริการ Session และแนวทางดูแลใจอย่างอ่อนโยน
-            </p>
-            <div class="cardAction">
-              <span class="btnGhost">ดูบริการ →</span>
+            <div style="opacity:.8;">
+              Public Methodology<br>
+              Public Methodology
             </div>
-          </a>
-        </div>
-
-        <div class="resBox" style="margin-top:14px;">
-          เราจะทยอยเพิ่มเนื้อหาเชิงการศึกษาเป็นลำดับ (สั้น กระชับ ทำได้จริง)
-          <ul>
-            <li>Foundations: Heart Awakening &amp; Nervous System</li>
-            <li>Breath Basics: Safe &amp; Gentle Breathing</li>
-            <li>Stillness Practice: Returning to Inner Ground</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA SPLIT -->
-  <section>
-    <div class="ctaSplit">
-      <div class="ctaBox">
-        <div class="kicker">Next Step</div>
-        <h3>อยากเริ่มฝึกวันนี้แบบเบาและมั่นคง?</h3>
-        <p style="margin:10px 0 0; color:var(--muted); line-height:1.8;">
-          ไปที่หน้า Practices เพื่อเริ่มจาก 3–5 นาที
-          แล้วค่อยขยับไปสู่การฝึกที่เหมาะกับชีวิตจริงของคุณ
-        </p>
-        <div class="ctaRow" style="margin-top:14px;">
-          <a class="btn primary" href="practices.html">เริ่มที่ Practices</a>
-          <a class="btn" href="services.html">ดูบริการ</a>
-        </div>
-
-        <div class="microProof">
-          บางครั้งการเปลี่ยนแปลงเริ่มจาก “การหายใจออกยาวขึ้น 6 รอบ”
-          และการให้หัวใจได้พัก โดยไม่ต้องพิสูจน์อะไร
-        </div>
-      </div>
-
-      <div class="faqBox">
-        <h3 style="margin:0;">Mini FAQ</h3>
-
-        <details class="faqItem">
-          <summary>เรียนรู้จากหน้านี้แล้วจะได้อะไร?</summary>
-          <p class="faqAns">
-            ได้ฐานความเข้าใจที่ชัดขึ้นว่า “หัวใจ–ระบบประสาท–ความนิ่ง” เชื่อมกันอย่างไร
-            และรู้วิธีเริ่มฝึกแบบปลอดภัยโดยไม่ฝืนตัวเอง
+          </div>
+          <p class="quote">
+            “การเรียนรู้ที่ดี เริ่มจากกรอบที่ปลอดภัย และค่อย ๆ ลึกอย่างเป็นธรรมชาติ”<br>
+            “Good learning starts with safety and deepens naturally.”
           </p>
-        </details>
-
-        <details class="faqItem">
-          <summary>ถ้าฉันรู้สึกไวต่อพลังงาน/อารมณ์มาก ควรเริ่มยังไง?</summary>
-          <p class="faqAns">
-            เริ่มจากการฝึกสั้น ๆ และปิดการฝึกด้วย grounding เสมอ
-            ถ้ารู้สึกท่วมอารมณ์ง่าย ให้เลือก Stillness แบบอ่อนโยนก่อน breathwork เชิงลึก
-          </p>
-        </details>
-
-        <details class="faqItem">
-          <summary>อยากฝึกให้ตรงกับฉันมากขึ้น?</summary>
-          <p class="faqAns">
-            คุณสามารถเริ่มจากบริการ Session เพื่อให้มีคนช่วย “ปรับระดับการฝึก”
-            ให้ปลอดภัย เหมาะกับชีวิตจริง และไม่เร่งเกินระบบของคุณ
-          </p>
-        </details>
-
-        <div class="faqFoot">
-          <a class="btn primary" href="services.html">ไปที่ Services</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="panel">
-      <div class="contactHead">
-        <h2>ติดต่อ / Follow</h2>
-        <div class="small">Connect gently</div>
+    <!-- SAFETY NOTICE -->
+    <section id="safety">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+        <div>
+          <div class="kicker">
+            ขอบเขตและความปลอดภัยในการเรียนรู้<br>
+            Safety Notice
+          </div>
+          <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">
+            Safety Notice<br>
+            Safety Notice
+          </div>
+        </div>
+        <div style="color:var(--muted2);font-size:13px;">
+          ปลอดภัย • เบา • ควบคุมได้<br>
+          Safe • Gentle • Self-controlled
+        </div>
       </div>
 
-      <div class="contactGrid">
-        <div class="note">
-          หากคุณอยากให้ KRUNIKI ช่วยจัดโครงฝึกที่ “พอดีกับคุณ”
-          สามารถเริ่มคุยกันผ่าน LINE OA ได้เลย 💛
-          <div style="margin-top:10px;color:var(--muted2);font-size:13px;">
-            (Learning เป็นพื้นที่สาธารณะ — ไม่ใช่เนื้อหาคอร์ส)
+      <div class="panel" style="margin-top:14px;">
+        <div class="resBody">
+          <div class="resBox">
+            การเรียนรู้และการฝึกที่เกี่ยวข้องกับหัวใจ ลมหายใจ และระบบประสาท อาจส่งผลต่อสภาวะทางกายและอารมณ์แตกต่างกันในแต่ละบุคคล<br>
+            Practices related to the heart, breath, and nervous system can affect the body and emotions differently for each person.
+            <div style="height:10px;"></div>
+            หากคุณมีภาวะเครียดหรือวิตกกังวลรุนแรง ภาวะแพนิค เวียนหัวง่าย หรือภาวะทางกาย/จิตเวชที่ต้องดูแลเฉพาะทาง ควรเริ่มจากระดับเบาและปรึกษาผู้เชี่ยวชาญที่เกี่ยวข้อง<br>
+            If you experience severe anxiety/stress, panic, frequent dizziness, or conditions requiring specialized care, start gently and consult an appropriate professional.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE FOUNDATIONS -->
+    <section id="foundations" style="margin-top:18px;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+        <div>
+          <div class="kicker">
+            ฐานความเข้าใจหลัก<br>
+            Core Foundations
+          </div>
+          <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">
+            Core Foundations — Foundation 01–04<br>
+            Core Foundations — Foundation 01–04
+          </div>
+        </div>
+        <div style="color:var(--muted2);font-size:13px;">
+          หัวใจ • ระบบประสาท • ความนิ่ง<br>
+          Heart • Nervous System • Stillness
+        </div>
+      </div>
+
+      <div class="grid2" style="margin-top:14px;">
+
+        <div class="card">
+          <div class="kicker">
+            Foundation 01<br>
+            Foundation 01
+          </div>
+          <h3>
+            Foundation 01<br>
+            Foundation 01
+          </h3>
+          <p>
+            Heart Awakening คือกระบวนการกลับมารับรู้สภาวะภายในอย่างไม่ตัดสิน และค่อย ๆ ฟื้นความสัมพันธ์ที่ปลอดภัยกับตนเอง ไม่ใช่การบังคับคิดบวกหรือเร่งให้ “หาย”<br>
+            Heart Awakening is the process of noticing inner states without judgment and rebuilding a safe relationship with oneself—without forcing positivity or rushing “healing”.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">
+            Foundation 02<br>
+            Foundation 02
+          </div>
+          <h3>
+            Foundation 02<br>
+            Foundation 02
+          </h3>
+          <p>
+            เมื่อระบบประสาทตึง เราจะเข้าสู่โหมดป้องกันโดยอัตโนมัติ แนวทางของ KRUNIKI เริ่มจากสร้างความปลอดภัยให้ระบบประสาทก่อน เพื่อให้หัวใจค่อย ๆ เปิดได้ตามธรรมชาติ<br>
+            When the nervous system is strained, the body enters protection mode. KRUNIKI begins by restoring nervous-system safety so the heart can open naturally.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">
+            Foundation 03<br>
+            Foundation 03
+          </div>
+          <h3>
+            Foundation 03<br>
+            Foundation 03
+          </h3>
+          <p>
+            Stillness ไม่ใช่ความว่างเปล่าหรือการหยุดคิด แต่คือพื้นที่ที่จิตใจหยุดไหลไปตามแรงกระตุ้นชั่วคราว และกลับมารับรู้ร่างกาย ลมหายใจ และความรู้สึกโดยไม่เร่งผลลัพธ์<br>
+            Stillness is not emptiness or stopping thoughts; it’s a space to pause reactivity and return to body, breath, and feeling without rushing outcomes.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">
+            Foundation 04<br>
+            Foundation 04
+          </div>
+          <h3>
+            Foundation 04<br>
+            Foundation 04
+          </h3>
+          <p>
+            Breathwork ในพื้นที่สาธารณะต้องยึดหลัก ปลอดภัย เบา ทำได้จริง: ไม่ฝืนลมหายใจ เน้นหายใจออกอย่างผ่อนคลาย และสังเกตร่างกายเป็นหลัก หากเวียนหัวคือสัญญาณว่าแรงเกินไป<br>
+            Public breathwork must be safe, gentle, and practical: don’t force the breath, prioritize relaxed exhalation, and listen to the body. Dizziness indicates over-effort.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEARNING LIBRARY -->
+    <section id="library" style="margin-top:18px;">
+      <div class="panel">
+        <div class="resHead">
+          <h2>
+            Learning Library<br>
+            Learning Library
+          </h2>
+          <div class="resTag">
+            คลังความรู้เชิงแนวคิด (ทยอยพัฒนา)<br>
+            Concept Library (In Development)
           </div>
         </div>
 
-        <div class="lineCta">
-          <div class="lineCtaTitle">
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color:rgba(255,255,255,.85)">
-              <path d="M21 12c0 4.4-4 8-9 8-1.1 0-2.2-.2-3.2-.5L4 21l1-3.2C3.7 16.3 3 14.2 3 12c0-4.4 4-8 9-8s9 3.6 9 8Z"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-            เชื่อมต่อหัวใจผ่าน LINE OA
-          </div>
+        <div class="resBody">
+          <div class="resBox">
 
-          <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">ไปที่ LINE OA</a>
-          <a class="btn" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ดู LINE Shop</a>
+            <p style="margin:0 0 12px 0;">
+              <strong>
+                Guide — การเริ่มฝึก 3–5 นาทีอย่างปลอดภัย<br>
+                Guide — Safe 3–5 Minute Start
+              </strong><br>
+              แนวทางเริ่มต้นสำหรับวันที่เวลาน้อยหรือใจอ่อนล้า เน้นความสม่ำเสมอ ความเบา และการปิดการฝึกอย่างเหมาะสม<br>
+              A starting approach for busy or depleted days—prioritizing consistency, gentleness, and proper closure.
+              <br>
+              <a href="practices.html">practices.html</a>
+            </p>
+
+            <p style="margin:0 0 12px 0;">
+              <strong>
+                Concept<br>
+                Concept
+              </strong><br>
+              ใจเร่ง หายใจสั้น และอยู่ในโหมดเฝ้าระวังต่อเนื่อง แนวทางคือ ลดแรงตึงของระบบก่อน แล้วค่อยพัฒนาการรับรู้อารมณ์<br>
+              Racing mind, shallow breath, persistent vigilance—reduce system strain first, then develop emotional awareness.
+            </p>
+
+            <p style="margin:0;">
+              <strong>
+                Service Reference<br>
+                Service Reference
+              </strong><br>
+              สำหรับผู้ที่ต้องการโครงสร้างและการปรับระดับที่เหมาะกับตนเอง สามารถเริ่มผ่านบริการ Session แบบสนับสนุน<br>
+              For those who want structure and personalization, begin with supportive session-based guidance.
+              <br>
+              <a href="services.html">services.html</a>
+            </p>
+
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <footer>
-      © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
-    </footer>
-  </section>
+    <!-- NEXT STEP -->
+    <section id="next" style="margin-top:18px;">
+      <div class="panel">
+        <div class="resHead">
+          <h2>
+            Next Step<br>
+            Next Step
+          </h2>
+          <div class="resTag">
+            การเชื่อมการเรียนรู้สู่การปฏิบัติ<br>
+            Connect Learning to Practice
+          </div>
+        </div>
 
-</main>
+        <div class="resBody">
+          <div class="resBox">
+            การเรียนรู้เชิงแนวคิดเป็นจุดเริ่มต้น การฝึกสั้นอย่างเหมาะสมช่วยให้ระบบประสาทและหัวใจค่อย ๆ ปรับตัวได้อย่างมั่นคง<br>
+            Conceptual learning is the start; short, appropriate practice helps the nervous system and heart stabilize over time.
+            <div style="margin-top:12px;">
+              <a href="practices.html">practices.html</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINI FAQ -->
+    <section id="faq" style="margin-top:18px;">
+      <div class="panel">
+        <div class="resHead">
+          <h2>
+            Mini FAQ<br>
+            Mini FAQ
+          </h2>
+          <div class="resTag">
+            คำถามที่พบบ่อย<br>
+            Frequently Asked Questions
+          </div>
+        </div>
+
+        <div class="resBody">
+          <div class="resBox">
+
+            <details class="faq">
+              <summary>
+                การเรียนรู้จากหน้านี้ช่วยอะไรได้บ้าง?<br>
+                What does this page help with?
+              </summary>
+              <p style="margin-top:10px;">
+                ช่วยสร้างความเข้าใจเกี่ยวกับหัวใจ ระบบประสาท และความนิ่ง เพื่อเริ่มฝึกอย่างปลอดภัย<br>
+                It clarifies heart–nervous system–stillness connections for safer practice.
+              </p>
+            </details>
+
+            <details class="faq" style="margin-top:10px;">
+              <summary>
+                ถ้าอ่อนไหวต่ออารมณ์/พลังงาน ควรเริ่มอย่างไร?<br>
+                If I’m highly sensitive, how should I start?
+              </summary>
+              <p style="margin-top:10px;">
+                เริ่มสั้น ๆ และ grounding ทุกครั้ง เลี่ยงการเร่งระดับ โดยเลือก stillness ก่อน breathwork เชิงลึก<br>
+                Start short, ground every time, avoid escalation; choose stillness before deep breathwork.
+              </p>
+            </details>
+
+            <details class="faq" style="margin-top:10px;">
+              <summary>
+                ต้องการฝึกให้เหมาะกับฉันมากขึ้น?<br>
+                How can I personalize my practice?
+              </summary>
+              <p style="margin-top:10px;">
+                พิจารณาบริการ Session เพื่อประเมินระดับและโครงฝึกที่เหมาะสม<br>
+                Consider sessions for assessment and tailored practice structure.
+              </p>
+            </details>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING NOTE + RELATED PATHWAYS -->
+    <section id="closing" style="margin-top:18px;">
+      <div class="panel">
+        <div class="contactHead">
+          <h2>
+            Closing Note<br>
+            Closing Note
+          </h2>
+          <div class="small">
+            บทสรุปเชิงสถาบัน<br>
+            Academic Closing
+          </div>
+        </div>
+
+        <div class="contactGrid">
+          <div class="note">
+            พื้นที่ Learning ของ KRUNIKI ทำหน้าที่เป็นฐานความเข้าใจเชิงระบบสำหรับการเริ่มต้นอย่างมีขอบเขต ปลอดภัย และเคารพจังหวะของแต่ละบุคคล เนื้อหาในหน้านี้เชื่อมต่อไปยังการฝึก การดูแล และการพัฒนาเชิงลึกตามความพร้อมของผู้เรียน<br>
+            KRUNIKI Learning serves as a bounded, safe foundational knowledge base that respects individual pacing. This page connects to practice, support, and deeper development as learners are ready.
+          </div>
+
+          <div class="lineCta">
+            <div class="lineCtaTitle">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color:#c9a86a">
+                <path d="M21 12c0 4.4-4 8-9 8-1.1 0-2.2-.2-3.2-.5L4 21l1-3.2C3.7 16.3 3 14.2 3 12c0-4.4 4-8 9-8s9 3.6 9 8Z"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              เส้นทางการเรียนรู้ที่เกี่ยวข้อง<br>
+              Related Pathways
+            </div>
+
+            <a class="btn primary" href="practices.html">
+              เริ่มต้นจากการฝึกพื้นฐาน (Practices)<br>
+              Start with foundational practice (Practices)
+            </a>
+            <a class="btn" href="services.html">
+              Guided Support &amp; Services<br>
+              Guided Support &amp; Services
+            </a>
+            <a class="btn" href="certification.html">
+              Certification Framework (Academic Reference)<br>
+              Certification Framework (Academic Reference)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+      </footer>
+    </section>
+
+  </main>
 
 </body>
 </html>
