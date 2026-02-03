@@ -3,271 +3,507 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Practices | KRUNIKI</title>
-  <meta name="description" content="KRUNIKI Practices — Breath • Stillness • Meditation (Public Version)" />
-  <link rel="stylesheet" href="assets/style.css">
+  <title>KRUNIKI Academy</title>
+  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
+<style>
+  :root{
+    --font-brand: "Times New Roman", Times, serif;
+    --font-head:  "Times New Roman", Times, serif;
+  }
+</style>
+  
+  <!-- 🔗 CSS เดิมของนิกี้ -->
+  <link rel="stylesheet" href="assets/css2/app.css">
+  <link rel="stylesheet" href="assets/css2/core/02_base.css">
+  <link rel="stylesheet" href="assets/hamburger.css">
+  <link rel="stylesheet" href="assets/css2/pages/index2.css">
+
+  <!-- ✅ CSS เฉพาะหน้า practices (scoped) -->
+  <link rel="stylesheet" href="assets/css2/pages/practices.css">
+
+  <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css">
+  <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
   <script src="assets/main.js" defer></script>
 </head>
+  
+<body class="page--index2 practicesPage">
 
-<body>
-
+ <!-- HEADER -->
 <header class="siteHeader">
   <div class="navInner">
-    <a class="brand" href="index.html" aria-label="KRUNIKI Home">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="brandText">KRUNIKI</span>
-    </a>
 
+    <!-- Brand + Social (LEFT) -->
+    <div class="brandBlock">
+      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="brandText">KRUNIKI</span>
+      </a>
+
+      <!-- Social row under brand -->
+      <div class="topbar">
+        <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+          <!-- LINE OA -->
+          <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+            </svg>
+          </a>
+
+          <!-- LINE SHOP -->
+          <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+              <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+              <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+            </svg>
+          </a>
+
+          <!-- FACEBOOK -->
+          <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+            </svg>
+          </a>
+
+          <!-- YOUTUBE -->
+          <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+            </svg>
+          </a>
+
+          <!-- TIKTOK -->
+          <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+            </svg>
+          </a>
+
+          <!-- INSTAGRAM -->
+          <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+              <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+              <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div><!-- ✅ ปิด brandBlock ให้ครบ -->
+
+    <!-- Desktop Menu (CENTER) -->
     <nav class="navLinks" aria-label="Primary navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
       <a href="about.html">เกี่ยวกับ</a>
       <a href="services.html">บริการ</a>
-      <a href="resources.html">Resources</a>
-      <a href="#contact">ติดต่อ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
     </nav>
 
-    <button class="navToggle"
-      type="button"
-      aria-label="เปิดเมนู"
-      aria-expanded="false"
-      aria-controls="mobileMenu">☰</button>
-  </div>
+    <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+    <div class="krActions">
+      <button class="krHam" id="krHam" type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+        </svg>
+      </button>
+    </div>
 
-  <nav id="mobileMenu" class="navDrawer" aria-label="Mobile navigation" hidden>
+  </div><!-- close .navInner -->
+
+  <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <a href="shop.html">ร้านค้า</a>
+    <a href="index.html">หน้าแรก</a>
     <a href="about.html">เกี่ยวกับ</a>
     <a href="services.html">บริการ</a>
-    <a href="resources.html">Resources</a>
-    <a href="#contact">ติดต่อ</a>
+    <a href="resources.html">คลังความรู้</a>
+    <a href="contact.html">ติดต่อ</a>
   </nav>
 </header>
 
-<main class="wrap">
+  <!-- ✅ MAIN (replaced only this part) -->
+  <main class="wrap">
 
-  <!-- HERO -->
-  <section class="panel hero" style="padding:26px;">
-    <div class="goldline">Practices • การฝึก (เวอร์ชันสาธารณะ) <strong>KRUNIKI</strong></div>
-    <h1 style="margin-top:10px;">Breath • Stillness • Meditation</h1>
-
-    <p class="lead" style="max-width:70ch;">
-      หน้านี้รวม “แนวทางการฝึกพื้นฐาน” ของ KRUNIKI สำหรับผู้ที่อยากเริ่มต้นดูแลระบบประสาท
-      คืนความนิ่งให้หัวใจ และกลับมาอยู่กับตัวเองอย่างอ่อนโยน — โดยไม่ใช่เนื้อหาเชิงคอร์ส
-      และไม่มีเทคนิคเฉพาะภายในระบบเรียน
-    </p>
-
-    <div class="ctaRow">
-      <a class="btn primary" href="services.html">ดูบริการที่มีในตอนนี้</a>
-      <a class="btn" href="resources.html">ดู Resources</a>
-      <a class="btn" href="index.html">← กลับหน้า Home</a>
+    <!-- ✅ Banner must be FIRST element in main -->
+    <div class="banner banner--practices" aria-label="KRUNIKI Practices Banner">
+      <img
+        src="assets/images/banners/practices-banner.webp"
+        alt="KRUNIKI Practices — Breath, Stillness, Meditation"
+        loading="lazy"
+        decoding="async">
     </div>
 
-    <div style="margin-top:14px;color:var(--muted2);font-size:13px;line-height:1.8;">
-      หมายเหตุ: หากคุณมีโรคประจำตัวรุนแรง, ตั้งครรภ์, หรือมีภาวะวิตกกังวล/แพนิครุนแรง
-      ให้ปรึกษาผู้เชี่ยวชาญก่อนเริ่มฝึกหายใจเชิงลึก และเริ่มจากระดับ “เบามาก” เท่านั้น
-   <div class="banner" aria-label="KRUNIKI Practices Banner">
-  <img
-    src="practices-banner.webp"
-    alt="KRUNIKI Practices — Breath, Stillness, Meditation"
-    loading="lazy"
-    decoding="async">
-</div>
-  </section>
+    <!-- HERO -->
+    <section id="top" class="panel hero">
+      <div class="heroGrid">
+        <div class="heroText">
+          <div class="goldline">Public Methodology Overview • ภาพรวมแนวทางสาธารณะ <strong>KRUNIKI</strong></div>
 
-  <!-- QUICK START -->
-  <section>
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
-      <div>
-        <div class="kicker">เริ่มต้นแบบสั้น ๆ</div>
-        <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">Quick Start (3–5 นาที)</div>
+          <h1>
+            Practices — Foundational Self-Regulation Approaches<br>
+            Breath • Stillness • Meditation
+          </h1>
+
+          <p class="lead">
+            หน้านี้จัดทำขึ้นเพื่ออธิบายกรอบแนวคิดการฝึกพื้นฐาน (Foundational Practice Framework)
+            ที่ KRUNIKI ใช้เป็นฐานรองรับการดูแลตนเองในระดับระบบประสาทและจิตใจ<br>
+            This page explains the foundational practice framework used in KRUNIKI to support
+            self-care for the nervous system and psychological stability.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="certification.html">KRUNIKI Certification Program</a>
+            <a class="btn" href="services.html">Guided Services</a>
+            <a class="btn" href="shop.html">KRUNIKI Shop</a>
+          </div>
+        </div>
+
+        <div class="quoteCard" aria-label="Practice principle quote">
+          <div class="quoteTop">
+            <div class="leftTitle">Short • Accessible</div>
+            <div style="opacity:.8;">Nervous-System Friendly</div>
+          </div>
+          <p class="quote">
+            “การฝึกที่ดี ไม่จำเป็นต้องยาว — แต่ต้องปลอดภัย ทำได้จริง และสม่ำเสมอ”
+            <br>
+            “A good practice doesn’t have to be long — it must be safe, doable, and consistent.”
+          </p>
+        </div>
       </div>
-      <div style="color:var(--muted2);font-size:13px;">Public-friendly • Practical</div>
-    </div>
+    </section>
 
-    <div class="grid2">
-      <div class="card">
-        <div class="kicker">Breath Reset</div>
-        <h3>ลมหายใจรีเซ็ตระบบประสาท (1 นาที)</h3>
-        <p>
-          หายใจเข้าเบา ๆ 4 วินาที / หายใจออกยาว 6 วินาที ทำ 6 รอบ
-          หากเวียนหัวให้ลดความลึกของลมหายใจทันที
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="kicker">Stillness Anchor</div>
-        <h3>จุดยึดความนิ่ง (90 วินาที)</h3>
-        <p>
-          วางมือที่อกเบา ๆ รับรู้สัมผัสมือ–หน้าอก แล้วค่อยรับรู้ “เสียงรอบตัว”
-          โดยไม่ตามความคิด แค่รับรู้และกลับมาที่สัมผัส
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="kicker">Micro Meditation</div>
-        <h3>สมาธิสั้น ๆ แบบไม่กดดัน (3 นาที)</h3>
-        <p>
-          ตั้งเวลา 3 นาที: “รู้ลมหายใจเข้า–ออก” แบบธรรมดาที่สุด
-          เผลอเมื่อไหร่ กลับมาเมื่อไหร่ นั่นคือการฝึกที่แท้จริง
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="kicker">Aftercare</div>
-        <h3>ปิดการฝึกให้ร่างกายปลอดภัย</h3>
-        <p>
-          จบด้วยการขยับนิ้วมือ/ไหล่เบา ๆ สัมผัสเท้ากับพื้น
-          และดื่มน้ำอุ่น 3–5 อึก เพื่อ “พาระบบกลับบ้าน”
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRACTICE PATHS -->
-  <section>
-    <div class="panel" style="padding:18px;">
+    <!-- Purpose -->
+    <section id="purpose">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
         <div>
-          <h2 style="margin:0;font-size:26px;letter-spacing:-.01em;">3 Paths of Practice</h2>
-          <div class="resTag">เส้นทางฝึก 3 แบบ — เลือกให้เหมาะกับวันของคุณ</div>
+          <div class="kicker">Purpose of This Page</div>
+          <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">วัตถุประสงค์ของหน้านี้</div>
+        </div>
+        <div style="color:var(--muted2);font-size:13px;">Self-awareness • Self-regulation • Internal Safety</div>
+      </div>
+
+      <div class="panel" style="margin-top:14px;">
+        <div class="resBody">
+          <div class="resBox">
+            หน้านี้จัดทำขึ้นเพื่ออธิบายกรอบแนวคิดการฝึกพื้นฐาน (Foundational Practice Framework)
+            ที่ KRUNIKI ใช้เป็นฐานรองรับการดูแลตนเองในระดับระบบประสาทและจิตใจ<br>
+            This page is created to explain the foundational practice framework that KRUNIKI uses
+            as a supportive base for self-care across the nervous system and psychological stability.
+            <ul>
+              <li>
+                สนับสนุนการรับรู้ตนเอง (Self-awareness)<br>
+                Support self-awareness.
+              </li>
+              <li>
+                ส่งเสริมการปรับสมดุลระบบประสาท (Self-regulation)<br>
+                Promote self-regulation.
+              </li>
+              <li>
+                ช่วยให้บุคคลสามารถกลับสู่ภาวะนิ่งและปลอดภัยภายใน (Internal Safety &amp; Stillness)<br>
+                Help return to internal safety and stillness.
+              </li>
+            </ul>
+
+            เนื้อหาทั้งหมดเป็นเวอร์ชันสาธารณะ ไม่ใช่โครงสร้างหลักสูตร ไม่เปิดเผยเทคนิคเฉพาะ
+            และไม่ทดแทนการดูแลทางการแพทย์หรือจิตบำบัด<br>
+            All content here is public-facing, not a curriculum structure, does not disclose proprietary techniques,
+            and does not replace medical or psychotherapy care.
+
+            <div style="margin-top:12px;">
+              🔗 สำหรับผู้ที่สนใจโครงสร้างระบบการเรียนรู้และมาตรฐานการฝึกในระดับสถาบัน สามารถดูภาพรวมได้ที่<br>
+              For institutional-level structure and training standards, see:
+              <a href="certification.html">KRUNIKI Certification Program</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety & Ethical Consideration -->
+    <section id="safety" style="margin-top:18px;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+        <div>
+          <div class="kicker">Safety &amp; Ethical Consideration</div>
+          <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">ความปลอดภัยและจริยธรรม</div>
+        </div>
+        <div style="color:var(--muted2);font-size:13px;">Gentle • Safe • Self-controlled</div>
+      </div>
+
+      <div class="panel" style="margin-top:14px;">
+        <div class="resBody">
+          <div class="resBox">
+            การฝึกที่เกี่ยวข้องกับลมหายใจและภาวะจิตใจ อาจส่งผลต่อระบบประสาทอัตโนมัติ (Autonomic Nervous System)<br>
+            Practices involving breath and mind-state can affect the autonomic nervous system.
+            <div style="height:10px;"></div>
+
+            ผู้ที่มีภาวะต่อไปนี้ควรปรึกษาผู้เชี่ยวชาญก่อนเริ่มฝึก<br>
+            If you have any of the following, consult a qualified professional before practice:
+            <ul>
+              <li>
+                โรคทางกายหรือจิตเวชรุนแรง<br>
+                Severe medical or psychiatric conditions.
+              </li>
+              <li>
+                ภาวะแพนิคหรือวิตกกังวลขั้นรุนแรง<br>
+                Severe panic or anxiety conditions.
+              </li>
+              <li>
+                การตั้งครรภ์<br>
+                Pregnancy.
+              </li>
+            </ul>
+
+            การฝึกทุกขั้นควรเริ่มจากระดับ เบา ปลอดภัย และควบคุมได้ด้วยตนเอง<br>
+            Always start at a level that is gentle, safe, and self-controlled.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Foundational Practice Framework -->
+    <section id="framework" style="margin-top:18px;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+        <div>
+          <div class="kicker">Foundational Practice Framework (3–5 Minutes)</div>
+          <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">กรอบการฝึกพื้นฐาน (3–5 นาที)</div>
+        </div>
+        <div style="color:var(--muted2);font-size:13px;">Short • Accessible • Nervous-System Friendly</div>
+      </div>
+
+      <div class="grid2" style="margin-top:14px;">
+
+        <div class="card">
+          <div class="kicker">1. Breath Regulation (1 Minute)</div>
+          <h3>การปรับลมหายใจ (1 นาที)</h3>
+          <p>
+            Objective: ลดสัญญาณความตึงในระบบประสาท และเพิ่มภาวะสงบ (Parasympathetic Activation)<br>
+            Objective: Reduce nervous-system tension and support parasympathetic activation.
+          </p>
+          <ul>
+            <li>หายใจเข้าอย่างอ่อนโยน (4 วินาที)<br>Inhale gently (4 seconds).</li>
+            <li>หายใจออกยาวกว่า (6 วินาที)<br>Exhale longer (6 seconds).</li>
+            <li>ทำซ้ำประมาณ 6 รอบ<br>Repeat ~6 rounds.</li>
+            <li>หากเกิดอาการเวียนหัว ให้ลดความลึกของลมหายใจทันที<br>If dizziness occurs, reduce breath depth immediately.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="kicker">2. Stillness Anchoring (90 Seconds)</div>
+          <h3>การยึดความนิ่ง (90 วินาที)</h3>
+          <p>
+            Objective: สร้างจุดยึดความปลอดภัย (Safety Anchor) ผ่านการรับรู้ร่างกายและสิ่งแวดล้อม<br>
+            Objective: Create a safety anchor via body and environmental awareness.
+          </p>
+          <ul>
+            <li>วางมือเบา ๆ บริเวณหน้าอก<br>Place a hand gently on the chest.</li>
+            <li>รับรู้สัมผัสทางกาย<br>Notice physical contact.</li>
+            <li>เปิดการรับรู้ต่อเสียงรอบตัวโดยไม่ตีความ<br>Open to surrounding sounds without interpretation.</li>
+            <li>ไม่ต้องหยุดความคิด เพียงรับรู้และกลับมาที่สัมผัสปัจจุบัน<br>No need to stop thoughts—notice and return to present sensation.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="kicker">3. Micro Meditation (3 Minutes)</div>
+          <h3>สมาธิแบบสั้น (3 นาที)</h3>
+          <p>
+            Objective: ฝึกการอยู่กับปัจจุบันอย่างไม่กดดัน และสร้างความคุ้นเคยกับการรับรู้ลมหายใจ<br>
+            Objective: Practice present-moment awareness without pressure and build familiarity with breath awareness.
+          </p>
+          <ul>
+            <li>ตั้งเวลาสั้น ๆ<br>Set a short timer.</li>
+            <li>รับรู้ลมหายใจเข้า–ออกตามธรรมชาติ<br>Notice natural inhale and exhale.</li>
+            <li>การเผลอและการกลับมา ถือเป็นส่วนหนึ่งของการเรียนรู้ ไม่ใช่ความผิดพลาด<br>Wandering and returning are part of learning—not a mistake.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="kicker">4. Integration &amp; Aftercare</div>
+          <h3>การบูรณาการและการดูแลหลังฝึก</h3>
+          <p>
+            Objective: นำระบบประสาทกลับสู่ภาวะพร้อมใช้ชีวิตประจำวัน<br>
+            Objective: Return the nervous system to a daily-life-ready state.
+          </p>
+          <ul>
+            <li>เคลื่อนไหวร่างกายเบา ๆ<br>Move gently.</li>
+            <li>รับรู้การสัมผัสเท้ากับพื้น<br>Feel feet contact with the ground.</li>
+            <li>ดื่มน้ำอุ่นเล็กน้อย<br>Drink a small amount of warm water.</li>
+            <li>ช่วยลดความเสี่ยงของการค้างพลังงานหรืออาการลอย<br>Helps reduce lingering activation or “floaty” sensations.</li>
+          </ul>
+          <p style="margin-top:10px;">
+            🧩 สำหรับผู้ที่ต้องการการฝึกพร้อมการดูแลอย่างเป็นระบบ สามารถดูบริการแบบ Session ได้ที่<br>
+            For guided, structured support, see:
+            <a href="services.html">Guided Services</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Three Foundational Practice Paths -->
+    <section id="paths" style="margin-top:18px;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+        <div>
+          <div class="kicker">Three Foundational Practice Paths</div>
+          <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">3 แนวทางฝึกพื้นฐาน</div>
         </div>
         <div style="color:var(--muted2);font-size:13px;">Breath • Stillness • Meditation</div>
       </div>
 
       <div class="grid2" style="margin-top:14px;">
-        <!-- Breath -->
         <div class="card">
-          <div class="kicker">Path 1</div>
-          <h3>Breath (ลมหายใจ)</h3>
+          <div class="kicker">Path I — Breath-Based Regulation</div>
+          <h3>การปรับสมดุลผ่านลมหายใจ</h3>
           <p>
-            เหมาะเมื่อใจฟุ้ง เหนื่อย หรือระบบประสาทตึง
-            เริ่มจาก “หายใจออกยาว” ก่อนเสมอ แล้วค่อยเพิ่มเวลา
+            Use When: ระบบประสาทตึง • ความคิดฟุ้ง • ความเหนื่อยสะสม<br>
+            Use When: High tension • Racing thoughts • Accumulated fatigue
           </p>
-
-          <div class="cardAction">
-            <span class="btnGhost">แนวทาง: 4–6 Breathing • Soft Nose Breathing</span>
-          </div>
+          <p>
+            Principle: การยืดช่วงหายใจออกช่วยลดการกระตุ้นของระบบประสาทซิมพาเทติก<br>
+            Principle: Extending the exhale can reduce sympathetic arousal.
+          </p>
         </div>
 
-        <!-- Stillness -->
         <div class="card">
-          <div class="kicker">Path 2</div>
-          <h3>Stillness (ความนิ่ง)</h3>
+          <div class="kicker">Path II — Stillness &amp; Sensory Awareness</div>
+          <h3>ความนิ่งและการรับรู้สัมผัส</h3>
           <p>
-            เหมาะเมื่ออยากกลับมาอยู่กับตัวเอง โดยไม่ต้อง “ทำอะไรเยอะ”
-            ฝึกการอยู่กับสัมผัส–เสียง–ร่างกายแบบไม่ตัดสิน
+            Use When: ต้องการพักใจ • ไม่ต้องการกระบวนการเชิงเทคนิค<br>
+            Use When: Need emotional rest • Prefer non-technical approaches
           </p>
-
-          <div class="cardAction">
-            <span class="btnGhost">แนวทาง: Hand-on-Heart • Sound Awareness</span>
-          </div>
+          <p>
+            Principle: การรับรู้สัมผัสและเสียงช่วยสร้างความรู้สึกปลอดภัยในปัจจุบัน (Present-Moment Safety)<br>
+            Principle: Sensory awareness can build present-moment safety.
+          </p>
         </div>
 
-        <!-- Meditation -->
         <div class="card">
-          <div class="kicker">Path 3</div>
-          <h3>Meditation (สมาธิ)</h3>
+          <div class="kicker">Path III — Gentle Meditation</div>
+          <h3>สมาธิแบบอ่อนโยน</h3>
           <p>
-            เหมาะเมื่ออยากเห็นความคิดชัดขึ้น และสร้างฐานใจที่มั่นคง
-            เริ่มสั้น ๆ แบบ “ทำได้ทุกวัน” ก่อนความลึกจะค่อย ๆ มาเอง
+            Use When: ต้องการพัฒนาความต่อเนื่องของการฝึก • ต้องการเห็นรูปแบบความคิดชัดขึ้น<br>
+            Use When: Build consistency • See thinking patterns more clearly
           </p>
-
-          <div class="cardAction">
-            <span class="btnGhost">แนวทาง: Breath Watching • Gentle Labeling</span>
-          </div>
-        </div>
-
-        <!-- Choose -->
-        <div class="card">
-          <div class="kicker">Choose</div>
-          <h3>เลือกอย่างไรให้เหมาะกับวันนี้?</h3>
           <p>
-            ถ้าใจตึงมาก → เริ่ม Breath <br/>
-            ถ้าอยากพักใจ → Stillness <br/>
-            ถ้าอยากฝึกต่อเนื่อง → Meditation
+            Principle: การฝึกสั้นแต่สม่ำเสมอสร้างฐานจิตที่มั่นคงมากกว่าการฝึกยาวแต่ไม่ต่อเนื่อง<br>
+            Principle: Short, consistent practice builds a steadier base than long, inconsistent sessions.
           </p>
+        </div>
+      </div>
+    </section>
 
-          <div class="cardAction">
-            <a class="btnGhost" href="services.html">อยากมีคนพาเริ่มฝึก →</a>
+    <!-- Practice Selection Guidance -->
+    <section id="guidance" style="margin-top:18px;">
+      <div class="panel">
+        <div class="resHead">
+          <h2>Practice Selection Guidance</h2>
+          <div class="resTag">แนวทางการเลือกการฝึก</div>
+        </div>
+        <div class="resBody">
+          <div class="resBox">
+            ภาวะตึงสูง → เริ่มจาก Breath<br>
+            High tension → Start with Breath.
+            <div style="height:8px;"></div>
+
+            ต้องการพักฟื้น → Stillness<br>
+            Need restoration → Stillness.
+            <div style="height:8px;"></div>
+
+            ต้องการพัฒนาอย่างต่อเนื่อง → Meditation<br>
+            Want ongoing development → Meditation.
+            <div style="height:10px;"></div>
+
+            การเลือกแนวทางควรยึดตามสภาวะจริงของวันนั้น ไม่ใช่เป้าหมายเชิงอุดมคติ<br>
+            Choose based on your real state today, not an idealized goal.
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- MINI FAQ -->
-  <section>
-    <div class="panel" style="padding:18px;">
-      <div class="faqHead">
-        <h2 style="margin:0;font-size:22px;">Mini FAQ</h2>
-        <div class="resTag">คำถามสั้น ๆ ที่คนมักถาม</div>
-      </div>
-
-      <details class="faqItem">
-        <summary>ควรฝึกวันละกี่นาที?</summary>
-        <p class="faqAns">
-          เริ่มจาก 3–5 นาทีให้ “ทำได้จริง” ก่อน แล้วค่อยเพิ่มเป็น 10–15 นาที
-          ความสม่ำเสมอสำคัญกว่าเวลาที่ยาว
-        </p>
-      </details>
-
-      <details class="faqItem">
-        <summary>ฝึกแล้วเวียนหัวทำยังไง?</summary>
-        <p class="faqAns">
-          ลดความลึกของลมหายใจทันที (หายใจเบาลง) และกลับมารับรู้เท้ากับพื้น
-          ถ้ายังเป็นบ่อย ให้หยุดการฝึกหายใจเชิงลึกและปรึกษาผู้เชี่ยวชาญ
-        </p>
-      </details>
-
-      <details class="faqItem">
-        <summary>ทำไมบางวันฝึกแล้วรู้สึกอ่อนไหว/ร้องไห้?</summary>
-        <p class="faqAns">
-          เป็นเรื่องปกติของระบบประสาทที่เริ่มปล่อยความตึงค้างไว้
-          ให้กลับสู่การฝึกเบา ๆ และปิดด้วยการ grounding (สัมผัสพื้น/น้ำอุ่น)
-        </p>
-      </details>
-
-      <div class="faqFoot">
-        <a class="btn primary" href="services.html">ดูบริการที่มีคนดูแลให้</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="panel">
-      <div class="contactHead">
-        <h2>ติดต่อ / Follow</h2>
-        <div class="small">Connect gently</div>
-      </div>
-
-      <div class="contactGrid">
-        <div class="note">
-          หากคุณอยากให้ KRUNIKI ช่วย “จัดการฝึกให้เหมาะกับคุณ” แบบอ่อนโยนและปลอดภัย
-          สามารถเริ่มต้นผ่านบริการ Session หรือพูดคุยกันผ่าน LINE OA ได้เลย 💛
-          <div style="margin-top:10px;color:var(--muted2);font-size:13px;">
-            (หน้านี้เป็นข้อมูลสาธารณะ ไม่มีรายละเอียดเชิงคอร์ส)
-          </div>
+    <!-- FAQ -->
+    <section id="faq" style="margin-top:18px;">
+      <div class="panel">
+        <div class="resHead">
+          <h2>Frequently Asked Questions (Brief)</h2>
+          <div class="resTag">คำถามที่พบบ่อย (ฉบับย่อ)</div>
         </div>
 
-        <div class="lineCta">
-          <div class="lineCtaTitle">
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color:rgba(255,255,255,.85)">
-              <path d="M21 12c0 4.4-4 8-9 8-1.1 0-2.2-.2-3.2-.5L4 21l1-3.2C3.7 16.3 3 14.2 3 12c0-4.4 4-8 9-8s9 3.6 9 8Z"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-            เชื่อมต่อหัวใจผ่าน LINE OA
-          </div>
+        <div class="resBody">
+          <div class="resBox">
+            <details class="faq">
+              <summary>ระยะเวลาที่เหมาะสมต่อวันคือเท่าใด? / How long per day?</summary>
+              <p style="margin-top:10px;">
+                เริ่มจาก 3–5 นาที เมื่อระบบประสาทคุ้นเคยจึงค่อยเพิ่มเวลา<br>
+                Start with 3–5 minutes, then increase as your nervous system adapts.
+              </p>
+            </details>
 
-          <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">ไปที่ LINE OA</a>
-          <a class="btn" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener">ดู LINE Shop</a>
+            <details class="faq" style="margin-top:10px;">
+              <summary>หากเกิดอาการเวียนหัวควรทำอย่างไร? / What if dizziness happens?</summary>
+              <p style="margin-top:10px;">
+                ลดความลึกของลมหายใจ กลับมารับรู้ร่างกายและพื้นผิวสัมผัส หากเกิดซ้ำควรหยุดการฝึกเชิงลึก<br>
+                Reduce breath depth, return to body and contact surfaces; if recurrent, stop deeper practice.
+              </p>
+            </details>
+
+            <details class="faq" style="margin-top:10px;">
+              <summary>การอ่อนไหวทางอารมณ์ถือว่าผิดปกติหรือไม่? / Are emotional responses abnormal?</summary>
+              <p style="margin-top:10px;">
+                ไม่ผิดปกติ อาจเป็นสัญญาณของการคลายความตึงสะสม ควรปิดการฝึกด้วย grounding ทุกครั้ง<br>
+                Not abnormal; it may signal release of stored tension. Close with grounding every time.
+              </p>
+            </details>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <footer>
-      © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
-    </footer>
-  </section>
+    <!-- Closing Note + CTAs -->
+    <section id="closing" style="margin-top:18px;">
+      <div class="panel">
+        <div class="contactHead">
+          <h2>Closing Note</h2>
+          <div class="small">ข้อเขียนปิดท้าย</div>
+        </div>
 
-</main>
+        <div class="contactGrid">
+          <div class="note">
+            กรอบการฝึกนี้ออกแบบเพื่อสนับสนุนการดูแลตนเองในชีวิตประจำวัน อย่างปลอดภัย มีจริยธรรม และไม่เร่งรัดกระบวนการภายใน<br>
+            This framework supports daily self-care in a safe, ethical, and non-rushed way.
+            <div style="margin-top:10px;color:var(--muted2);font-size:13px;">
+              สำหรับผู้ที่ต้องการเครื่องมือเพิ่มเติมหรือการดูแลแบบมีผู้เชี่ยวชาญประกบ:
+              <br>
+              For additional tools or guided support:
+            </div>
+          </div>
+
+          <div class="lineCta">
+            <div class="lineCtaTitle">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color:#c9a86a">
+                <path d="M21 12c0 4.4-4 8-9 8-1.1 0-2.2-.2-3.2-.5L4 21l1-3.2C3.7 16.3 3 14.2 3 12c0-4.4 4-8 9-8s9 3.6 9 8Z"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              Next steps • ก้าวถัดไป
+            </div>
+
+            <a class="btn primary" href="shop.html">KRUNIKI Shop</a>
+            <a class="btn" href="services.html">Guided Services</a>
+            <a class="btn" href="certification.html">Certification Program</a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+      </footer>
+    </section>
+
+  </main>
 
 </body>
 </html>
