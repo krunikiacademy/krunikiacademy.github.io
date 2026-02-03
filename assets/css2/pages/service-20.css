@@ -109,3 +109,36 @@
   outline: none;
   box-shadow: 0 0 0 3px rgba(214,181,108,.25);
 }
+
+/* =========================================
+   service-20min: STOP instant-close (CSS)
+   - Prevent backdrop click-through on mobile
+   - Keep hamburger working
+   ========================================= */
+
+/* 1) ซ่อน hidden ให้ชัวร์ */
+#mobileMenu[hidden],
+#menuBackdrop[hidden]{
+  display:none !important;
+}
+
+/* 2) Header/ham อยู่เหนือทุกอย่าง */
+.siteHeader{ position: sticky; top:0; z-index:9999 !important; }
+#krHam{ position: relative; z-index:10000 !important; pointer-events:auto !important; }
+
+/* 3) ตัวการเด้งปิด: backdrop รับคลิกทันที -> ปิดการรับคลิกมันไปเลย */
+#menuBackdrop{
+  pointer-events: none !important; /* 🔥 ตัวนี้คือแก้เด้งปิด */
+}
+
+/* 4) เมนูต้องรับคลิกได้ปกติ */
+#mobileMenu{
+  pointer-events: auto !important;
+  z-index: 9500 !important;
+}
+
+/* 5) ให้ feedback สีทองตอนกด (มือถือ) */
+#krHam:active .krHamIcon path,
+#krHam:focus-visible .krHamIcon path{
+  stroke: #d6b56c !important;
+}
