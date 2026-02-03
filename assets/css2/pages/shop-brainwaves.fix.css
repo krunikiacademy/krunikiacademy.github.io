@@ -111,19 +111,13 @@
     0 6px 18px rgba(214,179,106,.45) !important;
 }
 
-/* FORCE header layout ให้ตรง shop standard */
-.page--shop-brainwaves .siteHeader .navInner{
-  align-items: center;
-  min-height: 64px;
+/* FIX: Brand align with first social icon (shop-brainwaves only) */
+body.page--shop-brainwaves .siteHeader .brandBlock{
+  align-items: flex-start !important; /* อย่าให้มัน center */
 }
 
-/* กัน topbar ดันความสูงเกิน */
-.page--shop-brainwaves .brandBlock .topbar{
-  margin-top: 0;
-}
-
-/* FIX hamburger touch area (สำคัญมากสำหรับ iPhone SE) */
-.page--shop-brainwaves .krHam{
-  align-self: center;
-  padding: 10px;
+/* ถ้าต้องการให้ชิดเท่า “ไอคอนตัวแรก” (ที่มักมี padding ในกล่อง social) */
+body.page--shop-brainwaves .siteHeader .brandBlock .brand{
+  margin-left: 0 !important;
+  padding-left: 14px !important; /* ปรับได้: 12/14/16 ตามที่ตรงกับไอคอน */
 }
