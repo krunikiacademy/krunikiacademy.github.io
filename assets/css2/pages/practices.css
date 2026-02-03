@@ -1,0 +1,15 @@
+/* assets/css2/pages/practices.css */
+/* Scope: practices.html only via .practicesPage */
+
+.practicesPage .banner--practices{
+  width: 100%;
+  margin: 0 auto 16px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.practicesPage .banner--practices img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
