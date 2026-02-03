@@ -75,3 +75,15 @@
     0 14px 34px rgba(201,168,106,.45);
   transform: translateY(-1px);
 }
+
+/* =========================================
+   Soft Gold Border — Quote Card
+   Scope: practices.html only
+   ========================================= */
+
+.practicesPage .quoteCard{
+  border: 1px solid rgba(201, 168, 106, 0.55); /* Soft Gold */
+  border-radius: 18px;
+  box-shadow:
+    inset 0 0 0 1px rgba(201,168,106,0.18); /* gold inner glow */
+}
