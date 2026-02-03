@@ -19,3 +19,32 @@
   text-transform: uppercase;
   font-weight: 600;
 }
+
+/* =========================================
+   FIX: Hamburger opens then instantly closes
+   Scope only this page (service-20min) using :has(#details)
+   ========================================= */
+
+body.page--shop.shopPage:has(#details) .krHam{
+  position: relative;
+  z-index: 10050; /* ให้ปุ่มอยู่บนสุด */
+}
+
+/* ให้เมนูอยู่เหนือ backdrop และคลิกได้จริง */
+body.page--shop.shopPage:has(#details) #mobileMenu{
+  position: fixed;
+  z-index: 10040;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* backdrop อยู่ใต้เมนู */
+body.page--shop.shopPage:has(#details) #menuBackdrop{
+  z-index: 10030;
+}
+
+/* 🔥 จุดแก้เด้งปิดทันที:
+   กันไม่ให้ backdrop “รับ tap” แล้วกลายเป็น click-outside ทันที */
+body.page--shop.shopPage:has(#details) #menuBackdrop{
+  pointer-events: none;
+}
