@@ -87,3 +87,17 @@
   box-shadow:
     inset 0 0 0 1px rgba(201,168,106,0.18); /* gold inner glow */
 }
+
+/* =========================================
+   Soft Gold Border — Next Steps Card
+   Scope: practices.html only
+   Target: .lineCta
+   ========================================= */
+
+.practicesPage .lineCta{
+  border: 1px solid rgba(201,168,106,.55);   /* Soft Gold */
+  border-radius: 18px;
+  padding: 22px 20px; /* กันขอบให้หายใจ */
+  box-shadow:
+    inset 0 0 0 1px rgba(201,168,106,.18);  /* inner gold glow */
+}
