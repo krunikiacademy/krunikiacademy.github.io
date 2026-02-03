@@ -20,31 +20,41 @@
   font-weight: 600;
 }
 
-/* =========================================
-   FIX: Hamburger opens then instantly closes
-   Scope only this page (service-20min) using :has(#details)
-   ========================================= */
+/* =================================================
+   HARD FIX – stop hamburger auto-close (CSS only)
+   Scope: service-20min page only
+   ================================================= */
 
+/* 1) ให้ header + hamburger อยู่บนสุดจริง */
+body.page--shop.shopPage:has(#details) .siteHeader{
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+/* 2) ปุ่มแฮมต้องอยู่เหนือทุก section */
 body.page--shop.shopPage:has(#details) .krHam{
   position: relative;
-  z-index: 10050; /* ให้ปุ่มอยู่บนสุด */
+  z-index: 10020;
 }
 
-/* ให้เมนูอยู่เหนือ backdrop และคลิกได้จริง */
+/* 3) mobile menu ต้องอยู่เหนือ content ทั้งหมด */
 body.page--shop.shopPage:has(#details) #mobileMenu{
   position: fixed;
-  z-index: 10040;
+  z-index: 10010;
   pointer-events: auto;
-  -webkit-tap-highlight-color: transparent;
 }
 
-/* backdrop อยู่ใต้เมนู */
-body.page--shop.shopPage:has(#details) #menuBackdrop{
-  z-index: 10030;
-}
-
-/* 🔥 จุดแก้เด้งปิดทันที:
-   กันไม่ให้ backdrop “รับ tap” แล้วกลายเป็น click-outside ทันที */
-body.page--shop.shopPage:has(#details) #menuBackdrop{
+/* 4) 🔥 จุดตัดวงจรเด้งปิด:
+      ห้าม content ใต้ header รับ click/touch */
+body.page--shop.shopPage:has(#details) main,
+body.page--shop.shopPage:has(#details) .panel,
+body.page--shop.shopPage:has(#details) .recommended{
   pointer-events: none;
+}
+
+/* 5) แต่อนุญาตให้เมนูคลิกได้ */
+body.page--shop.shopPage:has(#details) #mobileMenu,
+body.page--shop.shopPage:has(#details) #mobileMenu *{
+  pointer-events: auto;
 }
