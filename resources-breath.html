@@ -2,240 +2,282 @@
 <html lang="th">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Breath & Stillness Guides — KRUNIKI</title>
-  <meta name="description" content="Breath & Stillness Guides by KRUNIKI SoulSync System™ — คู่มือการฝึกลมหายใจและความนิ่งแบบใช้งานได้จริง" />
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KRUNIKI Academy</title>
+  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
+<style>
+  :root{
+    --font-brand: "Times New Roman", Times, serif;
+    --font-head:  "Times New Roman", Times, serif;
+  }
+</style>
+  
+  <!-- 🔗 CSS เดิมของนิกี้ -->
+  <link rel="stylesheet" href="assets/css2/app.css">
+  <link rel="stylesheet" href="assets/css2/core/02_base.css">
+  <link rel="stylesheet" href="assets/hamburger.css">
+  <link rel="stylesheet" href="assets/css2/pages/index2.css">
+
+  <!-- ✅ CSS เฉพาะหน้า practices (scoped) -->
+  <link rel="stylesheet" href="assets/css2/pages/practices.css">
+
+  <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css">
+  <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
+  <script src="assets/main.js" defer></script>
 </head>
+  
+<body class="page--index2 practicesPage">
 
-<body>
+ <!-- HEADER -->
+<header class="siteHeader">
+  <div class="navInner">
 
-<header>
-  <div class="topbar">
-    <div class="brand" aria-label="KRUNIKI">
-      <span class="dot" aria-hidden="true"></span>
-      <span>K R U N I K I</span>
-    </div>
+    <!-- Brand + Social (LEFT) -->
+    <div class="brandBlock">
+      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="brandText">KRUNIKI</span>
+      </a>
 
-    <nav aria-label="เมนูหลัก">
-      <a href="index.html#about">เกี่ยวกับ</a>
+      <!-- Social row under brand -->
+      <div class="topbar">
+        <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+          <!-- LINE OA -->
+          <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+            </svg>
+          </a>
+
+          <!-- LINE SHOP -->
+          <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+              <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+              <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+            </svg>
+          </a>
+
+          <!-- FACEBOOK -->
+          <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+            </svg>
+          </a>
+
+          <!-- YOUTUBE -->
+          <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+            </svg>
+          </a>
+
+          <!-- TIKTOK -->
+          <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+            </svg>
+          </a>
+
+          <!-- INSTAGRAM -->
+          <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+              <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+              <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div><!-- ✅ ปิด brandBlock ให้ครบ -->
+
+    <!-- Desktop Menu (CENTER) -->
+    <nav class="navLinks" aria-label="Primary navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
+      <a href="about.html">เกี่ยวกับ</a>
       <a href="services.html">บริการ</a>
-      <a href="resources.html" aria-current="page">Resources</a>
-      <a href="index.html#contact">ติดต่อ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
     </nav>
 
-    <div class="right">
-      <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
-        <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3z"/>
-          </svg>
-        </a>
-      </div>
+    <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+    <div class="krActions">
+      <button class="krHam" id="krHam" type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+        </svg>
+      </button>
     </div>
-  </div>
+
+  </div><!-- close .navInner -->
+
+  <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <a href="shop.html">ร้านค้า</a>
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="services.html">บริการ</a>
+    <a href="resources.html">คลังความรู้</a>
+    <a href="contact.html">ติดต่อ</a>
+  </nav>
 </header>
 
-<main class="wrap">
+  <!-- ✅ MAIN (replaced only this part) -->
+  <main class="wrap">
 
-  <!-- =========================
-    Step 1 — HERO
-  ========================= -->
-  <section class="panel hero">
+   <div class="banner banner--practices" aria-label="KRUNIKI Resources Banner">
+    <img
+      src="assets/images/banners/resources-banner.webp"
+      alt="KRUNIKI Resources — Breath"
+      loading="lazy"
+      decoding="async">
+  </div>
+
+  <section id="top" class="panel hero">
     <div class="heroGrid">
       <div class="heroText">
-        <div class="goldline">Resources • Breath & Stillness Guides</div>
-        <h1>คู่มือ “ลมหายใจ & ความนิ่ง” (ใช้งานได้จริง)</h1>
+        <div class="goldline">Resources • Breath <strong>KRUNIKI</strong></div>
+        <h1>Breath Reset (พื้นฐานสาธารณะ)</h1>
+
         <p class="lead">
-          ชุดแนวทางฝึกแบบยืนพื้น ภายใต้ <strong>KRUNIKI SoulSync System™</strong><br>
-          เพื่อช่วยให้คุณ “กลับมารับรู้ตัวเอง” ได้เร็วขึ้นในวันที่ใจสั่น / เหนื่อย / วุ่น / ไม่ชัด
+          หน้านี้สรุปหลักการใช้ลมหายใจแบบ “เบา ปลอดภัย ทำซ้ำได้”
+          เพื่อสนับสนุนการปรับสมดุลในชีวิตประจำวัน
+          ไม่ใช่การฝึกหายใจเชิงเข้ม และไม่มุ่งผลลัพธ์แบบเร่งรัด
         </p>
 
         <div class="ctaRow">
-          <a class="btn primary" href="#guides">เริ่มอ่านคู่มือ</a>
-          <a class="btn" href="resources.html">กลับหน้า Resources</a>
+          <a class="btn primary" href="resources.html">กลับไปหน้า Resources</a>
+          <a class="btn" href="practices.html">ไปหน้า Practices</a>
+          <a class="btn" href="services.html">Guided Services</a>
         </div>
       </div>
 
-      <div class="quoteCard" aria-label="Signature">
+      <div class="quoteCard" aria-label="Breath principle">
         <div class="quoteTop">
-          <div class="leftTitle">Signature</div>
-          <div style="opacity:.8;">Practical, not floating</div>
+          <div class="leftTitle">Gentle first</div>
+          <div style="opacity:.8;">Exhale-led</div>
         </div>
         <p class="quote">
-          ไม่ใช่บทความเพื่อ “อ่านแล้วรู้สึกดีชั่วคราว”<br>
-          แต่เป็นแนวทางสั้น ๆ ที่ทำให้ “กลับมาอยู่กับตัวเอง” ได้จริง
+          ในเวอร์ชันสาธารณะ ให้ยึด “หายใจออกผ่อนคลาย” เป็นหลัก
+          <br>
+          ถ้าเวียนหัว = ฝึกหนักเกิน
         </p>
       </div>
     </div>
   </section>
 
-  <!-- =========================
-    Step 2 — GUIDE LIST
-  ========================= -->
-  <section class="panel" id="guides" style="margin-top:16px;">
-    <div class="resHead">
-      <h2>Breath & Stillness Guides</h2>
-      <div class="resTag">Short • Clear • Repeatable</div>
+  <section style="margin-top:18px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+      <div>
+        <div class="kicker">Core Principles</div>
+        <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">หลักการสำคัญ</div>
+      </div>
+      <div style="color:var(--muted2);font-size:13px;">Safety • Low intensity</div>
     </div>
 
-    <div class="resBody">
-      <div class="resBox">
-        <p style="opacity:.9; margin:0 0 10px 0;">
-          เลือกอ่านตามอาการของวันนั้นได้เลย (แต่ละหัวข้อจะค่อย ๆ เติมเนื้อหาเพิ่ม)
-        </p>
-
-        <div class="grid2" style="margin-top:10px;">
-          <!-- Guide 1 -->
-          <div class="card">
-            <div class="kicker">Guide 01</div>
-            <h3>30-Second Baseline Reset</h3>
-            <p>เช็กและรีเซ็ต “ฐานระบบประสาท” ภายใน 30 วินาที เพื่อให้ใจกลับมานิ่งขึ้น</p>
-            <div class="ctaRow" style="margin-top:10px;">
-              <a class="btn primary" href="#g1">เปิดอ่าน</a>
-            </div>
-          </div>
-
-          <!-- Guide 2 -->
-          <div class="card">
-            <div class="kicker">Guide 02</div>
-            <h3>Breathing Ratio (4:6) — คืนความนิ่ง</h3>
-            <p>ลมหายใจ 4:6 แบบอ่อนโยน เพื่อพาร่างกายกลับสู่โหมดปลอดภัย</p>
-            <div class="ctaRow" style="margin-top:10px;">
-              <a class="btn primary" href="#g2">เปิดอ่าน</a>
-            </div>
-          </div>
-
-          <!-- Guide 3 -->
-          <div class="card">
-            <div class="kicker">Guide 03</div>
-            <h3>Heart Stillness — 2 นาที</h3>
-            <p>คำแนะนำสั้น ๆ เพื่อกลับมารับรู้หัวใจ โดยไม่ต้อง “พยายามทำให้ดี”</p>
-            <div class="ctaRow" style="margin-top:10px;">
-              <a class="btn primary" href="#g3">เปิดอ่าน</a>
-            </div>
-          </div>
-
-          <!-- Guide 4 -->
-          <div class="card">
-            <div class="kicker">Guide 04</div>
-            <h3>Emergency Grounding (1–3 นาที)</h3>
-            <p>เมื่อใจสั่น/ตื่นตระหนก/คิดวน — ใช้ขั้นตอนนี้พากลับสู่พื้นทันที</p>
-            <div class="ctaRow" style="margin-top:10px;">
-              <a class="btn primary" href="#g4">เปิดอ่าน</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="ctaRow" style="margin-top:16px;">
-          <a class="btn" href="index.html#contact">ติดต่อ / ขอคำแนะนำ</a>
-          <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">ทัก LINE OA</a>
+    <div class="panel" style="margin-top:14px;">
+      <div class="resBody">
+        <div class="resBox">
+          <ul style="margin-top:0;">
+            <li><strong>ไม่ฝืนลมหายใจ</strong> (ลดความลึกได้เสมอ)</li>
+            <li><strong>หายใจออกยาวกว่า</strong> เพื่อช่วยลดแรงกระตุ้น</li>
+            <li><strong>สังเกตร่างกายก่อน</strong> มากกว่ายึดเทคนิค</li>
+            <li><strong>ทำสั้นและสม่ำเสมอ</strong> แทนการทำหนักเป็นครั้ง ๆ</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =========================
-    Step 3 — CONTENT (starter)
-  ========================= -->
-  <section class="panel" id="g1" style="margin-top:16px;">
-    <div class="resHead">
-      <h2>Guide 01 — 30-Second Baseline Reset</h2>
-      <div class="resTag">Fast reset</div>
-    </div>
-    <div class="resBody">
-      <div class="resBox">
-        <ol style="margin:10px 0 0 18px; line-height:1.9;">
-          <li>วางมือบนหน้าอก (หรือท้อง) แบบเบา ๆ</li>
-          <li>หายใจเข้า “สั้นพอดี” แล้วหายใจออก “ยาวขึ้นนิดหนึ่ง”</li>
-          <li>ถามตัวเองหนึ่งประโยค: <strong>ตอนนี้ฉันอยู่ในโหมดไหน—สู้/หนี/แข็ง/ปลอดภัย?</strong></li>
-          <li>จบด้วยคำสั้น ๆ: <strong>“ไม่ต้องรีบ”</strong></li>
-        </ol>
-        <p style="opacity:.9; margin-top:12px;">
-          เป้าหมายไม่ใช่ทำให้หายทันที — แต่คือ “กลับมารู้ตัว” ได้ทัน
-        </p>
+  <section style="margin-top:18px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+      <div>
+        <div class="kicker">Protocol</div>
+        <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">ชุดฝึก 2 แบบ (เลือก 1)</div>
       </div>
+      <div style="color:var(--muted2);font-size:13px;">2 minutes • 5 minutes</div>
     </div>
-  </section>
 
-  <section class="panel" id="g2" style="margin-top:16px;">
-    <div class="resHead">
-      <h2>Guide 02 — Breathing Ratio 4:6</h2>
-      <div class="resTag">Gentle breath</div>
-    </div>
-    <div class="resBody">
-      <div class="resBox">
-        <ul style="line-height:1.9; margin:8px 0 0 18px;">
+    <div class="grid2" style="margin-top:14px;">
+      <div class="card">
+        <div class="kicker">Option 1</div>
+        <h3>2 นาที (รีเซ็ตเร็ว)</h3>
+        <ul style="margin-top:10px;">
           <li>หายใจเข้า 4 วินาที</li>
-          <li>หายใจออก 6 วินาที (ยาวกว่าเล็กน้อย)</li>
-          <li>ทำ 6–10 รอบ</li>
+          <li>หายใจออก 6 วินาที</li>
+          <li>ทำ 10 รอบ</li>
+          <li>ปิดด้วยรับรู้เท้าสัมผัสพื้น 10 วินาที</li>
         </ul>
-        <p style="opacity:.9; margin-top:12px;">
-          ถ้ามึนหัว ให้ลดลงเป็น 3:5 หรือหายใจธรรมชาติ แล้วค่อยกลับมาใหม่
+      </div>
+
+      <div class="card">
+        <div class="kicker">Option 2</div>
+        <h3>5 นาที (เสถียรกว่า)</h3>
+        <ul style="margin-top:10px;">
+          <li>หายใจเข้า 4 วินาที</li>
+          <li>หายใจออก 6 วินาที</li>
+          <li>ทำต่อเนื่อง 5 นาที</li>
+          <li>ถ้าฟุ้ง: กลับมารับรู้สัมผัสมือ/เท้า</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="kicker">Aftercare</div>
+        <h3>การปิดการฝึก</h3>
+        <ul style="margin-top:10px;">
+          <li>ดื่มน้ำ 2–3 อึก</li>
+          <li>ขยับคอ/ไหล่เบา ๆ</li>
+          <li>เดินช้า ๆ 30 วินาที</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="kicker">Stop if</div>
+        <h3>หยุดทันทีถ้า</h3>
+        <ul style="margin-top:10px;">
+          <li>เวียนหัว / แน่นหน้าอก</li>
+          <li>หายใจไม่ทัน</li>
+          <li>รู้สึกตึงมากขึ้น</li>
+        </ul>
+        <p style="margin-top:10px;">
+          เปลี่ยนไปใช้ Stillness หรือ Grounding แทน
         </p>
       </div>
     </div>
   </section>
 
-  <section class="panel" id="g3" style="margin-top:16px;">
-    <div class="resHead">
-      <h2>Guide 03 — Heart Stillness (2 นาที)</h2>
-      <div class="resTag">Heart awareness</div>
-    </div>
-    <div class="resBody">
-      <div class="resBox">
-        <ol style="margin:10px 0 0 18px; line-height:1.9;">
-          <li>หลับตาหรือมองต่ำเล็กน้อย</li>
-          <li>หายใจธรรมชาติ 3 รอบ</li>
-          <li>รับรู้ “น้ำหนักของหัวใจ” โดยไม่ต้องตีความ</li>
-          <li>ปิดท้ายด้วยประโยค: <strong>“ฉันกลับมาอยู่กับตัวเองแล้ว”</strong></li>
-        </ol>
+  <section style="margin-top:18px;">
+    <div class="panel">
+      <div class="contactHead">
+        <h2>Next step</h2>
+        <div class="small">ก้าวถัดไป</div>
       </div>
-    </div>
-  </section>
 
-  <section class="panel" id="g4" style="margin-top:16px;">
-    <div class="resHead">
-      <h2>Guide 04 — Emergency Grounding (1–3 นาที)</h2>
-      <div class="resTag">Ground now</div>
-    </div>
-    <div class="resBody">
-      <div class="resBox">
-        <ol style="margin:10px 0 0 18px; line-height:1.9;">
-          <li>มองหาวัตถุ 3 ชิ้นตรงหน้า แล้วพูดในใจชื่อมัน</li>
-          <li>กดฝ่าเท้าลงพื้นเบา ๆ 5 ครั้ง (ช้า ๆ)</li>
-          <li>หายใจออกยาว 3 รอบ</li>
-          <li>บอกตัวเอง: <strong>“ตอนนี้ฉันปลอดภัย”</strong></li>
-        </ol>
-      </div>
-    </div>
-  </section>
+      <div class="contactGrid">
+        <div class="note">
+          หากต้องการเลือกชุดฝึกที่เหมาะกับสภาวะรายวัน ให้ดูหน้ารวม Practices
+        </div>
 
-  <!-- Bottom CTA -->
-  <section class="panel" style="margin-top:16px;">
-    <div class="resHead">
-      <h2>อยากได้คำแนะนำแบบส่วนตัว?</h2>
-      <div class="resTag">Connect gently</div>
-    </div>
-    <div class="resBody">
-      <div class="resBox">
-        <p style="opacity:.9; margin:0;">
-          ถ้าคุณอยากให้ครูนิกี้ช่วยแนะนำ “ลมหายใจที่เหมาะกับอาการของคุณ” แบบตรงจุด
-          คุณสามารถทัก LINE OA ได้เลย
-        </p>
-        <div class="ctaRow" style="margin-top:14px;">
-          <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">ทัก LINE OA</a>
-          <a class="btn" href="services.html">ดูบริการ</a>
+        <div class="lineCta">
+          <div class="lineCtaTitle">Related pages</div>
+          <a class="btn primary" href="resources.html">Resources</a>
+          <a class="btn" href="practices.html">Practices</a>
+          <a class="btn" href="services.html">Guided Services</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-</main>
+      <footer>
+        © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+      </footer>
+    </section>
 
-<footer>
-  © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
-</footer>
+  </main>
 
 </body>
 </html>
