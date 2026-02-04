@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KRUNIKI Academy</title>
+  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
+<style>
+  :root{
+    --font-brand: "Times New Roman", Times, serif;
+    --font-head:  "Times New Roman", Times, serif;
+  }
+</style>
+  
+  <!-- 🔗 CSS เดิมของนิกี้ -->
+  <link rel="stylesheet" href="assets/css2/app.css">
+  <link rel="stylesheet" href="assets/css2/core/02_base.css">
+  <link rel="stylesheet" href="assets/hamburger.css">
+  <link rel="stylesheet" href="assets/css2/pages/index2.css">
+
+  <!-- ✅ CSS เฉพาะหน้า practices (scoped) -->
+  <link rel="stylesheet" href="assets/css2/pages/practices.css">
+
+  <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css">
+  <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
+  <script src="assets/main.js" defer></script>
+</head>
+  
+<body class="page--index2 practicesPage">
+
+ <!-- HEADER -->
+<header class="siteHeader">
+  <div class="navInner">
+
+    <!-- Brand + Social (LEFT) -->
+    <div class="brandBlock">
+      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="brandText">KRUNIKI</span>
+      </a>
+
+      <!-- Social row under brand -->
+      <div class="topbar">
+        <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+          <!-- LINE OA -->
+          <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+            </svg>
+          </a>
+
+          <!-- LINE SHOP -->
+          <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+              <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+              <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+            </svg>
+          </a>
+
+          <!-- FACEBOOK -->
+          <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+            </svg>
+          </a>
+
+          <!-- YOUTUBE -->
+          <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+            </svg>
+          </a>
+
+          <!-- TIKTOK -->
+          <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+            </svg>
+          </a>
+
+          <!-- INSTAGRAM -->
+          <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+              <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+              <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div><!-- ✅ ปิด brandBlock ให้ครบ -->
+
+    <!-- Desktop Menu (CENTER) -->
+    <nav class="navLinks" aria-label="Primary navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
+      <a href="about.html">เกี่ยวกับ</a>
+      <a href="services.html">บริการ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+
+    <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+    <div class="krActions">
+      <button class="krHam" id="krHam" type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div><!-- close .navInner -->
+
+  <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <a href="shop.html">ร้านค้า</a>
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="services.html">บริการ</a>
+    <a href="resources.html">คลังความรู้</a>
+    <a href="contact.html">ติดต่อ</a>
+  </nav>
+</header>
+
+  <!-- ✅ MAIN (replaced only this part) -->
+  <main class="wrap">
+
+     <div class="banner banner--practices" aria-label="KRUNIKI Resources Banner">
+    <img
+      src="assets/images/banners/resources-banner.webp"
+      alt="KRUNIKI Resources — Stillness"
+      loading="lazy"
+      decoding="async">
+  </div>
+
+  <section id="top" class="panel hero">
+    <div class="heroGrid">
+      <div class="heroText">
+        <div class="goldline">Resources • Stillness <strong>KRUNIKI</strong></div>
+        <h1>Stillness 5–10 นาที</h1>
+
+        <p class="lead">
+          หน้านี้อธิบายการฝึกความนิ่งแบบสาธารณะ (Public Stillness Practice)
+          เพื่อสนับสนุนการพักระบบประสาทและเพิ่มความสามารถในการ “อยู่กับปัจจุบัน”
+          โดยไม่บังคับให้หยุดคิด และไม่เร่งผลลัพธ์
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="resources.html">กลับไปหน้า Resources</a>
+          <a class="btn" href="practices.html">ไปหน้า Practices</a>
+          <a class="btn" href="services.html">Guided Services</a>
+        </div>
+      </div>
+
+      <div class="quoteCard" aria-label="Stillness principle">
+        <div class="quoteTop">
+          <div class="leftTitle">Low effort</div>
+          <div style="opacity:.8;">High consistency</div>
+        </div>
+        <p class="quote">
+          ความนิ่งในที่นี้คือ “พื้นที่รับรู้” ไม่ใช่การทำให้ว่าง
+          <br>
+          ทำสั้น แต่ทำซ้ำ
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:18px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+      <div>
+        <div class="kicker">Setup</div>
+        <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">การเตรียมตัว</div>
+      </div>
+      <div style="color:var(--muted2);font-size:13px;">Posture • Environment</div>
+    </div>
+
+    <div class="panel" style="margin-top:14px;">
+      <div class="resBody">
+        <div class="resBox">
+          เลือกท่าที่สบาย ไม่เน้นความถูกต้องของท่านั่ง
+          ให้ร่างกายอยู่ในระดับ “ไม่ฝืน” และ “ไม่เกร็ง”
+          <ul style="margin-top:10px;">
+            <li>นั่งพิงได้ / นอนราบได้ หากจำเป็น</li>
+            <li>ตั้งเวลา 5 หรือ 10 นาที</li>
+            <li>หลีกเลี่ยงการฝึกทันทีหลังคาเฟอีน/อารมณ์พุ่งสูง</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:18px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+      <div>
+        <div class="kicker">Protocol</div>
+        <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">ขั้นตอนการฝึก</div>
+      </div>
+      <div style="color:var(--muted2);font-size:13px;">Sound • Touch • Breath</div>
+    </div>
+
+    <div class="grid2" style="margin-top:14px;">
+      <div class="card">
+        <div class="kicker">Minute 1</div>
+        <h3>ลงมาที่สัมผัส</h3>
+        <ul style="margin-top:10px;">
+          <li>รับรู้จุดที่ร่างกายสัมผัสเก้าอี้/พื้น</li>
+          <li>รับรู้มือ/เท้าเป็นหลัก</li>
+          <li>หายใจตามธรรมชาติ</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="kicker">Minute 2–4</div>
+        <h3>เปิดรับเสียงโดยไม่ตีความ</h3>
+        <ul style="margin-top:10px;">
+          <li>รับรู้เสียงใกล้–ไกล</li>
+          <li>ไม่ต้องตามหาเสียง</li>
+          <li>ถ้าคิดเยอะ ให้กลับมาที่สัมผัสมือ/เท้า</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="kicker">Minute 5–8</div>
+        <h3>สังเกตความคิดแบบเป็นกลาง</h3>
+        <ul style="margin-top:10px;">
+          <li>คิดได้ ไม่ต้องห้าม</li>
+          <li>ให้สังเกตว่า “กำลังคิด” แล้วกลับมา</li>
+          <li>ยึดหลัก: สั้น • เบา • ไม่ตัดสิน</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="kicker">Close</div>
+        <h3>ปิดการฝึก</h3>
+        <ul style="margin-top:10px;">
+          <li>ขยับนิ้วมือ/นิ้วเท้า</li>
+          <li>หายใจออกยาว 1 ครั้ง</li>
+          <li>ลุก/เปลี่ยนอิริยาบถช้า ๆ</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:18px;">
+    <div class="panel">
+      <div class="resHead">
+        <h2>Safety</h2>
+        <div class="resTag">ข้อควรระวัง</div>
+      </div>
+      <div class="resBody">
+        <div class="resBox">
+          หากเกิดอาการหลุดลอยหรืออารมณ์แรง ให้ลดเวลา และปิดด้วย grounding (เท้าสัมผัสพื้น + ดื่มน้ำ)
+          เป้าหมายคือ “พักอย่างปลอดภัย” ไม่ใช่ “ลงลึก”
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:18px;">
+    <div class="panel">
+      <div class="contactHead">
+        <h2>Next step</h2>
+        <div class="small">ก้าวถัดไป</div>
+      </div>
+
+      <div class="contactGrid">
+        <div class="note">
+          ถ้าต้องการแผนฝึกแบบต่อเนื่อง ให้กลับไปหน้า Practices เพื่อเลือกชุด 3–5 นาทีที่เหมาะกับชีวิตจริง
+        </div>
+
+        <div class="lineCta">
+          <div class="lineCtaTitle">Related pages</div>
+          <a class="btn primary" href="resources.html">Resources</a>
+          <a class="btn" href="practices.html">Practices</a>
+          <a class="btn" href="services.html">Guided Services</a>
+        </div>
+        </div>
+      </div>
+
+      <footer>
+        © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+      </footer>
+    </section>
+
+  </main>
+
+</body>
+</html>
