@@ -1,214 +1,308 @@
-
 <!doctype html>
 <html lang="th">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reset | KRUNIKI Resources</title>
-  <meta name="description" content="Foundational reset practices for nervous system regulation and internal stability." />
-
-  <style>
-    :root{
-      --font-brand: "Times New Roman", Times, serif;
-      --font-head:  "Times New Roman", Times, serif;
-    }
-  </style>
-
+  <title>KRUNIKI Academy</title>
+  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
+<style>
+  :root{
+    --font-brand: "Times New Roman", Times, serif;
+    --font-head:  "Times New Roman", Times, serif;
+  }
+</style>
+  
   <!-- 🔗 CSS เดิมของนิกี้ -->
   <link rel="stylesheet" href="assets/css2/app.css">
   <link rel="stylesheet" href="assets/css2/core/02_base.css">
   <link rel="stylesheet" href="assets/hamburger.css">
+  <link rel="stylesheet" href="assets/css2/pages/index2.css">
+
+  <!-- ✅ CSS เฉพาะหน้า practices (scoped) -->
   <link rel="stylesheet" href="assets/css2/pages/practices.css">
+
   <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css">
   <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
-
   <script src="assets/main.js" defer></script>
 </head>
+  
+<body class="page--index2 practicesPage">
 
-<body class="page--learning learningPage">
-  <!-- HEADER (คงโครงเดียวกับ practices.html) -->
-  <header class="siteHeader">
-    <div class="navInner">
+ <!-- HEADER -->
+<header class="siteHeader">
+  <div class="navInner">
 
-      <!-- Brand + Social (LEFT) -->
-      <div class="brandBlock">
-        <a class="brand" href="index.html" aria-label="KRUNIKI Home">
-          <span class="dot" aria-hidden="true"></span>
-          <span class="brandText">KRUNIKI</span>
-        </a>
+    <!-- Brand + Social (LEFT) -->
+    <div class="brandBlock">
+      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="brandText">KRUNIKI</span>
+      </a>
 
-        <div class="socialRow" aria-label="Social links">
-          <a class="socialIcon" href="https://lin.ee/" target="_blank" rel="noopener" aria-label="LINE">
-            <span aria-hidden="true">LINE</span>
+      <!-- Social row under brand -->
+      <div class="topbar">
+        <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+          <!-- LINE OA -->
+          <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+            </svg>
           </a>
-          <a class="socialIcon" href="https://shop.line.me/" target="_blank" rel="noopener" aria-label="LINE SHOP">
-            <span aria-hidden="true">SHOP</span>
+
+          <!-- LINE SHOP -->
+          <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+              <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+              <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+            </svg>
           </a>
-          <a class="socialIcon" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-            <span aria-hidden="true">FB</span>
+
+          <!-- FACEBOOK -->
+          <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+            </svg>
           </a>
-          <a class="socialIcon" href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
-            <span aria-hidden="true">YT</span>
+
+          <!-- YOUTUBE -->
+          <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+            </svg>
           </a>
-          <a class="socialIcon" href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">
-            <span aria-hidden="true">TT</span>
+
+          <!-- TIKTOK -->
+          <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+            </svg>
           </a>
-          <a class="socialIcon" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-            <span aria-hidden="true">IG</span>
+
+          <!-- INSTAGRAM -->
+          <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+              <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+              <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+            </svg>
           </a>
         </div>
       </div>
+    </div><!-- ✅ ปิด brandBlock ให้ครบ -->
 
-      <!-- Desktop Nav -->
-      <nav class="navLinks" aria-label="Primary navigation">
-        <a href="shop.html">ร้านค้า</a>
-        <a href="index.html">หน้าแรก</a>
-        <a href="about.html">เกี่ยวกับ</a>
-        <a href="services.html">บริการ</a>
-        <a href="resources.html">คลังความรู้</a>
-        <a href="contact.html">ติดต่อ</a>
-      </nav>
+    <!-- Desktop Menu (CENTER) -->
+    <nav class="navLinks" aria-label="Primary navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
+      <a href="about.html">เกี่ยวกับ</a>
+      <a href="services.html">บริการ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
 
-      <!-- Mobile Hamburger -->
-      <button class="hamburger" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
-        <span class="hamLine"></span>
-        <span class="hamLine"></span>
-        <span class="hamLine"></span>
+    <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+    <div class="krActions">
+      <button class="krHam" id="krHam" type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+        </svg>
       </button>
     </div>
 
-    <!-- Mobile Menu Panel -->
-    <div id="mobileMenu" class="mobileMenu" hidden>
-      <nav class="mobileLinks" aria-label="Mobile navigation">
-        <a href="shop.html">ร้านค้า</a>
-        <a href="index.html">หน้าแรก</a>
-        <a href="about.html">เกี่ยวกับ</a>
-        <a href="services.html">บริการ</a>
-        <a href="resources.html">คลังความรู้</a>
-        <a href="contact.html">ติดต่อ</a>
-      </nav>
+  </div><!-- close .navInner -->
+
+  <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <a href="shop.html">ร้านค้า</a>
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="services.html">บริการ</a>
+    <a href="resources.html">คลังความรู้</a>
+    <a href="contact.html">ติดต่อ</a>
+  </nav>
+</header>
+
+  <!-- ✅ MAIN (replaced only this part) -->
+  <main class="wrap">
+
+      <!-- Banner -->
+  <div class="banner banner--practices" aria-label="KRUNIKI Resources Banner">
+    <img
+      src="assets/images/banners/resources-banner.webp"
+      alt="KRUNIKI Resources — Reset"
+      loading="lazy"
+      decoding="async">
+  </div>
+
+  <!-- HERO -->
+  <section id="top" class="panel hero">
+    <div class="heroGrid">
+      <div class="heroText">
+        <div class="goldline">Resources • Reset <strong>KRUNIKI</strong></div>
+
+        <h1>60–90s Reset</h1>
+
+        <p class="lead">
+          หน้านี้รวบรวมวิธีรีเซ็ตสั้น (60–90 วินาที) สำหรับลดความตึงเฉียบพลัน
+          และพากลับสู่ “การรับรู้ตนเอง” ในระดับที่ปลอดภัย ควบคุมได้ และทำซ้ำได้ในชีวิตจริง
+          เนื้อหานี้เป็นเวอร์ชันสาธารณะ ไม่ใช่หลักสูตร และไม่ทดแทนการดูแลทางการแพทย์หรือจิตบำบัด
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="resources.html">กลับไปหน้า Resources</a>
+          <a class="btn" href="practices.html">ไปหน้า Practices</a>
+          <a class="btn" href="services.html">Guided Services</a>
+        </div>
+      </div>
+
+      <div class="quoteCard" aria-label="Reset principle">
+        <div class="quoteTop">
+          <div class="leftTitle">Short • Repeatable</div>
+          <div style="opacity:.8;">Self-controlled</div>
+        </div>
+        <p class="quote">
+          เป้าหมายคือ “ลดแรงกระตุ้น” ไม่ใช่ “เร่งให้หาย”
+          <br>
+          ทำให้จบ 1 รอบ แล้วค่อยประเมินสภาวะ
+        </p>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main class="pageMain">
-    <!-- HERO (คงโครงเดียวกับ practices.html) -->
-    <section class="panel hero">
-      <div class="container">
-        <div class="heroGrid">
+  <!-- SECTION 1 — When to use -->
+  <section style="margin-top:18px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+      <div>
+        <div class="kicker">When to use</div>
+        <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">ใช้เมื่อใด</div>
+      </div>
+      <div style="color:var(--muted2);font-size:13px;">Acute tension • Racing mind</div>
+    </div>
 
-          <div class="heroText">
-            <div class="goldline">Resources • Reset Foundations</div>
-            <h1>Reset — Nervous System Grounding &amp; Baseline Regulation</h1>
-            <p class="lead">
-              หน้านี้รวบรวมแนวคิดและการฝึกเชิงพื้นฐาน
-              เพื่อช่วยให้ระบบประสาทกลับสู่ค่าพื้นฐาน (baseline)
-              หลังจากความเครียด การกระตุ้น หรือภาวะล้นเกินทางอารมณ์
-            </p>
-
-            <div class="ctaRow">
-              <a class="btn primary" href="#content">อ่านเนื้อหา</a>
-              <a class="btn" href="resources.html">กลับไปหน้า Resources</a>
-            </div>
-          </div>
-
-          <div class="heroMedia">
-            <img class="heroImg"
-                 src="assets/images/banners/resources-reset.webp"
-                 alt="Reset Foundations — KRUNIKI Resources"
-                 loading="eager">
-          </div>
-
+    <div class="panel" style="margin-top:14px;">
+      <div class="resBody">
+        <div class="resBox">
+          ใช้เมื่อมีสัญญาณตึงเฉียบพลัน เช่น ใจเร่ง หายใจสั้น คิดวน หรือรู้สึก “หลุดศูนย์”
+          โดยตั้งเป้าว่า “กลับมารับรู้ร่างกาย” ให้มากขึ้นภายใน 1–2 นาที
+          <ul style="margin-top:10px;">
+            <li>ก่อนเริ่มงาน/ประชุม/เข้าสังคม</li>
+            <li>หลังรับข่าวสารหนัก หรือใช้หน้าจอนาน</li>
+            <li>ก่อนนอน เมื่อสมองยังวิ่ง</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- MAIN CONTENT (Thai only) -->
-    <section id="content" class="panel">
-      <div class="container">
-        <header class="sectionHead">
-          <p class="kicker">Public Learning</p>
-          <h2>พื้นฐานของ Reset</h2>
-          <p class="muted">
-            เนื้อหานี้เป็นเชิงการศึกษา. ใช้เพื่อทำความเข้าใจและฝึกแบบเบื้องต้น. ไม่ใช่โปรแกรมบำบัด.
-          </p>
-        </header>
+  <!-- SECTION 2 — Protocol -->
+  <section style="margin-top:18px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+      <div>
+        <div class="kicker">Protocol</div>
+        <div style="font-size:26px;font-weight:850;letter-spacing:-.01em;margin-top:6px;">ขั้นตอน (60–90 วินาที)</div>
+      </div>
+      <div style="color:var(--muted2);font-size:13px;">Breath • Touch • Orienting</div>
+    </div>
 
-        <div class="content">
-          <article class="pCard pCard--lite">
-            <div class="pBody">
-              <h3 class="pTitle">Reset คืออะไรในบริบทของการดูแลระบบประสาท</h3>
-              <p class="pDesc">
-                Reset คือการพาระบบกลับสู่ “จุดตั้งต้นที่เสถียร”. ไม่ใช่การผลักอารมณ์ให้หายไป.
-                เป็นการลดระดับการกระตุ้น. เพื่อให้ร่างกายกลับมาควบคุมได้.
-              </p>
-            </div>
-          </article>
+    <div class="grid2" style="margin-top:14px;">
+      <div class="card">
+        <div class="kicker">Step 1 (20–30s)</div>
+        <h3>ยืดลมหายใจออก</h3>
+        <ul style="margin-top:10px;">
+          <li>หายใจเข้าเบา 4 วินาที</li>
+          <li>หายใจออกยาว 6 วินาที</li>
+          <li>ทำซ้ำ 3 รอบ</li>
+        </ul>
+        <p style="margin-top:10px;">
+          หลักการ: ยืดการหายใจออกเพื่อช่วยลดระดับการกระตุ้นของระบบประสาท
+        </p>
+      </div>
 
-          <article class="pCard pCard--lite">
-            <div class="pBody">
-              <h3 class="pTitle">เมื่อใดควรใช้แนวทาง Reset</h3>
-              <p class="pDesc">
-                ใช้เมื่อรู้สึกล้นเกิน. หายใจตื้น. ใจเต้นเร็ว. อยู่ไม่สุข. หรือโฟกัสไม่ได้.
-                ใช้ได้หลังการทำงานหนัก. หลังการเผชิญเหตุการณ์กดดัน. หรือก่อนนอน.
-              </p>
-            </div>
-          </article>
+      <div class="card">
+        <div class="kicker">Step 2 (20–30s)</div>
+        <h3>วางมือเป็น “จุดยึด”</h3>
+        <ul style="margin-top:10px;">
+          <li>วางมือหนึ่งบนหน้าอก</li>
+          <li>รับรู้สัมผัสมือกับผิว</li>
+          <li>ไม่ต้องบังคับให้สงบ แค่ “รับรู้”</li>
+        </ul>
+      </div>
 
-          <article class="pCard pCard--lite">
-            <div class="pBody">
-              <h3 class="pTitle">หลักการสำคัญ</h3>
-              <p class="pDesc">
-                ช้า. ปลอดภัย. ควบคุมได้ด้วยตนเอง.
-                เริ่มจากสิ่งที่ร่างกาย “รับไหว”.
-                หยุดได้ทันทีเมื่อรู้สึกมากเกินไป.
-              </p>
-            </div>
-          </article>
+      <div class="card">
+        <div class="kicker">Step 3 (20–30s)</div>
+        <h3>Orienting (หันมารับรู้สิ่งแวดล้อม)</h3>
+        <ul style="margin-top:10px;">
+          <li>มองไปรอบ ๆ ช้า ๆ</li>
+          <li>เลือก 3 สิ่งที่เห็น</li>
+          <li>เลือก 2 เสียงที่ได้ยิน</li>
+          <li>รับรู้เท้าสัมผัสพื้น 1 จุด</li>
+        </ul>
+      </div>
 
-          <article class="pCard pCard--lite">
-            <div class="pBody">
-              <h3 class="pTitle">ตัวอย่างกิจกรรม Reset ระยะสั้น (ไม่เกิน 5 นาที)</h3>
-              <p class="pDesc">
-                1) วางเท้าทั้งสองกับพื้น. รู้สึกน้ำหนัก. 60 วินาที.<br>
-                2) มองไปรอบห้องช้า ๆ. หา 5 สิ่งที่เห็น. 60–90 วินาที.<br>
-                3) หายใจเข้า 4 วินาที. ออก 6 วินาที. ทำ 6 รอบ.<br>
-                4) วางมือบนหน้าอกหรือท้อง. รับสัมผัส. 60 วินาที.<br>
-                5) ดื่มน้ำอุณหภูมิห้องช้า ๆ. 3–5 อึก.
-              </p>
-            </div>
-          </article>
+      <div class="card">
+        <div class="kicker">Close (10s)</div>
+        <h3>ปิดให้จบ</h3>
+        <ul style="margin-top:10px;">
+          <li>หายใจออกยาว 1 ครั้ง</li>
+          <li>ถามตัวเอง: “ตอนนี้ตึงลดลงกี่เปอร์เซ็นต์”</li>
+          <li>ถ้ายังตึงมาก ให้ทำซ้ำอีก 1 รอบ</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-          <article class="pCard pCard--lite">
-            <div class="pBody">
-              <h3 class="pTitle">Safety note</h3>
-              <p class="pDesc">
-                เนื้อหานี้ไม่ใช่การรักษาทางการแพทย์. หากมีอาการรุนแรง เวียนศีรษะ หายใจติดขัด
-                หรือมีภาวะทางจิตใจที่ต้องการการดูแลเฉพาะ ควรปรึกษาผู้เชี่ยวชาญ.
-              </p>
-            </div>
-          </article>
+  <!-- SECTION 3 — Safety -->
+  <section style="margin-top:18px;">
+    <div class="panel">
+      <div class="resHead">
+        <h2>Safety</h2>
+        <div class="resTag">ข้อควรระวัง</div>
+      </div>
+
+      <div class="resBody">
+        <div class="resBox">
+          ถ้ามีอาการเวียนหัว แน่นหน้าอก หายใจไม่ทัน ให้ “ลดความลึกของลมหายใจทันที”
+          และกลับไปเน้นการรับรู้สัมผัส (มือ/เท้า) แทนการคุมจังหวะหายใจ
+          หากอาการรุนแรงหรือเกิดซ้ำบ่อย ควรปรึกษาผู้เชี่ยวชาญด้านสุขภาพ
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — CTA -->
+  <section style="margin-top:18px;">
+    <div class="panel">
+      <div class="contactHead">
+        <h2>Next step</h2>
+        <div class="small">ก้าวถัดไป</div>
+      </div>
+
+      <div class="contactGrid">
+        <div class="note">
+          ถ้าต้องการฝึกให้เป็นนิสัย (ไม่ใช่แค่รีเซ็ตเฉพาะหน้า)
+          ให้ต่อด้วยชุดฝึกสั้น 3–5 นาทีในหน้า Practices
         </div>
 
+        <div class="lineCta">
+          <div class="lineCtaTitle">Related pages</div>
+          <a class="btn primary" href="resources.html">Resources</a>
+          <a class="btn" href="practices.html">Practices</a>
+          <a class="btn" href="services.html">Guided Services</a>
+        </div>
       </div>
+    </div>
+    
+      <footer>
+        © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+      </footer>
     </section>
+
   </main>
 
-  <!-- FOOTER (คงโครงเดียวกับ practices.html) -->
-  <footer class="siteFooter">
-    <div class="container footerInner">
-      <div class="footerLeft">
-        <div class="footerBrand">KRUNIKI</div>
-        <p class="footerDesc">Heart • Stillness • Healing</p>
-      </div>
-      <div class="footerRight">
-        <a class="footerLink" href="contact.html">Contact</a>
-        <a class="footerLink" href="about.html">About</a>
-        <a class="footerLink" href="services.html">Services</a>
-      </div>
-    </div>
-    <div class="footerBottom">
-      © 2026 KRUNIKI • Heart Stillness Healing
-    </div>
-  </footer>
 </body>
 </html>
