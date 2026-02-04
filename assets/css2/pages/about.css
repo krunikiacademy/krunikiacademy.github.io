@@ -246,16 +246,16 @@ Morning Light: โปร่ง สว่าง premium + divider เบา ๆ +
     inset 0 0 0 1px rgba(201,168,106,.18); /* inner gold glow */
 }
 
-/* Premium tagline — about page only */
+/* Premium tagline — about page only (Adjusted for contrast) */
 .aboutPage .aboutHeroInner .tagline{
   display: inline-block;
   margin-top: 0.6rem;
 
-  font-size: 0.85rem;
-  letter-spacing: 0.18em;
+  font-size: 0.88rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 
-  color: rgba(120, 98, 55, 0.85); /* soft gold */
+  color: rgba(155, 120, 45, 0.98); /* deeper warm gold */
   font-weight: 500;
 
   position: relative;
@@ -264,13 +264,13 @@ Morning Light: โปร่ง สว่าง premium + divider เบา ๆ +
 .aboutPage .aboutHeroInner .tagline::before{
   content: "";
   display: block;
-  width: 42px;
+  width: 44px;
   height: 1px;
   margin: 0 auto 0.45rem;
   background: linear-gradient(
     to right,
     transparent,
-    rgba(180, 150, 90, 0.9),
+    rgba(155, 120, 45, 0.85),
     transparent
   );
 }
