@@ -1,0 +1,109 @@
+main.wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(18px, 3vw, 34px);
+}
+
+.panel.hero{
+  padding: clamp(18px, 3vw, 34px);
+}
+
+.goldline{
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+h1{
+  margin: 6px 0 12px;
+  line-height: 1.15;
+}
+
+.lead{
+  margin: 0 0 16px;
+  line-height: 1.85;
+}
+
+.ctaRow{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Layout gaps */
+.heroGrid{
+  display: grid;
+  gap: clamp(14px, 2.4vw, 22px);
+  align-items: start;
+}
+
+/* Quote card spacing */
+.quoteCard{
+  padding: clamp(14px, 2.2vw, 18px);
+}
+
+.quoteTop{
+  margin-bottom: 10px;
+}
+
+.quote{
+  margin: 0;
+  line-height: 1.9;
+}
+
+/* Contact blocks */
+.contactGrid{
+  margin-top: clamp(16px, 2.8vw, 26px);
+  display: grid;
+  gap: clamp(12px, 2.2vw, 18px);
+}
+
+.note{
+  padding: clamp(14px, 2.2vw, 18px);
+}
+
+.note .kicker{
+  margin-bottom: 6px;
+}
+
+.note h3{
+  margin: 8px 0 10px;
+  line-height: 1.25;
+}
+
+.lineCta{
+  padding: clamp(14px, 2.2vw, 18px);
+}
+
+.lineCtaTitle{
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Mini sections */
+.mini{
+  margin-top: clamp(16px, 2.8vw, 26px);
+  padding: clamp(14px, 2.2vw, 18px);
+}
+
+.mini .kicker{
+  margin-bottom: 6px;
+}
+
+.mini > div{
+  line-height: 1.85;
+}
+
+/* Footer spacing */
+.panel.hero > footer{
+  margin-top: clamp(18px, 3vw, 30px);
+  padding-top: 14px;
+}
+
+/* Small screens: tighten */
+@media (max-width: 560px){
+  main.wrap{ padding: 16px; }
+  .panel.hero{ padding: 16px; }
+  .lead{ line-height: 1.75; }
+  .ctaRow{ gap: 8px; }
+}
