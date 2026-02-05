@@ -109,65 +109,56 @@ h1{
 }
 
 /* =========================================================
-   Contract Page — Gold CTA & Icon Fix
+   contract.html — FIX (kicker gold + LINE buttons gold + icon gold)
    Scope: contract.html only
+   ใช้ได้แม้ body ไม่ใช่ .contactPage
    ========================================================= */
 
-/* ปุ่ม LINE ทั้งสอง → สีทอง */
-.contactPage .btn.primary,
-.contactPage .lineCta .btn.primary{
-  background: linear-gradient(
-    135deg,
-    #f6e3a3 0%,
-    #e2bf6b 40%,
-    #cfa74e 100%
-  );
-  color: #1b1b1b;
-  border: none;
+/* 0) กัน kicker สีทองหาย (รองรับทั้ง .kickerGold และ .kicker) */
+body[class*="contract"] .kickerGold,
+body[class*="contact"]  .kickerGold,
+body[class*="contract"] .kicker,
+body[class*="contact"]  .kicker{
+  color: var(--gold, #e2bf6b) !important;
+}
+
+/* 1) ปุ่ม LINE OA (2 จุด) ให้เป็นทอง — อิง href เพื่อไม่ชนปุ่มอื่น */
+a.btn[href*="lin.ee"]{
+  background: linear-gradient(135deg,#f6e3a3 0%,#e2bf6b 45%,#cfa74e 100%) !important;
+  color: #1b1b1b !important;
+  border: none !important;
   box-shadow:
     0 0 0 1px rgba(207,167,78,.45),
-    0 8px 24px rgba(207,167,78,.28);
+    0 8px 24px rgba(207,167,78,.28) !important;
 }
 
-.contactPage .btn.primary:hover,
-.contactPage .lineCta .btn.primary:hover{
-  background: linear-gradient(
-    135deg,
-    #ffe9b6 0%,
-    #e8c56f 45%,
-    #d4ad55 100%
-  );
+a.btn[href*="lin.ee"]:hover{
+  background: linear-gradient(135deg,#ffe9b6 0%,#e8c56f 45%,#d4ad55 100%) !important;
   box-shadow:
     0 0 0 1px rgba(212,173,85,.6),
-    0 10px 30px rgba(212,173,85,.35);
+    0 10px 30px rgba(212,173,85,.35) !important;
 }
 
-/* ปุ่ม LINE Shop (secondary) → ขอบทอง */
-.contactPage .lineCta .btn:not(.primary){
-  border-color: rgba(207,167,78,.7);
-  color: #f1d58a;
-}
-
-.contactPage .lineCta .btn:not(.primary):hover{
-  background: rgba(207,167,78,.12);
-}
-
-/* =========================================================
-   Icon “เชื่อมต่อหัวใจ” → สีทอง
-   ========================================================= */
-
-.contactPage .lineCtaTitle svg{
-  color: #e2bf6b;
+/* 2) ไอคอน “เชื่อมต่อหัวใจ” ให้เป็นทอง (svg อยู่ใน .lineCtaTitle ตามโค้ดนิกี้) */
+.lineCtaTitle svg{
+  color: var(--gold, #e2bf6b) !important;
   filter:
     drop-shadow(0 0 6px rgba(226,191,107,.45))
     drop-shadow(0 0 14px rgba(226,191,107,.25));
 }
 
-/* =========================================================
-   Card polish (ให้ทองดูเนียน ไม่แรง)
-   ========================================================= */
+/* 3) ปุ่ม LINE Shop (ให้เป็นขอบทองแบบ secondary) */
+a.btn[href*="shop.line.me"]{
+  border-color: rgba(207,167,78,.7) !important;
+  color: #f1d58a !important;
+}
 
-.contactPage .lineCta{
+a.btn[href*="shop.line.me"]:hover{
+  background: rgba(207,167,78,.12) !important;
+}
+
+/* 4) การ์ด LINE ให้ขอบทองนุ่ม ๆ (ไม่กระทบการ์ดอื่น) */
+.lineCta{
   border: 1px solid rgba(207,167,78,.35);
   box-shadow:
     inset 0 0 0 1px rgba(207,167,78,.12),
