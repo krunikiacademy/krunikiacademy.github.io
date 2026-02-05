@@ -1,0 +1,6 @@
+/* assets/nav-patch.css */
+/* Improve tap response on iOS (scoped to mobile menu only) */
+#mobileMenu a{
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
