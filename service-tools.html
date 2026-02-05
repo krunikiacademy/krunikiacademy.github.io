@@ -2,74 +2,133 @@
 <html lang="th">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KRUNIKI SoulSync System™ — Tools & Practices</title>
-  <meta name="description" content="Tools & Practices — เครื่องมือดูแลหัวใจ (Affirmations / Meditation / Ritual) ภายใต้ KRUNIKI SoulSync System™" />
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KRUNIKI Academy</title>
+  <meta name="description" content="KRUNIKI — Heart Awakening • Self-Healing • Conscious Learning" />
+<style>
+  :root{
+    --font-brand: "Times New Roman", Times, serif;
+    --font-head:  "Times New Roman", Times, serif;
+  }
+</style>
+  
+  <!-- 🔗 CSS เดิมของนิกี้ -->
+  <link rel="stylesheet" href="assets/css2/app.css">
+  <link rel="stylesheet" href="assets/css2/core/02_base.css">
+  <link rel="stylesheet" href="assets/hamburger.css">
+  <link rel="stylesheet" href="assets/css2/pages/index2.css">
+
+  <!-- ✅ CSS เฉพาะหน้า practices (scoped) -->
+  <link rel="stylesheet" href="assets/css2/pages/practices.css">
+
+  <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css">
+  <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
+  <script src="assets/main.js" defer></script>
 </head>
+  
+<body class="page--index2 practicesPage">
 
-<body>
+ <!-- HEADER -->
+<header class="siteHeader">
+  <div class="navInner">
 
-<header>
-  <div class="topbar">
-    <div class="brand" aria-label="KRUNIKI">
-      <span class="dot" aria-hidden="true"></span>
-      <span>K R U N I K I</span>
-    </div>
+    <!-- Brand + Social (LEFT) -->
+    <div class="brandBlock">
+      <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="brandText">KRUNIKI</span>
+      </a>
 
-    <nav aria-label="เมนูหลัก">
-      <a href="index.html#about">เกี่ยวกับ</a>
-      <a href="services.html" aria-current="page">บริการ</a>
-      <a href="index.html#resources">Resources</a>
-      <a href="index.html#contact">ติดต่อ</a>
+      <!-- Social row under brand -->
+      <div class="topbar">
+        <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+          <!-- LINE OA -->
+          <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+            </svg>
+          </a>
+
+          <!-- LINE SHOP -->
+          <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+              <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+              <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+            </svg>
+          </a>
+
+          <!-- FACEBOOK -->
+          <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+            </svg>
+          </a>
+
+          <!-- YOUTUBE -->
+          <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+            </svg>
+          </a>
+
+          <!-- TIKTOK -->
+          <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+            </svg>
+          </a>
+
+          <!-- INSTAGRAM -->
+          <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+              <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+              <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div><!-- ✅ ปิด brandBlock ให้ครบ -->
+
+    <!-- Desktop Menu (CENTER) -->
+    <nav class="navLinks" aria-label="Primary navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
+      <a href="about.html">เกี่ยวกับ</a>
+      <a href="services.html">บริการ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
     </nav>
 
-    <div class="right">
-      <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
-
-        <!-- LINE OA -->
-        <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3z"/>
-          </svg>
-        </a>
-
-        <!-- FACEBOOK -->
-        <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
-          </svg>
-        </a>
-
-        <!-- YOUTUBE -->
-        <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
-          </svg>
-        </a>
-
-        <!-- TIKTOK -->
-        <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
-          </svg>
-        </a>
-
-        <!-- INSTAGRAM -->
-        <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
-            <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
-            <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
-          </svg>
-        </a>
-
-      </div>
+    <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+    <div class="krActions">
+      <button class="krHam" id="krHam" type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false"
+        aria-controls="mobileMenu">
+        <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+        </svg>
+      </button>
     </div>
-  </div>
+
+  </div><!-- close .navInner -->
+
+  <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+  <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+    <a href="shop.html">ร้านค้า</a>
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับ</a>
+    <a href="services.html">บริการ</a>
+    <a href="resources.html">คลังความรู้</a>
+    <a href="contact.html">ติดต่อ</a>
+  </nav>
 </header>
 
-<main class="wrap">
+  <!-- ✅ MAIN (replaced only this part) -->
+  <main class="wrap">
 
   <!-- =========================
     Step 1 — HERO
@@ -78,28 +137,30 @@
     <div class="heroGrid">
 
       <div class="heroText">
-        <div class="goldline">Tools & Practices • เครื่องมือดูแลหัวใจของ <strong>KRUNIKI</strong></div>
-        <h1>ฝึกเองที่บ้าน แบบเบาแต่ลึก</h1>
+        <div class="goldline">Tools &amp; Practices • เครื่องมือฝึกพื้นฐานของ <strong>KRUNIKI</strong></div>
+        <h1>Tools &amp; Practices — Self-Practice Library</h1>
         <p class="lead">
-          สำหรับคนที่อยากมี “เครื่องมือจริง” ไว้กลับมาดูแลตัวเองทุกวัน
-          ผ่านคำพูด ลมหายใจ สมาธิ และพิธีกรรมเชิงเจตนา
-          ภายใต้แนวทาง <strong>KRUNIKI SoulSync System™</strong>
+          หน้านี้รวบรวม “เครื่องมือฝึกที่ใช้ได้จริงในชีวิตประจำวัน” ภายใต้กรอบ
+          <strong>KRUNIKI SoulSync System™</strong><br>
+          เนื้อหาเป็นเวอร์ชันสาธารณะ (Public-facing) เพื่ออธิบายประเภทเครื่องมือ วิธีเลือกใช้ และขอบเขตการใช้งาน
+          โดยไม่เปิดเผยกระบวนการเชิงลึกของระบบภายใน
         </p>
 
         <div class="ctaRow">
           <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">ขอคำแนะนำชุดฝึก (LINE)</a>
           <a class="btn" href="services.html">กลับหน้าบริการ</a>
+          <a class="btn" href="resources.html">ไปคลังความรู้</a>
         </div>
       </div>
 
-      <div class="quoteCard" aria-label="Tools signature">
+      <div class="quoteCard" aria-label="Tools & Practices note">
         <div class="quoteTop">
-          <div class="leftTitle">Signature</div>
-          <div style="opacity:.8;">Simple. Repeatable.</div>
+          <div class="leftTitle">Design Principle</div>
+          <div style="opacity:.8;">Short • Repeatable</div>
         </div>
         <p class="quote">
-          เครื่องมือของ KRUNIKI ไม่เน้น “ทำครั้งเดียวแล้วจบ”
-          แต่เน้น “ทำซ้ำได้” เพื่อให้หัวใจกลับมาอยู่กับตัวเองได้เสมอ
+          เครื่องมือในหน้านี้ออกแบบให้ “สั้น ทำซ้ำได้ และควบคุมได้ด้วยตนเอง”
+          เพื่อรองรับการกลับสู่ความนิ่งและความพร้อมใช้งานในวันจริง
         </p>
       </div>
 
@@ -111,21 +172,30 @@
   ========================= -->
   <section class="panel" style="margin-top:16px;">
     <div class="resHead">
-      <h2>Step 2 — เครื่องมือคืออะไร</h2>
+      <h2>Step 2 — Tools &amp; Practices คืออะไร</h2>
       <div class="resTag">Affirmations • Meditation • Ritual</div>
     </div>
+
     <div class="resBody">
       <div class="resBox">
         <p style="margin:0; line-height:1.9;">
-          Tools & Practices คือชุดฝึกที่ใช้ได้ในชีวิตประจำวัน เพื่อพากลับสู่ “ศูนย์กลาง”
-          โดยไม่ต้องรอให้ชีวิตหนักก่อน แล้วค่อยเริ่มดูแลตัวเอง
+          Tools &amp; Practices คือชุดเครื่องมือฝึก (practice tools) สำหรับใช้ “ดูแลตนเองเชิงระบบ”
+          โดยเน้นความสม่ำเสมอ ความปลอดภัย และการใช้งานซ้ำได้
+          มากกว่าการพึ่งแรงจูงใจชั่วคราว
         </p>
+
         <div style="height:10px"></div>
+
         <ul style="margin:0 0 0 18px; line-height:1.9;">
-          <li>Affirmations / Whisper Track — คำพูดที่ตั้งเจตนาและพาระบบประสาทกลับมานุ่ม</li>
-          <li>Meditation — สมาธิแบบยืนพื้น ฟังหัวใจ จัดระเบียบภายใน</li>
-          <li>Ritual — พิธีกรรมเชิงเจตนาเพื่อ “ปิดงานเก่า/เปิดสนามใหม่” อย่างปลอดภัย</li>
+          <li><strong>Affirmations / Whisper Track</strong> — ถ้อยคำเชิงเจตนาเพื่อปรับสภาวะใจและพฤติกรรมการรับรู้ (attention/meaning) ให้กลับมานุ่มและนิ่ง</li>
+          <li><strong>Meditation</strong> — สมาธิแบบยืนพื้นเพื่อฝึกการอยู่กับปัจจุบัน ลดความฟุ้ง และจัดระเบียบภายใน</li>
+          <li><strong>Ritual (Intentional)</strong> — โครงพิธีกรรมเชิงเจตนา เพื่อ “ปิดสิ่งเก่า / เปิดพื้นที่ใหม่” ในกรอบที่ปลอดภัยและไม่เกินความพร้อม</li>
         </ul>
+
+        <p style="margin:12px 0 0; line-height:1.9; color:rgba(255,255,255,.78);">
+          * เนื้อหาบนเว็บจะให้ “กรอบการเลือกใช้” และ “ข้อควรระวัง” เท่านั้น
+          รายละเอียดเชิงลึกของระบบจะสื่อสารในบริบทที่เหมาะสม
+        </p>
       </div>
     </div>
   </section>
@@ -136,100 +206,148 @@
   <section class="panel" style="margin-top:16px;">
     <div class="resHead">
       <h2>Step 3 — เหมาะกับใคร</h2>
-      <div class="resTag">Fit & use-cases</div>
+      <div class="resTag">Fit • Use cases</div>
     </div>
+
     <div class="resBody">
       <div class="resBox">
-        <strong>เหมาะกับคุณ หากคุณ…</strong>
-        <ul style="margin:10px 0 0 18px; line-height:1.9;">
-          <li>อยากฝึกเองที่บ้าน แบบไม่กดดัน แต่ต่อเนื่อง</li>
-          <li>อยากมีเครื่องมือ “กลับมารับรู้ตัวเอง” ได้ในวันที่สั่น/หนัก</li>
-          <li>ชอบสิ่งที่ทำง่าย แต่ลึก และทำซ้ำได้</li>
-        </ul>
+        <div class="grid2">
 
-        <div style="height:12px"></div>
+          <div class="card">
+            <div class="kicker">Fit</div>
+            <h3>เหมาะกับผู้ที่ต้องการ “เครื่องมือฝึกที่ทำได้จริง”</h3>
+            <ul style="margin:10px 0 0 18px; line-height:1.9;">
+              <li>ต้องการฝึกเองที่บ้านแบบเป็นขั้นตอนและไม่กดดัน</li>
+              <li>ต้องการวิธี “กลับมารับรู้ตัวเอง” ในวันที่ตึง เครียด หรือใจหนัก</li>
+              <li>ต้องการเครื่องมือที่สั้น แต่ทำซ้ำได้และเห็นผลเชิงความสม่ำเสมอ</li>
+            </ul>
+          </div>
 
-        <strong>อาจยังไม่เหมาะ หากคุณ…</strong>
-        <ul style="margin:10px 0 0 18px; line-height:1.9;">
-          <li>อยากได้ผลทันทีแบบไม่ต้องฝึกเลย</li>
-          <li>ต้องการทางลัดที่ไม่ต้องอยู่กับตัวเอง</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+          <div class="card">
+            <div class="kicker">Not-fit (for now)</div>
+            <h3>อาจยังไม่เหมาะ หากต้องการผลลัพธ์แบบไม่ต้องฝึก</h3>
+            <ul style="margin:10px 0 0 18px; line-height:1.9;">
+              <li>กำลังมองหาทางลัดที่ไม่ต้องลงมือทำอย่างสม่ำเสมอ</li>
+              <li>ต้องการให้ผู้อื่น “ตัดสินใจแทน” หรือ “ทำแทน”</li>
+            </ul>
+          </div>
 
-  <!-- =========================
-    Step 4 — HOW IT WORKS (High-level)
-  ========================= -->
-  <section class="panel" style="margin-top:16px;">
-    <div class="resHead">
-      <h2>Step 4 — วิธีใช้ (ภาพรวม)</h2>
-      <div class="resTag">Daily • Weekly • As needed</div>
-    </div>
-    <div class="resBody">
-      <div class="resBox">
-        <ul style="margin:0 0 0 18px; line-height:1.9;">
-          <li><strong>แบบรายวัน:</strong> 5–10 นาที เพื่อรีเซ็ตใจและระบบประสาท</li>
-          <li><strong>แบบรายสัปดาห์:</strong> สมาธิยาวขึ้นเพื่อทบทวนและจัดระเบียบภายใน</li>
-          <li><strong>ตามเหตุการณ์:</strong> เมื่อมีเรื่องกระทบใจ ให้ใช้ชุดฝึกเฉพาะสถานการณ์</li>
-        </ul>
-        <div style="height:10px"></div>
-        <p style="margin:0; line-height:1.9; color:rgba(255,255,255,.78);">
-          เราจะไม่เปิด “สูตรลับภายใน” บนเว็บ — แต่จะให้ “กรอบที่ชัดพอ” เพื่อเลือกได้อย่างปลอดภัย
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================
-    Step 5 — TAKEAWAYS
-  ========================= -->
-  <section class="panel" style="margin-top:16px;">
-    <div class="resHead">
-      <h2>Step 5 — สิ่งที่คุณจะได้</h2>
-      <div class="resTag">Repeatable • Practical</div>
-    </div>
-    <div class="resBody">
-      <div class="resBox">
-        <ul style="margin:0 0 0 18px; line-height:1.9;">
-          <li>ชุดฝึกที่ทำได้จริง และทำซ้ำได้ โดยไม่ต้องพึ่งแรงฮึด</li>
-          <li>ความนิ่งและความอ่อนโยนกลับมาเป็น “พื้นฐาน” ของวัน</li>
-          <li>ความสามารถในการกลับมารับรู้ตัวเองได้ไวขึ้น</li>
-          <li>ฐานการฝึกที่รองรับการเรียนรู้เชิงลึกในโปรแกรมอื่น ๆ ของ KRUNIKI</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================
-    Step 6 — CTA
-  ========================= -->
-  <section class="panel" style="margin-top:16px;">
-    <div class="resHead">
-      <h2>Step 6 — ขอคำแนะนำชุดฝึกที่เหมาะกับคุณ</h2>
-      <div class="resTag">Contact • Recommendations</div>
-    </div>
-    <div class="resBody">
-      <div class="resBox">
-        <p style="margin:0; line-height:1.9;">
-          ถ้าคุณยังไม่แน่ใจว่าเริ่มจากชุดไหน — ทักมาได้เลย
-          ฉันจะช่วยแนะนำ “ชุดฝึกที่พอดี” ตามจังหวะชีวิตของคุณ
-        </p>
-
-        <div class="ctaRow" style="margin-top:14px;">
-          <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">ทัก LINE เพื่อขอคำแนะนำ</a>
-          <a class="btn" href="services.html">กลับหน้าบริการ</a>
-          <a class="btn" href="index.html#contact">ไปหน้าติดต่อ</a>
         </div>
       </div>
     </div>
   </section>
 
-</main>
+  <!-- =========================
+    Step 4 — HOW TO USE (High-level)
+  ========================= -->
+  <section class="panel" style="margin-top:16px;">
+    <div class="resHead">
+      <h2>Step 4 — วิธีใช้ (ภาพรวม)</h2>
+      <div class="resTag">Daily • Weekly • Situational</div>
+    </div>
 
-<footer>
-  © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
-</footer>
+    <div class="resBody">
+      <div class="resBox">
+        <ul style="margin:0 0 0 18px; line-height:1.9;">
+          <li><strong>Daily (5–10 นาที)</strong> — ใช้เพื่อรีเซ็ตสภาวะและกลับสู่ความนิ่งระดับใช้งานได้</li>
+          <li><strong>Weekly (15–30 นาที)</strong> — ใช้เพื่อทบทวน ปรับจังหวะ และทำให้การฝึกมีโครงสร้าง</li>
+          <li><strong>As needed</strong> — ใช้เป็นเครื่องมือเฉพาะสถานการณ์เมื่อมีเหตุการณ์กระทบใจ</li>
+        </ul>
+
+        <p style="margin:12px 0 0; line-height:1.9; color:rgba(255,255,255,.78);">
+          แนวทางของ KRUNIKI ยึดหลัก “เริ่มเบา คุมได้ และปิดการฝึกให้เรียบร้อย”
+          เพื่อหลีกเลี่ยงการกระตุ้นเกินความพร้อม
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+    Step 5 — OUTPUTS (Practical outcomes)
+  ========================= -->
+  <section class="panel" style="margin-top:16px;">
+    <div class="resHead">
+      <h2>Step 5 — สิ่งที่ผู้ฝึกมักได้กลับไป</h2>
+      <div class="resTag">Repeatable • Practical • Doable</div>
+    </div>
+
+    <div class="resBody">
+      <div class="resBox">
+        <div class="grid2">
+
+          <div class="card">
+            <div class="kicker">Clarity</div>
+            <h3>รู้ว่า “ควรเริ่มจากอะไร”</h3>
+            <p style="margin:0; line-height:1.9;">
+              ลดความสับสนเรื่องการเลือกเครื่องมือ
+              และทำให้การฝึกมีกรอบที่ใช้งานซ้ำได้
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="kicker">Stability</div>
+            <h3>กลับสู่ความนิ่งได้เร็วขึ้น</h3>
+            <p style="margin:0; line-height:1.9;">
+              พัฒนาความสามารถในการรีเซ็ตสภาวะ
+              และรักษาความพร้อมใช้งานในชีวิตประจำวัน
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="kicker">Consistency</div>
+            <h3>ฝึกต่อเนื่องได้ โดยไม่พึ่งแรงฮึด</h3>
+            <p style="margin:0; line-height:1.9;">
+              เครื่องมือถูกออกแบบให้สั้นและทำซ้ำได้
+              เพื่อสนับสนุนความสม่ำเสมอ
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="kicker">Foundation</div>
+            <h3>เป็นฐานสำหรับเส้นทางการเรียนรู้ที่ลึกขึ้น</h3>
+            <p style="margin:0; line-height:1.9;">
+              ใช้เป็นฐานรองรับการทำงานเชิงระบบของ KRUNIKI
+              ในโปรแกรมและบริการที่เกี่ยวข้อง
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+    Step 6 — SAFETY NOTE + CTA
+  ========================= -->
+  <section class="panel" style="margin-top:16px;">
+    <div class="resHead">
+      <h2>Step 6 — ขอบเขตและความปลอดภัย</h2>
+      <div class="resTag">Ethics • Safety • Scope</div>
+    </div>
+
+    <div class="resBody">
+      <div class="resBox">
+        <p style="margin:0; line-height:1.9;">
+          เนื้อหาในหน้านี้เป็นเครื่องมือฝึกเพื่อการดูแลตนเองเชิงการเรียนรู้
+          ไม่ทดแทนการแพทย์หรือจิตบำบัด
+          หากมีภาวะทางกาย/ใจที่รุนแรง หรือกำลังอยู่ในช่วงวิกฤต
+          แนะนำให้ปรึกษาผู้เชี่ยวชาญที่เหมาะสมก่อน
+        </p>
+
+        <div class="ctaRow" style="margin-top:14px;">
+          <a class="btn primary" href="https://lin.ee/qdp20di" target="_blank" rel="noopener">ขอคำแนะนำชุดฝึก (LINE)</a>
+          <a class="btn" href="services.html">ดูบริการแบบมีผู้นำทาง</a>
+          <a class="btn" href="resources.html">กลับไปคลังความรู้</a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+      </footer>
+    </section>
+
+  </main>
 
 </body>
 </html>
