@@ -1,0 +1,14 @@
+/* Android-only performance fix (exclude iOS/iPadOS Safari) */
+@media (hover: none) and (pointer: coarse) {
+  @supports not (-webkit-touch-callout: none) {
+
+    html { scroll-behavior: auto !important; }
+
+    main, section, .panel, .productGrid, .cardGrid {
+      content-visibility: auto;
+      contain-intrinsic-size: 900px;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+  }
+}
