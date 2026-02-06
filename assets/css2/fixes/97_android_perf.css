@@ -1,4 +1,7 @@
-/* Android-only performance fix (exclude iOS/iPadOS Safari) */
+/* assets/css2/fixes/97_android_perf.css
+   Android-only perf fix (exclude iOS/iPadOS Safari)
+   LOCKED VALUE: contain-intrinsic-size = 800px
+*/
 @media (hover: none) and (pointer: coarse) {
   @supports not (-webkit-touch-callout: none) {
 
@@ -6,9 +9,9 @@
 
     main, section, .panel, .productGrid, .cardGrid {
       content-visibility: auto;
-      contain-intrinsic-size: 900px;
+      contain-intrinsic-size: 800px;
     }
 
-    img { display: block; max-width: 100%; height: auto; }
+    body { overscroll-behavior: none; }
   }
 }
