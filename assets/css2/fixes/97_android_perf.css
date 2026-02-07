@@ -1,31 +1,27 @@
 /* assets/css2/fixes/97_android_perf.css
-   Android-only perf fix (exclude iOS/iPadOS Safari)
-   LOCKED VALUE: contain-intrinsic-size = 800px
+   Android-only: prioritize INSTANT TEXT RENDER (no slow reveal)
+   No JS / No IMG / No layout edits
 */
 @media (hover: none) and (pointer: coarse) {
   @supports not (-webkit-touch-callout: none) {
 
+    /* 1) Avoid smooth scroll overhead */
     html { scroll-behavior: auto !important; }
 
+    /* 2) IMPORTANT: disable staged rendering (fix "text slowly appears") */
     main, section, .panel, .productGrid, .cardGrid {
-      content-visibility: auto;
-      contain-intrinsic-size: 800px;
+      content-visibility: visible !important; /* was auto */
+      contain-intrinsic-size: auto !important;
+      contain: none !important;
     }
 
+    /* 3) Reduce possible "fade-in/scroll" effects that feel laggy on Android */
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    /* 4) Optional: keep scroll behavior stable */
     body { overscroll-behavior: none; }
-  }
-}
-
-/* A) ลดงานวาดซ้ำตอนเลื่อน (no visual change) */
-@media (hover: none) and (pointer: coarse) {
-  @supports not (-webkit-touch-callout: none) {
-
-    /* ลด repaint จาก layout สั่นเล็กๆ */
-    body { -webkit-text-size-adjust: 100%; }
-
-    /* ลดภาระการคำนวณ layout ของ section ยาว ๆ */
-    main, section, .panel {
-      contain: layout style paint;
-    }
   }
 }
