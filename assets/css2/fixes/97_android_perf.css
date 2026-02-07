@@ -15,3 +15,17 @@
     body { overscroll-behavior: none; }
   }
 }
+
+/* A) ลดงานวาดซ้ำตอนเลื่อน (no visual change) */
+@media (hover: none) and (pointer: coarse) {
+  @supports not (-webkit-touch-callout: none) {
+
+    /* ลด repaint จาก layout สั่นเล็กๆ */
+    body { -webkit-text-size-adjust: 100%; }
+
+    /* ลดภาระการคำนวณ layout ของ section ยาว ๆ */
+    main, section, .panel {
+      contain: layout style paint;
+    }
+  }
+}
