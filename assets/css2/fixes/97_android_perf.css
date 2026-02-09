@@ -25,3 +25,68 @@
     body { overscroll-behavior: none; }
   }
 }
+
+/* ==========================================================================
+   Android Performance Patch (NO SPEC REDUCTION)
+   Goal: stop blank screen / wave rendering / janky scroll on Android Chrome
+   Place at END of 97_android_perf.css
+   ========================================================================== */
+
+/* Target: Android Chrome (exclude iOS Safari) */
+@supports (-webkit-appearance: none) and (not (-webkit-touch-callout: none)) {
+
+  /* 1) HARD STOP: prevent "blank screen until ready"
+     If any older CSS/JS sets body/main opacity/visibility to hide before load,
+     this forces immediate paint on Android. */
+  html, body {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Common containers that are often hidden during preload/fade-in patterns */
+  main, .pageMain, .siteMain, .wrapper, .container, .hero, .heroGrid, .heroText {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* If you have any "loading/preload" classes, neutralize their hiding effect */
+  .is-loading, .loading, .preload, .preloader,
+  body.is-loading, body.loading, body.preload {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* 2) Remove scroll jank from smooth scrolling (keeps UX identical, just avoids jank) */
+  html { scroll-behavior: auto !important; }
+
+  /* 3) Android text rendering stability (prevents weird delayed text paint) */
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 4) Reduce "wave" perception caused by heavy transitions during first paint
+     (NOT removing styles—just prevents transition from blocking first paint) */
+  body * {
+    transition-delay: 0s !important;
+  }
+
+  /* 5) Make images decode without blocking layout thread (no quality loss) */
+  img {
+    height: auto;
+    display: block;
+    image-rendering: auto;
+  }
+
+  /* 6) Prevent sticky/header repaint thrash (common Android issue) */
+  .siteHeader, header, nav {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* 7) Reduce tap/scroll latency feeling */
+  a, button {
+    touch-action: manipulation;
+  }
+}
