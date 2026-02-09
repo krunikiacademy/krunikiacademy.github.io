@@ -25,3 +25,55 @@
     body { overscroll-behavior: none; }
   }
 }
+
+/* assets/css2/fixes/97_android_perf.css
+   Android (low/mid spec, e.g., OPPO A31) scroll/render smoother
+   RULES:
+   - Keep UI/visual design the same (no shadow removal, no filter removal)
+   - Keep all functions the same (no disabling transitions/animations)
+   - No HTML/JS changes
+*/
+
+@media (hover: none) and (pointer: coarse) {
+  /* Target Android (avoid iOS Safari) */
+  @supports not (-webkit-touch-callout: none) {
+
+    /* 1) Prevent “black flash” from transparent root backgrounds during compositing */
+    html, body {
+      background: #fff; /* should match your site background; change ONLY if your global bg is not white */
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    /* 2) Avoid extra work from smooth-scrolling on low-end devices */
+    html { scroll-behavior: auto !important; }
+
+    /* 3) Stabilize text paint on Android (reduce “wave-like” incremental paint) */
+    body {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* 4) Fix common Android jank trigger: background-attachment: fixed */
+    /* (Visual remains the same in most designs; fixed backgrounds often cause black frames on low-end GPUs) */
+    * { background-attachment: scroll !important; }
+
+    /* 5) Reduce accidental huge repaint areas without changing layout:
+          - contain: paint limits paint invalidation to the element box
+          - does NOT change size/position/layout
+          Apply only to large “section shells” */
+    .panel, .hero, .container, .card, .cardGold, .pCard, .quoteCard, .hero__card {
+      contain: paint;
+    }
+
+    /* 6) Prevent “scroll chain” oddities; no visual impact */
+    body { overscroll-behavior: none; }
+
+    /* 7) Faster taps (no visual changes) */
+    a, button, .btn {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+  }
+}
