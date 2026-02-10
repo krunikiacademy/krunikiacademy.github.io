@@ -90,3 +90,61 @@
     touch-action: manipulation;
   }
 }
+
+/* ==========================================================================
+   Android Performance Patch v2 (SUPPORT SET)
+   Place AFTER v1 block (END of 97_android_perf.css)
+   ========================================================================== */
+
+@supports (-webkit-appearance: none) and (not (-webkit-touch-callout: none)) {
+
+  /* A) Kill common "reveal" hiding patterns that still cause wave rendering
+     (these class names are common; harmless if not used) */
+  .reveal, .revealUp, .fade, .fadeIn, .slideUp, .anim, .animate,
+  [data-anim], [data-animate], [data-reveal],
+  .is-revealing, .is-hidden, .hidden, .invisible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  /* If any section/card is animated in by initial opacity/transform, force stable paint */
+  section, article, .panel,
+  .card, .pCard, .productCard,
+  .heroCard, .heroMedia, .heroBanner {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* B) Prevent heavy filters/backdrop blur from blocking first paint
+     (keeps design intact in normal state; only neutralizes if applied via loading states) */
+  body.is-loading *, body.loading *, body.preload * {
+    filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* C) Reduce "paint thrash" by isolating heavy blocks (NO visual change) */
+  section, article, .panel, .container,
+  .card, .pCard, .hero, .footer, .siteHeader {
+    contain: layout paint;
+  }
+
+  /* D) Improve compositor stability for large text blocks/cards (helps Android render text sooner) */
+  .hero, .heroText, .heroGrid,
+  .card, .pCard, .productGrid,
+  main, .pageMain, .wrapper, .container {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* E) Avoid black/blank flash if browser paints before CSS finishes
+     (does not change theme if you already set a background; it just ensures a fallback) */
+  body {
+    background-color: var(--bg, #fff);
+  }
+
+  /* F) Faster click/scroll feel (no design change) */
+  body {
+    overscroll-behavior-y: none;
+  }
+}
