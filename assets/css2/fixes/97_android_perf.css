@@ -91,4 +91,80 @@
   }
 }
 
+========================================================================== */
 
+/* Android-ish targeting (Chrome/Android). Avoid iOS Safari. */
+@supports (-webkit-appearance: none) and (not (-webkit-touch-callout: none)) {
+
+  /* ------------------------------------------------------------------------
+     1) Fix: "blank / text arrives in waves" caused by hidden-on-load patterns
+     - Force document paint ASAP
+     - DO NOT touch header/nav states
+     ------------------------------------------------------------------------ */
+  html, body {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Only ensure MAIN content is visible; exclude header/nav to avoid menu bugs */
+  main, .pageMain, .siteMain {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* If any preload/loading class hides the main content, neutralize ONLY main */
+  body.is-loading main,
+  body.loading main,
+  body.preload main,
+  body.is-loading .pageMain,
+  body.loading .pageMain,
+  body.preload .pageMain {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     2) Fix: Android scroll feels "sticky / janky"
+     ------------------------------------------------------------------------ */
+  html { scroll-behavior: auto !important; }
+  body { -webkit-overflow-scrolling: touch; }
+
+  /* Faster tap response feel (no UI change) */
+  a, button { touch-action: manipulation; }
+
+  /* ------------------------------------------------------------------------
+     3) Fix: Delayed text paint / weird size adjust on Android
+     ------------------------------------------------------------------------ */
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ------------------------------------------------------------------------
+     4) Reduce "wave" perception from heavy first-paint transitions
+     - IMPORTANT: do NOT blanket-disable transitions for everything.
+     - Only neutralize transition on MAIN content during first paint.
+     ------------------------------------------------------------------------ */
+  main *, .pageMain *, .siteMain * {
+    transition-delay: 0s !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     5) Image decode stability (no quality loss)
+     ------------------------------------------------------------------------ */
+  img {
+    height: auto;
+    display: block;
+  }
+
+  /* ------------------------------------------------------------------------
+     6) NAV SAFETY GUARD (explicitly avoid perf rules from affecting nav)
+     - This prevents future edits in this file from breaking the menu.
+     ------------------------------------------------------------------------ */
+  header *, nav *, .siteHeader *, .navInner *, .navLinks *,
+  .hamburger *, .hamburgerBtn * {
+    transition-delay: revert !important;
+  }
+}
