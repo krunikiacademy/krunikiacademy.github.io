@@ -1,170 +1,92 @@
 /* assets/css2/fixes/97_android_perf.css
-   Android-only: prioritize INSTANT TEXT RENDER (no slow reveal)
-   No JS / No IMG / No layout edits
+   Android-only: prioritize INSTANT FIRST PAINT (text + layout)
+   Rules:
+   - No JS changes
+   - No HTML edits required
+   - Do NOT break mobile nav / hamburger
 */
+
+/* Android (coarse pointer) + not iOS Safari */
 @media (hover: none) and (pointer: coarse) {
   @supports not (-webkit-touch-callout: none) {
 
     /* 1) Avoid smooth scroll overhead */
     html { scroll-behavior: auto !important; }
 
-    /* 2) IMPORTANT: disable staged rendering (fix "text slowly appears") */
+    /* 2) HARD STOP: prevent "blank screen / text arrives in waves"
+       Force immediate paint for document + main content only (not header/nav). */
+    html, body {
+      visibility: visible !important;
+      opacity: 1 !important;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    main, .pageMain, .siteMain,
+    .wrapper, .container,
+    .hero, .heroGrid, .heroText,
+    section, .panel {
+      visibility: visible !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    /* If a loading/preload class is hiding content, neutralize it (content only) */
+    body.is-loading main,
+    body.loading main,
+    body.preload main,
+    body.is-loading .pageMain,
+    body.loading .pageMain,
+    body.preload .pageMain,
+    body.is-loading .siteMain,
+    body.loading .siteMain,
+    body.preload .siteMain {
+      visibility: visible !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    /* 3) IMPORTANT: avoid staged rendering on Android
+       If content-visibility:auto is used anywhere, it can feel like "waves".
+       Force visible for main sections/cards (do NOT apply to nav/header). */
     main, section, .panel, .productGrid, .cardGrid {
-      content-visibility: visible !important; /* was auto */
+      content-visibility: visible !important;
       contain-intrinsic-size: auto !important;
       contain: none !important;
     }
 
-    /* 3) Reduce possible "fade-in/scroll" effects that feel laggy on Android */
-    * {
-      animation: none !important;
-      transition: none !important;
+    /* 4) Reduce perceived wave: remove transition delay (NOT killing all transitions) */
+    main *, .pageMain *, .siteMain *,
+    section *, .panel * {
+      transition-delay: 0s !important;
     }
 
-    /* 4) Optional: keep scroll behavior stable */
+    /* 5) Text rendering stability */
+    body {
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 6) Keep images stable (no quality change) */
+    img {
+      height: auto;
+      display: block;
+      image-rendering: auto;
+    }
+
+    /* 7) Reduce tap latency feel */
+    a, button { touch-action: manipulation; }
+
+    /* 8) NAV SAFETY: do not interfere with menu open/close logic */
+    header *, nav *, .siteHeader *, .navInner *, .navLinks *,
+    .hamburger *, .hamburgerBtn * {
+      content-visibility: revert !important;
+      contain: revert !important;
+      transform: revert !important;
+      transition-delay: revert !important;
+      animation: revert !important;
+    }
+
+    /* 9) Optional: keep overscroll stable */
     body { overscroll-behavior: none; }
-  }
-}
-
-/* ==========================================================================
-   Android Performance Patch (NO SPEC REDUCTION)
-   Goal: stop blank screen / wave rendering / janky scroll on Android Chrome
-   Place at END of 97_android_perf.css
-   ========================================================================== */
-
-/* Target: Android Chrome (exclude iOS Safari) */
-@supports (-webkit-appearance: none) and (not (-webkit-touch-callout: none)) {
-
-  /* 1) HARD STOP: prevent "blank screen until ready"
-     If any older CSS/JS sets body/main opacity/visibility to hide before load,
-     this forces immediate paint on Android. */
-  html, body {
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  /* Common containers that are often hidden during preload/fade-in patterns */
-  main, .pageMain, .siteMain, .wrapper, .container, .hero, .heroGrid, .heroText {
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  /* If you have any "loading/preload" classes, neutralize their hiding effect */
-  .is-loading, .loading, .preload, .preloader,
-  body.is-loading, body.loading, body.preload {
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  /* 2) Remove scroll jank from smooth scrolling (keeps UX identical, just avoids jank) */
-  html { scroll-behavior: auto !important; }
-
-  /* 3) Android text rendering stability (prevents weird delayed text paint) */
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* 4) Reduce "wave" perception caused by heavy transitions during first paint
-     (NOT removing styles—just prevents transition from blocking first paint) */
-  body * {
-    transition-delay: 0s !important;
-  }
-
-  /* 5) Make images decode without blocking layout thread (no quality loss) */
-  img {
-    height: auto;
-    display: block;
-    image-rendering: auto;
-  }
-
-  /* 6) Prevent sticky/header repaint thrash (common Android issue) */
-  .siteHeader, header, nav {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-  }
-
-  /* 7) Reduce tap/scroll latency feeling */
-  a, button {
-    touch-action: manipulation;
-  }
-}
-
-========================================================================== */
-
-/* Android-ish targeting (Chrome/Android). Avoid iOS Safari. */
-@supports (-webkit-appearance: none) and (not (-webkit-touch-callout: none)) {
-
-  /* ------------------------------------------------------------------------
-     1) Fix: "blank / text arrives in waves" caused by hidden-on-load patterns
-     - Force document paint ASAP
-     - DO NOT touch header/nav states
-     ------------------------------------------------------------------------ */
-  html, body {
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  /* Only ensure MAIN content is visible; exclude header/nav to avoid menu bugs */
-  main, .pageMain, .siteMain {
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  /* If any preload/loading class hides the main content, neutralize ONLY main */
-  body.is-loading main,
-  body.loading main,
-  body.preload main,
-  body.is-loading .pageMain,
-  body.loading .pageMain,
-  body.preload .pageMain {
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  /* ------------------------------------------------------------------------
-     2) Fix: Android scroll feels "sticky / janky"
-     ------------------------------------------------------------------------ */
-  html { scroll-behavior: auto !important; }
-  body { -webkit-overflow-scrolling: touch; }
-
-  /* Faster tap response feel (no UI change) */
-  a, button { touch-action: manipulation; }
-
-  /* ------------------------------------------------------------------------
-     3) Fix: Delayed text paint / weird size adjust on Android
-     ------------------------------------------------------------------------ */
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* ------------------------------------------------------------------------
-     4) Reduce "wave" perception from heavy first-paint transitions
-     - IMPORTANT: do NOT blanket-disable transitions for everything.
-     - Only neutralize transition on MAIN content during first paint.
-     ------------------------------------------------------------------------ */
-  main *, .pageMain *, .siteMain * {
-    transition-delay: 0s !important;
-  }
-
-  /* ------------------------------------------------------------------------
-     5) Image decode stability (no quality loss)
-     ------------------------------------------------------------------------ */
-  img {
-    height: auto;
-    display: block;
-  }
-
-  /* ------------------------------------------------------------------------
-     6) NAV SAFETY GUARD (explicitly avoid perf rules from affecting nav)
-     - This prevents future edits in this file from breaking the menu.
-     ------------------------------------------------------------------------ */
-  header *, nav *, .siteHeader *, .navInner *, .navLinks *,
-  .hamburger *, .hamburgerBtn * {
-    transition-delay: revert !important;
   }
 }
