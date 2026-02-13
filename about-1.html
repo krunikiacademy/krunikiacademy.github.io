@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KRUNIKI — Heart • Stillness • Healing | About</title>
+  <meta name="description" content="About KRUNIKI. Heart-centered learning focused on stillness, self-awareness, and grounded self-healing." />
+
+<!-- Favicon & App Icons -->
+<link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico"/>
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32x32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/logo/android-chrome-192x192.png"/>
+<link rel="icon" type="image/png" sizes="512x512" href="assets/images/logo/android-chrome-512x512.png"/>
+    
+  <style>
+    :root{
+      --font-brand: "Times New Roman", Times, serif;
+      --font-head:  "Times New Roman", Times, serif;
+    }
+  </style>
+
+  <!-- 🔗 CSS เดิมของนิกี้ -->
+  <link rel="stylesheet" href="assets/css2/app.css">
+  <link rel="stylesheet" href="assets/css2/core/02_base.css">
+  <link rel="stylesheet" href="assets/hamburger.css">
+  <link rel="stylesheet" href="assets/css2/pages/index2.css">
+  
+  <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css">
+  <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css">
+  <link rel="stylesheet" href="assets/css2/fixes/97_android_perf.css">
+
+  <!-- ✅ เพิ่ม (STEP 3) -->
+<link rel="stylesheet" href="assets/nav-patch.css">
+  
+<!-- ✅ เฉพาะหน้า about (วางหลัง pages/index2.css ตามสเปก) -->
+  <link rel="stylesheet" href="assets/css2/pages/about.css">
+
+  <script src="assets/main.js" defer></script>
+<!-- ✅ เพิ่ม (STEP 1) ต้องอยู่หลัง main.js -->
+<script src="assets/nav-patch.js" defer></script>  
+</head>
+
+<body class="aboutPage">
+
+  <!-- HEADER -->
+  <header class="siteHeader">
+    <div class="navInner">
+
+      <!-- Brand + Social (LEFT) -->
+      <div class="brandBlock">
+        <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="brandText">KRUNIKI</span>
+        </a>
+
+        <!-- Social row under brand -->
+        <div class="topbar">
+          <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+            <!-- LINE OA -->
+            <a class="iconbtn gold" href="https://lin.ee/qdp20di" target="_blank" rel="noopener" aria-label="LINE OA">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"/>
+              </svg>
+            </a>
+
+            <!-- LINE SHOP -->
+            <a class="iconbtn gold" href="https://shop.line.me/@mew3619k" target="_blank" rel="noopener" aria-label="LINE SHOP">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="stroke" d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke-width="2" stroke-linejoin="round"/>
+                <path class="stroke" d="M9 8a3 3 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+                <path class="fill" d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z" opacity=".25"/>
+              </svg>
+            </a>
+
+            <!-- FACEBOOK -->
+            <a class="iconbtn" href="https://www.facebook.com/kruniki/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"/>
+              </svg>
+            </a>
+
+            <!-- YOUTUBE -->
+            <a class="iconbtn" href="https://www.youtube.com/@kruniki" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"/>
+              </svg>
+            </a>
+
+            <!-- TIKTOK -->
+            <a class="iconbtn" href="https://www.tiktok.com/@kruniki.official" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="fill" d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"/>
+              </svg>
+            </a>
+
+            <!-- INSTAGRAM -->
+            <a class="iconbtn" href="https://www.instagram.com/kruniki.official/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="stroke" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke-width="2"/>
+                <path class="stroke" d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="none" stroke-width="2"/>
+                <circle class="fill" cx="17.5" cy="6.5" r="1.1"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div><!-- ✅ ปิด brandBlock ให้ครบ -->
+
+      <!-- Desktop Menu (CENTER) -->
+      <nav class="navLinks" aria-label="Primary navigation">
+        <a href="shop.html">ร้านค้า</a>
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">เกี่ยวกับ</a>
+        <a href="services.html">บริการ</a>
+        <a href="resources.html">คลังความรู้</a>
+        <a href="contact.html">ติดต่อ</a>
+      </nav>
+
+      <!-- Mobile/iPad only: Hamburger (RIGHT) -->
+      <div class="krActions">
+        <button class="krHam" id="krHam" type="button"
+          aria-label="เปิดเมนู"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <svg class="krHamIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div><!-- close .navInner -->
+
+    <div id="menuBackdrop" class="menuBackdrop" hidden></div>
+
+    <nav id="mobileMenu" class="mobileMenu" hidden aria-label="Mobile navigation">
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
+      <a href="about.html">เกี่ยวกับ</a>
+      <a href="services.html">บริการ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+  </header>
+
+  <!-- ✅ MAIN: เปลี่ยนเฉพาะส่วนนี้ -->
+  <main class="pageMain aboutPage">
+
+  <!-- 1) Hero / Opening Statement -->
+ <section class="panel hero aboutHero" aria-labelledby="aboutHeroTitle">
+  <div class="container">
+    <div class="aboutHeroInner">
+      <div class="goldline">Connect gently • About <strong>KRUNIKI</strong></div>
+      <h1 id="aboutHeroTitle">KRUNIKI — Where the Heart Comes Home.</h1>
+
+      <p class="th lead">
+        KRUNIKI คือระบบการเรียนรู้และการปฏิบัติ<br>
+        ที่ออกแบบมาเพื่อพาผู้คนกลับไปสู่ศูนย์กลางของตนเอง<br>
+        ผ่านสติ ลมหายใจ และการฟังหัวใจอย่างเป็นลำดับ<br>
+        <span class="tagline">หัวใจ • สงบนิ่ง • การเยียวยาภายใน</span>
+      </p>
+
+      <p class="en lead">
+        KRUNIKI is a structured learning and practice system<br>
+        designed to guide individuals back to their inner center<br>
+        through mindfulness, breath-based awareness,
+        and heart-centered listening,<br>
+        in a clear and sequential manner,<br>
+        where stillness emerges as awareness returns to the breath.<br>
+        <span class="tagline">Heart • Stillness • Inner Healing</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+  <div class="aboutDivider" aria-hidden="true"></div>
+
+  <!-- 2) Story of KRUNIKI -->
+  <section class="panel aboutSection" aria-labelledby="storyTitle">
+    <div class="container narrow">
+
+      <header class="sectionHead">
+        <div class="goldline">Story • เส้นทางของ KRUNIKI</div>
+        <h2 class="sectionTitle" id="storyTitle">Story of KRUNIKI</h2>
+      </header>
+
+      <p class="th">
+        KRUNIKI ถูกพัฒนาขึ้นจากการปฏิบัติ การสังเกต และการกลั่นกรองอย่างต่อเนื่อง
+        เพื่อทำความเข้าใจว่า “มนุษย์สามารถสร้างความมั่นคงจากภายในได้อย่างไร”
+        ไม่ใช่เพียงในช่วงเวลาหนึ่ง — แต่ในระยะยาวของชีวิต
+      </p>
+      <p class="en">
+        Developed through continuous practice, observation, and refinement,
+        KRUNIKI explores how human beings can build true inner stability—
+        not only for a moment, but across the long term of life.
+      </p>
+
+      <!-- Quote block (ไทย+อังกฤษ) -->
+      <blockquote class="aboutQuote">
+        <p class="th">“ไม่ใช่การพาคุณไปเป็นใครใหม่ แต่คือการพาคุณกลับมาเชื่อมต่อกับตัวเอง — อย่างมีรากฐาน”</p>
+        <p class="en">“Not to make you someone new, but to bring you back to yourself—grounded and real.”</p>
+      </blockquote>
+
+    </div>
+  </section>
+
+  <div class="aboutDivider" aria-hidden="true"></div>
+
+  <!-- 3) KRUNIKI SoulSync System™ -->
+  <section class="panel aboutSection" aria-labelledby="soulsyncTitle">
+    <div class="container narrow">
+
+      <header class="sectionHead">
+        <div class="goldline">System • โครงสร้างการพัฒนาภายใน</div>
+        <h2 class="sectionTitle" id="soulsyncTitle">KRUNIKI SoulSync System™</h2>
+      </header>
+
+      <p class="th">
+        KRUNIKI SoulSync System™ คือโครงสร้างการพัฒนาภายในของมนุษย์
+        ที่ออกแบบจากการบูรณาการการฝึกสมาธิ การทำงานกับลมหายใจ
+        Somatic Awareness และความเข้าใจพื้นฐานเกี่ยวกับสมองและระบบประสาทของมนุษย์
+      </p>
+      <p class="en">
+        KRUNIKI SoulSync System™ is a structured inner development framework,
+        integrating meditation, breath-based practice, somatic awareness,
+        and foundational understanding of the human brain and nervous system.
+      </p>
+
+      <p class="th">
+        ระบบนี้พัฒนาขึ้นจากการปฏิบัติ การสังเกต และการกลั่นกรองอย่างต่อเนื่อง
+        เพื่อทำความเข้าใจว่า มนุษย์สามารถสร้าง “ความมั่นคงจากภายใน” ได้อย่างไร
+        ไม่ใช่เพียงในช่วงเวลาหนึ่ง แต่ในระยะยาวของชีวิต
+      </p>
+      <p class="en">
+        This system has been shaped through ongoing practice and observation,
+        to understand how humans can cultivate true inner stability—
+        not temporarily, but sustainably over time.
+      </p>
+
+      <p class="th">
+        แก่นของ SoulSync คือการพัฒนา “เสถียรภาพภายใน (Inner Stability)”
+        เพื่อให้มนุษย์สามารถรับรู้ตนเองได้ชัดเจน
+        ตอบสนองต่อความเครียดและความท้าทายของชีวิตอย่างสมดุล
+        และดำเนินชีวิตจากความจริงภายใน
+        แทนการถูกขับเคลื่อนด้วยความกลัวหรือรูปแบบเดิมของจิตใจ
+      </p>
+      <p class="en">
+        The core of SoulSync is developing inner stability—
+        so you can perceive yourself clearly, respond to stress and life challenges with balance,
+        and live from inner truth rather than fear-driven patterns.
+      </p>
+
+      <p class="th">
+        เมื่อสมอง ระบบประสาท และโลกภายในเริ่มทำงานอย่างสอดประสาน
+        ความสงบ ความชัดเจน และความมั่นคง
+        จะค่อย ๆ กลับมาเป็นสภาวะธรรมชาติของมนุษย์อีกครั้ง
+        KRUNIKI SoulSync System™ จึงไม่ใช่แนวคิดเชิงแรงบันดาลใจ
+        แต่เป็น “ระบบการเรียนรู้เชิงประสบการณ์”
+        ที่สามารถเรียนรู้ ฝึกฝน และนำไปใช้ได้จริงในชีวิตประจำวัน
+      </p>
+      <p class="en">
+        When the brain, nervous system, and inner world begin to work in harmony,
+        calm, clarity, and stability gradually return as a natural human state.
+        SoulSync is not merely inspirational—
+        it is experiential learning that can be practiced and applied in daily life.
+      </p>
+
+    </div>
+  </section>
+
+  <div class="aboutDivider" aria-hidden="true"></div>
+
+<!-- 4) KRUNIKI Healing System™ + Certificate Program -->
+<section class="panel aboutSection" aria-labelledby="healingTitle">
+  <div class="container narrow">
+
+    <header class="sectionHead">
+      <div class="goldline">Deep Learning • การเรียนรู้เชิงลึก</div>
+      <h2 class="sectionTitle" id="healingTitle">KRUNIKI Healing System™</h2>
+    </header>
+
+    <p class="th">
+      KRUNIKI Healing System™ คือกรอบการเรียนรู้เชิงลึก
+      ที่พัฒนาต่อยอดจาก KRUNIKI SoulSync System™
+      เพื่อสนับสนุนการเปลี่ยนแปลงภายในอย่างค่อยเป็นค่อยไป
+      มีโครงสร้าง และสามารถดำรงอยู่ได้ในชีวิตจริง
+    </p>
+    <p class="en">
+      KRUNIKI Healing System™ is a deep learning framework
+      developed as an extension of the KRUNIKI SoulSync System™
+      to support gradual inner change—with structure
+      and real-life integration.
+    </p>
+
+    <p class="th">
+      หัวใจของแนวทางนี้คือ:
+      “การกลับมาเชื่อมต่อกับหัวใจของตนเอง”
+    </p>
+    <p class="en">
+      At the heart of this approach is: returning to connection with your own heart.
+    </p>
+
+    <p class="th">
+      เมื่อการเชื่อมต่อนี้อ่อนลง
+      ชีวิตมักถูกนำด้วยความกลัว กลไกป้องกันตัว
+      หรือประสบการณ์ภายในที่ยังไม่ถูกรับรู้และบูรณาการ
+      KRUNIKI จึงสนับสนุนการฟื้นคืนความสามารถในการรับรู้ตนเอง
+      อย่างอ่อนโยน ไม่เร่งรัด และไม่ตัดขาดจากความจริงของชีวิต
+    </p>
+    <p class="en">
+      When this connection weakens,
+      life is often led by fear, protective patterns,
+      or inner experiences that have not yet been recognized and integrated.
+      KRUNIKI supports the restoration of self-awareness
+      in a gentle, unforced way—without disconnecting from the truth of life.
+    </p>
+
+    <div class="aboutMiniDivider" aria-hidden="true"></div>
+
+    <h3 class="aboutH3">Foundational Focus</h3>
+    <p class="th">
+      <strong>Heart Awakening</strong> — การปลุกหัวใจสู่การรับรู้ตนเองและการเยียวยาภายใน
+    </p>
+    <p class="en">
+      <strong>Heart Awakening</strong> — a foundation for self-awareness and inner healing.
+    </p>
+
+    <p class="th">
+      แนวทางนี้วางรากฐานของการพัฒนาภายใน
+      โดยช่วยให้ผู้เรียนค่อย ๆ ฟื้นคืนความสามารถในการรับรู้
+      ความสัมพันธ์ระหว่างร่างกาย อารมณ์ ระบบประสาท และหัวใจ
+      ในจังหวะที่เหมาะสมกับชีวิตจริงของแต่ละคน
+    </p>
+    <p class="en">
+      This foundational focus supports the gradual restoration of self-awareness,
+      clarifying the relationship between body, emotion, the nervous system, and the heart—
+      at a pace that fits real life.
+    </p>
+
+    <p class="th">
+      การเยียวยาในระบบ KRUNIKI
+      ไม่ใช่การหลีกเลี่ยงความจริงของชีวิต
+      แต่คือการพัฒนาความสามารถในการอยู่กับความจริงนั้น
+      โดยไม่ปิดหัวใจของตนเอง
+    </p>
+    <p class="en">
+      In KRUNIKI, healing is not avoidance of life’s truth.
+      It is the capacity to stay with that truth—without closing the heart.
+    </p>
+
+    <p class="th">
+      เป้าหมายของระบบนี้
+      ไม่ใช่การสร้างการพึ่งพาผู้สอนหรือกระบวนการ
+      แต่คือการพัฒนาความสามารถในการดูแลโลกภายในของตนเอง
+      และยืนอยู่บนความมั่นคงภายในอย่างแท้จริง
+    </p>
+    <p class="en">
+      The goal is not dependency on a teacher or a process—
+      but the ability to care for your inner world
+      and stand on genuine inner stability.
+    </p>
+
+    <div class="aboutMiniDivider" aria-hidden="true"></div>
+
+    <h3 class="aboutH3">A Long-Form Learning Path (In Development)</h3>
+
+    <p class="th">
+      KRUNIKI กำลังพัฒนาเส้นทางการเรียนรู้ระยะยาว
+      สำหรับผู้ที่ต้องการทำงานกับตนเองอย่างจริงจังและต่อเนื่อง
+      โดยเน้นการสร้างรากฐานภายในที่มั่นคง ได้แก่:
+    </p>
+    <p class="en">
+      KRUNIKI is developing a long-form learning pathway
+      for those committed to steady, continuous inner work—focused on building stable internal foundations:
+    </p>
+
+    <ul class="aboutList" aria-label="Program foundations (in development)">
+      <li>
+        <div class="th">การรับรู้และเข้าใจตนเองอย่างลึกซึ้ง</div>
+        <div class="en">Deep self-awareness and self-understanding</div>
+      </li>
+      <li>
+        <div class="th">เสถียรภาพทางอารมณ์</div>
+        <div class="en">Emotional stability</div>
+      </li>
+      <li>
+        <div class="th">การเชื่อมต่อกับหัวใจ</div>
+        <div class="en">Connection with the heart</div>
+      </li>
+      <li>
+        <div class="th">ความยืดหยุ่นและการปรับสมดุลของระบบประสาท</div>
+        <div class="en">Nervous system resilience and regulation</div>
+      </li>
+      <li>
+        <div class="th">ความชัดเจนในการดำเนินชีวิตจากภายใน</div>
+        <div class="en">Clarity to live from within</div>
+      </li>
+    </ul>
+
+    <p class="th">
+      แนวทางนี้ไม่มุ่งเน้นการเปลี่ยนแปลงอย่างรวดเร็ว
+      แต่ให้ความสำคัญกับโครงสร้าง ความต่อเนื่อง
+      และการฝึกที่สามารถหลอมรวมเข้ากับชีวิตประจำวันได้จริง
+    </p>
+    <p class="en">
+      This pathway does not aim for rapid change.
+      It emphasizes structure, continuity, and practices that integrate into everyday life.
+    </p>
+
+    <p class="th">
+      เป้าหมายไม่ใช่การสร้างการพึ่งพา
+      แต่คือการพัฒนาความสามารถในการยืนอยู่บนความมั่นคงภายใน
+      และดำเนินชีวิตจากการเชื่อมต่อกับหัวใจของตนเองในระยะยาว
+    </p>
+    <p class="en">
+      The aim is not dependency—
+      but the ability to stand in genuine inner stability
+      and live from sustained heart connection over time.
+    </p>
+  </div>
+  </section>
+
+  <div class="aboutDivider" aria-hidden="true"></div>
+
+  <!-- 5) Founder Section (ต้องมีรูป) -->
+  <section class="panel aboutSection" aria-labelledby="founderTitle">
+    <div class="container">
+
+      <header class="sectionHead">
+        <div class="goldline">Founder • ผู้สร้างระบบ</div>
+        <h2 class="sectionTitle" id="founderTitle">Founder</h2>
+      </header>
+
+      <div class="founderGrid">
+
+        <figure class="founderMedia">
+          <img
+            src="assets/images/about/kruniki-about-founder_2.webp"
+            alt="THANTHITIYA RIANLAHONG (ครูนิกี้) ผู้ก่อตั้ง KRUNIKI"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+
+        <div class="founderContent">
+
+          <p class="th founderName">THANTHITIYA RIANLAHONG (“ครูนิกี้”)</p>
+          <p class="en founderName">THANTHITIYA RIANLAHONG (“Kru Niki”)</p>
+
+          <p class="th">
+            Founder of KRUNIKI SoulSync System™<br>
+            Creator of KRUNIKI Healing System™
+          </p>
+
+          <p class="th">
+            ครูนิกี้พัฒนาระบบ KRUNIKI
+            จากประสบการณ์ตรงด้านการฝึกสมาธิ การทำงานกับลมหายใจ
+            และการศึกษาธรรมชาติของจิตใจมนุษย์อย่างต่อเนื่องเป็นเวลาหลายปี
+          </p>
+          <p class="en">
+            Kru Niki developed KRUNIKI through direct experience—
+            years of meditation practice, breathwork, and continued study of the human mind.
+          </p>
+
+          <p class="th">
+            เธอเชื่อว่า
+            การเปลี่ยนแปลงที่แท้จริง
+            ไม่ได้เริ่มจากการพยายามเป็นคนใหม่
+          </p>
+          <p class="en">
+            She believes true transformation does not begin by trying to become someone new.
+          </p>
+
+          <p class="th">
+            แต่เริ่มจากการกลับมาเชื่อมต่อกับหัวใจ
+            เข้าใจโลกภายใน
+            และสร้างฐานชีวิตจากภายในของตนเอง
+          </p>
+          <p class="en">
+            It begins by returning to the heart, understanding the inner world,
+            and building life foundations from within.
+          </p>
+
+          <p class="th">
+            การทำงานของเธอมุ่งเน้นการออกแบบ
+            โครงสร้างการเรียนรู้ที่มนุษย์สามารถนำไปใช้ได้จริง
+            เพื่อความมั่นคงภายในอย่างยั่งยืน
+          </p>
+          <p class="en">
+            Her work focuses on designing learning structures that people can apply in real life—
+            supporting sustainable inner stability.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="aboutDivider" aria-hidden="true"></div>
+
+  <!-- 6) Vision + Closing -->
+  <section class="panel aboutSection aboutClosing" aria-labelledby="visionTitle">
+    <div class="container narrow">
+
+      <header class="sectionHead">
+        <div class="goldline">Vision • ทิศทางระยะยาว</div>
+        <h2 class="sectionTitle" id="visionTitle">Vision + Closing</h2>
+      </header>
+
+      <p class="th">
+        KRUNIKI มุ่งพัฒนาพื้นที่การเรียนรู้ภายใน
+        ที่มีความลึก ชัดเจน และมีมาตรฐาน
+      </p>
+      <p class="en">
+        KRUNIKI is committed to building an inner learning space
+        that is deep, clear, and held to a high standard.
+      </p>
+
+      <p class="th">
+        โดยผสานสมาธิ พลังจิต ความเข้าใจระบบประสาท
+        และการเยียวยาภายใน
+        เข้ากับโครงสร้างการเรียนรู้เชิงประสบการณ์
+        ที่สามารถนำไปใช้ได้จริงในชีวิตประจำวัน
+      </p>
+      <p class="en">
+        Integrating meditation, mind training, nervous system understanding, and inner healing
+        into experiential learning that can be applied in everyday life.
+      </p>
+
+      <p class="th">
+        ในระยะยาว
+        KRUNIKI มีเป้าหมายเติบโตสู่การเป็น
+        พื้นที่ด้านการพัฒนาภายในของมนุษย์
+        ที่สร้างมาตรฐานการเรียนรู้
+        และสนับสนุนให้มนุษย์ดำเนินชีวิตจากความมั่นคงภายใน
+        ไม่ใช่เพียงการแสวงหาความสมดุลจากภายนอก
+      </p>
+      <p class="en">
+        Long term, KRUNIKI aims to grow into a trusted human inner development space—
+        setting learning standards and supporting people to live from inner stability,
+        not merely seeking balance externally.
+      </p>
+
+      <div class="closingLine">
+        <p class="th">กลับมาหาหัวใจ แล้วค่อย ๆ ใช้ชีวิตจากความจริงภายใน</p>
+        <p class="en">Return to the heart, then live gently from inner truth.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ✅ ปิดท้าย: คงโครง section+footer แบบ shop.html -->
+  <section class="panel closingCtaSection" aria-label="Closing Call to Action">
+    <div class="container">
+      <div class="card cardGold">
+        <div class="cardInner">
+
+          <div class="closingCta">
+            <div class="goldline">Connect gently • กลับบ้านที่หัวใจ</div>
+
+            <h2 class="sectionTitle">เริ่มจาก “ความมั่นคงภายใน” ทีละนิด</h2>
+
+            <p class="th sectionLead">
+              ไม่ต้องรีบ ไม่ต้องฝืน — แค่เริ่มกลับมาเชื่อมต่อกับตัวเองอย่างมีรากฐาน
+            </p>
+            <p class="en sectionLead">
+              No rush, no force—start by returning to yourself, grounded and real.
+            </p>
+
+            <div class="ctaRow">
+            <a class="btn primary" href="index.html">กลับหน้าแรก</a>
+            <a class="btn" href="shop.html">ไปหน้าร้านค้า</a>
+
+           <!-- ✅ ปุ่มใหม่ (สีทอง) -->
+           <a class="btn primary" href="certification.html">ดูรายละเอียด Certification Program</a>
+           </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+    </footer>
+  </section>
+
+</main>
+
+</body>
+</html>
