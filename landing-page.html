@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soul Awakening Master Set | KRUNIKI</title>
+  <meta name="description" content="Soul Awakening Master Set — กลับบ้านสู่หัวใจของตัวเองอีกครั้ง ค่อย ๆ เปิดหัวใจ เยียวยาภายใน และกลับมาเชื่อมกับความรักแท้จากตัวเองอย่างปลอดภัย ในราคาพิเศษ 2,490 บาท จากราคาปกติ 4,900 บาท" />
+  <style>
+    :root{
+      --bg:#fffaf8;
+      --card:#ffffff;
+      --text:#5a4350;
+      --muted:#8d7481;
+      --line:#ead9df;
+      --gold:#c9a96b;
+      --gold-deep:#b68e4b;
+      --pink:#f7ecef;
+      --rose:#e8cfd8;
+      --shadow:0 18px 50px rgba(146, 111, 126, .12);
+      --radius:28px;
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, #fff6f8 0%, rgba(255,246,248,0) 32%),
+        radial-gradient(circle at top right, #fff5eb 0%, rgba(255,245,235,0) 26%),
+        linear-gradient(180deg, #fffdfc 0%, var(--bg) 100%);
+      line-height:1.65;
+    }
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+    .section{padding:72px 0}
+
+    .hero{padding:86px 0 62px}
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.8);
+      color:var(--gold-deep);
+      font-size:14px;
+      letter-spacing:.2px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:32px;
+      align-items:center;
+      margin-top:24px;
+    }
+
+    h1,h2,h3,p{margin:0}
+
+    h1{
+      font-size:clamp(36px, 5vw, 62px);
+      line-height:1.1;
+      letter-spacing:-1.2px;
+      margin-top:18px;
+      color:#563f4b;
+    }
+
+    .subhead{
+      font-size:clamp(18px, 2.1vw, 23px);
+      color:var(--muted);
+      margin-top:18px;
+      max-width:720px;
+    }
+
+    .lead{
+      font-size:17px;
+      margin-top:22px;
+      max-width:760px;
+    }
+
+    .price-box{
+      background:linear-gradient(180deg, #fffdf8 0%, #fff7ef 100%);
+      border:1px solid #efdcbc;
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .price-box:before{
+      content:"";
+      position:absolute;
+      inset:auto -40px -40px auto;
+      width:160px;
+      height:160px;
+      background:radial-gradient(circle, rgba(201,169,107,.22) 0%, rgba(201,169,107,0) 70%);
+      border-radius:50%;
+    }
+
+    .price-kicker{
+      color:var(--gold-deep);
+      font-weight:700;
+      font-size:14px;
+      letter-spacing:.4px;
+      text-transform:uppercase;
+    }
+
+    .price-row{
+      display:flex;
+      align-items:flex-end;
+      gap:14px;
+      margin-top:14px;
+      flex-wrap:wrap;
+    }
+
+    .price-now{
+      font-size:clamp(40px, 5vw, 58px);
+      line-height:1;
+      font-weight:700;
+      color:#6b4e2f;
+    }
+
+    .price-old{
+      font-size:20px;
+      color:#9a8c7d;
+      text-decoration:line-through;
+      padding-bottom:8px;
+    }
+
+    .save{
+      display:inline-block;
+      margin-top:14px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid #ead7b5;
+      color:#9a6f21;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .cta-group{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+
+    .btn{
+      appearance:none;
+      border:none;
+      border-radius:999px;
+      padding:16px 26px;
+      font-size:16px;
+      font-weight:700;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+      cursor:pointer;
+      min-height:54px;
+    }
+
+    .btn:hover{transform:translateY(-1px)}
+
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+      box-shadow:0 14px 30px rgba(182,142,75,.24);
+    }
+
+    .btn-secondary{
+      color:var(--text);
+      background:#fff;
+      border:1px solid var(--line);
+    }
+
+    .tiny-note{
+      margin-top:16px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .card{
+      background:rgba(255,255,255,.86);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+    }
+
+    .stack{display:grid;gap:18px}
+
+    .bullet-list{
+      list-style:none;
+      padding:0;
+      margin:20px 0 0;
+      display:grid;
+      gap:14px;
+    }
+
+    .bullet-list li{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:linear-gradient(135deg, var(--gold) 0%, #efd8a1 100%);
+      margin-top:9px;
+      flex:0 0 10px;
+    }
+
+    .center{text-align:center}
+
+    h2{
+      font-size:clamp(28px, 4vw, 42px);
+      line-height:1.15;
+      letter-spacing:-.6px;
+      color:#563f4b;
+    }
+
+    .section-lead{
+      max-width:760px;
+      margin:14px auto 0;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
+      margin-top:34px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:22px;
+      margin-top:34px;
+    }
+
+    .eyebrow{
+      color:var(--gold-deep);
+      font-size:13px;
+      letter-spacing:.4px;
+      font-weight:700;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      font-size:22px;
+      line-height:1.25;
+      margin-bottom:10px;
+      color:#563f4b;
+    }
+
+    .card p{color:var(--text)}
+
+    .price-section{
+      background:linear-gradient(180deg, rgba(247,236,239,.55) 0%, rgba(255,250,248,0) 100%);
+    }
+
+    .offer-card{
+      max-width:860px;
+      margin:34px auto 0;
+      background:linear-gradient(180deg, #ffffff 0%, #fff9f5 100%);
+      border:1px solid var(--line);
+      border-radius:32px;
+      padding:34px;
+      box-shadow:var(--shadow);
+    }
+
+    .price-big{
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      gap:16px;
+      flex-wrap:wrap;
+      margin:12px 0 6px;
+    }
+
+    .price-big .now{
+      font-size:clamp(42px, 6vw, 68px);
+      font-weight:700;
+      color:#6b4e2f;
+      line-height:1;
+    }
+
+    .price-big .old{
+      font-size:22px;
+      color:#9a8c7d;
+      text-decoration:line-through;
+      padding-bottom:10px;
+    }
+
+    .benefit-strip{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .pill{
+      padding:10px 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      font-size:14px;
+      color:var(--text);
+    }
+
+    .faq{max-width:900px;margin:34px auto 0;display:grid;gap:16px}
+
+    .faq details{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px 20px;
+      box-shadow:var(--shadow);
+    }
+
+    .faq summary{
+      cursor:pointer;
+      font-weight:700;
+      color:#563f4b;
+      list-style:none;
+    }
+
+    .faq summary::-webkit-details-marker{display:none}
+
+    .faq p{margin-top:12px;color:var(--muted)}
+
+    .closing{
+      padding:86px 0 94px;
+    }
+
+    .closing-box{
+      background:linear-gradient(180deg, #fff9fa 0%, #ffffff 100%);
+      border:1px solid var(--line);
+      border-radius:36px;
+      box-shadow:var(--shadow);
+      padding:40px 30px;
+      text-align:center;
+    }
+
+    .closing-box p{
+      max-width:780px;
+      margin:16px auto 0;
+      font-size:18px;
+    }
+
+    footer{
+      padding:28px 0 48px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width: 920px){
+      .hero-grid,
+      .grid-3,
+      .grid-2{grid-template-columns:1fr}
+      .hero{padding-top:64px}
+    }
+
+    @media (max-width: 560px){
+      .section{padding:54px 0}
+      .card,.price-box,.offer-card,.closing-box{padding:24px 20px}
+      .btn{width:100%}
+      .cta-group{flex-direction:column}
+      .price-row,.price-big{align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="badge">KRUNIKI • Soul Awakening Master Set</div>
+        <div class="hero-grid">
+          <div>
+            <h1>กลับบ้านสู่หัวใจของตัวเองอีกครั้ง</h1>
+            <p class="subhead">Soul Awakening Master Set คือพื้นที่อ่อนโยนสำหรับคนที่ไม่อยากใช้ชีวิตจากแผลเดิม ความกลัวเดิม และเกราะเดิมอีกต่อไป</p>
+            <p class="lead">ค่อย ๆ เปิดหัวใจ เยียวยาภายใน และกลับมาเชื่อมกับความรักแท้จากตัวเองอย่างปลอดภัย โดยไม่ต้องฝืน ไม่ต้องเร่ง และไม่ต้องทิ้งตัวเองอีก</p>
+            <div class="cta-group">
+              <a class="btn btn-primary" href="#offer">เริ่ม Soul Awakening Master Set</a>
+              <a class="btn btn-secondary" href="#details">ดูรายละเอียดทั้งหมด</a>
+            </div>
+            <p class="tiny-note">เหมาะสำหรับผู้ที่รู้แล้วว่า “ฉันไม่อยากกลับไปใช้ชีวิตแบบเดิมอีกแล้ว”</p>
+          </div>
+          <aside class="price-box">
+            <div class="price-kicker">Special Launch Offer</div>
+            <div class="price-row">
+              <div class="price-now">฿2,490</div>
+              <div class="price-old">฿4,900</div>
+            </div>
+            <div class="save">ราคาพิเศษวันนี้ ประหยัด 2,410 บาท</div>
+            <ul class="bullet-list">
+              <li><span class="dot"></span><span>ชุดการเยียวยาที่ออกแบบมาเพื่อพาคุณค่อย ๆ เปิดหัวใจอย่างปลอดภัย</span></li>
+              <li><span class="dot"></span><span>เชื่อมจากความเข้าใจ ไปสู่การเยียวยาที่ลึกขึ้นจริง</span></li>
+              <li><span class="dot"></span><span>เหมาะกับผู้ที่พร้อมจะกลับมารักตัวเองอย่างแท้จริง</span></li>
+            </ul>
+            <div class="cta-group">
+              <a class="btn btn-primary" href="#offer">รับราคาพิเศษ 2,490 บาท</a>
+            </div>
+            <p class="tiny-note">จากราคาปกติ 4,900 บาท • ก้าวถัดไปที่อ่อนโยน แต่ทรงพลัง</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="details">
+      <div class="wrap center">
+        <div class="eyebrow">Why This Set</div>
+        <h2>คุณไม่ได้มีปัญหา<br>หัวใจของคุณแค่เคยเจ็บ</h2>
+        <p class="section-lead">ถ้าคุณเริ่มเห็นแล้วว่าหัวใจที่ปิดกำลังกระทบชีวิต ความรัก และคุณค่าของตัวเอง ก้าวถัดไปอาจไม่ใช่การฝืนเข้มแข็งอีก แต่คือการให้พื้นที่กับการเยียวยาที่ลึกและจริงพอสำหรับหัวใจของคุณ</p>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="eyebrow">See Clearly</div>
+            <h3>ไม่ใช่แค่เข้าใจ</h3>
+            <p>เริ่มเห็นชัดว่าหัวใจปิดคืออะไร ปิดเพราะอะไร และกำลังกระทบชีวิตคุณตรงไหนบ้าง</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">Heal Gently</div>
+            <h3>ค่อย ๆ คลายชั้นความเจ็บ</h3>
+            <p>ไม่เร่ง ไม่กดดัน ไม่ฝืนให้หายเร็ว แต่พาใจกลับมารู้สึกปลอดภัยพอที่จะเปิดอีกครั้ง</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">Return Home</div>
+            <h3>กลับมารักตัวเองจริง ๆ</h3>
+            <p>ค่อย ๆ เปิดรับความอ่อนโยน การได้รับ และพลังรักแท้จากตัวเองอย่างเป็นธรรมชาติ</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="grid-2">
+          <article class="card">
+            <div class="eyebrow">This Is For You If</div>
+            <h3>เซ็ตนี้เหมาะกับคุณ ถ้า...</h3>
+            <ul class="bullet-list">
+              <li><span class="dot"></span><span>คุณไม่อยากใช้ชีวิตจากแผลเดิมและเกราะเดิมอีกแล้ว</span></li>
+              <li><span class="dot"></span><span>คุณอยากค่อย ๆ เปิดหัวใจอย่างปลอดภัย ไม่ใช่แบบฝืน</span></li>
+              <li><span class="dot"></span><span>คุณพร้อมจะกลับมาเชื่อมกับคุณค่าในตัวเองจริง ๆ</span></li>
+              <li><span class="dot"></span><span>คุณต้องการก้าวลึกกว่าการคิดบวกหรือการเข้าใจตัวเองเพียงผิวเผิน</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="eyebrow">What You Receive</div>
+            <h3>สิ่งที่คุณจะได้รับ</h3>
+            <ul class="bullet-list">
+              <li><span class="dot"></span><span>พื้นที่เยียวยาที่อ่อนโยน ลึก และไม่กดดันหัวใจ</span></li>
+              <li><span class="dot"></span><span>การค่อย ๆ เชื่อมจากความเข้าใจ ไปสู่การเปิดรับและการเปลี่ยนแปลงภายใน</span></li>
+              <li><span class="dot"></span><span>ประสบการณ์ที่ช่วยให้หัวใจ ร่างกาย และระบบภายในค่อย ๆ ผ่อนคลาย</span></li>
+              <li><span class="dot"></span><span>ก้าวถัดไปของการกลับบ้านสู่หัวใจของตัวเองอย่างแท้จริง</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section price-section" id="offer">
+      <div class="wrap center">
+        <div class="eyebrow">Special Price</div>
+        <h2>ราคาพิเศษสำหรับผู้ที่พร้อมจะก้าวลึกกว่าเดิม</h2>
+        <div class="offer-card">
+          <p class="section-lead" style="margin-top:0">Soul Awakening Master Set</p>
+          <div class="price-big">
+            <div class="now">฿2,490</div>
+            <div class="old">฿4,900</div>
+          </div>
+          <p style="font-size:18px;color:var(--muted)">ราคาพิเศษ ลดทันที 2,410 บาท</p>
+          <div class="benefit-strip">
+            <span class="pill">ค่อย ๆ เยียวยา</span>
+            <span class="pill">ค่อย ๆ เปิดหัวใจ</span>
+            <span class="pill">ค่อย ๆ กลับมารักตัวเองจริง ๆ</span>
+          </div>
+          <div class="cta-group" style="justify-content:center">
+            <a class="btn btn-primary" href="#">รับ Soul Awakening Master Set ในราคา 2,490 บาท</a>
+            <a class="btn btn-secondary" href="#details">อ่านรายละเอียดก่อนตัดสินใจ</a>
+          </div>
+          <p class="tiny-note">ไม่ต้องรีบ แต่คุณไม่จำเป็นต้องกลับไปใช้ชีวิตแบบเดิม</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap center">
+        <div class="eyebrow">FAQ</div>
+        <h2>คำถามที่หัวใจอาจกำลังถามอยู่</h2>
+        <div class="faq">
+          <details>
+            <summary>ฉันยังไม่แน่ใจว่าตัวเองพร้อมหรือยัง</summary>
+            <p>คุณไม่จำเป็นต้องรีบตัดสินใจจากแรงกดดันใด ๆ แต่ถ้าหัวใจของคุณกำลังส่งสัญญาณว่าไม่อยากกลับไปใช้ชีวิตแบบเดิมอีก นี่อาจเป็นจังหวะที่เหมาะในการให้ก้าวถัดไปกับตัวเองอย่างอ่อนโยน</p>
+          </details>
+          <details>
+            <summary>เซ็ตนี้เหมาะกับคนที่ยังเจ็บอยู่มากไหม</summary>
+            <p>เซ็ตนี้ถูกออกแบบมาในโทนที่อ่อนโยนและไม่เร่งรัด เหมาะกับผู้ที่ต้องการพื้นที่ค่อย ๆ กลับมาเชื่อมกับหัวใจตัวเองอย่างปลอดภัย</p>
+          </details>
+          <details>
+            <summary>นี่ต่างจากการอ่านหรือฟังคอนเทนต์ทั่วไปอย่างไร</summary>
+            <p>คอนเทนต์ทั่วไปอาจช่วยให้คุณเข้าใจตัวเองมากขึ้น แต่เซ็ตนี้ถูกสร้างขึ้นเพื่อพาคุณก้าวลึกจากความเข้าใจ ไปสู่การค่อย ๆ เปิดรับ เยียวยา และกลับมารักตัวเองจริง ๆ</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <div class="closing-box">
+          <div class="eyebrow">Closing Invitation</div>
+          <h2>คุณไม่จำเป็นต้องหายทันที<br>แต่คุณให้ก้าวถัดไปกับหัวใจตัวเองได้วันนี้</h2>
+          <p>ถ้าคุณรู้แล้วว่าคุณไม่ได้อยากแค่เข้าใจตัวเองอีกต่อไป แต่คุณอยากเริ่มเยียวยาตัวเองจริง ๆ Soul Awakening Master Set อาจไม่ใช่แค่สิ่งที่คุณซื้อ แต่มันอาจเป็นจุดเริ่มต้นของความสัมพันธ์ใหม่ระหว่างคุณกับหัวใจของตัวเอง</p>
+          <div class="cta-group" style="justify-content:center">
+            <a class="btn btn-primary" href="#">เริ่ม Soul Awakening Master Set</a>
+            <a class="btn btn-secondary" href="#offer">ดูราคาพิเศษ 2,490 บาท</a>
+          </div>
+          <p class="tiny-note">กลับบ้านสู่หัวใจของตัวเองอีกครั้ง • อย่างอ่อนโยน • อย่างปลอดภัย • อย่างไม่ทิ้งตัวเองอีก</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      KRUNIKI • Heart • Stillness • Healing
+    </div>
+  </footer>
+</body>
+</html>
