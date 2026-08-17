@@ -49,15 +49,13 @@ body.hfa90Page .hfaContainer {
 
 /* Header safety */
 body.hfa90Page .siteHeader {
+  /* Header ต้องอยู่ใน document flow เพื่อไม่ทับ Banner ทุกขนาดจอ */
+  position: sticky !important;
+  top: 0 !important;
   background: #0b0b0c !important;
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
-}
-
-body.hfa90Page #menuBackdrop[hidden],
-body.hfa90Page:not(.menuOpen) #menuBackdrop {
-  display: none !important;
 }
 
 /* Typography */
@@ -581,4 +579,4 @@ body.hfa90Page footer .gold { color: var(--hfa-gold) !important; }
 
 @media (prefers-reduced-motion: reduce) {
   body.hfa90Page .hfaButton { transition: none; }
-}
+}
