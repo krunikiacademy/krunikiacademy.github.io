@@ -544,6 +544,13 @@ body.hfa90Page footer {
 
 body.hfa90Page footer .gold { color: var(--hfa-gold) !important; }
 
+/* This page only: keep the mobile menu behavior, remove only its dark veil. */
+body.hfa90Page #menuBackdrop {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
 /* Tablet */
 @media (max-width: 900px) {
   body.hfa90Page .hfaFounder { grid-template-columns: 1fr; }
@@ -579,4 +586,4 @@ body.hfa90Page footer .gold { color: var(--hfa-gold) !important; }
 
 @media (prefers-reduced-motion: reduce) {
   body.hfa90Page .hfaButton { transition: none; }
-}
+}
