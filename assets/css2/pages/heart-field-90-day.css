@@ -150,8 +150,12 @@ body.hfa90Page .hfaSectionGold {
 
 /* Hero */
 body.hfa90Page .hfaHero {
-  width: 100%;
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  max-width: none;
   margin: 0;
+  margin-left: -50vw;
   padding: 0;
   overflow: visible;
   background: #fff7fa;
@@ -160,6 +164,7 @@ body.hfa90Page .hfaHero {
 body.hfa90Page .hfaHeroBanner {
   display: block;
   width: 100%;
+  max-width: none;
   height: auto;
   margin: 0;
   border: 0;
