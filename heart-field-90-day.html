@@ -73,7 +73,7 @@
 
   <meta
     property="og:image"
-    content="https://www.kruniki.com/assets/images/heart-field-90-day/heart-field-90-day-banner.webp"
+    content="https://www.kruniki.com/assets/images/heart-field-90-day-banner.webp"
   />
 
   <!-- Structured Data -->
@@ -111,6 +111,54 @@
 
   <!-- Navigation Patch -->
   <link rel="stylesheet" href="assets/nav-patch.css" />
+
+  <!-- Critical header sizing: prevents social SVGs from expanding if a
+       cached external stylesheet is delayed or temporarily unavailable. -->
+  <style>
+    .siteHeader .topbar .social {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .siteHeader .topbar .social .iconbtn {
+      box-sizing: border-box;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      width: 34px !important;
+      height: 34px !important;
+      min-width: 34px !important;
+      min-height: 34px !important;
+      padding: 0 !important;
+      flex: 0 0 34px;
+    }
+
+    .siteHeader .topbar .social .iconbtn svg {
+      display: block;
+      width: 18px !important;
+      height: 18px !important;
+      max-width: 18px !important;
+      max-height: 18px !important;
+    }
+
+    @media (max-width: 420px) {
+      .siteHeader .topbar .social .iconbtn {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        min-height: 28px !important;
+        flex-basis: 28px;
+      }
+
+      .siteHeader .topbar .social .iconbtn svg {
+        width: 14px !important;
+        height: 14px !important;
+        max-width: 14px !important;
+        max-height: 14px !important;
+      }
+    }
+  </style>
 
   <!-- JavaScript กลาง: main.js ต้องอยู่ก่อน nav-patch.js -->
   <script src="assets/main.js" defer></script>
@@ -375,7 +423,7 @@
 
           <div class="hfaHeroVisual">
             <img
-              src="assets/images/heart-field-90-day/heart-field-90-day-banner.webp"
+              src="assets/images/heart-field-90-day-banner.webp"
               alt="The Heart Field Activation 90-Day Program โดย KRUNIKI"
               width="900"
               height="1100"
@@ -457,7 +505,7 @@
 
         <figure class="hfaPoster">
           <img
-            src="assets/images/heart-field-90-day/poster-program-overview.webp"
+            src="assets/images/poster-program-overview.webp"
             alt="ภาพรวม The Heart Field Activation 90-Day Program"
             width="1600"
             height="2000"
@@ -601,7 +649,7 @@
 
           <figure class="hfaPoster">
             <img
-              src="assets/images/heart-field-90-day/poster-90-day-journey.webp"
+              src="assets/images/poster-90-day-journey.webp"
               alt="เส้นทางการฝึกตลอด 90 วัน"
               width="1600"
               height="2000"
@@ -699,7 +747,7 @@
 
         <figure class="hfaPoster">
           <img
-            src="assets/images/heart-field-90-day/poster-program-materials.webp"
+            src="assets/images/poster-program-materials.webp"
             alt="eBook Meditation Library และ 13-Week Journey Notebook"
             width="1600"
             height="2000"
@@ -765,6 +813,18 @@
     <!-- 7. FOUNDER CIRCLE -->
     <section id="founder-circle" class="hfaSection">
       <div class="hfaContainer">
+
+        <figure class="hfaPoster hfaWide">
+          <img
+            src="assets/images/founder-circle-banner.webp"
+            alt="The Heart Field Activation Founder Circle"
+            width="1920"
+            height="1080"
+            loading="lazy"
+            decoding="async"
+            onerror="this.closest('.hfaPoster').hidden=true;"
+          />
+        </figure>
 
         <div class="hfaFounder">
 
@@ -832,7 +892,7 @@
 
         <figure class="hfaPoster">
           <img
-            src="assets/images/heart-field-90-day/poster-founder-circle.webp"
+            src="assets/images/poster-founder-circle.webp"
             alt="Founder Circle รุ่นแรก Founder Rate 4,900 บาท"
             width="1600"
             height="2000"
