@@ -56,6 +56,7 @@ body.hfa90Page .siteHeader {
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
+  z-index: 10020 !important;
 }
 
 /* Typography */
@@ -549,6 +550,12 @@ body.hfa90Page #menuBackdrop {
   background: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
+  z-index: 9998 !important;
+}
+
+/* Keep the open mobile menu above both backdrop and header on this page only. */
+body.hfa90Page #mobileMenu {
+  z-index: 10030 !important;
 }
 
 /* Tablet */
@@ -557,6 +564,25 @@ body.hfa90Page #menuBackdrop {
 
   body.hfa90Page .hfaGrid3,
   body.hfa90Page .hfaGrid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* Founder Circle only: remove stacked top spacing and use the screen width. */
+  body.hfa90Page #founder-circle {
+    padding-top: 18px;
+  }
+
+  body.hfa90Page #founder-circle > .hfaContainer > .hfaPoster.hfaWide:first-child {
+    width: 100vw;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: calc(50% - 50vw);
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  body.hfa90Page #founder-circle > .hfaContainer > .hfaPoster.hfaWide:first-child img {
+    width: 100%;
+  }
 
 }
 
@@ -582,6 +608,24 @@ body.hfa90Page #menuBackdrop {
   body.hfa90Page .hfaClosingCard { padding: 36px 20px; }
   body.hfa90Page .hfaActions { flex-direction: column; }
   body.hfa90Page .hfaButton { width: 100%; }
+
+  /* A 16:9 banner becomes too short on phones. Use a taller window and
+     center the meaningful artwork; this affects Founder Circle only. */
+  body.hfa90Page #founder-circle {
+    padding-top: 10px;
+  }
+
+  body.hfa90Page #founder-circle > .hfaContainer > .hfaPoster.hfaWide:first-child {
+    aspect-ratio: 4 / 3;
+    margin-bottom: 24px;
+  }
+
+  body.hfa90Page #founder-circle > .hfaContainer > .hfaPoster.hfaWide:first-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 58%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
