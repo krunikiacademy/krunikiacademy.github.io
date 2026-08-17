@@ -545,7 +545,15 @@ body.hfa90Page footer {
 
 body.hfa90Page footer .gold { color: var(--hfa-gold) !important; }
 
-/* This page only: keep the mobile menu behavior, remove only its dark veil. */
+/* This page only: restore the real hidden state overridden by legacy style.css. */
+body.hfa90Page #menuBackdrop[hidden] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* When the menu is open, keep the click-to-close layer but remove its dark veil. */
 body.hfa90Page #menuBackdrop {
   background: transparent !important;
   backdrop-filter: none !important;
