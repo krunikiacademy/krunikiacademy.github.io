@@ -1,935 +1,1037 @@
-/* =========================================================
-   KRUNIKI®
-   The Heart Field Activation™ — 90-Day Program
-
-   File:
-   assets/css2/pages/heart-field-90-day.css
-
-   Scope:
-   ใช้เฉพาะ body.hfa90Page
-   ไม่กระทบหน้าอื่นของเว็บไซต์
-   ========================================================= */
-
-
-/* =========================================================
-   1. PAGE VARIABLES
-   ========================================================= */
-
-body.hfa90Page {
-  --hfa-pink: #f7dce9;
-  --hfa-pink-soft: #fff7fa;
-  --hfa-rose: #ba6d88;
-
-  --hfa-gold: #c6ab66;
-  --hfa-gold-deep: #b59348;
-  --hfa-gold-soft: #f4ead0;
-
-  --hfa-brown: #5b493f;
-  --hfa-ink: #332b28;
-  --hfa-text: #584d48;
-  --hfa-text-soft: #665751;
-
-  --hfa-white: #ffffff;
-  --hfa-page: #fffafc;
-
-  --hfa-line: rgba(198, 171, 102, 0.38);
-  --hfa-shadow: 0 20px 44px rgba(83, 62, 54, 0.11);
-
-  margin: 0;
-  color: var(--hfa-ink);
-  background: var(--hfa-page) !important;
-}
-
-
-/* =========================================================
-   2. PAGE RESET — เฉพาะหน้า HFA
-   ========================================================= */
-
-body.hfa90Page main {
-  display: block;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-  overflow: hidden;
-  color: var(--hfa-ink);
-  background: var(--hfa-page);
-}
-
-body.hfa90Page main,
-body.hfa90Page main section,
-body.hfa90Page main article,
-body.hfa90Page main div,
-body.hfa90Page main figure {
-  box-sizing: border-box;
-}
-
-body.hfa90Page main p,
-body.hfa90Page main li {
-  color: var(--hfa-ink);
-}
-
-body.hfa90Page main img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-body.hfa90Page .hfaContainer {
-  width: min(1120px, calc(100% - 32px));
-  margin-right: auto;
-  margin-left: auto;
-}
-
-
-/* =========================================================
-   3. HEADER SAFETY — ใช้โครง Header กลางเดิม
-   ========================================================= */
-
-body.hfa90Page .siteHeader {
-  background: #0b0b0c !important;
-  -webkit-backdrop-filter: none !important;
-  backdrop-filter: none !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
-}
-
-body.hfa90Page #menuBackdrop[hidden] {
-  display: none !important;
-}
-
-body.hfa90Page:not(.menuOpen) #menuBackdrop {
-  display: none !important;
-}
-
-
-/* =========================================================
-   4. TYPOGRAPHY
-   ========================================================= */
-
-body.hfa90Page .hfaEyebrow {
-  margin: 0 0 12px;
-  color: var(--hfa-gold) !important;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
-
-body.hfa90Page .hfaTitle {
-  margin: 0;
-  color: var(--hfa-brown) !important;
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(36px, 5.4vw, 68px);
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 1.03;
-}
-
-body.hfa90Page .hfaTitleThai {
-  display: block;
-  margin-top: 18px;
-  font-family: inherit;
-  font-size: clamp(22px, 3vw, 34px);
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.4;
-}
-
-body.hfa90Page .hfaHeading {
-  margin: 0;
-  color: var(--hfa-brown) !important;
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(30px, 4vw, 46px);
-  font-weight: 500;
-  line-height: 1.18;
-}
-
-body.hfa90Page .hfaSubheading {
-  margin: 0;
-  color: var(--hfa-brown) !important;
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(22px, 2.7vw, 30px);
-  font-weight: 500;
-  line-height: 1.3;
-}
-
-body.hfa90Page .hfaLead {
-  max-width: 760px;
-  margin: 20px 0 0;
-  color: var(--hfa-text) !important;
-  font-size: clamp(17px, 2vw, 20px);
-  line-height: 1.9;
-  opacity: 1 !important;
-}
-
-body.hfa90Page .hfaBody {
-  margin: 14px 0 0;
-  color: var(--hfa-text) !important;
-  font-size: 16px;
-  line-height: 1.9;
-  opacity: 1 !important;
-}
-
-body.hfa90Page .hfaCenter {
-  text-align: center;
-}
-
-body.hfa90Page .hfaCenter .hfaLead {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-
-/* =========================================================
-   5. SECTIONS
-   ========================================================= */
-
-body.hfa90Page .hfaSection {
-  width: 100%;
-  max-width: none;
-  padding: 72px 0;
-  color: var(--hfa-ink);
-  background: #fffdfd;
-}
-
-body.hfa90Page .hfaSectionSoft {
-  background:
-    radial-gradient(
-      circle at 10% 10%,
-      rgba(247, 220, 233, 0.68),
-      transparent 34%
-    ),
-    linear-gradient(
-      180deg,
-      #fffdfd 0%,
-      var(--hfa-pink-soft) 100%
-    ) !important;
-}
-
-body.hfa90Page .hfaSectionGold {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(244, 234, 208, 0.92),
-      rgba(255, 250, 245, 0.98)
-    ) !important;
-}
-
-
-/* =========================================================
-   6. HERO
-   ========================================================= */
-
-body.hfa90Page .hfaHero {
-  position: relative;
-  width: 100%;
-  max-width: none;
-  padding: 68px 0 48px;
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 82% 20%,
-      rgba(247, 220, 233, 0.88),
-      transparent 31%
-    ),
-    radial-gradient(
-      circle at 8% 82%,
-      rgba(244, 234, 208, 0.82),
-      transparent 30%
-    ),
-    linear-gradient(
-      145deg,
-      #fffefe 0%,
-      #fff8fb 55%,
-      #fffdf8 100%
-    );
-}
-
-body.hfa90Page .hfaHeroGrid {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 1.05fr)
-    minmax(330px, 0.95fr);
-
-  gap: 46px;
-  align-items: center;
-}
-
-body.hfa90Page .hfaHeroGrid > * {
-  min-width: 0;
-}
-
-body.hfa90Page .hfaHeroGrid.hfaNoHeroImage {
-  grid-template-columns: minmax(0, 850px) !important;
-  justify-content: center;
-}
-
-body.hfa90Page .hfaHeroNote {
-  margin: 22px 0 0;
-  padding-left: 16px;
-  border-left: 2px solid var(--hfa-gold);
-
-  color: var(--hfa-text-soft) !important;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-body.hfa90Page .hfaHeroVisual {
-  position: relative;
-  min-height: 460px;
-  overflow: hidden;
-
-  border: 1px solid rgba(198, 171, 102, 0.32);
-  border-radius: 30px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(247, 220, 233, 0.72),
-      rgba(244, 234, 208, 0.68)
-    );
-
-  box-shadow: 0 28px 60px rgba(97, 70, 60, 0.15);
-}
-
-body.hfa90Page .hfaHeroVisual img {
-  width: 100%;
-  height: 100%;
-  min-height: 460px;
-  object-fit: cover;
-}
-
-body.hfa90Page .hfaHeroBadge {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-
-  max-width: 220px;
-  padding: 14px 18px;
-
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 18px;
-
-  color: var(--hfa-brown) !important;
-  background: rgba(255, 255, 255, 0.9);
-
-  box-shadow: 0 12px 28px rgba(75, 54, 48, 0.12);
-
-  font-size: 14px;
-  line-height: 1.6;
-
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-}
-
-body.hfa90Page .hfaHeroBadge strong {
-  color: var(--hfa-brown);
-}
-
-
-/* =========================================================
-   7. BUTTONS
-   ========================================================= */
-
-body.hfa90Page .hfaActions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 28px;
-}
-
-body.hfa90Page .hfaButton {
-  display: inline-flex;
-  min-height: 48px;
-  align-items: center;
-  justify-content: center;
-
-  padding: 12px 22px;
-
-  border: 1px solid var(--hfa-gold) !important;
-  border-radius: 999px;
-
-  color: var(--hfa-brown) !important;
-  background: rgba(255, 255, 255, 0.78) !important;
-
-  font-weight: 700;
-  line-height: 1.3;
-  text-align: center;
-  text-decoration: none !important;
-
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    background 180ms ease;
-}
-
-body.hfa90Page .hfaButton:hover,
-body.hfa90Page .hfaButton:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(90, 63, 51, 0.12);
-}
-
-body.hfa90Page .hfaButtonPrimary {
-  color: #ffffff !important;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--hfa-gold),
-      var(--hfa-gold-deep)
-    ) !important;
-}
-
-body.hfa90Page .hfaButtonSoft {
-  border-color: rgba(186, 109, 136, 0.5) !important;
-  background: rgba(247, 220, 233, 0.54) !important;
-}
-
-
-/* =========================================================
-   8. PROGRAM STATISTICS
-   ========================================================= */
-
-body.hfa90Page .hfaStats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  gap: 16px;
-  margin-top: 34px;
-}
-
-body.hfa90Page .hfaStat {
-  padding: 22px 18px;
-
-  border: 1px solid var(--hfa-line);
-  border-radius: 20px;
-
-  background: rgba(255, 255, 255, 0.82);
-  text-align: center;
-}
-
-body.hfa90Page .hfaStat strong {
-  display: block;
-  margin-bottom: 5px;
-
-  color: var(--hfa-gold) !important;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 28px;
-  font-weight: 500;
-}
-
-body.hfa90Page .hfaStat span {
-  color: var(--hfa-text-soft) !important;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-
-/* =========================================================
-   9. GRID SYSTEM
-   ========================================================= */
-
-body.hfa90Page .hfaGrid2,
-body.hfa90Page .hfaGrid3,
-body.hfa90Page .hfaGrid4 {
-  display: grid;
-  gap: 20px;
-  margin-top: 34px;
-}
-
-body.hfa90Page .hfaGrid2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-body.hfa90Page .hfaGrid3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-body.hfa90Page .hfaGrid4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-body.hfa90Page .hfaGrid2 > *,
-body.hfa90Page .hfaGrid3 > *,
-body.hfa90Page .hfaGrid4 > * {
-  min-width: 0;
-}
-
-
-/* =========================================================
-   10. CARDS
-   ========================================================= */
-
-body.hfa90Page .hfaCard {
-  height: 100%;
-  padding: 26px;
-
-  border: 1px solid var(--hfa-line);
-  border-radius: 22px;
-
-  color: var(--hfa-ink);
-  background: rgba(255, 255, 255, 0.9);
-
-  box-shadow: 0 14px 32px rgba(83, 62, 54, 0.07);
-}
-
-body.hfa90Page .hfaCardNumber {
-  display: inline-flex;
-  width: 40px;
-  height: 40px;
-
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 16px;
-
-  border-radius: 50%;
-
-  color: #ffffff !important;
-  background:
-    linear-gradient(
-      135deg,
-      var(--hfa-gold),
-      var(--hfa-gold-deep)
-    );
-
-  font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
-}
-
-body.hfa90Page .hfaCard h3 {
-  margin: 0;
-
-  color: var(--hfa-brown) !important;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 23px;
-  font-weight: 500;
-  line-height: 1.35;
-}
-
-body.hfa90Page .hfaCard p {
-  margin: 12px 0 0;
-
-  color: var(--hfa-text) !important;
-  font-size: 15px;
-  line-height: 1.8;
-  opacity: 1 !important;
-}
-
-
-/* =========================================================
-   11. LISTS
-   ========================================================= */
-
-body.hfa90Page .hfaList {
-  display: grid;
-  gap: 13px;
-
-  margin: 24px 0 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-body.hfa90Page .hfaList li {
-  position: relative;
-  padding-left: 29px;
-
-  color: var(--hfa-text) !important;
-  line-height: 1.8;
-  opacity: 1 !important;
-}
-
-body.hfa90Page .hfaList li::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  color: var(--hfa-gold);
-  content: "✦";
-}
-
-
-/* =========================================================
-   12. POSTERS
-   ========================================================= */
-
-body.hfa90Page .hfaPoster {
-  overflow: hidden;
-  margin: 38px 0 0;
-
-  border: 1px solid var(--hfa-line);
-  border-radius: 26px;
-
-  background: #ffffff;
-  box-shadow: var(--hfa-shadow);
-}
-
-body.hfa90Page .hfaPoster img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-body.hfa90Page .hfaPoster[hidden],
-body.hfa90Page .hfaHeroVisual[hidden] {
-  display: none !important;
-}
-
-
-/* =========================================================
-   13. 90-DAY JOURNEY TIMELINE
-   ========================================================= */
-
-body.hfa90Page .hfaJourney {
-  position: relative;
-  padding-left: 28px;
-}
-
-body.hfa90Page .hfaJourney::before {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: 7px;
-
-  width: 1px;
-
-  background:
-    linear-gradient(
-      var(--hfa-gold),
-      rgba(198, 171, 102, 0.18)
-    );
-
-  content: "";
-}
-
-body.hfa90Page .hfaJourneyItem {
-  position: relative;
-  padding: 0 0 32px 26px;
-}
-
-body.hfa90Page .hfaJourneyItem:last-child {
-  padding-bottom: 0;
-}
-
-body.hfa90Page .hfaJourneyItem::before {
-  position: absolute;
-  top: 7px;
-  left: -27px;
-
-  width: 14px;
-  height: 14px;
-
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-
-  background: var(--hfa-gold);
-  box-shadow: 0 0 0 1px var(--hfa-gold);
-
-  content: "";
-}
-
-body.hfa90Page .hfaJourneyItem h3 {
-  margin: 0;
-
-  color: var(--hfa-brown) !important;
-  font-size: 22px;
-  line-height: 1.4;
-}
-
-body.hfa90Page .hfaJourneyItem p {
-  margin: 8px 0 0;
-
-  color: var(--hfa-text) !important;
-  line-height: 1.8;
-  opacity: 1 !important;
-}
-
-
-/* =========================================================
-   14. FOUNDER CIRCLE
-   ========================================================= */
-
-body.hfa90Page .hfaFounder {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(300px, 0.72fr);
-
-  gap: 34px;
-  align-items: center;
-
-  padding: 38px;
-
-  border: 1px solid rgba(198, 171, 102, 0.5);
-  border-radius: 28px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.98),
-      rgba(247, 220, 233, 0.62)
-    );
-
-  box-shadow: 0 22px 48px rgba(83, 62, 54, 0.1);
-}
-
-body.hfa90Page .hfaPriceBox {
-  padding: 28px;
-
-  border: 1px solid rgba(198, 171, 102, 0.45);
-  border-radius: 24px;
-
-  background: rgba(255, 255, 255, 0.94);
-  text-align: center;
-}
-
-body.hfa90Page .hfaPriceLabel {
-  margin: 0;
-
-  color: var(--hfa-rose) !important;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-body.hfa90Page .hfaPrice {
-  margin: 12px 0 4px;
-
-  color: var(--hfa-gold) !important;
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(44px, 6vw, 64px);
-  line-height: 1;
-}
-
-body.hfa90Page .hfaPriceUnit {
-  margin: 0;
-
-  color: var(--hfa-text-soft) !important;
-  font-size: 15px;
-}
-
-
-/* =========================================================
-   15. FAQ
-   ========================================================= */
-
-body.hfa90Page .hfaFaq {
-  display: grid;
-  gap: 14px;
-  margin-top: 32px;
-}
-
-body.hfa90Page .hfaFaq details {
-  padding: 20px 22px;
-
-  border: 1px solid var(--hfa-line);
-  border-radius: 18px;
-
-  color: var(--hfa-ink);
-  background: rgba(255, 255, 255, 0.92);
-}
-
-body.hfa90Page .hfaFaq summary {
-  color: var(--hfa-brown) !important;
-  cursor: pointer;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.6;
-}
-
-body.hfa90Page .hfaFaq p {
-  margin: 14px 0 0;
-
-  color: var(--hfa-text) !important;
-  line-height: 1.85;
-  opacity: 1 !important;
-}
-
-
-/* =========================================================
-   16. RESPONSIBLE USE NOTICE
-   ========================================================= */
-
-body.hfa90Page .hfaNotice {
-  margin-top: 28px;
-  padding: 22px;
-
-  border: 1px solid rgba(198, 171, 102, 0.35);
-  border-radius: 18px;
-
-  background: rgba(255, 255, 255, 0.84);
-}
-
-body.hfa90Page .hfaNotice p {
-  margin: 0;
-
-  color: var(--hfa-text-soft) !important;
-  font-size: 14px;
-  line-height: 1.85;
-  opacity: 1 !important;
-}
-
-
-/* =========================================================
-   17. CLOSING CTA
-   ========================================================= */
-
-body.hfa90Page .hfaClosing {
-  width: 100%;
-  max-width: none;
-  padding: 76px 0;
-
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(247, 220, 233, 0.75),
-      transparent 34%
-    ),
-    linear-gradient(
-      135deg,
-      #fffafc,
-      #fffdf7
-    );
-}
-
-body.hfa90Page .hfaClosingCard {
-  padding: 46px 32px;
-
-  border: 1px solid rgba(198, 171, 102, 0.48);
-  border-radius: 30px;
-
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 24px 56px rgba(83, 62, 54, 0.1);
-
-  text-align: center;
-}
-
-body.hfa90Page .hfaClosingCard .hfaLead {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-body.hfa90Page .hfaClosingCard .hfaActions {
-  justify-content: center;
-}
-
-
-/* =========================================================
-   18. FOOTER
-   ========================================================= */
-
-body.hfa90Page footer {
-  display: block;
-  width: 100%;
-  margin-top: 0;
-  padding: 26px 16px;
-
-  color: rgba(245, 246, 248, 0.92) !important;
-  background: #0f1114 !important;
-
-  text-align: center;
-}
-
-body.hfa90Page footer .gold {
-  color: var(--hfa-gold) !important;
-}
-
-
-/* =========================================================
-   19. TABLET
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-  body.hfa90Page .hfaHeroGrid,
-  body.hfa90Page .hfaFounder {
-    grid-template-columns: 1fr;
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Heart Field Activation™ — 90-Day Program | KRUNIKI®</title>
+
+  <meta
+    name="description"
+    content="The Heart Field Activation™ — 90-Day Program โปรแกรมฝึกและเรียนรู้ภายในอย่างต่อเนื่อง 90 วัน พร้อม 13-Week Journey, Meditation Library และ Founder Circle โดย KRUNIKI®"
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.kruniki.com/heart-field-90-day.html"
+  />
+
+  <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico" />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="assets/images/logo/favicon-16x16.png"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/images/logo/favicon-32x32.png"
+  />
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="assets/images/logo/apple-touch-icon.png"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="assets/images/logo/android-chrome-192x192.png"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="512x512"
+    href="assets/images/logo/android-chrome-512x512.png"
+  />
+
+  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="The Heart Field Activation™ — 90-Day Program"
+  />
+
+  <meta
+    property="og:description"
+    content="90 วันของการกลับมารับรู้ ดูแล และสร้างความสัมพันธ์ที่อ่อนโยนกับหัวใจของตนเอง"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:url"
+    content="https://www.kruniki.com/heart-field-90-day.html"
+  />
+
+  <meta
+    property="og:image"
+    content="https://www.kruniki.com/assets/images/heart-field-90-day/heart-field-90-day-banner.webp"
+  />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "The Heart Field Activation™ — 90-Day Program",
+    "description": "โปรแกรมฝึกและเรียนรู้ภายในอย่างต่อเนื่อง 90 วัน โดย KRUNIKI®",
+    "provider": {
+      "@type": "Organization",
+      "name": "KRUNIKI®",
+      "url": "https://www.kruniki.com/"
+    },
+    "url": "https://www.kruniki.com/heart-field-90-day.html",
+    "inLanguage": "th"
   }
+  </script>
 
-  body.hfa90Page .hfaGrid3,
-  body.hfa90Page .hfaGrid4 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  <!-- CSS กลางของเว็บไซต์ -->
+  <link rel="stylesheet" href="assets/css2/app.css" />
+  <link rel="stylesheet" href="assets/css2/core/02_base.css" />
+  <link rel="stylesheet" href="assets/hamburger.css" />
+  <link rel="stylesheet" href="assets/css2/pages/index2.css" />
+  <link rel="stylesheet" href="assets/css2/fixes/99_hotfix.css" />
+  <link rel="stylesheet" href="assets/css2/fixes/98_final_polish.css" />
 
-  body.hfa90Page .hfaHeroVisual {
-    min-height: 380px;
-  }
+  <!-- CSS เฉพาะหน้า Heart Field Activation 90-Day -->
+  <link
+    rel="stylesheet"
+    href="assets/css2/pages/heart-field-90-day.css"
+  />
 
-  body.hfa90Page .hfaHeroVisual img {
-    min-height: 380px;
-  }
-}
+  <link rel="stylesheet" href="assets/css2/fixes/97_android_perf.css" />
 
+  <!-- Navigation Patch -->
+  <link rel="stylesheet" href="assets/nav-patch.css" />
 
-/* =========================================================
-   20. MOBILE
-   ========================================================= */
+  <!-- JavaScript กลาง: main.js ต้องอยู่ก่อน nav-patch.js -->
+  <script src="assets/main.js" defer></script>
+  <script src="assets/nav-patch.js" defer></script>
+</head>
 
-@media (max-width: 680px) {
+<body class="hfa90Page">
 
-  body.hfa90Page .hfaContainer {
-    width: min(100% - 24px, 1120px);
-  }
+  <!-- HEADER: ใช้โครงเดียวกับเว็บไซต์เดิม -->
+  <header class="siteHeader">
+    <div class="navInner">
 
-  body.hfa90Page .hfaSection {
-    padding: 54px 0;
-  }
+      <!-- Brand + Social -->
+      <div class="brandBlock">
+        <a class="brand" href="index.html" aria-label="KRUNIKI Home">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="brandText">KRUNIKI</span>
+        </a>
 
-  body.hfa90Page .hfaHero {
-    padding: 44px 0 34px;
-  }
+        <div class="topbar">
+          <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
 
-  body.hfa90Page .hfaHeroGrid {
-    gap: 30px;
-  }
+            <!-- LINE OA -->
+            <a
+              class="iconbtn gold"
+              href="https://lin.ee/qdp20di"
+              target="_blank"
+              rel="noopener"
+              aria-label="LINE OA"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  class="fill"
+                  d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"
+                />
+              </svg>
+            </a>
 
-  body.hfa90Page .hfaHeroVisual,
-  body.hfa90Page .hfaHeroVisual img {
-    min-height: 320px;
-  }
+            <!-- LINE SHOP -->
+            <a
+              class="iconbtn gold"
+              href="https://shop.line.me/@mew3619k"
+              target="_blank"
+              rel="noopener"
+              aria-label="LINE SHOP"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  class="stroke"
+                  d="M6 8h12l-1 12H7L6 8Z"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path
+                  class="stroke"
+                  d="M9 8a3 3 0 0 1 6 0"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="fill"
+                  d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z"
+                  opacity=".25"
+                />
+              </svg>
+            </a>
 
-  body.hfa90Page .hfaStats,
-  body.hfa90Page .hfaGrid2,
-  body.hfa90Page .hfaGrid3,
-  body.hfa90Page .hfaGrid4 {
-    grid-template-columns: 1fr;
-  }
+            <!-- Facebook -->
+            <a
+              class="iconbtn"
+              href="https://www.facebook.com/kruniki/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  class="fill"
+                  d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"
+                />
+              </svg>
+            </a>
 
-  body.hfa90Page .hfaFounder {
-    padding: 24px 18px;
-  }
+            <!-- YouTube -->
+            <a
+              class="iconbtn"
+              href="https://www.youtube.com/@kruniki"
+              target="_blank"
+              rel="noopener"
+              aria-label="YouTube"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  class="fill"
+                  d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"
+                />
+              </svg>
+            </a>
 
-  body.hfa90Page .hfaCard {
-    padding: 22px 19px;
-  }
+            <!-- TikTok -->
+            <a
+              class="iconbtn"
+              href="https://www.tiktok.com/@kruniki.official"
+              target="_blank"
+              rel="noopener"
+              aria-label="TikTok"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  class="fill"
+                  d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"
+                />
+              </svg>
+            </a>
 
-  body.hfa90Page .hfaClosingCard {
-    padding: 36px 20px;
-  }
+            <!-- Instagram -->
+            <a
+              class="iconbtn"
+              href="https://www.instagram.com/kruniki.official/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  class="stroke"
+                  d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z"
+                  fill="none"
+                  stroke-width="2"
+                />
+                <path
+                  class="stroke"
+                  d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
+                  fill="none"
+                  stroke-width="2"
+                />
+                <circle class="fill" cx="17.5" cy="6.5" r="1.1" />
+              </svg>
+            </a>
 
-  body.hfa90Page .hfaActions {
-    flex-direction: column;
-  }
+          </div>
+        </div>
+      </div>
 
-  body.hfa90Page .hfaButton {
-    width: 100%;
-  }
-}
+      <!-- Desktop Navigation -->
+      <nav class="navLinks" aria-label="Primary navigation">
+        <a href="shop.html">ร้านค้า</a>
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">เกี่ยวกับ</a>
+        <a href="services.html" aria-current="page">บริการ</a>
+        <a href="resources.html">คลังความรู้</a>
+        <a href="contact.html">ติดต่อ</a>
+      </nav>
 
+      <!-- Mobile Hamburger -->
+      <div class="krActions">
+        <button
+          class="krHam"
+          id="krHam"
+          type="button"
+          aria-label="เปิดเมนู"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <svg
+            class="krHamIcon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M3 6.5h18M3 12h18M3 17.5h18"></path>
+          </svg>
+        </button>
+      </div>
 
-/* =========================================================
-   21. REDUCED MOTION
-   ========================================================= */
+    </div>
 
-@media (prefers-reduced-motion: reduce) {
+    <div id="menuBackdrop" class="menuBackdrop" hidden></div>
 
-  body.hfa90Page .hfaButton {
-    transition: none;
-  }
-}
+    <nav
+      id="mobileMenu"
+      class="mobileMenu"
+      hidden
+      aria-label="Mobile navigation"
+    >
+      <a href="shop.html">ร้านค้า</a>
+      <a href="index.html">หน้าแรก</a>
+      <a href="about.html">เกี่ยวกับ</a>
+      <a href="services.html" aria-current="page">บริการ</a>
+      <a href="resources.html">คลังความรู้</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="hfaHero">
+      <div class="hfaContainer">
+        <div class="hfaHeroGrid">
+
+          <div>
+            <p class="hfaEyebrow">
+              KRUNIKI® • 90-Day Guided Journey
+            </p>
+
+            <h1 class="hfaTitle">
+              The Heart Field Activation™
+              <span class="hfaTitleThai">90-Day Program</span>
+            </h1>
+
+            <p class="hfaLead">
+              90 วันของการกลับมารับรู้ ดูแล และสร้างความสัมพันธ์
+              ที่อ่อนโยนกับหัวใจของตนเอง ผ่านการเรียนรู้
+              การฝึกอย่างต่อเนื่อง และการนำสิ่งที่ค้นพบ
+              กลับมาใช้ในชีวิตจริง
+            </p>
+
+            <p class="hfaHeroNote">
+              เราไม่ได้สอนให้คุณเป็นคนใหม่
+              เราเพียงพาคุณกลับมารู้สึกปลอดภัย
+              ในหัวใจของตัวเองอีกครั้ง
+            </p>
+
+            <div class="hfaActions">
+              <a
+                class="hfaButton hfaButtonPrimary"
+                href="https://lin.ee/qdp20di"
+                target="_blank"
+                rel="noopener"
+              >
+                สมัคร Founder Circle
+              </a>
+
+              <a
+                class="hfaButton hfaButtonSoft"
+                href="#program-overview"
+              >
+                สำรวจรายละเอียดโปรแกรม
+              </a>
+            </div>
+
+            <div class="hfaStats" aria-label="ข้อมูลสำคัญของโปรแกรม">
+              <div class="hfaStat">
+                <strong>90</strong>
+                <span>วันของการเดินทางภายใน</span>
+              </div>
+
+              <div class="hfaStat">
+                <strong>13</strong>
+                <span>สัปดาห์แห่งการฝึกอย่างต่อเนื่อง</span>
+              </div>
+
+              <div class="hfaStat">
+                <strong>1</strong>
+                <span>Founder Circle รุ่นแรก</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hfaHeroVisual">
+            <img
+              src="assets/images/heart-field-90-day/heart-field-90-day-banner.webp"
+              alt="The Heart Field Activation 90-Day Program โดย KRUNIKI"
+              width="900"
+              height="1100"
+              fetchpriority="high"
+              decoding="async"
+              onerror="this.closest('.hfaHeroVisual').hidden=true; this.closest('.hfaHeroGrid').classList.add('hfaNoHeroImage');"
+            />
+
+            <div class="hfaHeroBadge">
+              <strong>Founder Circle</strong><br />
+              พื้นที่ร่วมเดินทางสำหรับสมาชิกผู้ก่อตั้งรุ่นแรก
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PROGRAM OVERVIEW -->
+    <section
+      id="program-overview"
+      class="hfaSection hfaSectionSoft"
+    >
+      <div class="hfaContainer">
+
+        <div class="hfaCenter">
+          <p class="hfaEyebrow">The Journey Within</p>
+
+          <h2 class="hfaHeading">
+            โปรแกรมนี้คืออะไร
+          </h2>
+
+          <p class="hfaLead">
+            The Heart Field Activation™ คือพื้นที่การเรียนรู้และการฝึก
+            ที่ออกแบบให้คุณค่อย ๆ กลับมารับรู้หัวใจ ร่างกาย
+            ความรู้สึก และรูปแบบภายในของตนเอง
+            โดยไม่ชี้นำ ไม่เร่ง และไม่ตัดสิน
+          </p>
+        </div>
+
+        <div class="hfaGrid3">
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">01</span>
+
+            <h3>กลับมารับรู้ตนเอง</h3>
+
+            <p>
+              เรียนรู้ที่จะสังเกตสิ่งที่กำลังเกิดขึ้นภายใน
+              ด้วยความซื่อตรงและอ่อนโยน
+              โดยไม่จำเป็นต้องรีบเปลี่ยนแปลงตนเอง
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">02</span>
+
+            <h3>สร้างความต่อเนื่อง</h3>
+
+            <p>
+              เปลี่ยนการดูแลหัวใจจากสิ่งที่ทำเป็นครั้งคราว
+              ให้กลายเป็นจังหวะเล็ก ๆ
+              ที่สามารถดำเนินไปพร้อมกับชีวิตจริง
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">03</span>
+
+            <h3>หลอมรวมสู่ชีวิตจริง</h3>
+
+            <p>
+              นำความเข้าใจจากการฝึกกลับมาใช้กับความสัมพันธ์
+              การตัดสินใจ และวิธีที่คุณดูแลตนเองในแต่ละวัน
+            </p>
+          </article>
+
+        </div>
+
+        <figure class="hfaPoster">
+          <img
+            src="assets/images/heart-field-90-day/poster-program-overview.webp"
+            alt="ภาพรวม The Heart Field Activation 90-Day Program"
+            width="1600"
+            height="2000"
+            loading="lazy"
+            decoding="async"
+            onerror="this.closest('.hfaPoster').hidden=true;"
+          />
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- 3. WHO IS IT FOR -->
+    <section class="hfaSection">
+      <div class="hfaContainer">
+        <div class="hfaGrid2">
+
+          <div>
+            <p class="hfaEyebrow">Is This Journey For You?</p>
+
+            <h2 class="hfaHeading">
+              โปรแกรมนี้อาจเหมาะกับคุณ หาก...
+            </h2>
+
+            <ul class="hfaList">
+              <li>
+                คุณดูแลคนอื่นมาเป็นเวลานาน
+                แต่ไม่แน่ใจว่าจะกลับมาดูแลหัวใจของตนเองอย่างไร
+              </li>
+
+              <li>
+                คุณเข้าใจตนเองในระดับความคิด
+                แต่ยังต้องการพื้นที่สำหรับการรับรู้และการฝึกอย่างต่อเนื่อง
+              </li>
+
+              <li>
+                คุณต้องการสร้างความสัมพันธ์กับตนเอง
+                ที่ไม่ตั้งอยู่บนการตำหนิ การบังคับ หรือความสมบูรณ์แบบ
+              </li>
+
+              <li>
+                คุณกำลังมองหาโครงสร้างที่ชัดเจน
+                แต่ยังเคารพจังหวะและความพร้อมของตนเอง
+              </li>
+
+              <li>
+                คุณต้องการเครื่องมือที่สามารถนำกลับมาใช้ซ้ำ
+                ในชีวิตประจำวันได้จริง
+              </li>
+            </ul>
+          </div>
+
+          <article class="hfaCard">
+            <p class="hfaEyebrow">KRUNIKI® Approach</p>
+
+            <h3 class="hfaSubheading">
+              ไม่ชี้นำ • ไม่เร่ง • ไม่ตัดสิน
+            </h3>
+
+            <p class="hfaBody">
+              โปรแกรมนี้ไม่ได้กำหนดว่าคุณควรรู้สึกอย่างไร
+              หรือควรเปลี่ยนแปลงตนเองให้เป็นแบบใด
+              แต่จะช่วยสร้างพื้นที่ให้คุณได้กลับมารับรู้
+              ฟัง และค่อย ๆ เข้าใจประสบการณ์ภายในของตนเอง
+            </p>
+
+            <p class="hfaBody">
+              คุณสามารถเดินทางในจังหวะของตนเอง
+              โดยใช้โครงสร้างของโปรแกรมเป็นเพื่อนร่วมทาง
+              ไม่ใช่เป็นแรงกดดัน
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 90-DAY JOURNEY -->
+    <section class="hfaSection hfaSectionGold">
+      <div class="hfaContainer">
+
+        <div class="hfaCenter">
+          <p class="hfaEyebrow">90-Day Journey</p>
+
+          <h2 class="hfaHeading">
+            การเดินทางตลอด 13 สัปดาห์
+          </h2>
+
+          <p class="hfaLead">
+            โปรแกรมถูกออกแบบให้การเรียนรู้ การฝึก
+            การเขียนสะท้อนตนเอง และการพัก
+            เดินไปด้วยกันอย่างเป็นลำดับ
+          </p>
+        </div>
+
+        <div class="hfaGrid2">
+
+          <div class="hfaJourney">
+
+            <article class="hfaJourneyItem">
+              <h3>Phase 1 — Returning</h3>
+              <p>
+                กลับมารับรู้ตนเองและสังเกตสภาวะภายใน
+                โดยไม่รีบตัดสินหรือแก้ไข
+              </p>
+            </article>
+
+            <article class="hfaJourneyItem">
+              <h3>Phase 2 — Reconnecting</h3>
+              <p>
+                ค่อย ๆ เชื่อมโยงกับหัวใจ ร่างกาย
+                ลมหายใจ และความรู้สึกอย่างอ่อนโยน
+              </p>
+            </article>
+
+            <article class="hfaJourneyItem">
+              <h3>Phase 3 — Practicing</h3>
+              <p>
+                ฝึกเครื่องมือสำคัญซ้ำอย่างต่อเนื่อง
+                เพื่อสร้างความคุ้นเคยในการกลับมาหาตนเอง
+              </p>
+            </article>
+
+            <article class="hfaJourneyItem">
+              <h3>Phase 4 — Integrating</h3>
+              <p>
+                นำสิ่งที่เรียนรู้กลับมาใช้กับชีวิต
+                ความสัมพันธ์ และการตัดสินใจจริง
+              </p>
+            </article>
+
+            <article class="hfaJourneyItem">
+              <h3>Phase 5 — Continuing</h3>
+              <p>
+                สรุปการเดินทางและออกแบบวิธีดูแลหัวใจ
+                ที่สามารถดำเนินต่อหลังจบ Day 90
+              </p>
+            </article>
+
+          </div>
+
+          <figure class="hfaPoster">
+            <img
+              src="assets/images/heart-field-90-day/poster-90-day-journey.webp"
+              alt="เส้นทางการฝึกตลอด 90 วัน"
+              width="1600"
+              height="2000"
+              loading="lazy"
+              decoding="async"
+              onerror="this.closest('.hfaPoster').hidden=true;"
+            />
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHAT MEMBERS RECEIVE -->
+    <section class="hfaSection">
+      <div class="hfaContainer">
+
+        <div class="hfaCenter">
+          <p class="hfaEyebrow">What You Will Receive</p>
+
+          <h2 class="hfaHeading">
+            สิ่งที่สมาชิกจะได้รับ
+          </h2>
+
+          <p class="hfaLead">
+            เครื่องมือทุกชิ้นทำหน้าที่ร่วมกัน
+            เพื่อสนับสนุนการเรียนรู้ การฝึก
+            และการกลับมาทบทวนตนเองตลอด 90 วัน
+          </p>
+        </div>
+
+        <div class="hfaGrid3">
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">01</span>
+            <h3>eBook รักแท้จากตัวเอง 101</h3>
+            <p>
+              เนื้อหาสำหรับทำความเข้าใจความสัมพันธ์กับตนเอง
+              คุณค่าในตนเอง และการกลับมาดูแลหัวใจ
+              ด้วยภาษาที่อ่อนโยนและเข้าถึงได้
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">02</span>
+            <h3>13-Week Journey Notebook</h3>
+            <p>
+              สมุดเดินทางสำหรับบันทึกการฝึก
+              การสังเกตความเปลี่ยนแปลง
+              และการสะท้อนประสบการณ์ในแต่ละช่วง
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">03</span>
+            <h3>Meditation Library</h3>
+            <p>
+              ชุดเสียงสมาธิที่เชื่อมโยงกับจังหวะของโปรแกรม
+              เพื่อช่วยให้คุณมีพื้นที่กลับมารับรู้
+              ลมหายใจ หัวใจ และร่างกาย
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">04</span>
+            <h3>Heart Field Breath™ 4-4-6</h3>
+            <p>
+              แนวทางฝึกลมหายใจที่เรียบง่าย
+              โดยให้ผู้เรียนฝึกตามระดับที่ตนเองรู้สึกสบาย
+              และสามารถหยุดพักได้ทุกเมื่อ
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">05</span>
+            <h3>Guided Learning</h3>
+            <p>
+              โครงสร้างการเรียนรู้และคำแนะนำตลอดการเดินทาง
+              เพื่อช่วยให้ผู้เรียนเห็นทิศทาง
+              โดยไม่ต้องเร่งตนเองให้ตามใคร
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">06</span>
+            <h3>Founder Circle Community</h3>
+            <p>
+              พื้นที่ของสมาชิกผู้ร่วมเดินทางรุ่นแรก
+              สำหรับรับข้อมูล การสะท้อนการเรียนรู้
+              และการสนับสนุนภายใต้ขอบเขตที่ชัดเจน
+            </p>
+          </article>
+
+        </div>
+
+        <figure class="hfaPoster">
+          <img
+            src="assets/images/heart-field-90-day/poster-program-materials.webp"
+            alt="eBook Meditation Library และ 13-Week Journey Notebook"
+            width="1600"
+            height="2000"
+            loading="lazy"
+            decoding="async"
+            onerror="this.closest('.hfaPoster').hidden=true;"
+          />
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- 6. MEDITATION LIBRARY -->
+    <section class="hfaSection hfaSectionSoft">
+      <div class="hfaContainer">
+
+        <div class="hfaCenter">
+          <p class="hfaEyebrow">Meditation Library</p>
+
+          <h2 class="hfaHeading">
+            ชุดเสียงสมาธิประกอบการเดินทาง
+          </h2>
+
+          <p class="hfaLead">
+            แต่ละ Track ถูกออกแบบให้ทำหน้าที่ต่างกัน
+            และสามารถกลับมาใช้ซ้ำตามจังหวะการฝึกของตนเอง
+          </p>
+        </div>
+
+        <div class="hfaGrid3">
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">01</span>
+            <h3>ลมหายใจแห่งแสง</h3>
+            <p>
+              การกลับมารับรู้ลมหายใจและร่างกาย
+              ผ่านภาพนำที่อ่อนโยนและไม่เร่ง
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">02</span>
+            <h3>เชื่อมต่อหัวใจ</h3>
+            <p>
+              พื้นที่สำหรับกลับมารับรู้หัวใจ
+              ความรู้สึก และเสียงภายในของตนเอง
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">03</span>
+            <h3>ขอบคุณตัวเองและร่างกาย</h3>
+            <p>
+              การฝึกสังเกตคุณค่าของตนเอง
+              และสร้างความสัมพันธ์ที่อ่อนโยนกับร่างกาย
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FOUNDER CIRCLE -->
+    <section id="founder-circle" class="hfaSection">
+      <div class="hfaContainer">
+
+        <div class="hfaFounder">
+
+          <div>
+            <p class="hfaEyebrow">
+              First Cohort • Founder Circle
+            </p>
+
+            <h2 class="hfaHeading">
+              Founder Circle รุ่นแรก
+            </h2>
+
+            <p class="hfaLead">
+              Founder Circle คือกลุ่มสมาชิกผู้ร่วมเดินทาง
+              รุ่นแรกของ The Heart Field Activation™
+              ที่จะเรียนรู้และเติบโตไปพร้อมกับโปรแกรมตลอด 90 วัน
+            </p>
+
+            <ul class="hfaList">
+              <li>
+                เข้าร่วมการเดินทางครบ 90 วัน
+                ภายใต้โครงสร้างของโปรแกรม
+              </li>
+
+              <li>
+                ได้รับเครื่องมือและสื่อประกอบการฝึก
+                ตามที่กำหนดไว้ในโปรแกรม
+              </li>
+
+              <li>
+                มีพื้นที่ Community
+                สำหรับติดตามข้อมูลและสะท้อนการเรียนรู้
+              </li>
+
+              <li>
+                เป็นสมาชิกกลุ่มผู้ก่อตั้งรุ่นแรก
+                ของการเดินทางนี้
+              </li>
+            </ul>
+          </div>
+
+          <div class="hfaPriceBox">
+            <p class="hfaPriceLabel">Founder Rate</p>
+            <p class="hfaPrice">4,900</p>
+            <p class="hfaPriceUnit">บาท / ตลอดโปรแกรม 90 วัน</p>
+
+            <div class="hfaActions">
+              <a
+                class="hfaButton hfaButtonPrimary"
+                href="https://lin.ee/qdp20di"
+                target="_blank"
+                rel="noopener"
+              >
+                สมัคร Founder Circle
+              </a>
+            </div>
+
+            <p class="hfaBody">
+              ติดต่อผ่าน LINE OA เพื่อรับรายละเอียด
+              ขั้นตอนการสมัครและการยืนยันสิทธิ์
+            </p>
+          </div>
+
+        </div>
+
+        <figure class="hfaPoster">
+          <img
+            src="assets/images/heart-field-90-day/poster-founder-circle.webp"
+            alt="Founder Circle รุ่นแรก Founder Rate 4,900 บาท"
+            width="1600"
+            height="2000"
+            loading="lazy"
+            decoding="async"
+            onerror="this.closest('.hfaPoster').hidden=true;"
+          />
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- 8. PRINCIPLES -->
+    <section class="hfaSection hfaSectionGold">
+      <div class="hfaContainer">
+
+        <div class="hfaCenter">
+          <p class="hfaEyebrow">Our Principles</p>
+
+          <h2 class="hfaHeading">
+            พื้นที่ที่เคารพมนุษย์และจังหวะของแต่ละคน
+          </h2>
+        </div>
+
+        <div class="hfaGrid4">
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">01</span>
+            <h3>ไม่ชี้นำ</h3>
+            <p>
+              ไม่กำหนดคำตอบหรือประสบการณ์ภายในแทนผู้เรียน
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">02</span>
+            <h3>ไม่เร่ง</h3>
+            <p>
+              เคารพความพร้อมและจังหวะการเรียนรู้ของแต่ละคน
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">03</span>
+            <h3>ไม่ตัดสิน</h3>
+            <p>
+              เปิดพื้นที่ให้ทุกความรู้สึกได้รับการรับรู้อย่างตรงไปตรงมา
+            </p>
+          </article>
+
+          <article class="hfaCard">
+            <span class="hfaCardNumber">04</span>
+            <h3>ไม่สร้างการพึ่งพา</h3>
+            <p>
+              สนับสนุนให้ผู้เรียนค่อย ๆ กลับมาดูแลและรับฟังตนเอง
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQ -->
+    <section class="hfaSection">
+      <div class="hfaContainer">
+
+        <div class="hfaCenter">
+          <p class="hfaEyebrow">
+            Frequently Asked Questions
+          </p>
+
+          <h2 class="hfaHeading">
+            คำถามที่พบบ่อย
+          </h2>
+        </div>
+
+        <div class="hfaFaq">
+
+          <details>
+            <summary>
+              ต้องมีประสบการณ์ฝึกสมาธิมาก่อนหรือไม่
+            </summary>
+            <p>
+              ไม่จำเป็น โปรแกรมออกแบบให้ผู้เรียนค่อย ๆ เริ่มต้น
+              ตามระดับที่ตนเองรู้สึกสบาย
+              และสามารถปรับจังหวะการฝึกให้เหมาะกับตนเองได้
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              หากบางวันไม่สามารถทำกิจกรรมได้
+              จะถือว่าหลุดจากโปรแกรมหรือไม่
+            </summary>
+            <p>
+              ไม่ถือว่าหลุดจากโปรแกรม การหยุดพักเป็นส่วนหนึ่ง
+              ของการดูแลตนเอง คุณสามารถกลับมาเริ่มต่อ
+              จากจุดที่เหมาะกับสภาวะของตนเองได้
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              โปรแกรมนี้เป็นการบำบัดหรือการรักษาหรือไม่
+            </summary>
+            <p>
+              ไม่ใช่ โปรแกรมนี้เป็นพื้นที่การเรียนรู้
+              การฝึก และการสะท้อนตนเอง
+              ไม่ใช่บริการทางการแพทย์ การวินิจฉัย
+              หรือการทำจิตบำบัด
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Founder Circle แตกต่างจากรอบปกติอย่างไร
+            </summary>
+            <p>
+              Founder Circle คือกลุ่มผู้ร่วมเดินทางรุ่นแรก
+              ที่เข้าร่วมโปรแกรมภายใต้ Founder Rate
+              และเป็นสมาชิกชุดแรกของพื้นที่การเรียนรู้นี้
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              สมัครโปรแกรมได้อย่างไร
+            </summary>
+            <p>
+              กดปุ่ม “สมัคร Founder Circle”
+              เพื่อส่งข้อความผ่าน LINE OA
+              จากนั้นทีมงานจะส่งรายละเอียดการลงทะเบียน
+              และขั้นตอนยืนยันสิทธิ์ให้เป็นลำดับ
+            </p>
+          </details>
+
+        </div>
+
+        <div class="hfaNotice">
+          <p>
+            <strong>ขอบเขตของโปรแกรม:</strong>
+            The Heart Field Activation™ — 90-Day Program
+            เป็นโปรแกรมการเรียนรู้และฝึกปฏิบัติเพื่อการรับรู้ตนเอง
+            ไม่ใช่การรักษา การวินิจฉัยโรค
+            หรือสิ่งทดแทนการดูแลจากแพทย์
+            นักจิตวิทยา หรือผู้เชี่ยวชาญด้านสุขภาพจิต
+            หากคุณกำลังเผชิญภาวะฉุกเฉิน
+            หรือมีอาการที่จำเป็นต้องได้รับการดูแลเฉพาะทาง
+            โปรดติดต่อผู้เชี่ยวชาญที่เหมาะสมก่อนเข้าร่วมโปรแกรม
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. CLOSING CTA -->
+    <section class="hfaClosing">
+      <div class="hfaContainer">
+
+        <div class="hfaClosingCard">
+          <p class="hfaEyebrow">
+            Your Heart Is Welcome Here
+          </p>
+
+          <h2 class="hfaHeading">
+            การกลับมาหาตัวเอง<br />
+            ไม่จำเป็นต้องเริ่มจากการเปลี่ยนแปลงครั้งใหญ่
+          </h2>
+
+          <p class="hfaLead">
+            บางครั้ง การเดินทางอาจเริ่มจากเพียงหนึ่งช่วงเวลา
+            ที่คุณยอมกลับมารับฟังหัวใจของตนเองอีกครั้ง
+          </p>
+
+          <div class="hfaActions">
+            <a
+              class="hfaButton hfaButtonPrimary"
+              href="https://lin.ee/qdp20di"
+              target="_blank"
+              rel="noopener"
+            >
+              สมัคร Founder Circle
+            </a>
+
+            <a class="hfaButton" href="index.html">
+              กลับหน้าแรก
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 KRUNIKI® •
+    <span class="gold">Heart • Stillness • Inner Healing</span>
+  </footer>
+
+</body>
+</html>
