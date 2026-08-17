@@ -1,4 +1,4 @@
-/* KRUNIKIÂ® | The Heart Field Activationâ„¢ â€” 90-Day Program */
+/* KRUNIKI® | The Heart Field Activation™ — 90-Day Program */
 
 body.hfa90Page {
   --hfa-pink: #f7dce9;
@@ -150,28 +150,48 @@ body.hfa90Page .hfaSectionGold {
 
 /* Hero */
 body.hfa90Page .hfaHero {
-  position: relative;
   width: 100%;
-  padding: 68px 0 48px;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  background: #fff7fa;
+}
+
+body.hfa90Page .hfaHeroBanner {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+body.hfa90Page .hfaIntro {
   background:
     radial-gradient(circle at 82% 20%, rgba(247, 220, 233, 0.88), transparent 31%),
     radial-gradient(circle at 8% 82%, rgba(244, 234, 208, 0.82), transparent 30%),
     linear-gradient(145deg, #fffefe 0%, #fff8fb 55%, #fffdf8 100%);
 }
 
-body.hfa90Page .hfaHeroGrid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(330px, 0.95fr);
-  gap: 46px;
-  align-items: center;
+body.hfa90Page .hfaIntroContent {
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
 }
 
-body.hfa90Page .hfaHeroGrid > * { min-width: 0; }
+body.hfa90Page .hfaIntroContent .hfaLead {
+  margin-inline: auto;
+}
 
-body.hfa90Page .hfaHeroGrid.hfaNoHeroImage {
-  grid-template-columns: minmax(0, 850px) !important;
+body.hfa90Page .hfaIntroContent .hfaActions {
   justify-content: center;
+}
+
+body.hfa90Page .hfaIntroContent .hfaHeroNote {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: left;
 }
 
 body.hfa90Page .hfaHeroNote {
@@ -181,38 +201,6 @@ body.hfa90Page .hfaHeroNote {
   color: var(--hfa-text-soft) !important;
   font-size: 15px;
   line-height: 1.8;
-}
-
-body.hfa90Page .hfaHeroVisual {
-  position: relative;
-  min-height: 460px;
-  overflow: hidden;
-  border: 1px solid rgba(198, 171, 102, 0.32);
-  border-radius: 30px;
-  background: linear-gradient(145deg, rgba(247, 220, 233, 0.72), rgba(244, 234, 208, 0.68));
-  box-shadow: 0 28px 60px rgba(97, 70, 60, 0.15);
-}
-
-body.hfa90Page .hfaHeroVisual img {
-  width: 100%;
-  height: 100%;
-  min-height: 460px;
-  object-fit: cover;
-}
-
-body.hfa90Page .hfaHeroBadge {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  max-width: 220px;
-  padding: 14px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 18px;
-  color: var(--hfa-brown) !important;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 12px 28px rgba(75, 54, 48, 0.12);
-  font-size: 14px;
-  line-height: 1.6;
 }
 
 /* Buttons */
@@ -367,7 +355,7 @@ body.hfa90Page .hfaList li::before {
   top: 0;
   left: 0;
   color: var(--hfa-gold-dark);
-  content: "âœ¦";
+  content: "✦";
 }
 
 /* Posters */
@@ -382,8 +370,7 @@ body.hfa90Page .hfaPoster {
 
 body.hfa90Page .hfaPoster img { width: 100%; }
 
-body.hfa90Page .hfaPoster[hidden],
-body.hfa90Page .hfaHeroVisual[hidden] { display: none !important; }
+body.hfa90Page .hfaPoster[hidden] { display: none !important; }
 
 /* Journey */
 body.hfa90Page .hfaJourney {
@@ -556,22 +543,17 @@ body.hfa90Page footer .gold { color: var(--hfa-gold) !important; }
 
 /* Tablet */
 @media (max-width: 900px) {
-  body.hfa90Page .hfaHeroGrid,
   body.hfa90Page .hfaFounder { grid-template-columns: 1fr; }
 
   body.hfa90Page .hfaGrid3,
   body.hfa90Page .hfaGrid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  body.hfa90Page .hfaHeroVisual,
-  body.hfa90Page .hfaHeroVisual img { min-height: 380px; }
 }
 
 /* Mobile */
 @media (max-width: 680px) {
   body.hfa90Page .hfaContainer { width: min(100% - 24px, 1120px); }
   body.hfa90Page .hfaSection { padding: 54px 0; }
-  body.hfa90Page .hfaHero { padding: 44px 0 34px; }
-  body.hfa90Page .hfaHeroGrid { gap: 30px; }
 
   body.hfa90Page .hfaEyebrow {
     margin-bottom: 10px;
@@ -579,8 +561,6 @@ body.hfa90Page footer .gold { color: var(--hfa-gold) !important; }
     letter-spacing: 0.08em;
   }
 
-  body.hfa90Page .hfaHeroVisual,
-  body.hfa90Page .hfaHeroVisual img { min-height: 320px; }
 
   body.hfa90Page .hfaStats,
   body.hfa90Page .hfaGrid2,
