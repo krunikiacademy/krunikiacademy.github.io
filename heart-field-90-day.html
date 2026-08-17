@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>The Heart Field Activation™ — 90-Day Program | KRUNIKI®</title>
+
+  <meta
+    name="description"
+    content="90 วันฟื้นสนามพลังหัวใจ — การเดินทางเพื่อค่อย ๆ กลับมาเชื่อมต่อกับตัวเอง ผ่านหัวใจ ความสงบนิ่ง และการเยียวยาภายใน"
+  />
+
+  <!-- CSS หลักของเว็บไซต์เดิม -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- CSS เฉพาะหน้านี้ -->
+  <style>
+    .hfa-page {
+      --hfa-gold: #c6ab66;
+      --hfa-gold-light: #ead9a6;
+      --hfa-pink: #9b2858;
+      --hfa-text: #f7f1e5;
+      --hfa-muted: rgba(255, 255, 255, 0.74);
+      --hfa-line: rgba(198, 171, 102, 0.28);
+      --hfa-panel: rgba(255, 255, 255, 0.035);
+    }
+
+    .hfa-page,
+    .hfa-page * {
+      box-sizing: border-box;
+    }
+
+    .hfa-page {
+      padding-bottom: 60px;
+    }
+
+    .hfa-page h1,
+    .hfa-page h2,
+    .hfa-page h3,
+    .hfa-page p,
+    .hfa-page figure {
+      margin-top: 0;
+    }
+
+    .hfa-page h2 {
+      margin-bottom: 18px;
+      color: #fff;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.25;
+    }
+
+    .hfa-page h3 {
+      margin-bottom: 10px;
+      color: var(--hfa-gold-light);
+      font-size: 21px;
+      line-height: 1.4;
+    }
+
+    .hfa-page p,
+    .hfa-page li {
+      color: var(--hfa-muted);
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .hfa-panel {
+      overflow: hidden;
+    }
+
+    .hfa-section {
+      padding: 68px 0;
+      border-bottom: 1px solid var(--hfa-line);
+    }
+
+    .hfa-kicker,
+    .hfa-eyebrow {
+      margin-bottom: 10px;
+      color: var(--hfa-gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .hfa-hero {
+      padding: 54px;
+      background:
+        radial-gradient(
+          circle at 85% 10%,
+          rgba(198, 171, 102, 0.14),
+          transparent 34%
+        ),
+        radial-gradient(
+          circle at 15% 85%,
+          rgba(155, 40, 88, 0.12),
+          transparent 34%
+        ),
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .hfa-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.72fr);
+      gap: 44px;
+      align-items: center;
+    }
+
+    .hfa-title {
+      margin-bottom: 6px;
+      color: #fff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: 1.02;
+    }
+
+    .hfa-thai-title {
+      margin-bottom: 22px !important;
+      color: var(--hfa-gold) !important;
+      font-size: clamp(27px, 4vw, 42px) !important;
+    }
+
+    .hfa-hero .lead {
+      max-width: 720px;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 19px;
+      line-height: 1.85;
+    }
+
+    .hfa-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 25px 0;
+    }
+
+    .hfa-meta span {
+      padding: 9px 14px;
+      border: 1px solid rgba(198, 171, 102, 0.4);
+      border-radius: 999px;
+      color: var(--hfa-gold-light);
+      font-size: 14px;
+    }
+
+    .hfa-core {
+      margin: 45px 0 0;
+      padding: 30px 22px;
+      border-top: 1px solid var(--hfa-line);
+      border-bottom: 1px solid var(--hfa-line);
+      color: var(--hfa-gold-light);
+      font-size: clamp(22px, 3vw, 31px);
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .hfa-two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hfa-poster {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(198, 171, 102, 0.35);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
+    }
+
+    .hfa-poster img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hfa-poster-hero {
+      max-width: 510px;
+      justify-self: end;
+    }
+
+    .hfa-wide {
+      max-width: 900px;
+      margin: 34px auto 0;
+    }
+
+    .hfa-note {
+      margin-top: 25px;
+      padding: 20px;
+      border-left: 3px solid var(--hfa-gold);
+      border-radius: 0 16px 16px 0;
+      background: rgba(198, 171, 102, 0.08);
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .hfa-note strong {
+      color: var(--hfa-gold-light);
+    }
+
+    .hfa-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .hfa-cards article {
+      padding: 26px;
+      border: 1px solid var(--hfa-line);
+      border-radius: 20px;
+      background: var(--hfa-panel);
+    }
+
+    .hfa-cards article p {
+      margin-bottom: 0;
+      font-size: 15px;
+    }
+
+    .hfa-intro {
+      max-width: 760px;
+    }
+
+    .hfa-volume-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .hfa-practice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .hfa-list {
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hfa-list li {
+      position: relative;
+      margin-bottom: 11px;
+      padding: 12px 14px 12px 42px;
+      border: 1px solid rgba(198, 171, 102, 0.18);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .hfa-list li::before {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      color: var(--hfa-gold);
+      content: "♡";
+    }
+
+    .hfa-founder {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.78fr);
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hfa-price {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 28px 0;
+      padding: 24px;
+      border: 1px solid rgba(198, 171, 102, 0.35);
+      border-radius: 20px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(198, 171, 102, 0.13),
+          rgba(155, 40, 88, 0.08)
+        );
+    }
+
+    .hfa-price span {
+      color: var(--hfa-gold);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hfa-price strong {
+      margin: 5px 0;
+      color: #fff;
+      font-size: 44px;
+      line-height: 1.2;
+    }
+
+    .hfa-price small {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 15px;
+    }
+
+    .hfa-boundary {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hfa-boundary p {
+      font-size: 15px;
+    }
+
+    .hfa-final-cta {
+      margin-top: 55px;
+      padding: 54px 24px;
+      border: 1px solid rgba(198, 171, 102, 0.4);
+      border-radius: 26px;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(198, 171, 102, 0.16),
+          transparent 58%
+        ),
+        rgba(255, 255, 255, 0.035);
+      text-align: center;
+    }
+
+    .hfa-final-cta p {
+      margin-bottom: 8px;
+      color: var(--hfa-gold-light);
+    }
+
+    .hfa-final-cta h2 {
+      margin-bottom: 25px;
+    }
+
+    .hfa-sticky-cta {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .hfa-hero {
+        padding: 34px 24px;
+      }
+
+      .hfa-hero-grid,
+      .hfa-two-col,
+      .hfa-founder {
+        grid-template-columns: 1fr;
+      }
+
+      .hfa-poster-hero {
+        max-width: 620px;
+        justify-self: center;
+      }
+
+      .hfa-cards,
+      .hfa-volume-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hfa-practice-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .hfa-page {
+        padding-bottom: 92px;
+      }
+
+      .hfa-section {
+        padding: 45px 0;
+      }
+
+      .hfa-title {
+        font-size: 47px;
+      }
+
+      .hfa-thai-title {
+        font-size: 29px !important;
+      }
+
+      .hfa-core {
+        padding: 24px 10px;
+        font-size: 21px;
+      }
+
+      .hfa-price strong {
+        font-size: 36px;
+      }
+
+      .hfa-sticky-cta {
+        position: fixed;
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        padding: 14px 16px;
+        border: 1px solid rgba(214, 180, 106, 0.6);
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.9);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        backdrop-filter: blur(10px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="topbar">
+
+    <div class="brand" aria-label="KRUNIKI">
+      <span class="dot" aria-hidden="true"></span>
+      <span>K R U N I K I</span>
+    </div>
+
+    <nav aria-label="เมนูหลัก">
+      <a href="index.html#about">เกี่ยวกับ</a>
+      <a href="services.html" aria-current="page">บริการ</a>
+      <a href="index.html#resources">Resources</a>
+      <a href="index.html#contact">ติดต่อ</a>
+    </nav>
+
+    <div class="right">
+      <div class="social" aria-label="ช่องทางโซเชียลของ KRUNIKI">
+
+        <!-- LINE OA -->
+        <a
+          class="iconbtn gold"
+          href="https://lin.ee/qdp20di"
+          target="_blank"
+          rel="noopener"
+          aria-label="LINE OA"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              class="fill"
+              d="M12 3C6.5 3 2 6.7 2 11.3c0 2.8 1.7 5.3 4.3 6.9-.1.8-.5 2.7-.5 2.9 0 .3.2.5.5.4.2 0 2.2-1.3 3.3-2 1.1.3 2.2.4 3.4.4 5.5 0 10-3.7 10-8.3S17.5 3 12 3zM8.5 12.8c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7zm3.5 0c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z"
+            />
+          </svg>
+        </a>
+
+        <!-- LINE SHOP -->
+        <a
+          class="iconbtn gold"
+          href="https://shop.line.me/@mew3619k"
+          target="_blank"
+          rel="noopener"
+          aria-label="LINE SHOP"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              class="stroke"
+              d="M6 8h12l-1 12H7L6 8Z"
+              fill="none"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+            <path
+              class="stroke"
+              d="M9 8a3 3 0 0 1 6 0"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              class="fill"
+              d="M9.2 12.5h5.6c.5 0 .9.4.9.9v.4c0 1.7-1.4 3.1-3.1 3.1h-1.2c-1.7 0-3.1-1.4-3.1-3.1v-.4c0-.5.4-.9.9-.9Z"
+              opacity=".25"
+            />
+          </svg>
+        </a>
+
+        <!-- FACEBOOK -->
+        <a
+          class="iconbtn"
+          href="https://www.facebook.com/kruniki/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              class="fill"
+              d="M14 8.7V7.3c0-.8.5-1 1.1-1h1V4h-1.8C12.3 4 11 5.3 11 7.2v1.5H9v2.7h2V20h3v-8.6h2.1l.4-2.7H14z"
+            />
+          </svg>
+        </a>
+
+        <!-- YOUTUBE -->
+        <a
+          class="iconbtn"
+          href="https://www.youtube.com/@kruniki"
+          target="_blank"
+          rel="noopener"
+          aria-label="YouTube"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              class="fill"
+              d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4A2.7 2.7 0 0 0 2.4 7.2 28.4 28.4 0 0 0 2 12a28.4 28.4 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9C6 19.1 12 19.1 12 19.1s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.4 28.4 0 0 0 22 12a28.4 28.4 0 0 0-.4-4.8ZM10.2 15.2V8.8L15.8 12l-5.6 3.2Z"
+            />
+          </svg>
+        </a>
+
+        <!-- TIKTOK -->
+        <a
+          class="iconbtn"
+          href="https://www.tiktok.com/@kruniki.official"
+          target="_blank"
+          rel="noopener"
+          aria-label="TikTok"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              class="fill"
+              d="M15 3c.3 2.5 1.7 4.1 4 4.3v3.1c-1.6.1-3-.4-4-1.1v6.5c0 3-2.4 5.2-5.4 5.2S4.2 19 4.2 16s2.4-5.3 5.4-5.3c.5 0 .9.1 1.3.2v3.3c-.4-.2-.8-.3-1.3-.3-1.2 0-2.2 1-2.2 2.2 0 1.2 1 2.2 2.2 2.2 1.4 0 2.4-1 2.4-2.8V3h3Z"
+            />
+          </svg>
+        </a>
+
+        <!-- INSTAGRAM -->
+        <a
+          class="iconbtn"
+          href="https://www.instagram.com/kruniki.official/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              class="stroke"
+              d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z"
+              fill="none"
+              stroke-width="2"
+            />
+            <path
+              class="stroke"
+              d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
+              fill="none"
+              stroke-width="2"
+            />
+            <circle class="fill" cx="17.5" cy="6.5" r="1.1" />
+          </svg>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<main class="wrap hfa-page">
+
+  <!-- HERO -->
+  <section class="panel hfa-panel hfa-hero">
+
+    <div class="hfa-hero-grid">
+
+      <div>
+        <div class="goldline">KRUNIKI® SoulSync System®</div>
+
+        <p class="hfa-eyebrow">
+          The Heart Field Activation™
+        </p>
+
+        <h1 class="hfa-title">
+          90-Day Program
+        </h1>
+
+        <h2 class="hfa-thai-title">
+          90 วันฟื้นสนามพลังหัวใจ
+        </h2>
+
+        <p class="lead">
+          การเดินทาง 90 วัน เพื่อค่อย ๆ กลับมาเชื่อมต่อกับตัวเอง
+          ผ่านหัวใจ ความสงบนิ่ง และการเยียวยาภายใน
+        </p>
+
+        <div class="hfa-meta">
+          <span>Founder Circle</span>
+          <span>เริ่ม 1 กันยายน 2569</span>
+          <span>90 วัน • 13 สัปดาห์</span>
+        </div>
+
+        <div class="ctaRow">
+          <a
+            class="btn primary"
+            href="https://shop.line.me/@mew3619k"
+            target="_blank"
+            rel="noopener"
+          >
+            สมัคร Founder Circle
+          </a>
+
+          <a class="btn" href="#journey">
+            ดูเส้นทาง 90 วัน
+          </a>
+        </div>
+      </div>
+
+      <figure class="hfa-poster hfa-poster-hero">
+        <img
+          src="assets/posters/2. เริ่มโปรแกรม 1 กันยายน.png"
+          alt="The Heart Field Activation 90-Day Program Founder Circle"
+        >
+      </figure>
+
+    </div>
+
+    <blockquote class="hfa-core">
+      “เราไม่ได้สอนให้คุณเป็นคนใหม่<br>
+      เราเพียงพาคุณกลับมารู้สึกปลอดภัยในหัวใจตัวเองอีกครั้ง”
+    </blockquote>
+
+  </section>
+
+  <!-- PROGRAM INTRODUCTION -->
+  <section class="hfa-section hfa-two-col">
+
+    <div>
+      <p class="hfa-kicker">Program Introduction</p>
+
+      <h2>โปรแกรมนี้คืออะไร</h2>
+
+      <p>
+        The Heart Field Activation™ — 90-Day Program
+        คือกระบวนการเรียนรู้ การฝึกปฏิบัติ
+        และการนำสิ่งที่ได้เรียนรู้กลับไปใช้ในชีวิตอย่างต่อเนื่องตลอด 90 วัน
+      </p>
+
+      <p>
+        โปรแกรมเปิดพื้นที่ให้คุณค่อย ๆ กลับมารับรู้เสียงของหัวใจ
+        ความรู้สึก และความต้องการที่แท้จริงของตัวเอง
+        ผ่านความสงบนิ่ง การหายใจ การทำสมาธิ
+        การเขียนบันทึก และการทบทวนภายใน
+      </p>
+
+      <p>
+        นี่ไม่ใช่การพาคุณหนีจากตัวตนเดิม
+        แต่เป็นการสนับสนุนให้คุณกลับมารู้จัก เข้าใจ
+        และเชื่อมต่อกับตัวเองอีกครั้งอย่างอ่อนโยน
+      </p>
+
+      <div class="hfa-note">
+        <strong>
+          โปรแกรมนี้ไม่ใช่ KRUNIKI® Heart Awakening — 45-Minute Session
+        </strong>
+        <br>
+        Heart Awakening เป็นประสบการณ์ระยะสั้น
+        สำหรับการกลับมารับรู้หัวใจและโลกภายใน
+        ส่วน The Heart Field Activation™
+        เป็นกระบวนการเรียนรู้และฝึกปฏิบัติต่อเนื่องตลอด 90 วัน
+      </div>
+    </div>
+
+    <figure class="hfa-poster">
+      <img
+        src="assets/posters/1. โปรแกรมนี้คืออะไร.png"
+        alt="โปรแกรม The Heart Field Activation คืออะไร"
+      >
+    </figure>
+
+  </section>
+
+  <!-- WHO IT IS FOR -->
+  <section class="hfa-section">
+
+    <p class="hfa-kicker">See • Feel • Understand</p>
+
+    <h2>พื้นที่นี้อาจเหมาะกับคุณ หาก…</h2>
+
+    <div class="hfa-cards">
+
+      <article>
+        <h3>อยากกลับมารับรู้ตัวเอง</h3>
+
+        <p>
+          คุณต้องการฟังหัวใจ ความรู้สึก
+          และความต้องการของตัวเองให้ชัดขึ้น
+          โดยไม่ต้องเร่งรีบหรือบังคับตัวเอง
+        </p>
+      </article>
+
+      <article>
+        <h3>อยากมีแนวทางฝึกที่ต่อเนื่อง</h3>
+
+        <p>
+          คุณมองหาจังหวะการเรียนรู้และการฝึกที่ค่อยเป็นค่อยไป
+          พร้อมพื้นที่สำหรับบันทึก ทบทวน และสังเกตตัวเอง
+        </p>
+      </article>
+
+      <article>
+        <h3>อยากนำความเข้าใจไปใช้จริง</h3>
+
+        <p>
+          คุณต้องการเปลี่ยนความตระหนักรู้ภายใน
+          ให้เป็นวิธีดูแลตัวเองและการใช้ชีวิต
+          ที่เชื่อมโยงกับหัวใจมากขึ้น
+        </p>
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- 90-DAY JOURNEY -->
+  <section class="hfa-section" id="journey">
+
+    <p class="hfa-kicker">13-Week Journey</p>
+
+    <h2>ภาพรวมเส้นทาง 90 วัน</h2>
+
+    <p class="hfa-intro">
+      เส้นทางแบ่งออกเป็น 3 ช่วง
+      เพื่อให้การเรียนรู้ การฝึกปฏิบัติ
+      และการสะท้อนภายในดำเนินไปอย่างมีจังหวะ
+      ตลอด 13 สัปดาห์
+    </p>
+
+    <figure class="hfa-poster hfa-wide">
+      <img
+        src="assets/posters/7. ภาพรวมเส้นทาง 90 วัน.png"
+        alt="ภาพรวมเส้นทาง 90 วัน 13 สัปดาห์ 3 Volumes"
+      >
+    </figure>
+
+    <div class="hfa-volume-grid">
+
+      <figure class="hfa-poster">
+        <img
+          src="assets/posters/4. Notebook Volum 1 of 3.png"
+          alt="Notebook Volume 1 สัปดาห์ 1 ถึง 4"
+        >
+      </figure>
+
+      <figure class="hfa-poster">
+        <img
+          src="assets/posters/5. Notebook Volum 2 of 3.png"
+          alt="Notebook Volume 2 สัปดาห์ 5 ถึง 8"
+        >
+      </figure>
+
+      <figure class="hfa-poster">
+        <img
+          src="assets/posters/6. Notebook Volum 3 of 3.png"
+          alt="Notebook Volume 3 สัปดาห์ 9 ถึง 13"
+        >
+      </figure>
+
+    </div>
+
+  </section>
+
+  <!-- PRACTICE -->
+  <section class="hfa-section">
+
+    <p class="hfa-kicker">Daily Practice</p>
+
+    <h2>เรียนรู้ผ่านการฝึกที่อ่อนโยนและทำซ้ำได้</h2>
+
+    <p class="hfa-intro">
+      การเดินทางนี้ประกอบด้วยการเรียนรู้ การหายใจ
+      การฟังสมาธิ การเขียนบันทึก และการทบทวนตัวเอง
+      คุณไม่จำเป็นต้องทำได้สมบูรณ์แบบทุกวัน
+      เพียงกลับมาเริ่มใหม่ได้เสมอ
+    </p>
+
+    <div class="hfa-practice-grid">
+
+      <figure class="hfa-poster">
+        <img
+          src="assets/posters/3. Heart Field 4-4-6 Breath.png"
+          alt="Heart Field 4-4-6 Breath และการฝึกตลอด 90 วัน"
+        >
+      </figure>
+
+      <figure class="hfa-poster">
+        <img
+          src="assets/posters/8. สมาธิ 3 แทร็ก.png"
+          alt="สมาธิ 3 แทร็กสำหรับการฝึกตลอด 90 วัน"
+        >
+      </figure>
+
+    </div>
+
+  </section>
+
+  <!-- WHAT YOU RECEIVE -->
+  <section class="hfa-section hfa-two-col">
+
+    <figure class="hfa-poster">
+      <img
+        src="assets/posters/9. สิ่งที่คุณจะได้รับในโปรแกรม.png"
+        alt="สิ่งที่คุณจะได้รับใน The Heart Field Activation Program"
+      >
+    </figure>
+
+    <div>
+      <p class="hfa-kicker">What You Receive</p>
+
+      <h2>สิ่งที่คุณจะได้รับในโปรแกรม</h2>
+
+      <ul class="hfa-list">
+        <li>13-Week Journey Notebook จำนวน 3 เล่ม</li>
+        <li>eBook รักแท้จากตัวเอง 101</li>
+        <li>สมาธิสำหรับใช้ร่วมกับการฝึกจำนวน 3 แทร็ก</li>
+        <li>Heart Field 4-4-6 Breath™</li>
+        <li>คอร์สออนไลน์สอนสดและคำแนะนำตลอดเส้นทาง</li>
+        <li>พื้นที่ KRUNIKI Community</li>
+        <li>Ritual การฝึกและการทบทวนตลอด 90 วัน</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- FOUNDER CIRCLE -->
+  <section class="hfa-section hfa-founder">
+
+    <div>
+      <p class="hfa-kicker">Founder Circle</p>
+
+      <h2>ร่วมเป็นส่วนหนึ่งของการเดินทางครั้งแรก</h2>
+
+      <p>
+        Founder Circle คือกลุ่มผู้เข้าร่วมรุ่นก่อตั้งของ
+        The Heart Field Activation™
+        ที่จะเรียนรู้ ฝึกปฏิบัติ
+        และเดินทางร่วมกันตลอด 90 วัน
+      </p>
+
+      <p>
+        สมาชิกจะได้รับองค์ประกอบของโปรแกรม
+        พื้นที่ Community
+        การเรียนรู้ร่วมกันแบบสด
+        และการสนับสนุนให้ค่อย ๆ นำสิ่งที่เรียนรู้
+        กลับไปใช้ในชีวิตจริง
+      </p>
+
+      <div class="hfa-price">
+        <span>Founder Rate</span>
+        <strong>4,900 บาท</strong>
+        <small>เริ่มโปรแกรม 1 กันยายน 2569</small>
+      </div>
+
+      <div class="ctaRow">
+        <a
+          class="btn primary"
+          href="https://shop.line.me/@mew3619k"
+          target="_blank"
+          rel="noopener"
+        >
+          สมัคร Founder Circle ผ่าน LINE SHOP
+        </a>
+
+        <a
+          class="btn"
+          href="https://lin.ee/qdp20di"
+          target="_blank"
+          rel="noopener"
+        >
+          สอบถามผ่าน LINE OA
+        </a>
+      </div>
+    </div>
+
+    <figure class="hfa-poster">
+      <img
+        src="assets/posters/10. สิ่งที่สมาชิก Founder Circle จะได้รับ.png"
+        alt="สิ่งที่สมาชิก Founder Circle จะได้รับ"
+      >
+    </figure>
+
+  </section>
+
+  <!-- ETHICAL BOUNDARY -->
+  <section class="hfa-section hfa-boundary">
+
+    <p class="hfa-kicker">A Gentle Note</p>
+
+    <h2>ขอบเขตของพื้นที่นี้</h2>
+
+    <p>
+      KRUNIKI® เป็นพื้นที่สำหรับการเรียนรู้
+      การตระหนักรู้ การฝึกปฏิบัติ
+      และการสำรวจโลกภายใน
+    </p>
+
+    <p>
+      โปรแกรมนี้ไม่ใช่บริการทางการแพทย์
+      ไม่ใช่การวินิจฉัยหรือ Psychotherapy
+      และไม่สามารถรับประกันผลลัพธ์เฉพาะบุคคลได้
+      หากคุณกำลังเผชิญภาวะที่ต้องการการดูแล
+      ด้านสุขภาพกายหรือสุขภาพจิต
+      โปรดติดต่อผู้เชี่ยวชาญที่เหมาะสมควบคู่กันไป
+    </p>
+
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="hfa-final-cta">
+
+    <p>
+      เมื่อหัวใจพร้อม
+      คุณมีสิทธิ์เลือกจังหวะเริ่มต้นของตัวเอง
+    </p>
+
+    <h2>เริ่มต้นเส้นทาง 90 วัน</h2>
+
+    <a
+      class="btn primary"
+      href="https://shop.line.me/@mew3619k"
+      target="_blank"
+      rel="noopener"
+    >
+      สมัคร Founder Circle
+    </a>
+
+  </section>
+
+</main>
+
+<!-- CTA สำหรับมือถือ -->
+<a
+  class="hfa-sticky-cta"
+  href="https://shop.line.me/@mew3619k"
+  target="_blank"
+  rel="noopener"
+>
+  สมัคร Founder Circle • 4,900 บาท
+</a>
+
+<footer>
+  © 2026 KRUNIKI •
+  <span class="gold">Heart Stillness Healing</span>
+</footer>
+
+</body>
+</html>
