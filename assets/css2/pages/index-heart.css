@@ -25,6 +25,91 @@
   height: auto;
 }
 
+/* 90-Day Program slider — page scoped */
+.page--index-heart .heartProgramSlider {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #f7dce9;
+}
+
+.page--index-heart .heartSliderViewport {
+  width: 100%;
+  overflow: hidden;
+  transition: height .28s ease;
+}
+
+.page--index-heart .heartSliderTrack {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  transition: transform .55s ease;
+  will-change: transform;
+}
+
+.page--index-heart .heartSlide {
+  display: block;
+  flex: 0 0 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
+.page--index-heart .heartSlide img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+.page--index-heart .heartSliderArrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  padding: 0 0 5px;
+  border: 1px solid rgba(255,255,255,.72);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(40,24,24,.48);
+  box-shadow: 0 6px 22px rgba(0,0,0,.2);
+  font: 400 42px/1 "Times New Roman", Times, serif;
+  place-items: center;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.page--index-heart .heartSliderPrev { left: 18px; }
+.page--index-heart .heartSliderNext { right: 18px; }
+
+.page--index-heart .heartSliderDots {
+  position: absolute;
+  right: 0;
+  bottom: 16px;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+}
+
+.page--index-heart .heartSliderDots button {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.92);
+  border-radius: 50%;
+  background: rgba(65,42,35,.45);
+  box-shadow: 0 2px 8px rgba(0,0,0,.22);
+  cursor: pointer;
+}
+
+.page--index-heart .heartSliderDots button.isActive {
+  background: #e95b85;
+  transform: scale(1.18);
+}
+
 @media (max-width: 900px) {
   .page--index-heart .homeCorePrograms {
     padding-bottom: 34px;
@@ -36,5 +121,22 @@
   .page--index-heart .homeCorePrograms {
     padding-bottom: 28px;
     gap: 12px;
+  }
+
+  .page--index-heart .heartSliderArrow {
+    width: 38px;
+    height: 38px;
+    font-size: 34px;
+  }
+
+  .page--index-heart .heartSliderPrev { left: 8px; }
+  .page--index-heart .heartSliderNext { right: 8px; }
+  .page--index-heart .heartSliderDots { bottom: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page--index-heart .heartSliderViewport,
+  .page--index-heart .heartSliderTrack {
+    transition: none;
   }
 }
