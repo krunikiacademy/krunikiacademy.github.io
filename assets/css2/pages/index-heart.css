@@ -1,0 +1,40 @@
+/* KRUNIKI® — Preview Homepage: Heart Version
+   Scoped to index-heart.html only. */
+
+.page--index-heart .homeCorePrograms {
+  display: grid;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 42px;
+  gap: 24px;
+}
+
+.page--index-heart .homeCoreBanner {
+  display: block;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  background: #f7dce9;
+  text-decoration: none;
+}
+
+.page--index-heart .homeCoreBanner img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .page--index-heart .homeCorePrograms {
+    padding-bottom: 34px;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page--index-heart .homeCorePrograms {
+    padding-bottom: 28px;
+    gap: 12px;
+  }
+}
