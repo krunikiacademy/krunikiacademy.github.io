@@ -47,16 +47,22 @@ body.hfa90Page .hfaContainer {
   margin-inline: auto;
 }
 
-/* Header safety */
-body.hfa90Page .siteHeader {
-  /* Header à¸•à¹‰à¸­à¸‡à¸­à¸¢à¸¹à¹ˆà¹ƒà¸™ document flow à¹€à¸žà¸·à¹ˆà¸­à¹„à¸¡à¹ˆà¸—à¸±à¸š Banner à¸—à¸¸à¸à¸‚à¸™à¸²à¸”à¸ˆà¸­ */
-  position: sticky !important;
-  top: 0 !important;
-  background: #0b0b0c !important;
-  -webkit-backdrop-filter: none !important;
-  backdrop-filter: none !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
-  z-index: 10020 !important;
+/* Solid black band behind the top menu row only. */
+body.hfa90Page .siteHeader::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 72px;
+  background: #0b0b0c;
+  content: "";
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.hfa90Page .siteHeader .navInner {
+  position: relative;
+  z-index: 1;
 }
 
 /* Typography */
