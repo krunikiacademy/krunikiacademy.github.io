@@ -9,8 +9,8 @@ body.hfa90Page {
   --hfa-gold-deep: #b59348;
   --hfa-brown: #5b493f;
   --hfa-ink: #332b28;
-  --hfa-text: #584d48;
-  --hfa-text-soft: #665751;
+  --hfa-text: #443b37;
+  --hfa-text-soft: #554944;
   --hfa-line: rgba(198, 171, 102, 0.38);
   --hfa-shadow: 0 20px 44px rgba(83, 62, 54, 0.11);
   margin: 0;
@@ -115,7 +115,7 @@ body.hfa90Page .hfaLead {
   max-width: 760px;
   margin: 20px 0 0;
   color: var(--hfa-text) !important;
-  font-size: clamp(17px, 2vw, 20px);
+  font-size: clamp(19px, 2vw, 21px);
   line-height: 1.9;
   opacity: 1 !important;
 }
@@ -123,7 +123,7 @@ body.hfa90Page .hfaLead {
 body.hfa90Page .hfaBody {
   margin: 14px 0 0;
   color: var(--hfa-text) !important;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.9;
   opacity: 1 !important;
 }
@@ -205,7 +205,7 @@ body.hfa90Page .hfaHeroNote {
   padding-left: 16px;
   border-left: 2px solid var(--hfa-gold);
   color: var(--hfa-text-soft) !important;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
 }
 
@@ -277,8 +277,8 @@ body.hfa90Page .hfaStat strong {
 
 body.hfa90Page .hfaStat span {
   color: var(--hfa-text-soft) !important;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 body.hfa90Page .hfaGrid2,
@@ -334,8 +334,8 @@ body.hfa90Page .hfaCard h3 {
 body.hfa90Page .hfaCard p {
   margin: 12px 0 0;
   color: var(--hfa-text) !important;
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.85;
   opacity: 1 !important;
 }
 
@@ -352,7 +352,8 @@ body.hfa90Page .hfaList li {
   position: relative;
   padding-left: 29px;
   color: var(--hfa-text) !important;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.85;
   opacity: 1 !important;
 }
 
@@ -424,7 +425,8 @@ body.hfa90Page .hfaJourneyItem h3 {
 body.hfa90Page .hfaJourneyItem p {
   margin: 8px 0 0;
   color: var(--hfa-text) !important;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.85;
 }
 
 /* Founder Circle */
@@ -468,7 +470,7 @@ body.hfa90Page .hfaPrice {
 body.hfa90Page .hfaPriceUnit {
   margin: 0;
   color: var(--hfa-text-soft) !important;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* FAQ and notice */
@@ -488,14 +490,15 @@ body.hfa90Page .hfaFaq details {
 body.hfa90Page .hfaFaq summary {
   color: var(--hfa-brown) !important;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 body.hfa90Page .hfaFaq p {
   margin: 14px 0 0;
   color: var(--hfa-text) !important;
+  font-size: 17px;
   line-height: 1.85;
 }
 
@@ -510,7 +513,7 @@ body.hfa90Page .hfaNotice {
 body.hfa90Page .hfaNotice p {
   margin: 0;
   color: var(--hfa-text-soft) !important;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.85;
 }
 
@@ -617,6 +620,31 @@ body.hfa90Page #mobileMenu {
 /* Mobile */
 @media (max-width: 680px) {
   body.hfa90Page .hfaContainer { width: min(100% - 24px, 1120px); }
+
+  /* Mobile readability */
+  body.hfa90Page .hfaLead {
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  body.hfa90Page .hfaBody,
+  body.hfa90Page .hfaCard p,
+  body.hfa90Page .hfaList li,
+  body.hfa90Page .hfaJourneyItem p,
+  body.hfa90Page .hfaFaq p {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+  body.hfa90Page .hfaStat span,
+  body.hfa90Page .hfaNotice p,
+  body.hfa90Page .hfaPriceUnit {
+    font-size: 16px;
+  }
+
+  body.hfa90Page .hfaFaq summary {
+    font-size: 18px;
+  }
   body.hfa90Page .hfaSection { padding: 54px 0; }
 
   body.hfa90Page .hfaEyebrow {
