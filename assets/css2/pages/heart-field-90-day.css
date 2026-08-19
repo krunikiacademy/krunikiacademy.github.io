@@ -13,6 +13,7 @@ body.hfa90Page {
   --hfa-text-soft: #665751;
   --hfa-line: rgba(198, 171, 102, 0.38);
   --hfa-shadow: 0 20px 44px rgba(83, 62, 54, 0.11);
+
   margin: 0;
   color: var(--hfa-ink);
   background: #fffafc !important;
@@ -45,6 +46,11 @@ body.hfa90Page main img {
 body.hfa90Page .hfaContainer {
   width: min(1120px, calc(100% - 32px));
   margin-inline: auto;
+}
+
+/* Header */
+body.hfa90Page .siteHeader {
+  background: #0b0b0c !important;
 }
 
 /* Typography */
@@ -591,7 +597,61 @@ body.hfa90Page footer .gold {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Founder Circle only: remove stacked top spacing and use the screen width. */
+  /* Restore mobile menu panel */
+  body.hfa90Page #mobileMenu {
+    background: #0b0b0c !important;
+    background-color: #0b0b0c !important;
+    background-image: none !important;
+
+    color: #ffffff !important;
+
+    opacity: 1 !important;
+    filter: none !important;
+
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+
+    z-index: 10050 !important;
+  }
+
+  body.hfa90Page #mobileMenu a {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    filter: none !important;
+    text-shadow: none !important;
+  }
+
+  body.hfa90Page #mobileMenu a.active,
+  body.hfa90Page #mobileMenu a[aria-current="page"],
+  body.hfa90Page #mobileMenu a:hover,
+  body.hfa90Page #mobileMenu a:focus,
+  body.hfa90Page #mobileMenu a:active {
+    color: #c6ab66 !important;
+    opacity: 1 !important;
+  }
+
+  body.hfa90Page #mobileMenu .menuInner,
+  body.hfa90Page #mobileMenu .mobileMenuInner,
+  body.hfa90Page #mobileMenu nav {
+    background: #0b0b0c !important;
+    opacity: 1 !important;
+    filter: none !important;
+
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  body.hfa90Page #mobileMenu::before,
+  body.hfa90Page #mobileMenu::after {
+    background: transparent !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Founder Circle */
   body.hfa90Page #founder-circle {
     padding-top: 18px;
   }
@@ -654,8 +714,6 @@ body.hfa90Page footer .gold {
     width: 100%;
   }
 
-  /* A 16:9 banner becomes too short on phones. Use a taller window and
-     center the meaningful artwork; this affects Founder Circle only. */
   body.hfa90Page #founder-circle {
     padding-top: 10px;
   }
