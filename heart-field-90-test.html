@@ -125,26 +125,15 @@
       backdrop-filter: blur(10px) !important;
     }
 
-    body.hfa90Page .siteHeader::before {
+    body.hfa90Page .hfaSolidMenuBand {
       position: absolute;
       top: 0;
       right: 0;
       left: 0;
       height: 72px;
       background: #0b0b0c;
-      content: "";
-      opacity: 1 !important;
       pointer-events: none;
-      z-index: 0;
-    }
-
-    body.hfa90Page .siteHeader .navInner {
-      position: relative;
-      z-index: 1;
-    }
-
-    body.hfa90Page.hfa90Scrolled .siteHeader::before {
-      opacity: 0 !important;
+      z-index: 9998;
     }
 
     @media (max-width: 1024px) {
@@ -182,20 +171,7 @@
     (() => {
       "use strict";
 
-      const initializeHeartFieldTest = () => {
-        const page = document.body;
-
-        if (!page.classList.contains("hfa90Page")) {
-          return;
-        }
-
-        const updateHeaderState = () => {
-          page.classList.toggle("hfa90Scrolled", window.scrollY > 1);
-        };
-
-        updateHeaderState();
-        window.addEventListener("scroll", updateHeaderState, { passive: true });
-
+      const initializeHeartFieldMenu = () => {
         document.querySelectorAll("#mobileMenu a[href]").forEach((link) => {
           link.addEventListener("click", (event) => {
             if (
@@ -221,15 +197,17 @@
       };
 
       if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initializeHeartFieldTest);
+        document.addEventListener("DOMContentLoaded", initializeHeartFieldMenu);
       } else {
-        initializeHeartFieldTest();
+        initializeHeartFieldMenu();
       }
     })();
   </script>
 </head>
 
 <body class="hfa90Page">
+
+  <div class="hfaSolidMenuBand" aria-hidden="true"></div>
 
   <!-- HEADER: ใช้โครงเดียวกับเว็บไซต์เดิม -->
   <header class="siteHeader">
