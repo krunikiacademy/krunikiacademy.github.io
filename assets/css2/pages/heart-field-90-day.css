@@ -545,25 +545,72 @@ body.hfa90Page footer {
 
 body.hfa90Page footer .gold { color: var(--hfa-gold) !important; }
 
-/* This page only: restore the real hidden state overridden by legacy style.css. */
-body.hfa90Page #menuBackdrop[hidden] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
+/* Mobile and iPad menu — this page only */
+@media (max-width: 1024px) {
+  body.hfa90Page #menuBackdrop[hidden] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
 
-/* When the menu is open, keep the click-to-close layer but remove its dark veil. */
-body.hfa90Page #menuBackdrop {
-  background: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  z-index: 9998 !important;
-}
+  body.hfa90Page #menuBackdrop:not([hidden]) {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    background: transparent !important;
+    background-image: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    z-index: 9998 !important;
+  }
 
-/* Keep the open mobile menu above both backdrop and header on this page only. */
-body.hfa90Page #mobileMenu {
-  z-index: 10030 !important;
+  body.hfa90Page .siteHeader,
+  body.hfa90Page #mobileMenu {
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+
+  body.hfa90Page #mobileMenu {
+    z-index: 10030 !important;
+    background-color: #0b0b0c !important;
+    background-image: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    isolation: isolate;
+  }
+
+  body.hfa90Page #mobileMenu a,
+  body.hfa90Page #mobileMenu a span {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    text-shadow: none !important;
+  }
+
+  body.hfa90Page #mobileMenu a:hover,
+  body.hfa90Page #mobileMenu a:focus-visible,
+  body.hfa90Page #mobileMenu a:active,
+  body.hfa90Page #mobileMenu a.active,
+  body.hfa90Page #mobileMenu a.is-active,
+  body.hfa90Page #mobileMenu a[aria-current="page"],
+  body.hfa90Page #mobileMenu a:hover span,
+  body.hfa90Page #mobileMenu a:focus-visible span,
+  body.hfa90Page #mobileMenu a:active span,
+  body.hfa90Page #mobileMenu a.active span,
+  body.hfa90Page #mobileMenu a.is-active span,
+  body.hfa90Page #mobileMenu a[aria-current="page"] span {
+    color: var(--hfa-gold, #c6ab66) !important;
+    -webkit-text-fill-color: var(--hfa-gold, #c6ab66) !important;
+    opacity: 1 !important;
+  }
 }
 
 /* Tablet */
@@ -639,3 +686,4 @@ body.hfa90Page #mobileMenu {
 @media (prefers-reduced-motion: reduce) {
   body.hfa90Page .hfaButton { transition: none; }
 }
+
