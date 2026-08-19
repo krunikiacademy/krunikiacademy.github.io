@@ -1,4 +1,4 @@
-/* KRUNIKIÂ® | The Heart Field Activationâ„¢ â€” 90-Day Program */
+/* KRUNIKI® | The Heart Field Activation™ — 90-Day Program */
 
 body.hfa90Page {
   --hfa-pink: #f7dce9;
@@ -348,9 +348,14 @@ body.hfa90Page .hfaList {
   list-style: none;
 }
 
+body.hfa90Page .hfaList {
+  counter-reset: hfa-list;
+}
+
 body.hfa90Page .hfaList li {
+  counter-increment: hfa-list;
   position: relative;
-  padding-left: 29px;
+  padding-left: 42px;
   color: var(--hfa-text) !important;
   font-size: 18px;
   line-height: 1.85;
@@ -362,7 +367,10 @@ body.hfa90Page .hfaList li::before {
   top: 0;
   left: 0;
   color: var(--hfa-gold-dark);
-  content: "âœ¦";
+  content: counter(hfa-list, decimal-leading-zero);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 /* Posters */
@@ -571,7 +579,7 @@ body.hfa90Page #mobileMenu {
   z-index: 10030 !important;
 }
 
-/* Mobile menu text only â€” keep every other header/menu style unchanged. */
+/* Mobile menu text only — keep every other header/menu style unchanged. */
 @media (max-width: 1024px) {
   body.hfa90Page #mobileMenu a,
   body.hfa90Page #mobileMenu a span {
