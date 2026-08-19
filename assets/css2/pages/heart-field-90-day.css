@@ -47,6 +47,16 @@ body.hfa90Page .hfaContainer {
   margin-inline: auto;
 }
 
+/* Solid menu band only; the transparent lower header remains global. */
+body.hfa90Page .siteHeader {
+  background-image: linear-gradient(
+    to bottom,
+    #0b0b0c 0,
+    #0b0b0c 72px,
+    transparent 72px
+  ) !important;
+}
+
 /* Typography */
 body.hfa90Page .hfaEyebrow {
   margin: 0 0 14px;
