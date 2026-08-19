@@ -112,10 +112,121 @@
   <!-- Navigation Patch -->
   <link rel="stylesheet" href="assets/nav-patch.css" />
 
+  <!-- Heart Field Test: header fix isolated to this HTML file -->
+  <style>
+    body.hfa90Page::before {
+      display: none !important;
+      content: none !important;
+    }
+
+    body.hfa90Page .siteHeader {
+      background: rgba(10, 11, 13, 0.55) !important;
+      -webkit-backdrop-filter: blur(10px) !important;
+      backdrop-filter: blur(10px) !important;
+    }
+
+    body.hfa90Page .siteHeader::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 72px;
+      background: #0b0b0c;
+      content: "";
+      opacity: 1 !important;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body.hfa90Page .siteHeader .navInner {
+      position: relative;
+      z-index: 1;
+    }
+
+    body.hfa90Page.hfa90Scrolled .siteHeader::before {
+      opacity: 0 !important;
+    }
+
+    @media (max-width: 1024px) {
+      body.hfa90Page .siteHeader {
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+      }
+
+      body.hfa90Page #mobileMenu a,
+      body.hfa90Page #mobileMenu a span {
+        color: #fff !important;
+        -webkit-text-fill-color: #fff !important;
+        opacity: 1 !important;
+      }
+
+      body.hfa90Page #mobileMenu a:active,
+      body.hfa90Page #mobileMenu a:focus,
+      body.hfa90Page #mobileMenu a:focus-visible,
+      body.hfa90Page #mobileMenu a.hfa90MenuPressed,
+      body.hfa90Page #mobileMenu a:active span,
+      body.hfa90Page #mobileMenu a:focus span,
+      body.hfa90Page #mobileMenu a:focus-visible span,
+      body.hfa90Page #mobileMenu a.hfa90MenuPressed span {
+        color: #c9a86a !important;
+        -webkit-text-fill-color: #c9a86a !important;
+      }
+    }
+  </style>
+
   <!-- JavaScript กลาง: main.js ต้องอยู่ก่อน nav-patch.js -->
   <script src="assets/main.js" defer></script>
   <script src="assets/nav-patch.js" defer></script>
-  <script src="assets/heart-field-header.js" defer></script>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const initializeHeartFieldTest = () => {
+        const page = document.body;
+
+        if (!page.classList.contains("hfa90Page")) {
+          return;
+        }
+
+        const updateHeaderState = () => {
+          page.classList.toggle("hfa90Scrolled", window.scrollY > 1);
+        };
+
+        updateHeaderState();
+        window.addEventListener("scroll", updateHeaderState, { passive: true });
+
+        document.querySelectorAll("#mobileMenu a[href]").forEach((link) => {
+          link.addEventListener("click", (event) => {
+            if (
+              event.defaultPrevented ||
+              event.button !== 0 ||
+              event.metaKey ||
+              event.ctrlKey ||
+              event.shiftKey ||
+              event.altKey ||
+              link.target === "_blank"
+            ) {
+              return;
+            }
+
+            event.preventDefault();
+            link.classList.add("hfa90MenuPressed");
+
+            window.setTimeout(() => {
+              window.location.assign(link.href);
+            }, 260);
+          });
+        });
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initializeHeartFieldTest);
+      } else {
+        initializeHeartFieldTest();
+      }
+    })();
+  </script>
 </head>
 
 <body class="hfa90Page">
