@@ -13,7 +13,6 @@ body.hfa90Page {
   --hfa-text-soft: #665751;
   --hfa-line: rgba(198, 171, 102, 0.38);
   --hfa-shadow: 0 20px 44px rgba(83, 62, 54, 0.11);
-
   margin: 0;
   color: var(--hfa-ink);
   background: #fffafc !important;
@@ -48,9 +47,16 @@ body.hfa90Page .hfaContainer {
   margin-inline: auto;
 }
 
-/* Header */
+/* Header safety */
 body.hfa90Page .siteHeader {
+  /* Header ต้องอยู่ใน document flow เพื่อไม่ทับ Banner ทุกขนาดจอ */
+  position: sticky !important;
+  top: 0 !important;
   background: #0b0b0c !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
+  z-index: 10020 !important;
 }
 
 /* Typography */
@@ -120,13 +126,8 @@ body.hfa90Page .hfaBody {
   opacity: 1 !important;
 }
 
-body.hfa90Page .hfaCenter {
-  text-align: center;
-}
-
-body.hfa90Page .hfaCenter .hfaLead {
-  margin-inline: auto;
-}
+body.hfa90Page .hfaCenter { text-align: center; }
+body.hfa90Page .hfaCenter .hfaLead { margin-inline: auto; }
 
 /* Sections */
 body.hfa90Page .hfaSection {
@@ -143,11 +144,7 @@ body.hfa90Page .hfaSectionSoft {
 }
 
 body.hfa90Page .hfaSectionGold {
-  background: linear-gradient(
-    135deg,
-    rgba(244, 234, 208, 0.92),
-    rgba(255, 250, 245, 0.98)
-  ) !important;
+  background: linear-gradient(135deg, rgba(244, 234, 208, 0.92), rgba(255, 250, 245, 0.98)) !important;
 }
 
 /* Hero */
@@ -243,11 +240,7 @@ body.hfa90Page .hfaButton:focus-visible {
 
 body.hfa90Page .hfaButtonPrimary {
   color: #fff !important;
-  background: linear-gradient(
-    135deg,
-    var(--hfa-gold),
-    var(--hfa-gold-deep)
-  ) !important;
+  background: linear-gradient(135deg, var(--hfa-gold), var(--hfa-gold-deep)) !important;
 }
 
 body.hfa90Page .hfaButtonSoft {
@@ -294,23 +287,13 @@ body.hfa90Page .hfaGrid4 {
   margin-top: 34px;
 }
 
-body.hfa90Page .hfaGrid2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-body.hfa90Page .hfaGrid3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-body.hfa90Page .hfaGrid4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
+body.hfa90Page .hfaGrid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+body.hfa90Page .hfaGrid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+body.hfa90Page .hfaGrid4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 body.hfa90Page .hfaGrid2 > *,
 body.hfa90Page .hfaGrid3 > *,
-body.hfa90Page .hfaGrid4 > * {
-  min-width: 0;
-}
+body.hfa90Page .hfaGrid4 > * { min-width: 0; }
 
 /* Cards */
 body.hfa90Page .hfaCard {
@@ -332,11 +315,7 @@ body.hfa90Page .hfaCardNumber {
   margin-bottom: 16px;
   border-radius: 50%;
   color: #fff !important;
-  background: linear-gradient(
-    135deg,
-    var(--hfa-gold),
-    var(--hfa-gold-deep)
-  );
+  background: linear-gradient(135deg, var(--hfa-gold), var(--hfa-gold-deep));
   font-family: "Times New Roman", Times, serif;
   font-size: 19px;
 }
@@ -393,13 +372,9 @@ body.hfa90Page .hfaPoster {
   box-shadow: var(--hfa-shadow);
 }
 
-body.hfa90Page .hfaPoster img {
-  width: 100%;
-}
+body.hfa90Page .hfaPoster img { width: 100%; }
 
-body.hfa90Page .hfaPoster[hidden] {
-  display: none !important;
-}
+body.hfa90Page .hfaPoster[hidden] { display: none !important; }
 
 /* Journey */
 body.hfa90Page .hfaJourney {
@@ -413,10 +388,7 @@ body.hfa90Page .hfaJourney::before {
   bottom: 8px;
   left: 7px;
   width: 1px;
-  background: linear-gradient(
-    var(--hfa-gold),
-    rgba(198, 171, 102, 0.18)
-  );
+  background: linear-gradient(var(--hfa-gold), rgba(198, 171, 102, 0.18));
   content: "";
 }
 
@@ -425,9 +397,7 @@ body.hfa90Page .hfaJourneyItem {
   padding: 0 0 32px 26px;
 }
 
-body.hfa90Page .hfaJourneyItem:last-child {
-  padding-bottom: 0;
-}
+body.hfa90Page .hfaJourneyItem:last-child { padding-bottom: 0; }
 
 body.hfa90Page .hfaJourneyItem::before {
   position: absolute;
@@ -464,11 +434,7 @@ body.hfa90Page .hfaFounder {
   padding: 38px;
   border: 1px solid rgba(198, 171, 102, 0.5);
   border-radius: 28px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.98),
-    rgba(247, 220, 233, 0.62)
-  );
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(247, 220, 233, 0.62));
   box-shadow: 0 22px 48px rgba(83, 62, 54, 0.1);
 }
 
@@ -564,13 +530,8 @@ body.hfa90Page .hfaClosingCard {
   text-align: center;
 }
 
-body.hfa90Page .hfaClosingCard .hfaLead {
-  margin-inline: auto;
-}
-
-body.hfa90Page .hfaClosingCard .hfaActions {
-  justify-content: center;
-}
+body.hfa90Page .hfaClosingCard .hfaLead { margin-inline: auto; }
+body.hfa90Page .hfaClosingCard .hfaActions { justify-content: center; }
 
 body.hfa90Page footer {
   display: block;
@@ -582,76 +543,37 @@ body.hfa90Page footer {
   text-align: center;
 }
 
-body.hfa90Page footer .gold {
-  color: var(--hfa-gold) !important;
+body.hfa90Page footer .gold { color: var(--hfa-gold) !important; }
+
+/* This page only: restore the real hidden state overridden by legacy style.css. */
+body.hfa90Page #menuBackdrop[hidden] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* When the menu is open, keep the click-to-close layer but remove its dark veil. */
+body.hfa90Page #menuBackdrop {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  z-index: 9998 !important;
+}
+
+/* Keep the open mobile menu above both backdrop and header on this page only. */
+body.hfa90Page #mobileMenu {
+  z-index: 10030 !important;
 }
 
 /* Tablet */
 @media (max-width: 900px) {
-  body.hfa90Page .hfaFounder {
-    grid-template-columns: 1fr;
-  }
+  body.hfa90Page .hfaFounder { grid-template-columns: 1fr; }
 
   body.hfa90Page .hfaGrid3,
-  body.hfa90Page .hfaGrid4 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  body.hfa90Page .hfaGrid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  /* Restore mobile menu panel */
-  body.hfa90Page #mobileMenu {
-    background: #0b0b0c !important;
-    background-color: #0b0b0c !important;
-    background-image: none !important;
-
-    color: #ffffff !important;
-
-    opacity: 1 !important;
-    filter: none !important;
-
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
-
-    z-index: 10050 !important;
-  }
-
-  body.hfa90Page #mobileMenu a {
-    color: #ffffff !important;
-    opacity: 1 !important;
-    filter: none !important;
-    text-shadow: none !important;
-  }
-
-  body.hfa90Page #mobileMenu a.active,
-  body.hfa90Page #mobileMenu a[aria-current="page"],
-  body.hfa90Page #mobileMenu a:hover,
-  body.hfa90Page #mobileMenu a:focus,
-  body.hfa90Page #mobileMenu a:active {
-    color: #c6ab66 !important;
-    opacity: 1 !important;
-  }
-
-  body.hfa90Page #mobileMenu .menuInner,
-  body.hfa90Page #mobileMenu .mobileMenuInner,
-  body.hfa90Page #mobileMenu nav {
-    background: #0b0b0c !important;
-    opacity: 1 !important;
-    filter: none !important;
-
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
-  }
-
-  body.hfa90Page #mobileMenu::before,
-  body.hfa90Page #mobileMenu::after {
-    background: transparent !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
-  }
-
-  /* Founder Circle */
+  /* Founder Circle only: remove stacked top spacing and use the screen width. */
   body.hfa90Page #founder-circle {
     padding-top: 18px;
   }
@@ -669,17 +591,13 @@ body.hfa90Page footer .gold {
   body.hfa90Page #founder-circle > .hfaContainer > .hfaPoster.hfaWide:first-child img {
     width: 100%;
   }
+
 }
 
 /* Mobile */
 @media (max-width: 680px) {
-  body.hfa90Page .hfaContainer {
-    width: min(100% - 24px, 1120px);
-  }
-
-  body.hfa90Page .hfaSection {
-    padding: 54px 0;
-  }
+  body.hfa90Page .hfaContainer { width: min(100% - 24px, 1120px); }
+  body.hfa90Page .hfaSection { padding: 54px 0; }
 
   body.hfa90Page .hfaEyebrow {
     margin-bottom: 10px;
@@ -687,33 +605,20 @@ body.hfa90Page footer .gold {
     letter-spacing: 0.08em;
   }
 
+
   body.hfa90Page .hfaStats,
   body.hfa90Page .hfaGrid2,
   body.hfa90Page .hfaGrid3,
-  body.hfa90Page .hfaGrid4 {
-    grid-template-columns: 1fr;
-  }
+  body.hfa90Page .hfaGrid4 { grid-template-columns: 1fr; }
 
-  body.hfa90Page .hfaFounder {
-    padding: 24px 18px;
-  }
+  body.hfa90Page .hfaFounder { padding: 24px 18px; }
+  body.hfa90Page .hfaCard { padding: 22px 19px; }
+  body.hfa90Page .hfaClosingCard { padding: 36px 20px; }
+  body.hfa90Page .hfaActions { flex-direction: column; }
+  body.hfa90Page .hfaButton { width: 100%; }
 
-  body.hfa90Page .hfaCard {
-    padding: 22px 19px;
-  }
-
-  body.hfa90Page .hfaClosingCard {
-    padding: 36px 20px;
-  }
-
-  body.hfa90Page .hfaActions {
-    flex-direction: column;
-  }
-
-  body.hfa90Page .hfaButton {
-    width: 100%;
-  }
-
+  /* A 16:9 banner becomes too short on phones. Use a taller window and
+     center the meaningful artwork; this affects Founder Circle only. */
   body.hfa90Page #founder-circle {
     padding-top: 10px;
   }
@@ -732,7 +637,5 @@ body.hfa90Page footer .gold {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body.hfa90Page .hfaButton {
-    transition: none;
-  }
+  body.hfa90Page .hfaButton { transition: none; }
 }
