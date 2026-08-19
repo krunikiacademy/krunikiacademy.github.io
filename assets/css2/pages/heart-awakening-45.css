@@ -1066,3 +1066,20 @@ body.ha45Page footer .gold {
   }
 
 }
+
+/* =========================================================
+   Heart Awakening 45 — Header stays at document top
+   Page-specific override only
+   ========================================================= */
+
+body.ha45Page .siteHeader,
+body.ha45Page header.siteHeader {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+}
+
+body.ha45Page main {
+  padding-top: 0 !important;
+}
