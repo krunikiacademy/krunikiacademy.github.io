@@ -556,36 +556,9 @@ body.hfa90Page #menuBackdrop {
   -webkit-backdrop-filter: none !important;
 }
 
-/* V9 — The legacy stylesheet turns the menu itself into a black 100vh film.
-   Restore it as a compact dropdown under the hamburger on this page only. */
-body.hfa90Page #mobileMenu[hidden] {
-  display: none !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-@media (max-width: 900px) {
-  body.hfa90Page #mobileMenu {
-    position: fixed !important;
-    inset: auto calc(14px + env(safe-area-inset-right)) auto auto !important;
-    top: calc(64px + env(safe-area-inset-top)) !important;
-    right: calc(14px + env(safe-area-inset-right)) !important;
-    bottom: auto !important;
-    left: auto !important;
-    width: min(78vw, 320px) !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: min(70vh, 520px) !important;
-    margin: 0 !important;
-    padding: 12px !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    border: 1px solid rgba(198, 171, 102, 0.32) !important;
-    border-radius: 16px !important;
-    background: rgba(10, 10, 12, 0.96) !important;
-    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38) !important;
-    z-index: 10030 !important;
-  }
+/* Keep the open mobile menu above both backdrop and header on this page only. */
+body.hfa90Page #mobileMenu {
+  z-index: 10030 !important;
 }
 
 /* Tablet */
