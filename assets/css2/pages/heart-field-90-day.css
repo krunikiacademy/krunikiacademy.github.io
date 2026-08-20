@@ -47,20 +47,6 @@ body.hfa90Page .hfaContainer {
   margin-inline: auto;
 }
 
-/* Solid band at the top of the document.
-   It sits below the sticky header and naturally scrolls out of view. */
-body.hfa90Page::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 72px;
-  background: #0b0b0c;
-  content: "";
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* Typography */
 body.hfa90Page .hfaEyebrow {
   margin: 0 0 14px;
