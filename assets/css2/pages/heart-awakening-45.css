@@ -1066,3 +1066,9 @@ body.ha45Page footer .gold {
   }
 
 }
+
+/* แก้เฉพาะแถบดำทึบ ไม่ให้ค่อมรางเลื่อน */
+body.ha45Page .siteHeader {
+  right: 16px !important;
+  width: auto !important;
+}
