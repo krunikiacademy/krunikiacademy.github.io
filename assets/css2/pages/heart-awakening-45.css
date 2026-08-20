@@ -1068,18 +1068,56 @@ body.ha45Page footer .gold {
 }
 
 /* =========================================================
-   Heart Awakening 45 — Header stays at document top
-   Page-specific override only
+   Heart Awakening 45
+   Header stays only at the document top
+   Never follows page scrolling
    ========================================================= */
 
-body.ha45Page .siteHeader,
-body.ha45Page header.siteHeader {
-  position: relative !important;
-  top: auto !important;
-  right: auto !important;
-  left: auto !important;
+html body.ha45Page header.siteHeader,
+html body.ha45Page .siteHeader {
+  position: static !important;
+
+  top: unset !important;
+  right: unset !important;
+  bottom: unset !important;
+  left: unset !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  transform: none !important;
+  translate: none !important;
+
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
-body.ha45Page main {
+/* ยกเลิกพื้นที่ชดเชย Header แบบ fixed */
+html body.ha45Page main,
+html body.ha45Page .page,
+html body.ha45Page #main,
+html body.ha45Page .siteMain {
   padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* ปิดชั้นเงา/ฟิล์มที่อาจถูกสร้างด้วย pseudo-element */
+html body.ha45Page header.siteHeader::before,
+html body.ha45Page header.siteHeader::after,
+html body.ha45Page .siteHeader::before,
+html body.ha45Page .siteHeader::after {
+  position: static !important;
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Backdrop ต้องหายสนิทเมื่อมี hidden */
+html body.ha45Page .menuBackdrop[hidden] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
