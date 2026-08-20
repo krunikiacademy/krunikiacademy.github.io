@@ -27,7 +27,14 @@ body.hfa90Page main {
   padding-left: 0 !important;
   overflow: hidden;
   color: var(--hfa-ink);
-  background: #fffafc;
+  background:
+    linear-gradient(
+      to bottom,
+      #0b0b0c 0,
+      #0b0b0c 72px,
+      #fffafc 72px,
+      #fffafc 100%
+    );
 }
 
 body.hfa90Page main *,
