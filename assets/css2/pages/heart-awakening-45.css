@@ -1,5 +1,5 @@
 /* =========================================================
-   KRUNIKI® Heart Awakening — 45-Minute Session
+   KRUNIKIÂ® Heart Awakening â€” 45-Minute Session
    Page-specific CSS
 
    File:
@@ -1068,31 +1068,48 @@ body.ha45Page footer .gold {
 }
 
 /* =========================================================
-   Heart Awakening 45
-   Header stays only at the document top
-   Never follows page scrolling
+   23. HEADER + MOBILE MENU LAYERS
+
+   Layer 1: .siteHeader
+   - solid black
+   - sticky at the top
+   - remains in document flow, so it does not cover the
+     browser's vertical scrollbar
+
+   Layer 2: #menuBackdrop
+   - translucent black
+   - fixed to the viewport and spans 100vw, so it extends
+     beneath the scrollbar area when the mobile menu is open
    ========================================================= */
+
+html:has(body.ha45Page) {
+  scrollbar-gutter: stable;
+}
 
 html body.ha45Page header.siteHeader,
 html body.ha45Page .siteHeader {
-  position: static !important;
-
-  top: unset !important;
-  right: unset !important;
-  bottom: unset !important;
-  left: unset !important;
+  position: sticky !important;
+  top: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
 
   width: 100% !important;
   max-width: 100% !important;
 
+  overflow: visible !important;
   transform: none !important;
   translate: none !important;
 
+  background: #000 !important;
+  background-color: #000 !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
+
+  z-index: 10000 !important;
 }
 
-/* ยกเลิกพื้นที่ชดเชย Header แบบ fixed */
+/* Sticky Header remains in normal flow: remove legacy fixed-header spacing. */
 html body.ha45Page main,
 html body.ha45Page .page,
 html body.ha45Page #main,
@@ -1101,23 +1118,43 @@ html body.ha45Page .siteMain {
   margin-top: 0 !important;
 }
 
-/* ปิดชั้นเงา/ฟิล์มที่อาจถูกสร้างด้วย pseudo-element */
-html body.ha45Page header.siteHeader::before,
-html body.ha45Page header.siteHeader::after,
-html body.ha45Page .siteHeader::before,
-html body.ha45Page .siteHeader::after {
-  position: static !important;
-  content: none !important;
-  display: none !important;
-  background: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* Backdrop ต้องหายสนิทเมื่อมี hidden */
-html body.ha45Page .menuBackdrop[hidden] {
+/* Hidden means completely absent. */
+html body.ha45Page #menuBackdrop[hidden] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
   pointer-events: none !important;
+}
+
+/* Translucent viewport layer used only while the mobile menu is open. */
+html body.ha45Page #menuBackdrop:not([hidden]) {
+  position: fixed !important;
+  inset: 0 !important;
+
+  display: block !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+
+  background: rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+
+  z-index: 10020 !important;
+}
+
+/* Mobile menu stays above the translucent backdrop. */
+html body.ha45Page #mobileMenu {
+  z-index: 10030 !important;
+}
+
+/* Hamburger stays above both the backdrop and the mobile menu. */
+html body.ha45Page .krActions,
+html body.ha45Page #krHam {
+  position: relative !important;
+  z-index: 10060 !important;
 }
