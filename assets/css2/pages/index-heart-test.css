@@ -1,0 +1,456 @@
+/* assets/css2/pages/index-heart-test.css
+   Scope: index-heart-test.html only
+   Purpose: TEST the new homepage story + four visual path cards.
+   Does not modify shared Header / Mobile Menu / Footer.
+*/
+
+/* =========================================================
+   1) WHY INNER SAFETY â€” STORY BLOCK
+   ========================================================= */
+
+.page--index-heart .innerSafetyStory{
+  margin: 46px 0 62px;
+}
+
+.page--index-heart .innerSafetyStory__grid{
+  display: grid;
+  grid-template-columns: minmax(300px, .82fr) minmax(0, 1.18fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+
+  padding: clamp(20px, 3vw, 38px);
+  border: 1px solid rgba(198, 171, 102, .42);
+  border-radius: 28px;
+
+  background:
+    radial-gradient(circle at 10% 12%, rgba(245,116,233,.10), transparent 34%),
+    linear-gradient(135deg, rgba(255,255,255,.98), rgba(255,248,251,.96));
+
+  box-shadow: 0 20px 56px rgba(61, 45, 38, .08);
+}
+
+.page--index-heart .innerSafetyStory__media{
+  min-width: 0;
+}
+
+.page--index-heart .innerSafetyStory__media img{
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(45, 32, 32, .10);
+}
+
+.page--index-heart .innerSafetyStory__content{
+  min-width: 0;
+  max-width: 700px;
+}
+
+.page--index-heart .innerSafetyStory__eyebrow{
+  margin-bottom: 10px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: .82rem;
+  line-height: 1.4;
+  letter-spacing: .15em;
+  font-weight: 700;
+
+  color: #b28e45;
+}
+
+.page--index-heart .innerSafetyStory__english{
+  margin: 0 0 14px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(1.8rem, 3.1vw, 3rem);
+  line-height: 1.02;
+  font-weight: 700;
+
+  color: #2c2528;
+}
+
+.page--index-heart .innerSafetyStory__title{
+  margin: 0 0 22px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.65rem, 2.6vw, 2.55rem);
+  line-height: 1.34;
+  font-weight: 700;
+
+  color: #2b2527;
+}
+
+.page--index-heart .innerSafetyStory__content p{
+  margin: 0 0 15px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: 1.04rem;
+  line-height: 1.86;
+
+  color: rgba(43, 37, 39, .80);
+}
+
+.page--index-heart .innerSafetyStory__bridge{
+  padding-top: 4px;
+  font-weight: 600;
+  color: rgba(43, 37, 39, .90) !important;
+}
+
+.page--index-heart .innerSafetyStory__action{
+  margin-top: 26px;
+}
+
+.page--index-heart .innerSafetyStory__link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 11px 18px;
+
+  border: 1px solid rgba(198, 171, 102, .72);
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.74);
+
+  font-family: "Sarabun", sans-serif;
+  font-size: .96rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  color: #7f632f;
+
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.page--index-heart .innerSafetyStory__link:hover{
+  transform: translateY(-1px);
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(120, 90, 50, .10);
+}
+
+
+/* =========================================================
+   2) PRIMARY PATHS â€” FOUR IMAGE CARDS
+   ========================================================= */
+
+.page--index-heart .homePaths{
+  margin-top: 8px;
+}
+
+.page--index-heart .homePaths__head{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+
+  margin-bottom: 24px;
+}
+
+.page--index-heart .homePaths__kicker{
+  margin-bottom: 6px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: .82rem;
+  letter-spacing: .14em;
+  font-weight: 700;
+
+  color: #b28e45;
+}
+
+.page--index-heart .homePaths__title{
+  margin: 0;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.25;
+  font-weight: 700;
+
+  color: #2b2527;
+}
+
+.page--index-heart .homePaths__lead{
+  max-width: 760px;
+  margin: 10px 0 0;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+
+  color: var(--muted2);
+}
+
+.page--index-heart .homePaths__signature{
+  flex: 0 0 auto;
+
+  padding-bottom: 5px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: .85rem;
+  letter-spacing: .08em;
+
+  color: var(--muted2);
+}
+
+.page--index-heart .homePathGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.page--index-heart .homePathCard{
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+
+  border: 1px solid rgba(198, 171, 102, .34);
+  border-radius: 24px;
+
+  background: rgba(255,255,255,.94);
+
+  box-shadow: 0 14px 38px rgba(51, 40, 37, .07);
+
+  transition: transform .20s ease, box-shadow .20s ease, border-color .20s ease;
+}
+
+.page--index-heart .homePathCard:hover{
+  transform: translateY(-3px);
+  border-color: rgba(198, 171, 102, .66);
+  box-shadow: 0 20px 48px rgba(51, 40, 37, .11);
+}
+
+.page--index-heart .homePathCard--awakening{
+  background:
+    radial-gradient(circle at 92% 6%, rgba(245,116,233,.13), transparent 27%),
+    rgba(255,255,255,.96);
+}
+
+.page--index-heart .homePathCard--field{
+  background:
+    radial-gradient(circle at 94% 7%, rgba(198,171,102,.17), transparent 30%),
+    rgba(255,255,255,.96);
+}
+
+.page--index-heart .homePathCard__media{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background: #f8f3f2;
+}
+
+.page--index-heart .homePathCard__media img{
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+
+  transition: transform .35s ease;
+}
+
+.page--index-heart .homePathCard:hover .homePathCard__media img{
+  transform: scale(1.018);
+}
+
+.page--index-heart .homePathCard__body{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 24px 24px 25px;
+}
+
+.page--index-heart .homePathCard__kicker{
+  margin-bottom: 9px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: .78rem;
+  line-height: 1.45;
+  letter-spacing: .11em;
+  font-weight: 700;
+
+  color: #b28e45;
+}
+
+.page--index-heart .homePathCard__english{
+  margin: 0 0 9px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.18;
+  font-weight: 700;
+
+  color: #2b2527;
+}
+
+.page--index-heart .homePathCard__thai{
+  margin: 0 0 14px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.6rem, 2.7vw, 2.15rem);
+  line-height: 1.3;
+  font-weight: 700;
+
+  color: #2b2527;
+}
+
+.page--index-heart .homePathCard--awakening .homePathCard__thai{
+  color: #b94aa9;
+}
+
+.page--index-heart .homePathCard--field .homePathCard__thai{
+  color: #8b6b2f;
+}
+
+.page--index-heart .homePathCard__foundation{
+  display: inline-block;
+  align-self: flex-start;
+
+  margin: -2px 0 14px;
+  padding: 7px 11px;
+
+  border: 1px solid rgba(198,171,102,.42);
+  border-radius: 999px;
+
+  background: rgba(198,171,102,.08);
+
+  font-family: "Sarabun", sans-serif;
+  font-size: .9rem;
+  line-height: 1.4;
+  font-weight: 700;
+
+  color: #7d602d;
+}
+
+.page--index-heart .homePathCard__desc{
+  margin: 0 0 20px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: 1rem;
+  line-height: 1.78;
+
+  color: rgba(43, 37, 39, .76);
+}
+
+.page--index-heart .homePathCard__cta{
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+
+  margin-top: auto;
+  padding-top: 4px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: .96rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  color: #8a6a30;
+}
+
+.page--index-heart .homePathCard__cta:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+/* =========================================================
+   3) RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 980px){
+
+  .page--index-heart .innerSafetyStory__grid{
+    grid-template-columns: minmax(260px, .9fr) minmax(0, 1.1fr);
+    gap: 28px;
+    padding: 24px;
+  }
+
+  .page--index-heart .homePathGrid{
+    gap: 20px;
+  }
+
+  .page--index-heart .homePathCard__body{
+    padding: 21px;
+  }
+
+  .page--index-heart .homePaths__signature{
+    display: none;
+  }
+}
+
+
+@media (max-width: 720px){
+
+  .page--index-heart .innerSafetyStory{
+    margin: 32px 0 46px;
+  }
+
+  .page--index-heart .innerSafetyStory__grid{
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    padding: 17px;
+    border-radius: 22px;
+  }
+
+  .page--index-heart .innerSafetyStory__media{
+    width: min(100%, 520px);
+    margin: 0 auto;
+  }
+
+  .page--index-heart .innerSafetyStory__content{
+    max-width: none;
+  }
+
+  .page--index-heart .innerSafetyStory__english{
+    font-size: clamp(1.75rem, 8vw, 2.35rem);
+  }
+
+  .page--index-heart .innerSafetyStory__title{
+    font-size: clamp(1.55rem, 6.7vw, 2rem);
+  }
+
+  .page--index-heart .innerSafetyStory__content p{
+    font-size: 1rem;
+    line-height: 1.78;
+  }
+
+  .page--index-heart .innerSafetyStory__link{
+    width: 100%;
+  }
+
+  .page--index-heart .homePaths__head{
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .page--index-heart .homePathGrid{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .page--index-heart .homePathCard{
+    border-radius: 22px;
+  }
+
+  .page--index-heart .homePathCard__body{
+    padding: 21px 19px 22px;
+  }
+
+  .page--index-heart .homePathCard__thai{
+    font-size: clamp(1.55rem, 7vw, 2rem);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce){
+
+  .page--index-heart .innerSafetyStory__link,
+  .page--index-heart .homePathCard,
+  .page--index-heart .homePathCard__media img{
+    transition: none;
+  }
+}
