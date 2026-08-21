@@ -5,7 +5,7 @@
 */
 
 /* =========================================================
-   1) WHY INNER SAFETY — STORY BLOCK
+   1) WHY INNER SAFETY â€” STORY BLOCK
    ========================================================= */
 
 .page--index-heart .innerSafetyStory{
@@ -68,35 +68,34 @@
   line-height: 1.02;
   font-weight: 700;
 
-  color: #8b5a52;
+  color: #2c2528;
 }
 
 .page--index-heart .innerSafetyStory__title{
   margin: 0 0 22px;
 
   font-family: "Sarabun", sans-serif;
-  font-size: clamp(1.85rem, 2.8vw, 2.8rem);
+  font-size: clamp(1.65rem, 2.6vw, 2.55rem);
   line-height: 1.34;
   font-weight: 700;
 
-  color: #493735;
+  color: #2b2527;
 }
 
 .page--index-heart .innerSafetyStory__content p{
-  margin: 0 0 17px;
+  margin: 0 0 15px;
 
   font-family: "Sarabun", sans-serif;
-  font-size: 1.13rem;
-  line-height: 1.88;
-  font-weight: 500;
+  font-size: 1.04rem;
+  line-height: 1.86;
 
-  color: #4f4341;
+  color: rgba(43, 37, 39, .80);
 }
 
 .page--index-heart .innerSafetyStory__bridge{
   padding-top: 4px;
   font-weight: 600;
-  color: #493735 !important;
+  color: rgba(43, 37, 39, .90) !important;
 }
 
 .page--index-heart .innerSafetyStory__action{
@@ -117,7 +116,7 @@
   background: rgba(255,255,255,.74);
 
   font-family: "Sarabun", sans-serif;
-  font-size: 1rem;
+  font-size: .96rem;
   font-weight: 700;
   text-decoration: none;
 
@@ -134,7 +133,7 @@
 
 
 /* =========================================================
-   2) PRIMARY PATHS — FOUR IMAGE CARDS
+   2) PRIMARY PATHS â€” FOUR IMAGE CARDS
    ========================================================= */
 
 .page--index-heart .homePaths{
@@ -165,11 +164,11 @@
   margin: 0;
 
   font-family: "Sarabun", sans-serif;
-  font-size: clamp(2rem, 3.2vw, 2.9rem);
-  line-height: 1.28;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.25;
   font-weight: 700;
 
-  color: #493735;
+  color: #2b2527;
 }
 
 .page--index-heart .homePaths__lead{
@@ -177,11 +176,10 @@
   margin: 10px 0 0;
 
   font-family: "Sarabun", sans-serif;
-  font-size: 1.12rem;
-  line-height: 1.8;
-  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.75;
 
-  color: #514644;
+  color: var(--muted2);
 }
 
 .page--index-heart .homePaths__signature{
@@ -193,7 +191,7 @@
   font-size: .85rem;
   letter-spacing: .08em;
 
-  color: #756968;
+  color: var(--muted2);
 }
 
 .page--index-heart .homePathGrid{
@@ -280,30 +278,30 @@
   margin: 0 0 9px;
 
   font-family: "Times New Roman", Times, serif;
-  font-size: clamp(1.28rem, 2.1vw, 1.65rem);
-  line-height: 1.2;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.18;
   font-weight: 700;
 
-  color: #60463f;
+  color: #2b2527;
 }
 
 .page--index-heart .homePathCard__thai{
   margin: 0 0 14px;
 
   font-family: "Sarabun", sans-serif;
-  font-size: clamp(1.85rem, 2.9vw, 2.4rem);
-  line-height: 1.32;
+  font-size: clamp(1.6rem, 2.7vw, 2.15rem);
+  line-height: 1.3;
   font-weight: 700;
 
-  color: #493735;
+  color: #2b2527;
 }
 
 .page--index-heart .homePathCard--awakening .homePathCard__thai{
-  color: #ad4f91;
+  color: #b94aa9;
 }
 
 .page--index-heart .homePathCard--field .homePathCard__thai{
-  color: #8a672e;
+  color: #8b6b2f;
 }
 
 .page--index-heart .homePathCard__foundation{
@@ -319,8 +317,8 @@
   background: rgba(198,171,102,.08);
 
   font-family: "Sarabun", sans-serif;
-  font-size: 1rem;
-  line-height: 1.45;
+  font-size: .9rem;
+  line-height: 1.4;
   font-weight: 700;
 
   color: #7d602d;
@@ -330,11 +328,10 @@
   margin: 0 0 20px;
 
   font-family: "Sarabun", sans-serif;
-  font-size: 1.09rem;
-  line-height: 1.82;
-  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.78;
 
-  color: #514644;
+  color: rgba(43, 37, 39, .76);
 }
 
 .page--index-heart .homePathCard__cta{
@@ -346,7 +343,7 @@
   padding-top: 4px;
 
   font-family: "Sarabun", sans-serif;
-  font-size: 1rem;
+  font-size: .96rem;
   font-weight: 700;
   text-decoration: none;
 
@@ -371,20 +368,12 @@
     padding: 24px;
   }
 
-  .page--index-heart .innerSafetyStory__content p{
-    font-size: 1.08rem;
-  }
-
   .page--index-heart .homePathGrid{
     gap: 20px;
   }
 
   .page--index-heart .homePathCard__body{
     padding: 21px;
-  }
-
-  .page--index-heart .homePathCard__desc{
-    font-size: 1.05rem;
   }
 
   .page--index-heart .homePaths__signature{
@@ -417,34 +406,25 @@
   }
 
   .page--index-heart .innerSafetyStory__english{
-    font-size: clamp(1.8rem, 8vw, 2.4rem);
+    font-size: clamp(1.75rem, 8vw, 2.35rem);
   }
 
   .page--index-heart .innerSafetyStory__title{
-    font-size: clamp(1.7rem, 7vw, 2.15rem);
+    font-size: clamp(1.55rem, 6.7vw, 2rem);
   }
 
   .page--index-heart .innerSafetyStory__content p{
-    font-size: 1.08rem;
-    line-height: 1.82;
+    font-size: 1rem;
+    line-height: 1.78;
   }
 
   .page--index-heart .innerSafetyStory__link{
     width: 100%;
-    font-size: 1rem;
   }
 
   .page--index-heart .homePaths__head{
     display: block;
     margin-bottom: 20px;
-  }
-
-  .page--index-heart .homePaths__title{
-    font-size: clamp(1.8rem, 7vw, 2.25rem);
-  }
-
-  .page--index-heart .homePaths__lead{
-    font-size: 1.07rem;
   }
 
   .page--index-heart .homePathGrid{
@@ -460,25 +440,8 @@
     padding: 21px 19px 22px;
   }
 
-  .page--index-heart .homePathCard__english{
-    font-size: 1.35rem;
-  }
-
   .page--index-heart .homePathCard__thai{
-    font-size: clamp(1.75rem, 7vw, 2.15rem);
-  }
-
-  .page--index-heart .homePathCard__foundation{
-    font-size: .98rem;
-  }
-
-  .page--index-heart .homePathCard__desc{
-    font-size: 1.07rem;
-    line-height: 1.82;
-  }
-
-  .page--index-heart .homePathCard__cta{
-    font-size: 1rem;
+    font-size: clamp(1.55rem, 7vw, 2rem);
   }
 }
 
