@@ -25,6 +25,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png"/>
 <link rel="icon" type="image/png" sizes="192x192" href="assets/images/logo/android-chrome-192x192.png"/>
 <link rel="icon" type="image/png" sizes="512x512" href="assets/images/logo/android-chrome-512x512.png"/>
+
+  <!-- HOME TEST v1.1: preload above-the-fold core banners -->
+  <link rel="preload" as="image" href="assets/images/home-heart-field-90-day.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/home-heart-awakening-45.webp" fetchpriority="high">
   
 <style>
   :root{
@@ -189,7 +193,7 @@
                 alt="The Heart Field Activation 90-Day Program"
                 width="1448"
                 height="1086"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
               />
             </a>
@@ -215,8 +219,9 @@
           alt="KRUNIKI Heart Awakening — 45-Minute Session"
           width="1536"
           height="1024"
-          loading="lazy"
+          loading="eager"
           decoding="async"
+          fetchpriority="high"
         />
       </a>
     </section>
@@ -528,7 +533,7 @@
       </div>
 
       <footer>
-        © 2026 KRUNIKI • <span class="gold">Heart Stillness Healing</span>
+        © 2026 KRUNIKI® • <span class="gold">Heart Stillness Healing</span>
       </footer>
     </section>
   </main>
