@@ -1,0 +1,839 @@
+/* assets/css2/pages/why-inner-safety.css
+   VERSION: WHY-INNER-SAFETY CSS — v1.0
+   Scope: why-inner-safety.html only
+   Visual direction: Premium / Academic / Clean / Grounded
+   Does not modify shared Header / Mobile Menu / global Footer.
+*/
+
+.page--inner-safety{
+  --is-cream: #fffaf5;
+  --is-cream-2: #fbf2ea;
+  --is-panel: rgba(255,255,255,.94);
+  --is-text: #444044;
+  --is-muted: #6d666a;
+  --is-deep: #553f4b;
+  --is-plum: #7b285e;
+  --is-pink: #b33d98;
+  --is-gold: #c6ab66;
+  --is-gold-strong: #b38d38;
+  --is-line: rgba(198,171,102,.42);
+
+  background:
+    radial-gradient(circle at 8% 4%, rgba(240,195,217,.14), transparent 24%),
+    linear-gradient(180deg, #fffaf6 0%, #fff 24%, #fffaf6 100%);
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.page--inner-safety .innerSafetyPage{
+  padding-top: 72px;
+}
+
+.page--inner-safety .isContainer{
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.page--inner-safety .isContainer--reading{
+  max-width: 900px;
+}
+
+.page--inner-safety .isEyebrow{
+  margin-bottom: 10px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: .82rem;
+  line-height: 1.4;
+  letter-spacing: .15em;
+  font-weight: 700;
+
+  color: var(--is-gold-strong);
+}
+
+.page--inner-safety h1,
+.page--inner-safety h2,
+.page--inner-safety h3,
+.page--inner-safety p{
+  margin-top: 0;
+}
+
+.page--inner-safety p{
+  font-family: "Sarabun", sans-serif;
+  color: var(--is-text);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.page--inner-safety .isHero{
+  padding: 34px 0 70px;
+}
+
+.page--inner-safety .isPoster{
+  width: min(100%, 920px);
+  margin: 0 auto 34px;
+}
+
+.page--inner-safety .isPoster img{
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border: 1px solid rgba(198,171,102,.34);
+  border-radius: 26px;
+
+  background: #fff8f2;
+
+  box-shadow: 0 18px 52px rgba(74,52,56,.10);
+}
+
+.page--inner-safety .isPoster--hero{
+  width: min(100%, 980px);
+  margin-bottom: 42px;
+}
+
+.page--inner-safety .isIntro{
+  width: min(100%, 900px);
+  margin: 0 auto;
+
+  padding: clamp(24px, 4vw, 42px);
+
+  border: 1px solid var(--is-line);
+  border-radius: 28px;
+
+  background:
+    radial-gradient(circle at 92% 8%, rgba(223,121,190,.09), transparent 28%),
+    var(--is-panel);
+}
+
+.page--inner-safety .isIntro h1{
+  margin-bottom: 14px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(2.25rem, 5vw, 4.2rem);
+  line-height: 1.02;
+  font-weight: 700;
+
+  color: var(--is-plum);
+}
+
+.page--inner-safety .isIntro h2{
+  margin-bottom: 22px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.8rem, 3.4vw, 2.75rem);
+  line-height: 1.28;
+  font-weight: 700;
+
+  color: #3f3c40;
+}
+
+.page--inner-safety .isIntro p{
+  margin-bottom: 16px;
+
+  font-size: 1.13rem;
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+.page--inner-safety .isIntro .isLead{
+  font-size: 1.22rem;
+  line-height: 1.88;
+  color: #4e454b;
+}
+
+
+/* =========================================================
+   CHAPTERS
+   ========================================================= */
+
+.page--inner-safety .isChapter{
+  padding: 70px 0;
+}
+
+.page--inner-safety .isChapter--soft{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,250,246,.3),
+      rgba(250,238,235,.58),
+      rgba(255,250,246,.3)
+    );
+}
+
+.page--inner-safety .isChapter--closing{
+  padding-bottom: 84px;
+}
+
+.page--inner-safety .isChapterHead{
+  display: grid;
+  grid-template-columns: auto minmax(0,1fr);
+  gap: 18px;
+  align-items: start;
+
+  width: min(100%, 900px);
+  margin: 0 auto 28px;
+}
+
+.page--inner-safety .isChapterNo{
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba(198,171,102,.66);
+  border-radius: 50%;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: var(--is-gold-strong);
+  background: rgba(255,255,255,.82);
+}
+
+.page--inner-safety .isChapterHead h2{
+  margin: 0;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.3;
+  font-weight: 700;
+
+  color: #3f3c40;
+}
+
+.page--inner-safety .isReading{
+  width: min(100%, 900px);
+  margin: 0 auto;
+
+  padding: clamp(22px, 3vw, 34px);
+
+  border: 1px solid rgba(198,171,102,.35);
+  border-radius: 24px;
+
+  background: rgba(255,255,255,.90);
+}
+
+.page--inner-safety .isReading p{
+  margin-bottom: 16px;
+
+  font-size: 1.12rem;
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+.page--inner-safety .isReading p:last-child{
+  margin-bottom: 0;
+}
+
+.page--inner-safety .isReading--two{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 24px;
+}
+
+.page--inner-safety .isReading--two > div{
+  padding: 4px 6px;
+}
+
+.page--inner-safety .isReading--two h3{
+  margin-bottom: 10px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: 1.38rem;
+  line-height: 1.4;
+
+  color: var(--is-deep);
+}
+
+.page--inner-safety .isInsight{
+  margin-top: 24px;
+  padding: 18px 20px;
+
+  border-left: 3px solid var(--is-gold);
+  border-radius: 0 16px 16px 0;
+
+  background: rgba(198,171,102,.08);
+
+  font-family: "Sarabun", sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  font-weight: 500;
+
+  color: #4c4549;
+}
+
+.page--inner-safety .isInsight strong{
+  color: var(--is-plum);
+}
+
+.page--inner-safety .isQuote{
+  width: min(100%, 900px);
+  margin: 28px auto 0;
+
+  padding: 22px 26px;
+
+  border: 1px solid rgba(198,171,102,.46);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.96), rgba(251,240,246,.92));
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.25rem, 2.6vw, 1.65rem);
+  line-height: 1.7;
+  font-weight: 700;
+  text-align: center;
+
+  color: var(--is-plum);
+}
+
+
+/* =========================================================
+   TEXT SECTIONS
+   ========================================================= */
+
+.page--inner-safety .isTextSection{
+  padding: 72px 0;
+
+  border-top: 1px solid rgba(198,171,102,.22);
+  border-bottom: 1px solid rgba(198,171,102,.22);
+}
+
+.page--inner-safety .isTextSection h2{
+  margin-bottom: 24px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.9rem, 3.7vw, 3rem);
+  line-height: 1.3;
+  font-weight: 700;
+
+  color: #3f3c40;
+}
+
+.page--inner-safety .isTextSection p{
+  margin-bottom: 16px;
+
+  font-size: 1.13rem;
+  line-height: 1.92;
+  font-weight: 500;
+}
+
+.page--inner-safety .isTextSection .isStrong{
+  margin-top: 26px;
+
+  font-size: 1.24rem;
+  font-weight: 700;
+
+  color: var(--is-plum);
+}
+
+.page--inner-safety .isTextSection--dark{
+  background:
+    radial-gradient(circle at 10% 12%, rgba(190,144,93,.10), transparent 27%),
+    linear-gradient(145deg, #161719, #1d1d20);
+
+  border-color: rgba(198,171,102,.36);
+}
+
+.page--inner-safety .isTextSection--dark .isEyebrow{
+  color: #d8bd78;
+}
+
+.page--inner-safety .isTextSection--dark h2{
+  color: #f2ece8;
+}
+
+.page--inner-safety .isPillars{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 22px;
+
+  margin-top: 30px;
+}
+
+.page--inner-safety .isPillars article{
+  padding: 26px 22px;
+
+  border: 1px solid rgba(198,171,102,.34);
+  border-radius: 22px;
+
+  background: rgba(255,255,255,.045);
+}
+
+.page--inner-safety .isPillarNo{
+  margin-bottom: 18px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: .82rem;
+  letter-spacing: .14em;
+
+  color: #d8bd78;
+}
+
+.page--inner-safety .isPillars h3{
+  margin-bottom: 10px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.75rem;
+
+  color: #f3e9e4;
+}
+
+.page--inner-safety .isPillars p{
+  margin: 0;
+
+  font-size: 1.04rem;
+  line-height: 1.82;
+
+  color: rgba(242,236,232,.78);
+}
+
+
+/* =========================================================
+   PATHWAYS
+   ========================================================= */
+
+.page--inner-safety .isPathways{
+  padding: 78px 0;
+
+  background:
+    radial-gradient(circle at 10% 4%, rgba(229,125,190,.08), transparent 24%),
+    #fffaf6;
+}
+
+.page--inner-safety .isSectionHead{
+  width: min(100%, 840px);
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.page--inner-safety .isSectionHead h2{
+  margin-bottom: 14px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.9rem, 3.8vw, 3rem);
+  line-height: 1.3;
+
+  color: #3f3c40;
+}
+
+.page--inner-safety .isSectionHead p{
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--is-muted);
+}
+
+.page--inner-safety .isPathGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 24px;
+}
+
+.page--inner-safety .isPathCard{
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+  padding: clamp(24px, 3vw, 34px);
+
+  border: 1px solid rgba(198,171,102,.38);
+  border-radius: 26px;
+
+  background: rgba(255,255,255,.94);
+
+  box-shadow: 0 14px 34px rgba(64,44,50,.06);
+}
+
+.page--inner-safety .isPathCard--pink{
+  background:
+    radial-gradient(circle at 92% 5%, rgba(226,104,183,.12), transparent 28%),
+    #fff;
+}
+
+.page--inner-safety .isPathCard--gold{
+  background:
+    radial-gradient(circle at 92% 5%, rgba(198,171,102,.16), transparent 30%),
+    #fff;
+}
+
+.page--inner-safety .isPathKicker{
+  margin-bottom: 10px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: .78rem;
+  letter-spacing: .12em;
+  font-weight: 700;
+
+  color: var(--is-gold-strong);
+}
+
+.page--inner-safety .isPathCard h3{
+  margin-bottom: 10px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  line-height: 1.22;
+
+  color: #54474e;
+}
+
+.page--inner-safety .isPathThai{
+  margin-bottom: 14px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.65rem, 2.8vw, 2.2rem);
+  line-height: 1.3;
+  font-weight: 700;
+
+  color: var(--is-plum);
+}
+
+.page--inner-safety .isPathCard p{
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.page--inner-safety .isPathBadge{
+  align-self: flex-start;
+
+  margin-bottom: 14px !important;
+  padding: 7px 11px;
+
+  border: 1px solid rgba(198,171,102,.42);
+  border-radius: 999px;
+
+  background: rgba(198,171,102,.08);
+
+  font-weight: 700 !important;
+  color: #765b2a !important;
+}
+
+.page--inner-safety .isPathCard a{
+  display: inline-flex;
+  align-self: flex-start;
+
+  margin-top: auto;
+  padding-top: 14px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  color: #85662f;
+}
+
+.page--inner-safety .isPathCard a:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+/* =========================================================
+   SAFETY NOTICE
+   ========================================================= */
+
+.page--inner-safety .isSafetyNotice{
+  padding: 62px 0;
+
+  background: #f7f4f2;
+}
+
+.page--inner-safety .isSafetyNotice h2{
+  margin-bottom: 12px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+
+  color: #4b4749;
+}
+
+.page--inner-safety .isSafetyNotice p{
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.85;
+
+  color: #666064;
+}
+
+
+/* =========================================================
+   CONTACT / FOOTER
+   ========================================================= */
+
+.page--inner-safety .isContact{
+  padding: 64px 0 36px;
+}
+
+.page--inner-safety .isContactCard{
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: 28px;
+  align-items: center;
+
+  padding: clamp(24px, 3vw, 34px);
+
+  border: 1px solid rgba(198,171,102,.42);
+  border-radius: 26px;
+
+  background: #fff;
+}
+
+.page--inner-safety .isContactCard h2{
+  margin-bottom: 10px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+
+  color: #403c3f;
+}
+
+.page--inner-safety .isContactCard p{
+  margin-bottom: 0;
+
+  font-size: 1.05rem;
+  line-height: 1.78;
+  color: var(--is-muted);
+}
+
+.page--inner-safety .isContactActions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.page--inner-safety .isButton{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 10px 17px;
+
+  border: 1px solid rgba(198,171,102,.58);
+  border-radius: 999px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: .98rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  color: #765b2a;
+  background: #fff;
+}
+
+.page--inner-safety .isButton--primary{
+  background: #c6ab66;
+  border-color: #c6ab66;
+  color: #231f1a;
+}
+
+.page--inner-safety .isFooter{
+  padding: 28px 20px 36px;
+
+  border-top: 1px solid rgba(198,171,102,.28);
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: .92rem;
+  letter-spacing: .04em;
+  text-align: center;
+
+  color: #6f665f;
+}
+
+.page--inner-safety .isFooter span{
+  color: #a78742;
+}
+
+
+/* =========================================================
+   TABLET / iPAD
+   ========================================================= */
+
+@media (min-width: 721px) and (max-width: 980px){
+
+  .page--inner-safety .isContainer{
+    width: min(100% - 34px, 920px);
+  }
+
+  .page--inner-safety .isPoster,
+  .page--inner-safety .isPoster--hero{
+    width: min(100%, 820px);
+  }
+
+  .page--inner-safety .isReading--two{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .page--inner-safety .isPillars{
+    grid-template-columns: 1fr;
+  }
+
+  .page--inner-safety .isContactCard{
+    grid-template-columns: 1fr;
+  }
+
+  .page--inner-safety .isContactActions{
+    justify-content: flex-start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 720px){
+
+  .page--inner-safety .innerSafetyPage{
+    padding-top: 72px;
+  }
+
+  .page--inner-safety .isContainer{
+    width: calc(100% - 24px);
+  }
+
+  .page--inner-safety .isHero{
+    padding: 22px 0 48px;
+  }
+
+  .page--inner-safety .isPoster,
+  .page--inner-safety .isPoster--hero{
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .page--inner-safety .isPoster img{
+    border-radius: 18px;
+  }
+
+  .page--inner-safety .isIntro{
+    padding: 20px 17px;
+    border-radius: 20px;
+  }
+
+  .page--inner-safety .isIntro h1{
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .page--inner-safety .isIntro h2{
+    font-size: clamp(1.55rem, 7.5vw, 2.1rem);
+  }
+
+  .page--inner-safety .isIntro p,
+  .page--inner-safety .isIntro .isLead{
+    font-size: 1.06rem;
+    line-height: 1.82;
+  }
+
+  .page--inner-safety .isChapter{
+    padding: 52px 0;
+  }
+
+  .page--inner-safety .isChapterHead{
+    grid-template-columns: 42px minmax(0,1fr);
+    gap: 13px;
+    margin-bottom: 22px;
+  }
+
+  .page--inner-safety .isChapterNo{
+    width: 42px;
+    height: 42px;
+  }
+
+  .page--inner-safety .isChapterHead h2{
+    font-size: clamp(1.55rem, 7vw, 2.05rem);
+  }
+
+  .page--inner-safety .isReading{
+    padding: 20px 17px;
+    border-radius: 20px;
+  }
+
+  .page--inner-safety .isReading p{
+    font-size: 1.06rem;
+    line-height: 1.84;
+  }
+
+  .page--inner-safety .isReading--two{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .page--inner-safety .isQuote{
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .page--inner-safety .isTextSection{
+    padding: 54px 0;
+  }
+
+  .page--inner-safety .isTextSection p{
+    font-size: 1.06rem;
+    line-height: 1.86;
+  }
+
+  .page--inner-safety .isPillars{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .page--inner-safety .isPathways{
+    padding: 56px 0;
+  }
+
+  .page--inner-safety .isPathGrid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .page--inner-safety .isPathCard{
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  .page--inner-safety .isSafetyNotice{
+    padding: 48px 0;
+  }
+
+  .page--inner-safety .isContact{
+    padding: 48px 0 28px;
+  }
+
+  .page--inner-safety .isContactCard{
+    grid-template-columns: 1fr;
+    padding: 20px 17px;
+    border-radius: 20px;
+  }
+
+  .page--inner-safety .isContactActions{
+    justify-content: flex-start;
+  }
+
+  .page--inner-safety .isButton{
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce){
+  .page--inner-safety *{
+    scroll-behavior: auto !important;
+  }
+}
