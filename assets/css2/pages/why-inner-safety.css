@@ -29,15 +29,20 @@
    ========================================================= */
 
 .page--inner-safety .innerSafetyPage{
+  position: relative;
   padding-top: 72px;
-  background:
-    linear-gradient(
-      to bottom,
-      #0b0b0c 0,
-      #0b0b0c 72px,
-      transparent 72px,
-      transparent 100%
-    );
+}
+
+.page--inner-safety .innerSafetyPage::before{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 72px;
+  background: #0b0b0c;
+  content: "";
+  pointer-events: none;
+  transform: translateX(-50%);
 }
 
 .page--inner-safety .isContainer{
