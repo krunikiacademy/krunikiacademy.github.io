@@ -30,6 +30,14 @@
 
 .page--inner-safety .innerSafetyPage{
   padding-top: 72px;
+  background:
+    linear-gradient(
+      to bottom,
+      #0b0b0c 0,
+      #0b0b0c 72px,
+      transparent 72px,
+      transparent 100%
+    );
 }
 
 .page--inner-safety .isContainer{
