@@ -525,6 +525,50 @@
   }
 }
 
+/* =========================================================
+   REDUCED MOTION
+เพิ่ม:
+/* =========================================================
+   HOME FEATURE VISUAL
+   Desktop / iPad = Banner
+   Mobile = Poster
+   ========================================================= */
+
+.page--index-heart .homeFeatureVisual{
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.page--index-heart .homeFeatureVisual picture{
+  display: block;
+  width: 100%;
+}
+
+.page--index-heart .homeFeatureVisual img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  margin: 0;
+}
+
+/* Mobile Poster */
+@media (max-width: 720px){
+
+  .page--index-heart .homeFeatureVisual{
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .page--index-heart .homeFeatureVisual img{
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+}
 
 /* =========================================================
    REDUCED MOTION
