@@ -1,773 +1,692 @@
-/* assets/css2/pages/why-inner-safety.css
-   VERSION: WHY-INNER-SAFETY CSS — v1.2
-   Scope: why-inner-safety.html only
-   Visual direction: Premium / Academic / Clean / Grounded
-   Does not modify shared Header / Mobile Menu / global Footer.
-*/
+ heart-field-90-day.css ( Codex แก้ไขแถบดำทึบ ทับ ค่อมรางเลื่อน )
 
-.page--inner-safety{
-  --is-cream: #fffaf5;
-  --is-cream-2: #fbf2ea;
-  --is-panel: rgba(255,255,255,.94);
-  --is-text: #444044;
-  --is-muted: #6d666a;
-  --is-deep: #553f4b;
-  --is-plum: #7b285e;
-  --is-pink: #b33d98;
-  --is-gold: #c6ab66;
-  --is-gold-strong: #b38d38;
-  --is-line: rgba(198,171,102,.42);
+/* KRUNIKI® | The Heart Field Activation™ — 90-Day Program */
 
-  background:
-    radial-gradient(circle at 8% 4%, rgba(240,195,217,.14), transparent 24%),
-    linear-gradient(180deg, #fffaf6 0%, #fff 24%, #fffaf6 100%);
+body.hfa90Page {
+  --hfa-pink: #f7dce9;
+  --hfa-pink-soft: #fff7fa;
+  --hfa-rose: #ba6d88;
+  --hfa-gold: #c6ab66;
+  --hfa-gold-dark: #9b742f;
+  --hfa-gold-deep: #b59348;
+  --hfa-brown: #5b493f;
+  --hfa-ink: #332b28;
+  --hfa-text: #443b37;
+  --hfa-text-soft: #554944;
+  --hfa-line: rgba(198, 171, 102, 0.38);
+  --hfa-shadow: 0 20px 44px rgba(83, 62, 54, 0.11);
+  margin: 0;
+  color: var(--hfa-ink);
+  background: #fffafc !important;
 }
 
-
-/* =========================================================
-   ARCHITECTURE v1.2
-   - Header / Mobile Menu remain from the existing KRUNIKI template.
-   - The solid black 72px band belongs to <main> document flow.
-   - It is NOT created with body::before / header pseudo-elements.
-   - The band ends at the page content width and does not cover the scrollbar.
-   - KRUNIKI® brand text uses Times New Roman only.
-   ========================================================= */
-
-
-/* =========================================================
-   TOP BAND — SAME ROOT PATTERN AS HEART FIELD 90-DAY
-   ========================================================= */
-
-.page--inner-safety main.wrap{
+body.hfa90Page main {
   display: block;
   width: 100%;
   max-width: none;
   margin: 0;
-
   padding-right: 0 !important;
   padding-left: 0 !important;
-
   overflow: hidden;
-
+  color: var(--hfa-ink);
   background:
     linear-gradient(
       to bottom,
       #0b0b0c 0,
       #0b0b0c 72px,
-      #fffaf6 72px,
-      #fffaf6 100%
+      #fffafc 72px,
+      #fffafc 100%
     );
 }
 
-
-/* =========================================================
-   KRUNIKI® BRAND TYPOGRAPHY — TIMES NEW ROMAN ONLY
-   ========================================================= */
-
-.page--inner-safety .brandText,
-.page--inner-safety .krBrand,
-.page--inner-safety footer{
-  font-family: "Times New Roman", Times, serif !important;
+body.hfa90Page main *,
+body.hfa90Page main *::before,
+body.hfa90Page main *::after {
+  box-sizing: border-box;
 }
 
-.page--inner-safety .krBrand{
-  font-style: normal;
-  letter-spacing: normal;
+body.hfa90Page main img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* =========================================================
-   BASE
-   ========================================================= */
-
-.page--inner-safety .isContainer{
-  width: min(1180px, calc(100% - 40px));
+body.hfa90Page .hfaContainer {
+  width: min(1120px, calc(100% - 32px));
   margin-inline: auto;
 }
 
-.page--inner-safety .isContainer--reading{
-  max-width: 900px;
-}
-
-.page--inner-safety .isEyebrow{
-  margin-bottom: 10px;
-
+/* Typography */
+body.hfa90Page .hfaEyebrow {
+  margin: 0 0 14px;
+  color: var(--hfa-gold-dark) !important;
   font-family: "Times New Roman", Times, serif;
-  font-size: .82rem;
-  line-height: 1.4;
-  letter-spacing: .15em;
+  font-size: 17px;
   font-weight: 700;
-
-  color: var(--is-gold-strong);
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  opacity: 1 !important;
 }
 
-.page--inner-safety h1,
-.page--inner-safety h2,
-.page--inner-safety h3,
-.page--inner-safety p{
-  margin-top: 0;
+body.hfa90Page .hfaTitle {
+  margin: 0;
+  color: var(--hfa-brown) !important;
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(36px, 5.4vw, 68px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.03;
 }
 
-.page--inner-safety p{
-  font-family: "Sarabun", sans-serif;
-  color: var(--is-text);
+body.hfa90Page .hfaTitleThai {
+  display: block;
+  margin-top: 18px;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
 }
 
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.page--inner-safety .isHero{
-  padding: 34px 0 70px;
+body.hfa90Page .hfaHeading,
+body.hfa90Page .hfaSubheading {
+  margin: 0;
+  color: var(--hfa-brown) !important;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
 }
 
-.page--inner-safety .isPoster{
-  width: min(100%, 920px);
-  margin: 0 auto 34px;
+body.hfa90Page .hfaHeading {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.18;
 }
 
-.page--inner-safety .isPoster img{
+body.hfa90Page .hfaSubheading {
+  font-size: clamp(22px, 2.7vw, 30px);
+  line-height: 1.3;
+}
+
+body.hfa90Page .hfaLead {
+  max-width: 760px;
+  margin: 20px 0 0;
+  color: var(--hfa-text) !important;
+  font-size: clamp(19px, 2vw, 21px);
+  line-height: 1.9;
+  opacity: 1 !important;
+}
+
+body.hfa90Page .hfaBody {
+  margin: 14px 0 0;
+  color: var(--hfa-text) !important;
+  font-size: 18px;
+  line-height: 1.9;
+  opacity: 1 !important;
+}
+
+body.hfa90Page .hfaCenter { text-align: center; }
+body.hfa90Page .hfaCenter .hfaLead { margin-inline: auto; }
+
+/* Sections */
+body.hfa90Page .hfaSection {
+  width: 100%;
+  padding: 72px 0;
+  color: var(--hfa-ink);
+  background: #fffdfd;
+}
+
+body.hfa90Page .hfaSectionSoft {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(247, 220, 233, 0.68), transparent 34%),
+    linear-gradient(180deg, #fffdfd 0%, #fff7fa 100%) !important;
+}
+
+body.hfa90Page .hfaSectionGold {
+  background: linear-gradient(135deg, rgba(244, 234, 208, 0.92), rgba(255, 250, 245, 0.98)) !important;
+}
+
+/* Hero */
+body.hfa90Page .hfaHero {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  margin-left: -50vw;
+  padding: 0;
+  overflow: visible;
+  background: #fff7fa;
+}
+
+body.hfa90Page .hfaHeroBanner {
   display: block;
   width: 100%;
+  max-width: none;
   height: auto;
-
-  border: 1px solid rgba(198,171,102,.34);
-  border-radius: 26px;
-
-  background: #fff8f2;
-
-  box-shadow: 0 18px 52px rgba(74,52,56,.10);
-}
-
-.page--inner-safety .isPoster--hero{
-  width: min(100%, 980px);
-  margin-bottom: 42px;
-}
-
-.page--inner-safety .isIntro{
-  width: min(100%, 900px);
-  margin: 0 auto;
-
-  padding: clamp(24px, 4vw, 42px);
-
-  border: 1px solid var(--is-line);
-  border-radius: 28px;
-
-  background:
-    radial-gradient(circle at 92% 8%, rgba(223,121,190,.09), transparent 28%),
-    var(--is-panel);
-}
-
-.page--inner-safety .isIntro h1{
-  margin-bottom: 14px;
-
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(2.25rem, 5vw, 4.2rem);
-  line-height: 1.02;
-  font-weight: 700;
-
-  color: var(--is-plum);
-}
-
-.page--inner-safety .isIntro h2{
-  margin-bottom: 22px;
-
-  font-family: "Sarabun", sans-serif;
-  font-size: clamp(1.8rem, 3.4vw, 2.75rem);
-  line-height: 1.28;
-  font-weight: 700;
-
-  color: #3f3c40;
-}
-
-.page--inner-safety .isIntro p{
-  margin-bottom: 16px;
-
-  font-size: 1.13rem;
-  line-height: 1.9;
-  font-weight: 500;
-}
-
-.page--inner-safety .isIntro .isLead{
-  font-size: 1.22rem;
-  line-height: 1.88;
-  color: #4e454b;
-}
-
-
-/* =========================================================
-   CHAPTERS
-   ========================================================= */
-
-.page--inner-safety .isChapter{
-  padding: 70px 0;
-}
-
-.page--inner-safety .isChapter--soft{
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,250,246,.3),
-      rgba(250,238,235,.58),
-      rgba(255,250,246,.3)
-    );
-}
-
-.page--inner-safety .isChapter--closing{
-  padding-bottom: 84px;
-}
-
-.page--inner-safety .isChapterHead{
-  display: grid;
-  grid-template-columns: auto minmax(0,1fr);
-  gap: 18px;
-  align-items: start;
-
-  width: min(100%, 900px);
-  margin: 0 auto 28px;
-}
-
-.page--inner-safety .isChapterNo{
-  display: grid;
-  place-items: center;
-
-  width: 48px;
-  height: 48px;
-
-  border: 1px solid rgba(198,171,102,.66);
-  border-radius: 50%;
-
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1rem;
-  font-weight: 700;
-
-  color: var(--is-gold-strong);
-  background: rgba(255,255,255,.82);
-}
-
-.page--inner-safety .isChapterHead h2{
   margin: 0;
-
-  font-family: "Sarabun", sans-serif;
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  line-height: 1.3;
-  font-weight: 700;
-
-  color: #3f3c40;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
 }
 
-.page--inner-safety .isReading{
-  width: min(100%, 900px);
-  margin: 0 auto;
-
-  padding: clamp(22px, 3vw, 34px);
-
-  border: 1px solid rgba(198,171,102,.35);
-  border-radius: 24px;
-
-  background: rgba(255,255,255,.90);
-}
-
-.page--inner-safety .isReading p{
-  margin-bottom: 16px;
-
-  font-size: 1.12rem;
-  line-height: 1.9;
-  font-weight: 500;
-}
-
-.page--inner-safety .isReading p:last-child{
-  margin-bottom: 0;
-}
-
-.page--inner-safety .isReading--two{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 24px;
-}
-
-.page--inner-safety .isReading--two > div{
-  padding: 4px 6px;
-}
-
-.page--inner-safety .isReading--two h3{
-  margin-bottom: 10px;
-
-  font-family: "Sarabun", sans-serif;
-  font-size: 1.38rem;
-  line-height: 1.4;
-
-  color: var(--is-deep);
-}
-
-.page--inner-safety .isInsight{
-  margin-top: 24px;
-  padding: 18px 20px;
-
-  border-left: 3px solid var(--is-gold);
-  border-radius: 0 16px 16px 0;
-
-  background: rgba(198,171,102,.08);
-
-  font-family: "Sarabun", sans-serif;
-  font-size: 1.08rem;
-  line-height: 1.85;
-  font-weight: 500;
-
-  color: #4c4549;
-}
-
-.page--inner-safety .isInsight strong{
-  color: var(--is-plum);
-}
-
-.page--inner-safety .isQuote{
-  width: min(100%, 900px);
-  margin: 28px auto 0;
-
-  padding: 22px 26px;
-
-  border: 1px solid rgba(198,171,102,.46);
-  border-radius: 22px;
-
+body.hfa90Page .hfaIntro {
   background:
-    linear-gradient(135deg, rgba(255,255,255,.96), rgba(251,240,246,.92));
-
-  font-family: "Sarabun", sans-serif;
-  font-size: clamp(1.25rem, 2.6vw, 1.65rem);
-  line-height: 1.7;
-  font-weight: 700;
-  text-align: center;
-
-  color: var(--is-plum);
+    radial-gradient(circle at 82% 20%, rgba(247, 220, 233, 0.88), transparent 31%),
+    radial-gradient(circle at 8% 82%, rgba(244, 234, 208, 0.82), transparent 30%),
+    linear-gradient(145deg, #fffefe 0%, #fff8fb 55%, #fffdf8 100%);
 }
 
-
-/* =========================================================
-   TEXT SECTIONS
-   ========================================================= */
-
-.page--inner-safety .isTextSection{
-  padding: 72px 0;
-
-  border-top: 1px solid rgba(198,171,102,.22);
-  border-bottom: 1px solid rgba(198,171,102,.22);
-}
-
-.page--inner-safety .isTextSection h2{
-  margin-bottom: 24px;
-
-  font-family: "Sarabun", sans-serif;
-  font-size: clamp(1.9rem, 3.7vw, 3rem);
-  line-height: 1.3;
-  font-weight: 700;
-
-  color: #3f3c40;
-}
-
-.page--inner-safety .isTextSection p{
-  margin-bottom: 16px;
-
-  font-size: 1.13rem;
-  line-height: 1.92;
-  font-weight: 500;
-}
-
-.page--inner-safety .isTextSection .isStrong{
-  margin-top: 26px;
-
-  font-size: 1.24rem;
-  font-weight: 700;
-
-  color: var(--is-plum);
-}
-
-.page--inner-safety .isTextSection--dark{
-  background:
-    radial-gradient(circle at 10% 12%, rgba(190,144,93,.10), transparent 27%),
-    linear-gradient(145deg, #161719, #1d1d20);
-
-  border-color: rgba(198,171,102,.36);
-}
-
-.page--inner-safety .isTextSection--dark .isEyebrow{
-  color: #d8bd78;
-}
-
-.page--inner-safety .isTextSection--dark h2{
-  color: #f2ece8;
-}
-
-.page--inner-safety .isPillars{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 22px;
-
-  margin-top: 30px;
-}
-
-.page--inner-safety .isPillars article{
-  padding: 26px 22px;
-
-  border: 1px solid rgba(198,171,102,.34);
-  border-radius: 22px;
-
-  background: rgba(255,255,255,.045);
-}
-
-.page--inner-safety .isPillarNo{
-  margin-bottom: 18px;
-
-  font-family: "Times New Roman", Times, serif;
-  font-size: .82rem;
-  letter-spacing: .14em;
-
-  color: #d8bd78;
-}
-
-.page--inner-safety .isPillars h3{
-  margin-bottom: 10px;
-
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.75rem;
-
-  color: #f3e9e4;
-}
-
-.page--inner-safety .isPillars p{
-  margin: 0;
-
-  font-size: 1.04rem;
-  line-height: 1.82;
-
-  color: rgba(242,236,232,.78);
-}
-
-
-/* =========================================================
-   PATHWAYS
-   ========================================================= */
-
-.page--inner-safety .isPathways{
-  padding: 78px 0;
-
-  background:
-    radial-gradient(circle at 10% 4%, rgba(229,125,190,.08), transparent 24%),
-    #fffaf6;
-}
-
-.page--inner-safety .isSectionHead{
-  width: min(100%, 840px);
-  margin: 0 auto 30px;
+body.hfa90Page .hfaIntroContent {
+  max-width: 900px;
+  margin-inline: auto;
   text-align: center;
 }
 
-.page--inner-safety .isSectionHead h2{
-  margin-bottom: 14px;
-
-  font-family: "Sarabun", sans-serif;
-  font-size: clamp(1.9rem, 3.8vw, 3rem);
-  line-height: 1.3;
-
-  color: #3f3c40;
+body.hfa90Page .hfaIntroContent .hfaLead {
+  margin-inline: auto;
 }
 
-.page--inner-safety .isSectionHead p{
-  font-size: 1.08rem;
-  line-height: 1.85;
-  color: var(--is-muted);
+body.hfa90Page .hfaIntroContent .hfaActions {
+  justify-content: center;
 }
 
-.page--inner-safety .isPathGrid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 24px;
+body.hfa90Page .hfaIntroContent .hfaHeroNote {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: left;
 }
 
-.page--inner-safety .isPathCard{
-  display: flex;
-  flex-direction: column;
-
-  min-height: 100%;
-  padding: clamp(24px, 3vw, 34px);
-
-  border: 1px solid rgba(198,171,102,.38);
-  border-radius: 26px;
-
-  background: rgba(255,255,255,.94);
-
-  box-shadow: 0 14px 34px rgba(64,44,50,.06);
-}
-
-.page--inner-safety .isPathCard--pink{
-  background:
-    radial-gradient(circle at 92% 5%, rgba(226,104,183,.12), transparent 28%),
-    #fff;
-}
-
-.page--inner-safety .isPathCard--gold{
-  background:
-    radial-gradient(circle at 92% 5%, rgba(198,171,102,.16), transparent 30%),
-    #fff;
-}
-
-.page--inner-safety .isPathKicker{
-  margin-bottom: 10px;
-
-  font-family: "Times New Roman", Times, serif;
-  font-size: .78rem;
-  letter-spacing: .12em;
-  font-weight: 700;
-
-  color: var(--is-gold-strong);
-}
-
-.page--inner-safety .isPathCard h3{
-  margin-bottom: 10px;
-
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
-  line-height: 1.22;
-
-  color: #54474e;
-}
-
-.page--inner-safety .isPathThai{
-  margin-bottom: 14px;
-
-  font-family: "Sarabun", sans-serif;
-  font-size: clamp(1.65rem, 2.8vw, 2.2rem);
-  line-height: 1.3;
-  font-weight: 700;
-
-  color: var(--is-plum);
-}
-
-.page--inner-safety .isPathCard p{
-  font-size: 1.05rem;
+body.hfa90Page .hfaHeroNote {
+  margin: 22px 0 0;
+  padding-left: 16px;
+  border-left: 2px solid var(--hfa-gold);
+  color: var(--hfa-text-soft) !important;
+  font-size: 17px;
   line-height: 1.8;
 }
 
-.page--inner-safety .isPathBadge{
-  align-self: flex-start;
-
-  margin-bottom: 14px !important;
-  padding: 7px 11px;
-
-  border: 1px solid rgba(198,171,102,.42);
-  border-radius: 999px;
-
-  background: rgba(198,171,102,.08);
-
-  font-weight: 700 !important;
-  color: #765b2a !important;
+/* Buttons */
+body.hfa90Page .hfaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
 }
 
-.page--inner-safety .isPathCard a{
+body.hfa90Page .hfaButton {
   display: inline-flex;
-  align-self: flex-start;
-
-  margin-top: auto;
-  padding-top: 14px;
-
-  font-family: "Sarabun", sans-serif;
-  font-size: 1rem;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border: 1px solid var(--hfa-gold) !important;
+  border-radius: 999px;
+  color: var(--hfa-brown) !important;
+  background: rgba(255, 255, 255, 0.78) !important;
   font-weight: 700;
-  text-decoration: none;
-
-  color: #85662f;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none !important;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.page--inner-safety .isPathCard a:hover{
-  text-decoration: underline;
-  text-underline-offset: 4px;
+body.hfa90Page .hfaButton:hover,
+body.hfa90Page .hfaButton:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(90, 63, 51, 0.12);
 }
 
-
-/* =========================================================
-   SAFETY NOTICE
-   ========================================================= */
-
-.page--inner-safety .isSafetyNotice{
-  padding: 62px 0;
-
-  background: #f7f4f2;
+body.hfa90Page .hfaButtonPrimary {
+  color: #fff !important;
+  background: linear-gradient(135deg, var(--hfa-gold), var(--hfa-gold-deep)) !important;
 }
 
-.page--inner-safety .isSafetyNotice h2{
-  margin-bottom: 12px;
-
-  font-family: "Sarabun", sans-serif;
-  font-size: clamp(1.55rem, 3vw, 2.2rem);
-
-  color: #4b4749;
+body.hfa90Page .hfaButtonSoft {
+  border-color: rgba(186, 109, 136, 0.5) !important;
+  background: rgba(247, 220, 233, 0.54) !important;
 }
 
-.page--inner-safety .isSafetyNotice p{
+/* Stats and grids */
+body.hfa90Page .hfaStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+body.hfa90Page .hfaStat {
+  padding: 22px 18px;
+  border: 1px solid var(--hfa-line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  text-align: center;
+}
+
+body.hfa90Page .hfaStat strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--hfa-gold-dark) !important;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+body.hfa90Page .hfaStat span {
+  color: var(--hfa-text-soft) !important;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+body.hfa90Page .hfaGrid2,
+body.hfa90Page .hfaGrid3,
+body.hfa90Page .hfaGrid4 {
+  display: grid;
+  gap: 20px;
+  margin-top: 34px;
+}
+
+body.hfa90Page .hfaGrid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+body.hfa90Page .hfaGrid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+body.hfa90Page .hfaGrid4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+body.hfa90Page .hfaGrid2 > *,
+body.hfa90Page .hfaGrid3 > *,
+body.hfa90Page .hfaGrid4 > * { min-width: 0; }
+
+/* Cards */
+body.hfa90Page .hfaCard {
+  height: 100%;
+  padding: 26px;
+  border: 1px solid var(--hfa-line);
+  border-radius: 22px;
+  color: var(--hfa-ink);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 14px 32px rgba(83, 62, 54, 0.07);
+}
+
+body.hfa90Page .hfaCardNumber {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  color: #fff !important;
+  background: linear-gradient(135deg, var(--hfa-gold), var(--hfa-gold-deep));
+  font-family: "Times New Roman", Times, serif;
+  font-size: 19px;
+}
+
+body.hfa90Page .hfaCard h3 {
   margin: 0;
+  color: var(--hfa-brown) !important;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.35;
+}
 
-  font-size: 1rem;
+body.hfa90Page .hfaCard p {
+  margin: 12px 0 0;
+  color: var(--hfa-text) !important;
+  font-size: 17px;
   line-height: 1.85;
-
-  color: #666064;
+  opacity: 1 !important;
 }
 
-
-/* =========================================================
-   TABLET / iPAD
-   ========================================================= */
-
-@media (min-width: 721px) and (max-width: 980px){
-
-  .page--inner-safety .isContainer{
-    width: min(100% - 34px, 920px);
-  }
-
-  .page--inner-safety .isPoster,
-  .page--inner-safety .isPoster--hero{
-    width: min(100%, 820px);
-  }
-
-  .page--inner-safety .isReading--two{
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .page--inner-safety .isPillars{
-    grid-template-columns: 1fr;
-  }
-
-
+/* Lists */
+body.hfa90Page .hfaList {
+  display: grid;
+  gap: 13px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
+body.hfa90Page .hfaList {
+  counter-reset: hfa-list;
+}
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+body.hfa90Page .hfaList li {
+  counter-increment: hfa-list;
+  position: relative;
+  padding-left: 42px;
+  color: var(--hfa-text) !important;
+  font-size: 18px;
+  line-height: 1.85;
+  opacity: 1 !important;
+}
 
-@media (max-width: 720px){
+body.hfa90Page .hfaList li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--hfa-gold-dark);
+  content: counter(hfa-list, decimal-leading-zero);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  font-weight: 700;
+}
 
+/* Posters */
+body.hfa90Page .hfaPoster {
+  overflow: hidden;
+  margin: 38px 0 0;
+  border: 1px solid var(--hfa-line);
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: var(--hfa-shadow);
+}
 
-  .page--inner-safety .isContainer{
-    width: calc(100% - 24px);
+body.hfa90Page .hfaPoster img { width: 100%; }
+
+body.hfa90Page .hfaPoster[hidden] { display: none !important; }
+
+/* Journey */
+body.hfa90Page .hfaJourney {
+  position: relative;
+  padding-left: 28px;
+}
+
+body.hfa90Page .hfaJourney::before {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 7px;
+  width: 1px;
+  background: linear-gradient(var(--hfa-gold), rgba(198, 171, 102, 0.18));
+  content: "";
+}
+
+body.hfa90Page .hfaJourneyItem {
+  position: relative;
+  padding: 0 0 32px 26px;
+}
+
+body.hfa90Page .hfaJourneyItem:last-child { padding-bottom: 0; }
+
+body.hfa90Page .hfaJourneyItem::before {
+  position: absolute;
+  top: 7px;
+  left: -27px;
+  width: 14px;
+  height: 14px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: var(--hfa-gold);
+  box-shadow: 0 0 0 1px var(--hfa-gold);
+  content: "";
+}
+
+body.hfa90Page .hfaJourneyItem h3 {
+  margin: 0;
+  color: var(--hfa-brown) !important;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+body.hfa90Page .hfaJourneyItem p {
+  margin: 8px 0 0;
+  color: var(--hfa-text) !important;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+/* Founder Circle */
+body.hfa90Page .hfaFounder {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+  gap: 34px;
+  align-items: center;
+  padding: 38px;
+  border: 1px solid rgba(198, 171, 102, 0.5);
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(247, 220, 233, 0.62));
+  box-shadow: 0 22px 48px rgba(83, 62, 54, 0.1);
+}
+
+body.hfa90Page .hfaPriceBox {
+  padding: 28px;
+  border: 1px solid rgba(198, 171, 102, 0.45);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  text-align: center;
+}
+
+body.hfa90Page .hfaPriceLabel {
+  margin: 0;
+  color: var(--hfa-rose) !important;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.hfa90Page .hfaPrice {
+  margin: 12px 0 4px;
+  color: var(--hfa-gold-dark) !important;
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(44px, 6vw, 64px);
+  line-height: 1;
+}
+
+body.hfa90Page .hfaPriceUnit {
+  margin: 0;
+  color: var(--hfa-text-soft) !important;
+  font-size: 16px;
+}
+
+/* FAQ and notice */
+body.hfa90Page .hfaFaq {
+  display: grid;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+body.hfa90Page .hfaFaq details {
+  padding: 20px 22px;
+  border: 1px solid var(--hfa-line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+body.hfa90Page .hfaFaq summary {
+  color: var(--hfa-brown) !important;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+body.hfa90Page .hfaFaq p {
+  margin: 14px 0 0;
+  color: var(--hfa-text) !important;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+body.hfa90Page .hfaNotice {
+  margin-top: 28px;
+  padding: 22px;
+  border: 1px solid rgba(198, 171, 102, 0.35);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.84);
+}
+
+body.hfa90Page .hfaNotice p {
+  margin: 0;
+  color: var(--hfa-text-soft) !important;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+/* Closing and footer */
+body.hfa90Page .hfaClosing {
+  width: 100%;
+  padding: 76px 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(247, 220, 233, 0.75), transparent 34%),
+    linear-gradient(135deg, #fffafc, #fffdf7);
+}
+
+body.hfa90Page .hfaClosingCard {
+  padding: 46px 32px;
+  border: 1px solid rgba(198, 171, 102, 0.48);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 24px 56px rgba(83, 62, 54, 0.1);
+  text-align: center;
+}
+
+body.hfa90Page .hfaClosingCard .hfaLead { margin-inline: auto; }
+body.hfa90Page .hfaClosingCard .hfaActions { justify-content: center; }
+
+body.hfa90Page footer {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 26px 16px;
+  color: rgba(245, 246, 248, 0.92) !important;
+  background: #0f1114 !important;
+  text-align: center;
+}
+
+body.hfa90Page footer .gold { color: var(--hfa-gold) !important; }
+
+/* This page only: restore the real hidden state overridden by legacy style.css. */
+body.hfa90Page #menuBackdrop[hidden] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* When the menu is open, keep the click-to-close layer but remove its dark veil. */
+body.hfa90Page #menuBackdrop {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  z-index: 9998 !important;
+}
+
+/* Keep the open mobile menu above both backdrop and header on this page only. */
+body.hfa90Page #mobileMenu {
+  z-index: 10030 !important;
+}
+
+/* Mobile menu text only — keep every other header/menu style unchanged. */
+@media (max-width: 1024px) {
+  body.hfa90Page #mobileMenu a,
+  body.hfa90Page #mobileMenu a span {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    opacity: 1 !important;
   }
 
-  .page--inner-safety .isHero{
-    padding: 22px 0 48px;
+  body.hfa90Page #mobileMenu a:active,
+  body.hfa90Page #mobileMenu a:focus-visible,
+  body.hfa90Page #mobileMenu a:active span,
+  body.hfa90Page #mobileMenu a:focus-visible span {
+    color: var(--hfa-gold, #c6ab66) !important;
+    -webkit-text-fill-color: var(--hfa-gold, #c6ab66) !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  body.hfa90Page .hfaFounder { grid-template-columns: 1fr; }
+
+  body.hfa90Page .hfaGrid3,
+  body.hfa90Page .hfaGrid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* Founder Circle only: remove stacked top spacing and use the screen width. */
+  body.hfa90Page #founder-circle {
+    padding-top: 18px;
   }
 
-  .page--inner-safety .isPoster,
-  .page--inner-safety .isPoster--hero{
+  body.hfa90Page #founder-circle > .hfaContainer > .hfaPoster.hfaWide:first-child {
+    width: 100vw;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: calc(50% - 50vw);
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  body.hfa90Page #founder-circle > .hfaContainer > .hfaPoster.hfaWide:first-child img {
     width: 100%;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  body.hfa90Page .hfaContainer { width: min(100% - 24px, 1120px); }
+
+  /* Mobile readability */
+  body.hfa90Page .hfaLead {
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  body.hfa90Page .hfaBody,
+  body.hfa90Page .hfaCard p,
+  body.hfa90Page .hfaList li,
+  body.hfa90Page .hfaJourneyItem p,
+  body.hfa90Page .hfaFaq p {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+  body.hfa90Page .hfaStat span,
+  body.hfa90Page .hfaNotice p,
+  body.hfa90Page .hfaPriceUnit {
+    font-size: 16px;
+  }
+
+  body.hfa90Page .hfaFaq summary {
+    font-size: 18px;
+  }
+  body.hfa90Page .hfaSection { padding: 54px 0; }
+
+  body.hfa90Page .hfaEyebrow {
+    margin-bottom: 10px;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+  }
+
+
+  body.hfa90Page .hfaStats,
+  body.hfa90Page .hfaGrid2,
+  body.hfa90Page .hfaGrid3,
+  body.hfa90Page .hfaGrid4 { grid-template-columns: 1fr; }
+
+  body.hfa90Page .hfaFounder { padding: 24px 18px; }
+  body.hfa90Page .hfaCard { padding: 22px 19px; }
+  body.hfa90Page .hfaClosingCard { padding: 36px 20px; }
+  body.hfa90Page .hfaActions { flex-direction: column; }
+  body.hfa90Page .hfaButton { width: 100%; }
+
+  /* A 16:9 banner becomes too short on phones. Use a taller window and
+     center the meaningful artwork; this affects Founder Circle only. */
+  body.hfa90Page #founder-circle {
+    padding-top: 10px;
+  }
+
+  body.hfa90Page #founder-circle > .hfaContainer > .hfaPoster.hfaWide:first-child {
+    aspect-ratio: 4 / 3;
     margin-bottom: 24px;
   }
 
-  .page--inner-safety .isPoster img{
-    border-radius: 18px;
+  body.hfa90Page #founder-circle > .hfaContainer > .hfaPoster.hfaWide:first-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 58%;
   }
-
-  .page--inner-safety .isIntro{
-    padding: 20px 17px;
-    border-radius: 20px;
-  }
-
-  .page--inner-safety .isIntro h1{
-    font-size: clamp(2rem, 11vw, 3rem);
-  }
-
-  .page--inner-safety .isIntro h2{
-    font-size: clamp(1.55rem, 7.5vw, 2.1rem);
-  }
-
-  .page--inner-safety .isIntro p,
-  .page--inner-safety .isIntro .isLead{
-    font-size: 1.06rem;
-    line-height: 1.82;
-  }
-
-  .page--inner-safety .isChapter{
-    padding: 52px 0;
-  }
-
-  .page--inner-safety .isChapterHead{
-    grid-template-columns: 42px minmax(0,1fr);
-    gap: 13px;
-    margin-bottom: 22px;
-  }
-
-  .page--inner-safety .isChapterNo{
-    width: 42px;
-    height: 42px;
-  }
-
-  .page--inner-safety .isChapterHead h2{
-    font-size: clamp(1.55rem, 7vw, 2.05rem);
-  }
-
-  .page--inner-safety .isReading{
-    padding: 20px 17px;
-    border-radius: 20px;
-  }
-
-  .page--inner-safety .isReading p{
-    font-size: 1.06rem;
-    line-height: 1.84;
-  }
-
-  .page--inner-safety .isReading--two{
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .page--inner-safety .isQuote{
-    padding: 18px;
-    border-radius: 18px;
-  }
-
-  .page--inner-safety .isTextSection{
-    padding: 54px 0;
-  }
-
-  .page--inner-safety .isTextSection p{
-    font-size: 1.06rem;
-    line-height: 1.86;
-  }
-
-  .page--inner-safety .isPillars{
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .page--inner-safety .isPathways{
-    padding: 56px 0;
-  }
-
-  .page--inner-safety .isPathGrid{
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .page--inner-safety .isPathCard{
-    padding: 22px 18px;
-    border-radius: 20px;
-  }
-
-  .page--inner-safety .isSafetyNotice{
-    padding: 48px 0;
-  }
-
-
-
-
 }
 
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce){
-  .page--inner-safety *{
-    scroll-behavior: auto !important;
-  }
+@media (prefers-reduced-motion: reduce) {
+  body.hfa90Page .hfaButton { transition: none; }
 }
