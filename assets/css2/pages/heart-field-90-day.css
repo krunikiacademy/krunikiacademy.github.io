@@ -688,3 +688,18 @@ body.hfa90Page #mobileMenu {
 @media (prefers-reduced-motion: reduce) {
   body.hfa90Page .hfaButton { transition: none; }
 }
+
+/* =========================================================
+   90 วันฟื้นสนามพลังหัวใจ
+   ========================================================= */
+body.hfa90Page .hfaTitleFocus {
+  margin: 18px 0 20px;
+
+  font-family: "Sarabun", sans-serif;
+  font-size: clamp(36px, 7vw, 72px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+
+  color: #C6AB66;
+}
