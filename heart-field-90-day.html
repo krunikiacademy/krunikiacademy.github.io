@@ -755,16 +755,24 @@
     <section id="founder-circle" class="hfaSection">
       <div class="hfaContainer">
 
-        <figure class="hfaPoster hfaWide">
-          <img
-            src="/assets/images/founder-circle-banner.webp"
-            alt="The Heart Field Activation Founder Circle"
-            width="1920"
-            height="1080"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
+       <figure class="hfaPoster">
+  <picture>
+    <source
+      media="(max-width: 680px)"
+      srcset="assets/images/founder-circle-mobile.webp"
+    >
+
+    <img
+      src="assets/images/founder-circle-banner.webp"
+      alt="The Heart Field Activation 90-Day Program Founder Circle"
+      width="2048"
+      height="682"
+      loading="lazy"
+      decoding="async"
+      onerror="this.closest('.hfaPoster').hidden=true;"
+    />
+  </picture>
+</figure>
 
         <div class="hfaFounder">
 
