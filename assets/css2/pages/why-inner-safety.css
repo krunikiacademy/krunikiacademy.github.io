@@ -850,3 +850,7 @@
     scroll-behavior: auto !important;
   }
 }
+
+.page--inner-safety .krBrand{
+  font-family: "Times New Roman", Times, serif !important;
+}
